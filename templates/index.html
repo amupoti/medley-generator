@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block title %}{{ t("dashboard_title") }}{% endblock %}
+{% block content %}
+<section class="page-header">
+  <h1>{{ t("dashboard_title") }}</h1>
+  <p>{{ t("dashboard_intro") }}</p>
+</section>
+
+<section class="metrics">
+  <div>
+    <span>{{ stats.song_count }}</span>
+    <label>{{ t("songs_count") }}</label>
+  </div>
+  <div>
+    <span>{{ stats.chorus_count }}</span>
+    <label>{{ t("chorus_count") }}</label>
+  </div>
+  <div>
+    <span>{{ stats.source_count }}</span>
+    <label>{{ t("source_count") }}</label>
+  </div>
+  <div>
+    <span class="small">{{ stats.updated_at or t("never") }}</span>
+    <label>{{ t("db_updated") }}</label>
+  </div>
+</section>
+
+<section class="two-column">
+  <form class="panel" method="post" action="{{ lang_url('analyze_url_route') }}">
+    <h2>{{ t("analyze_url") }}</h2>
+    <p class="notice">{{ t("visible_chrome_notice") }}</p>
+    <label>
+      {{ t("explore_url") }}
+      <input name="source_url" type="url" placeholder="https://www.ultimate-guitar.com/explore?..." required>
+    </label>
+    <div class="inline-fields">
+      <label>
+        {{ t("limit") }}
+        <input name="limit" type="number" min="1" placeholder="{{ t("all") }}">
+      </label>
+      <label>
+        {{ t("delay_ms") }}
+        <input name="delay_ms" type="number" min="0" value="2000">
+      </label>
+    </div>
+    <label class="checkbox">
+      <input name="refresh" type="checkbox">
+      {{ t("refresh_known") }}
+    </label>
+    <button type="submit">{{ t("start_url_analysis") }}</button>
+  </form>
+
+  <form class="panel" method="post" action="{{ lang_url('analyze_upload_route') }}" enctype="multipart/form-data">
+    <h2>{{ t("analyze_upload") }}</h2>
+    <p class="notice">{{ t("upload_notice") }}</p>
+    <label>
+      {{ t("explore_html") }}
+      <input name="explore_html" type="file" accept=".html,.htm,text/html" required>
+    </label>
+    <div class="inline-fields">
+      <label>
+        {{ t("limit") }}
+        <input name="limit" type="number" min="1" placeholder="{{ t("all") }}">
+      </label>
+      <label>
+        {{ t("delay_ms") }}
+        <input name="delay_ms" type="number" min="0" value="2000">
+      </label>
+    </div>
+    <label class="checkbox">
+      <input name="refresh" type="checkbox">
+      {{ t("refresh_known") }}
+    </label>
+    <button type="submit">{{ t("start_upload_analysis") }}</button>
+  </form>
+</section>
+
+<section class="panel">
+  <h2>{{ t("stored_sources") }}</h2>
+  {% if stats.sources %}
+    <ul class="source-list">
+      {% for source in stats.sources %}
+        <li>
+          <span>{{ source|source_label }}</span>
+          <a href="{{ lang_url('medley', source_id=source) }}">{{ t("open_medley") }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>{{ t("no_sources") }}</p>
+  {% endif %}
+</section>
+
+{% if jobs %}
+<section class="panel">
+  <h2>{{ t("recent_jobs") }}</h2>
+  <table>
+    <thead>
+      <tr><th>{{ t("status") }}</th><th>{{ t("source") }}</th><th>{{ t("updated") }}</th><th></th></tr>
+    </thead>
+    <tbody>
+      {% for job in jobs %}
+        <tr>
+          <td><span class="status {{ job.status }}">{{ status_text(job.status) }}</span></td>
+          <td>{{ job.source_id|source_label }}</td>
+          <td>{{ job.updated_at }}</td>
+          <td><a href="{{ lang_url('job_detail', job_id=job.id) }}">{{ t("view") }}</a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}{{ t("source_medley") }} {{ source_id|source_label }}{% endblock %}
+{% block content %}
+<section class="page-header">
+  <h1>{{ t("source_medley") }}</h1>
+  <p>{{ source_id|source_label }}</p>
+</section>
+
+<section class="panel compact">
+  <form class="toolbar-form" method="get" action="{{ lang_url('medley', source_id=source_id) }}">
+    <input type="hidden" name="lang" value="{{ current_lang }}">
+    <input type="hidden" name="limit" value="{{ limit }}">
+    <input type="hidden" name="show_original" value="0">
+    <label>
+      {{ t("target_key") }}
+      <select name="target_root">
+        {% for root in target_roots %}
+          <option value="{{ root }}" {% if root == target_root %}selected{% endif %}>{{ root }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label class="toolbar-checkbox">
+      <input type="checkbox" name="show_original" value="1" {% if show_original %}checked{% endif %}>
+      {{ t("show_original_choruses") }}
+    </label>
+    <button type="submit">{{ t("apply") }}</button>
+  </form>
+  <div class="summary-grid">
+    <div><span>{{ output.song_count }}</span><label>{{ t("comparable_songs") }}</label></div>
+    <div><span>{{ "%.4f"|format(output.medley.average_transition_score) }}</span><label>{{ t("average_transition") }}</label></div>
+    <div><span>{{ target_root }}</span><label>{{ t("target_root") }}</label></div>
+  </div>
+</section>
+
+{% if songs %}
+  {% for song in songs %}
+    {% set transition = transitions[loop.index0] if loop.index0 < transitions|length else none %}
+    <section class="song-block">
+      <div class="rank">{{ loop.index }}</div>
+      <div class="song-body">
+        <h2>{{ song.artist }} - {{ song.title }}</h2>
+        {% if show_original %}
+          <div class="label">{{ t("original_chorus") }}</div>
+          <div class="chords">
+            {% for chord in song.chorus_chords %}<span>{{ chord }}</span>{% endfor %}
+          </div>
+        {% endif %}
+        <div class="label">{{ t("medley_chorus") }} {{ target_root }} ({{ song.transpose_label }})</div>
+        <div class="chords medley-chords">
+          {% for chord in song.medley_chords %}<span>{{ chord }}</span>{% endfor %}
+        </div>
+        {% if transition %}
+          <p class="transition">{{ t("next_transition_score") }}: <strong>{{ "%.4f"|format(transition.score) }}</strong></p>
+        {% else %}
+          <p class="muted">{{ t("end_of_list") }}</p>
+        {% endif %}
+        <a href="{{ song.url }}" target="_blank" rel="noreferrer">{{ t("ug_source") }}</a>
+      </div>
+    </section>
+  {% endfor %}
+{% else %}
+  <section class="panel"><p>{{ t("no_chorus_source") }}</p></section>
+{% endif %}
+{% endblock %}

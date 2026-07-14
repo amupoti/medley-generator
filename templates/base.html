@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ t("app_name") }}{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="{{ lang_url('index') }}">{{ t("app_name") }}</a>
+    <nav>
+      <a href="{{ lang_url('index') }}">{{ t("analyze_nav") }}</a>
+      <a href="{{ lang_url('songs') }}">{{ t("songs_nav") }}</a>
+    </nav>
+    <form class="language-form" method="get" action="{{ request.path }}">
+      {% for name, value in request.args.items() %}
+        {% if name != "lang" %}
+          <input type="hidden" name="{{ name }}" value="{{ value }}">
+        {% endif %}
+      {% endfor %}
+      <label>
+        {{ t("language") }}
+        <select name="lang" onchange="this.form.submit()">
+          {% for code, label in languages.items() %}
+            <option value="{{ code }}" {% if code == current_lang %}selected{% endif %}>{{ label }}</option>
+          {% endfor %}
+        </select>
+      </label>
+    </form>
+  </header>
+  <main class="page">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

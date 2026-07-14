@@ -1,0 +1,200 @@
+#!/usr/bin/env python3
+import argparse
+import html
+import json
+import sys
+from pathlib import Path
+
+from chord_utils import transpose_chords
+
+
+def render_chords(chords: list[str]) -> str:
+    return "".join(f'<span class="chord">{html.escape(chord)}</span>' for chord in chords)
+
+
+def transpose_label(shift: int) -> str:
+    if shift == 0:
+        return "no transpose"
+    direction = "up" if shift > 0 else "down"
+    amount = abs(shift)
+    semitone = "semitone" if amount == 1 else "semitones"
+    return f"transpose {direction} {amount} {semitone}"
+
+
+def render_report(data: dict, limit: int) -> str:
+    songs = data["medley"]["songs"][:limit]
+    transitions = data["medley"]["transitions"][: max(0, limit - 1)]
+    target_root = data["medley"].get("target_root", "C")
+    rows = []
+
+    for index, song in enumerate(songs):
+        transition = transitions[index] if index < len(transitions) else None
+        medley_chords = transpose_chords(song["chorus_chords"], song.get("global_transpose_by", 0))
+        if transition:
+            transition_html = (
+                f'<div class="transition">Next transition score: '
+                f'<strong>{transition["score"]:.4f}</strong></div>'
+            )
+        else:
+            transition_html = '<div class="transition end">End of top list</div>'
+
+        rows.append(
+            f"""
+            <section class="song">
+              <div class="rank">{index + 1}</div>
+              <div class="details">
+                <h2>{html.escape(song["artist"])} - {html.escape(song["title"])}</h2>
+                <div class="chords-label">Original chorus</div>
+                <div class="chords">{render_chords(song["chorus_chords"])}</div>
+                <div class="chords-label">Medley chorus in {html.escape(target_root)} ({html.escape(transpose_label(song.get("global_transpose_by", 0)))})</div>
+                <div class="chords medley-chords">{render_chords(medley_chords)}</div>
+                {transition_html}
+                <a href="{html.escape(song["url"])}">Ultimate Guitar source</a>
+              </div>
+            </section>
+            """
+        )
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medley Top {len(songs)}</title>
+  <style>
+    body {{
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #1f2328;
+      background: #f6f8fa;
+    }}
+    main {{
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }}
+    header {{
+      margin-bottom: 24px;
+    }}
+    h1 {{
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 1.15;
+    }}
+    .meta {{
+      color: #57606a;
+      font-size: 15px;
+    }}
+    .song {{
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 16px;
+      padding: 18px 0;
+      border-top: 1px solid #d0d7de;
+    }}
+    .rank {{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      background: #24292f;
+      font-weight: 700;
+    }}
+    h2 {{
+      margin: 2px 0 12px;
+      font-size: 20px;
+      line-height: 1.25;
+    }}
+    .chords {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 6px 0 12px;
+    }}
+    .chords-label,
+    .next-chords-label {{
+      color: #57606a;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }}
+    .medley-chords {{
+      margin-bottom: 12px;
+    }}
+    .chord {{
+      min-width: 42px;
+      padding: 7px 10px;
+      border: 1px solid #8c959f;
+      border-radius: 6px;
+      background: #ffffff;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-weight: 700;
+      text-align: center;
+    }}
+    .medley-chords .chord {{
+      border-color: #1f883d;
+      background: #dafbe1;
+    }}
+    .transition {{
+      margin-bottom: 8px;
+      color: #0969da;
+      font-size: 15px;
+    }}
+    .transition.end {{
+      color: #57606a;
+    }}
+    a {{
+      color: #57606a;
+      font-size: 14px;
+    }}
+    @media (max-width: 640px) {{
+      main {{
+        padding: 24px 14px 36px;
+      }}
+      .song {{
+        grid-template-columns: 36px 1fr;
+        gap: 12px;
+      }}
+      .rank {{
+        width: 32px;
+        height: 32px;
+      }}
+    }}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Medley Top {len(songs)}</h1>
+      <div class="meta">Target root: {html.escape(target_root)}. Average transition score: {data["medley"]["average_transition_score"]:.4f}</div>
+    </header>
+    {"".join(rows)}
+  </main>
+</body>
+</html>
+"""
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Render an HTML medley report.")
+    parser.add_argument("input", help="JSON generated by compare_choruses.py")
+    parser.add_argument("-o", "--output", default="medley_top20.html")
+    parser.add_argument("--limit", type=int, default=20)
+    args = parser.parse_args()
+
+    data = json.loads(Path(args.input).read_text(encoding="utf-8"))
+    html_text = render_report(data, args.limit)
+    Path(args.output).write_text(html_text, encoding="utf-8")
+    print(json.dumps({"output": args.output, "song_count": min(args.limit, len(data["medley"]["songs"]))}, indent=2))
+    return 0
+
+
+if __name__ == "__main__":
+    try:
+        raise SystemExit(main())
+    except Exception as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        raise SystemExit(1)

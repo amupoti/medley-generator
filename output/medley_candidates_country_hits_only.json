@@ -1,0 +1,4603 @@
+{
+  "song_count": 41,
+  "top_pairs": [
+    {
+      "score": 1.0,
+      "absolute_score": 1.0,
+      "interval_score": 1.0,
+      "quality_score": 1.0,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 7,
+        "artist": "Jason Mraz",
+        "title": "Im Yours",
+        "url": "https://tabs.ultimate-guitar.com/tab/jason-mraz/im-yours-chords-373896",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 48,
+        "artist": "James Arthur",
+        "title": "Say You Wont Let Go",
+        "url": "https://tabs.ultimate-guitar.com/tab/james-arthur/say-you-wont-let-go-chords-1874747",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.8608,
+      "absolute_score": 0.875,
+      "interval_score": 0.8667,
+      "quality_score": 0.875,
+      "chord_overlap": 0.8,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 1,
+        "artist": "Ed Sheeran",
+        "title": "Perfect",
+        "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/perfect-chords-1956589",
+        "chorus_chords": [
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 36,
+        "artist": "Green Day",
+        "title": "Boulevard Of Broken Dreams",
+        "url": "https://tabs.ultimate-guitar.com/tab/green-day/boulevard-of-broken-dreams-chords-146744",
+        "chorus_chords": [
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "B7"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.8202,
+      "absolute_score": 0.7143,
+      "interval_score": 0.8333,
+      "quality_score": 0.8571,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 4,
+        "artist": "Passenger",
+        "title": "Let Her Go",
+        "url": "https://tabs.ultimate-guitar.com/tab/passenger/let-her-go-chords-1137467",
+        "chorus_chords": [
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 16,
+        "artist": "Justin Bieber",
+        "title": "Love Yourself",
+        "url": "https://tabs.ultimate-guitar.com/tab/justin-bieber/love-yourself-chords-1780199",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "F",
+          "C"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.8125,
+      "absolute_score": 0.8,
+      "interval_score": 0.75,
+      "quality_score": 0.8,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 24,
+        "artist": "Taylor Swift",
+        "title": "Love Story",
+        "url": "https://tabs.ultimate-guitar.com/tab/taylor-swift/love-story-chords-730809",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 49,
+        "artist": "Lewis Capaldi",
+        "title": "Someone You Loved",
+        "url": "https://tabs.ultimate-guitar.com/tab/lewis-capaldi/someone-you-loved-chords-2512737",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.8122,
+      "absolute_score": 0.7692,
+      "interval_score": 0.7273,
+      "quality_score": 0.9231,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 16,
+        "artist": "Justin Bieber",
+        "title": "Love Yourself",
+        "url": "https://tabs.ultimate-guitar.com/tab/justin-bieber/love-yourself-chords-1780199",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "F",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 24,
+        "artist": "Taylor Swift",
+        "title": "Love Story",
+        "url": "https://tabs.ultimate-guitar.com/tab/taylor-swift/love-story-chords-730809",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "C"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.7486,
+      "absolute_score": 0.7692,
+      "interval_score": 0.5455,
+      "quality_score": 0.9231,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 4,
+        "artist": "Passenger",
+        "title": "Let Her Go",
+        "url": "https://tabs.ultimate-guitar.com/tab/passenger/let-her-go-chords-1137467",
+        "chorus_chords": [
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 24,
+        "artist": "Taylor Swift",
+        "title": "Love Story",
+        "url": "https://tabs.ultimate-guitar.com/tab/taylor-swift/love-story-chords-730809",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "C"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.747,
+      "absolute_score": 0.7273,
+      "interval_score": 0.6667,
+      "quality_score": 0.7273,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 4,
+        "artist": "Passenger",
+        "title": "Let Her Go",
+        "url": "https://tabs.ultimate-guitar.com/tab/passenger/let-her-go-chords-1137467",
+        "chorus_chords": [
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 43,
+        "artist": "Kodaline",
+        "title": "All I Want",
+        "url": "https://tabs.ultimate-guitar.com/tab/kodaline/all-i-want-chords-1180259",
+        "chorus_chords": [
+          "Am",
+          "F",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.747,
+      "absolute_score": 0.7273,
+      "interval_score": 0.6667,
+      "quality_score": 0.7273,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 4,
+        "artist": "Passenger",
+        "title": "Let Her Go",
+        "url": "https://tabs.ultimate-guitar.com/tab/passenger/let-her-go-chords-1137467",
+        "chorus_chords": [
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 49,
+        "artist": "Lewis Capaldi",
+        "title": "Someone You Loved",
+        "url": "https://tabs.ultimate-guitar.com/tab/lewis-capaldi/someone-you-loved-chords-2512737",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.747,
+      "absolute_score": 0.7273,
+      "interval_score": 0.6667,
+      "quality_score": 0.7273,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 16,
+        "artist": "Justin Bieber",
+        "title": "Love Yourself",
+        "url": "https://tabs.ultimate-guitar.com/tab/justin-bieber/love-yourself-chords-1780199",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "F",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 49,
+        "artist": "Lewis Capaldi",
+        "title": "Someone You Loved",
+        "url": "https://tabs.ultimate-guitar.com/tab/lewis-capaldi/someone-you-loved-chords-2512737",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.7358,
+      "absolute_score": 0.75,
+      "interval_score": 0.6667,
+      "quality_score": 1.0,
+      "chord_overlap": 0.6,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 43,
+        "artist": "Kodaline",
+        "title": "All I Want",
+        "url": "https://tabs.ultimate-guitar.com/tab/kodaline/all-i-want-chords-1180259",
+        "chorus_chords": [
+          "Am",
+          "F",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 50,
+        "artist": "Imagine Dragons",
+        "title": "Radioactive",
+        "url": "https://tabs.ultimate-guitar.com/tab/imagine-dragons/radioactive-chords-1171909",
+        "chorus_chords": [
+          "Am",
+          "C",
+          "G",
+          "D"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.725,
+      "absolute_score": 0.5,
+      "interval_score": 1.0,
+      "quality_score": 1.0,
+      "chord_overlap": 0.3333,
+      "transpose_right_by": -5,
+      "left": {
+        "rank": 38,
+        "artist": "The Cranberries",
+        "title": "Zombie",
+        "url": "https://tabs.ultimate-guitar.com/tab/the-cranberries/zombie-chords-844902",
+        "chorus_chords": [
+          "Em",
+          "C",
+          "G",
+          "D/F#"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 43,
+        "artist": "Kodaline",
+        "title": "All I Want",
+        "url": "https://tabs.ultimate-guitar.com/tab/kodaline/all-i-want-chords-1180259",
+        "chorus_chords": [
+          "Am",
+          "F",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6933,
+      "absolute_score": 0.6667,
+      "interval_score": 0.6,
+      "quality_score": 0.6667,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 7,
+        "artist": "Jason Mraz",
+        "title": "Im Yours",
+        "url": "https://tabs.ultimate-guitar.com/tab/jason-mraz/im-yours-chords-373896",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 26,
+        "artist": "John Denver",
+        "title": "Take Me Home Country Roads",
+        "url": "https://tabs.ultimate-guitar.com/tab/john-denver/take-me-home-country-roads-chords-1101747",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6933,
+      "absolute_score": 0.6667,
+      "interval_score": 0.6,
+      "quality_score": 0.6667,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 26,
+        "artist": "John Denver",
+        "title": "Take Me Home Country Roads",
+        "url": "https://tabs.ultimate-guitar.com/tab/john-denver/take-me-home-country-roads-chords-1101747",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 48,
+        "artist": "James Arthur",
+        "title": "Say You Wont Let Go",
+        "url": "https://tabs.ultimate-guitar.com/tab/james-arthur/say-you-wont-let-go-chords-1874747",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6833,
+      "absolute_score": 0.5455,
+      "interval_score": 0.6667,
+      "quality_score": 0.7273,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 16,
+        "artist": "Justin Bieber",
+        "title": "Love Yourself",
+        "url": "https://tabs.ultimate-guitar.com/tab/justin-bieber/love-yourself-chords-1780199",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "F",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 43,
+        "artist": "Kodaline",
+        "title": "All I Want",
+        "url": "https://tabs.ultimate-guitar.com/tab/kodaline/all-i-want-chords-1180259",
+        "chorus_chords": [
+          "Am",
+          "F",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6678,
+      "absolute_score": 0.6957,
+      "interval_score": 0.5714,
+      "quality_score": 0.6957,
+      "chord_overlap": 0.8,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 26,
+        "artist": "John Denver",
+        "title": "Take Me Home Country Roads",
+        "url": "https://tabs.ultimate-guitar.com/tab/john-denver/take-me-home-country-roads-chords-1101747",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 36,
+        "artist": "Green Day",
+        "title": "Boulevard Of Broken Dreams",
+        "url": "https://tabs.ultimate-guitar.com/tab/green-day/boulevard-of-broken-dreams-chords-146744",
+        "chorus_chords": [
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "B7"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6543,
+      "absolute_score": 0.6087,
+      "interval_score": 0.5714,
+      "quality_score": 0.6087,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 4,
+        "artist": "Passenger",
+        "title": "Let Her Go",
+        "url": "https://tabs.ultimate-guitar.com/tab/passenger/let-her-go-chords-1137467",
+        "chorus_chords": [
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 45,
+        "artist": "Johnny Cash",
+        "title": "Hurt",
+        "url": "https://tabs.ultimate-guitar.com/tab/johnny-cash/hurt-chords-89849",
+        "chorus_chords": [
+          "Am",
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "Am"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6486,
+      "absolute_score": 0.6154,
+      "interval_score": 0.5455,
+      "quality_score": 0.6154,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 2,
+        "artist": "Jeff Buckley",
+        "title": "Hallelujah",
+        "url": "https://tabs.ultimate-guitar.com/tab/jeff-buckley/hallelujah-chords-198052",
+        "chorus_chords": [
+          "F",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "C",
+          "Am",
+          "C",
+          "Am"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 43,
+        "artist": "Kodaline",
+        "title": "All I Want",
+        "url": "https://tabs.ultimate-guitar.com/tab/kodaline/all-i-want-chords-1180259",
+        "chorus_chords": [
+          "Am",
+          "F",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6406,
+      "absolute_score": 0.64,
+      "interval_score": 0.5217,
+      "quality_score": 0.56,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 1,
+        "artist": "Ed Sheeran",
+        "title": "Perfect",
+        "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/perfect-chords-1956589",
+        "chorus_chords": [
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 26,
+        "artist": "John Denver",
+        "title": "Take Me Home Country Roads",
+        "url": "https://tabs.ultimate-guitar.com/tab/john-denver/take-me-home-country-roads-chords-1101747",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6389,
+      "absolute_score": 0.4444,
+      "interval_score": 0.8571,
+      "quality_score": 0.8889,
+      "chord_overlap": 0.3333,
+      "transpose_right_by": 5,
+      "left": {
+        "rank": 7,
+        "artist": "Jason Mraz",
+        "title": "Im Yours",
+        "url": "https://tabs.ultimate-guitar.com/tab/jason-mraz/im-yours-chords-373896",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 12,
+        "artist": "Ed Sheeran",
+        "title": "Photograph",
+        "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/photograph-chords-1493446",
+        "chorus_chords": [
+          "D",
+          "A",
+          "Bm",
+          "G",
+          "D"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6389,
+      "absolute_score": 0.4444,
+      "interval_score": 0.8571,
+      "quality_score": 0.8889,
+      "chord_overlap": 0.3333,
+      "transpose_right_by": -5,
+      "left": {
+        "rank": 12,
+        "artist": "Ed Sheeran",
+        "title": "Photograph",
+        "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/photograph-chords-1493446",
+        "chorus_chords": [
+          "D",
+          "A",
+          "Bm",
+          "G",
+          "D"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 48,
+        "artist": "James Arthur",
+        "title": "Say You Wont Let Go",
+        "url": "https://tabs.ultimate-guitar.com/tab/james-arthur/say-you-wont-let-go-chords-1874747",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6375,
+      "absolute_score": 0.25,
+      "interval_score": 1.0,
+      "quality_score": 1.0,
+      "chord_overlap": 0.3333,
+      "transpose_right_by": -5,
+      "left": {
+        "rank": 7,
+        "artist": "Jason Mraz",
+        "title": "Im Yours",
+        "url": "https://tabs.ultimate-guitar.com/tab/jason-mraz/im-yours-chords-373896",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 49,
+        "artist": "Lewis Capaldi",
+        "title": "Someone You Loved",
+        "url": "https://tabs.ultimate-guitar.com/tab/lewis-capaldi/someone-you-loved-chords-2512737",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6375,
+      "absolute_score": 0.25,
+      "interval_score": 1.0,
+      "quality_score": 1.0,
+      "chord_overlap": 0.3333,
+      "transpose_right_by": -5,
+      "left": {
+        "rank": 48,
+        "artist": "James Arthur",
+        "title": "Say You Wont Let Go",
+        "url": "https://tabs.ultimate-guitar.com/tab/james-arthur/say-you-wont-let-go-chords-1874747",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 49,
+        "artist": "Lewis Capaldi",
+        "title": "Someone You Loved",
+        "url": "https://tabs.ultimate-guitar.com/tab/lewis-capaldi/someone-you-loved-chords-2512737",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6259,
+      "absolute_score": 0.5333,
+      "interval_score": 0.7692,
+      "quality_score": 0.8,
+      "chord_overlap": 0.3333,
+      "transpose_right_by": 5,
+      "left": {
+        "rank": 4,
+        "artist": "Passenger",
+        "title": "Let Her Go",
+        "url": "https://tabs.ultimate-guitar.com/tab/passenger/let-her-go-chords-1137467",
+        "chorus_chords": [
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 26,
+        "artist": "John Denver",
+        "title": "Take Me Home Country Roads",
+        "url": "https://tabs.ultimate-guitar.com/tab/john-denver/take-me-home-country-roads-chords-1101747",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6233,
+      "absolute_score": 0.6667,
+      "interval_score": 0.5714,
+      "quality_score": 0.6667,
+      "chord_overlap": 0.6,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 7,
+        "artist": "Jason Mraz",
+        "title": "Im Yours",
+        "url": "https://tabs.ultimate-guitar.com/tab/jason-mraz/im-yours-chords-373896",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 31,
+        "artist": "Misc Soundtrack/Lady Gaga\u00a0&\u00a0Bradley Cooper",
+        "title": "A Star Is Born - Shallow",
+        "url": "https://tabs.ultimate-guitar.com/tab/misc-soundtrack/a-star-is-born-shallow-chords-2488086",
+        "chorus_chords": [
+          "Am",
+          "D",
+          "G",
+          "D",
+          "Em"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6233,
+      "absolute_score": 0.6667,
+      "interval_score": 0.5714,
+      "quality_score": 0.6667,
+      "chord_overlap": 0.6,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 31,
+        "artist": "Misc Soundtrack/Lady Gaga\u00a0&\u00a0Bradley Cooper",
+        "title": "A Star Is Born - Shallow",
+        "url": "https://tabs.ultimate-guitar.com/tab/misc-soundtrack/a-star-is-born-shallow-chords-2488086",
+        "chorus_chords": [
+          "Am",
+          "D",
+          "G",
+          "D",
+          "Em"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 48,
+        "artist": "James Arthur",
+        "title": "Say You Wont Let Go",
+        "url": "https://tabs.ultimate-guitar.com/tab/james-arthur/say-you-wont-let-go-chords-1874747",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6174,
+      "absolute_score": 0.7,
+      "interval_score": 0.4211,
+      "quality_score": 0.7,
+      "chord_overlap": 0.8,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 14,
+        "artist": "Oasis",
+        "title": "Dont Look Back In Anger",
+        "url": "https://tabs.ultimate-guitar.com/tab/oasis/dont-look-back-in-anger-chords-6097",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "E7",
+          "F",
+          "G",
+          "C",
+          "Am",
+          "G",
+          "C",
+          "G",
+          "Am",
+          "E7",
+          "F",
+          "G",
+          "C",
+          "G",
+          "Am",
+          "E7",
+          "F",
+          "G",
+          "C",
+          "Am",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 45,
+        "artist": "Johnny Cash",
+        "title": "Hurt",
+        "url": "https://tabs.ultimate-guitar.com/tab/johnny-cash/hurt-chords-89849",
+        "chorus_chords": [
+          "Am",
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "Am"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6125,
+      "absolute_score": 0.625,
+      "interval_score": 0.4286,
+      "quality_score": 0.625,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 2,
+        "artist": "Jeff Buckley",
+        "title": "Hallelujah",
+        "url": "https://tabs.ultimate-guitar.com/tab/jeff-buckley/hallelujah-chords-198052",
+        "chorus_chords": [
+          "F",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "C",
+          "Am",
+          "C",
+          "Am"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 4,
+        "artist": "Passenger",
+        "title": "Let Her Go",
+        "url": "https://tabs.ultimate-guitar.com/tab/passenger/let-her-go-chords-1137467",
+        "chorus_chords": [
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6089,
+      "absolute_score": 0.25,
+      "interval_score": 1.0,
+      "quality_score": 1.0,
+      "chord_overlap": 0.1429,
+      "transpose_right_by": -2,
+      "left": {
+        "rank": 7,
+        "artist": "Jason Mraz",
+        "title": "Im Yours",
+        "url": "https://tabs.ultimate-guitar.com/tab/jason-mraz/im-yours-chords-373896",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 21,
+        "artist": "Adele",
+        "title": "Someone Like You",
+        "url": "https://tabs.ultimate-guitar.com/tab/adele/someone-like-you-chords-1006040",
+        "chorus_chords": [
+          "A",
+          "E",
+          "F#m",
+          "D"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6089,
+      "absolute_score": 0.25,
+      "interval_score": 1.0,
+      "quality_score": 1.0,
+      "chord_overlap": 0.1429,
+      "transpose_right_by": 2,
+      "left": {
+        "rank": 21,
+        "artist": "Adele",
+        "title": "Someone Like You",
+        "url": "https://tabs.ultimate-guitar.com/tab/adele/someone-like-you-chords-1006040",
+        "chorus_chords": [
+          "A",
+          "E",
+          "F#m",
+          "D"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 48,
+        "artist": "James Arthur",
+        "title": "Say You Wont Let Go",
+        "url": "https://tabs.ultimate-guitar.com/tab/james-arthur/say-you-wont-let-go-chords-1874747",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.6083,
+      "absolute_score": 0.5,
+      "interval_score": 0.6667,
+      "quality_score": 1.0,
+      "chord_overlap": 0.3333,
+      "transpose_right_by": -5,
+      "left": {
+        "rank": 38,
+        "artist": "The Cranberries",
+        "title": "Zombie",
+        "url": "https://tabs.ultimate-guitar.com/tab/the-cranberries/zombie-chords-844902",
+        "chorus_chords": [
+          "Em",
+          "C",
+          "G",
+          "D/F#"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 50,
+        "artist": "Imagine Dragons",
+        "title": "Radioactive",
+        "url": "https://tabs.ultimate-guitar.com/tab/imagine-dragons/radioactive-chords-1171909",
+        "chorus_chords": [
+          "Am",
+          "C",
+          "G",
+          "D"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5992,
+      "absolute_score": 0.4,
+      "interval_score": 0.7692,
+      "quality_score": 0.9333,
+      "chord_overlap": 0.3333,
+      "transpose_right_by": 5,
+      "left": {
+        "rank": 16,
+        "artist": "Justin Bieber",
+        "title": "Love Yourself",
+        "url": "https://tabs.ultimate-guitar.com/tab/justin-bieber/love-yourself-chords-1780199",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "F",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 26,
+        "artist": "John Denver",
+        "title": "Take Me Home Country Roads",
+        "url": "https://tabs.ultimate-guitar.com/tab/john-denver/take-me-home-country-roads-chords-1101747",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5906,
+      "absolute_score": 0.5217,
+      "interval_score": 0.4762,
+      "quality_score": 0.6087,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 16,
+        "artist": "Justin Bieber",
+        "title": "Love Yourself",
+        "url": "https://tabs.ultimate-guitar.com/tab/justin-bieber/love-yourself-chords-1780199",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "F",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 45,
+        "artist": "Johnny Cash",
+        "title": "Hurt",
+        "url": "https://tabs.ultimate-guitar.com/tab/johnny-cash/hurt-chords-89849",
+        "chorus_chords": [
+          "Am",
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "Am"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5875,
+      "absolute_score": 0.5,
+      "interval_score": 0.4286,
+      "quality_score": 0.75,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 2,
+        "artist": "Jeff Buckley",
+        "title": "Hallelujah",
+        "url": "https://tabs.ultimate-guitar.com/tab/jeff-buckley/hallelujah-chords-198052",
+        "chorus_chords": [
+          "F",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "C",
+          "Am",
+          "C",
+          "Am"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 16,
+        "artist": "Justin Bieber",
+        "title": "Love Yourself",
+        "url": "https://tabs.ultimate-guitar.com/tab/justin-bieber/love-yourself-chords-1780199",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "F",
+          "C"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5832,
+      "absolute_score": 0.4242,
+      "interval_score": 0.7097,
+      "quality_score": 0.9091,
+      "chord_overlap": 0.3333,
+      "transpose_right_by": -5,
+      "left": {
+        "rank": 1,
+        "artist": "Ed Sheeran",
+        "title": "Perfect",
+        "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/perfect-chords-1956589",
+        "chorus_chords": [
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 45,
+        "artist": "Johnny Cash",
+        "title": "Hurt",
+        "url": "https://tabs.ultimate-guitar.com/tab/johnny-cash/hurt-chords-89849",
+        "chorus_chords": [
+          "Am",
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "Am"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.575,
+      "absolute_score": 0.5,
+      "interval_score": 0.6,
+      "quality_score": 0.6667,
+      "chord_overlap": 0.6,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 26,
+        "artist": "John Denver",
+        "title": "Take Me Home Country Roads",
+        "url": "https://tabs.ultimate-guitar.com/tab/john-denver/take-me-home-country-roads-chords-1101747",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 38,
+        "artist": "The Cranberries",
+        "title": "Zombie",
+        "url": "https://tabs.ultimate-guitar.com/tab/the-cranberries/zombie-chords-844902",
+        "chorus_chords": [
+          "Em",
+          "C",
+          "G",
+          "D/F#"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5743,
+      "absolute_score": 0.5789,
+      "interval_score": 0.5556,
+      "quality_score": 0.7368,
+      "chord_overlap": 0.4444,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 10,
+        "artist": "Ed Sheeran",
+        "title": "Thinking Out Loud",
+        "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/thinking-out-loud-chords-1486860",
+        "chorus_chords": [
+          "F",
+          "G",
+          "C",
+          "C/E",
+          "F",
+          "G",
+          "C",
+          "C/E",
+          "F",
+          "G",
+          "C",
+          "C/E",
+          "F",
+          "G",
+          "Am",
+          "G",
+          "F",
+          "C/E",
+          "Dm",
+          "G",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 13,
+        "artist": "Bruno Mars",
+        "title": "When I Was Your Man",
+        "url": "https://tabs.ultimate-guitar.com/tab/bruno-mars/when-i-was-your-man-chords-1198871",
+        "chorus_chords": [
+          "G",
+          "F",
+          "G",
+          "C",
+          "F",
+          "G",
+          "C",
+          "F",
+          "G",
+          "Am",
+          "D7",
+          "F",
+          "Fm",
+          "C",
+          "F",
+          "C",
+          "Em/B"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5736,
+      "absolute_score": 0.6154,
+      "interval_score": 0.5455,
+      "quality_score": 0.6154,
+      "chord_overlap": 0.5,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 30,
+        "artist": "Eagles",
+        "title": "Hotel California Tab By Eagles @ Ultimate-Guitar.Com",
+        "url": "https://tabs.ultimate-guitar.com/tab/eagles/hotel-california-tabs-14288",
+        "chorus_chords": [
+          "G",
+          "D",
+          "F#",
+          "Bm",
+          "G",
+          "D",
+          "Em",
+          "F#"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 31,
+        "artist": "Misc Soundtrack/Lady Gaga\u00a0&\u00a0Bradley Cooper",
+        "title": "A Star Is Born - Shallow",
+        "url": "https://tabs.ultimate-guitar.com/tab/misc-soundtrack/a-star-is-born-shallow-chords-2488086",
+        "chorus_chords": [
+          "Am",
+          "D",
+          "G",
+          "D",
+          "Em"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5725,
+      "absolute_score": 0.4,
+      "interval_score": 0.75,
+      "quality_score": 0.8,
+      "chord_overlap": 0.3333,
+      "transpose_right_by": -5,
+      "left": {
+        "rank": 7,
+        "artist": "Jason Mraz",
+        "title": "Im Yours",
+        "url": "https://tabs.ultimate-guitar.com/tab/jason-mraz/im-yours-chords-373896",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 24,
+        "artist": "Taylor Swift",
+        "title": "Love Story",
+        "url": "https://tabs.ultimate-guitar.com/tab/taylor-swift/love-story-chords-730809",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "C"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5635,
+      "absolute_score": 0.6286,
+      "interval_score": 0.4242,
+      "quality_score": 0.8,
+      "chord_overlap": 0.5,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 10,
+        "artist": "Ed Sheeran",
+        "title": "Thinking Out Loud",
+        "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/thinking-out-loud-chords-1486860",
+        "chorus_chords": [
+          "F",
+          "G",
+          "C",
+          "C/E",
+          "F",
+          "G",
+          "C",
+          "C/E",
+          "F",
+          "G",
+          "C",
+          "C/E",
+          "F",
+          "G",
+          "Am",
+          "G",
+          "F",
+          "C/E",
+          "Dm",
+          "G",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 34,
+        "artist": "Train",
+        "title": "Hey Soul Sister",
+        "url": "https://tabs.ultimate-guitar.com/tab/train/hey-soul-sister-chords-884388",
+        "chorus_chords": [
+          "F",
+          "G",
+          "C",
+          "G",
+          "F",
+          "G",
+          "C",
+          "G",
+          "F",
+          "G",
+          "C",
+          "G",
+          "F",
+          "G"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5616,
+      "absolute_score": 0.6207,
+      "interval_score": 0.4444,
+      "quality_score": 0.7586,
+      "chord_overlap": 0.5,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 34,
+        "artist": "Train",
+        "title": "Hey Soul Sister",
+        "url": "https://tabs.ultimate-guitar.com/tab/train/hey-soul-sister-chords-884388",
+        "chorus_chords": [
+          "F",
+          "G",
+          "C",
+          "G",
+          "F",
+          "G",
+          "C",
+          "G",
+          "F",
+          "G",
+          "C",
+          "G",
+          "F",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 41,
+        "artist": "Creedence Clearwater Revival",
+        "title": "Have You Ever Seen The Rain",
+        "url": "https://tabs.ultimate-guitar.com/tab/creedence-clearwater-revival/have-you-ever-seen-the-rain-chords-56479",
+        "chorus_chords": [
+          "F",
+          "G",
+          "C",
+          "C/B",
+          "Am",
+          "Am7/G",
+          "F",
+          "G",
+          "C",
+          "C/B",
+          "Am",
+          "Am7/G",
+          "F",
+          "G",
+          "C"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5611,
+      "absolute_score": 0.2222,
+      "interval_score": 0.8571,
+      "quality_score": 0.8889,
+      "chord_overlap": 0.3333,
+      "transpose_right_by": 5,
+      "left": {
+        "rank": 12,
+        "artist": "Ed Sheeran",
+        "title": "Photograph",
+        "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/photograph-chords-1493446",
+        "chorus_chords": [
+          "D",
+          "A",
+          "Bm",
+          "G",
+          "D"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 21,
+        "artist": "Adele",
+        "title": "Someone Like You",
+        "url": "https://tabs.ultimate-guitar.com/tab/adele/someone-like-you-chords-1006040",
+        "chorus_chords": [
+          "A",
+          "E",
+          "F#m",
+          "D"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5574,
+      "absolute_score": 0.5778,
+      "interval_score": 0.4651,
+      "quality_score": 0.7111,
+      "chord_overlap": 0.5714,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 14,
+        "artist": "Oasis",
+        "title": "Dont Look Back In Anger",
+        "url": "https://tabs.ultimate-guitar.com/tab/oasis/dont-look-back-in-anger-chords-6097",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "E7",
+          "F",
+          "G",
+          "C",
+          "Am",
+          "G",
+          "C",
+          "G",
+          "Am",
+          "E7",
+          "F",
+          "G",
+          "C",
+          "G",
+          "Am",
+          "E7",
+          "F",
+          "G",
+          "C",
+          "Am",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 39,
+        "artist": "John Lennon",
+        "title": "Imagine",
+        "url": "https://tabs.ultimate-guitar.com/tab/john-lennon/imagine-chords-9306",
+        "chorus_chords": [
+          "F",
+          "G",
+          "C",
+          "Cmaj7",
+          "E",
+          "E7",
+          "F",
+          "G",
+          "C",
+          "Cmaj7",
+          "E",
+          "E7",
+          "F",
+          "G",
+          "C",
+          "Cmaj7",
+          "E",
+          "E7",
+          "F",
+          "G",
+          "C"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5571,
+      "absolute_score": 0.5714,
+      "interval_score": 0.5,
+      "quality_score": 0.7143,
+      "chord_overlap": 0.5,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 15,
+        "artist": "Eagles",
+        "title": "Hotel California",
+        "url": "https://tabs.ultimate-guitar.com/tab/eagles/hotel-california-chords-46190",
+        "chorus_chords": [
+          "F",
+          "C",
+          "E7",
+          "Am",
+          "F",
+          "C",
+          "Dm",
+          "E7"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 24,
+        "artist": "Taylor Swift",
+        "title": "Love Story",
+        "url": "https://tabs.ultimate-guitar.com/tab/taylor-swift/love-story-chords-730809",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "C"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5567,
+      "absolute_score": 0.6667,
+      "interval_score": 0.2857,
+      "quality_score": 0.8889,
+      "chord_overlap": 0.6,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 31,
+        "artist": "Misc Soundtrack/Lady Gaga\u00a0&\u00a0Bradley Cooper",
+        "title": "A Star Is Born - Shallow",
+        "url": "https://tabs.ultimate-guitar.com/tab/misc-soundtrack/a-star-is-born-shallow-chords-2488086",
+        "chorus_chords": [
+          "Am",
+          "D",
+          "G",
+          "D",
+          "Em"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 50,
+        "artist": "Imagine Dragons",
+        "title": "Radioactive",
+        "url": "https://tabs.ultimate-guitar.com/tab/imagine-dragons/radioactive-chords-1171909",
+        "chorus_chords": [
+          "Am",
+          "C",
+          "G",
+          "D"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5499,
+      "absolute_score": 0.6667,
+      "interval_score": 0.4615,
+      "quality_score": 0.5333,
+      "chord_overlap": 0.5,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 4,
+        "artist": "Passenger",
+        "title": "Let Her Go",
+        "url": "https://tabs.ultimate-guitar.com/tab/passenger/let-her-go-chords-1137467",
+        "chorus_chords": [
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 15,
+        "artist": "Eagles",
+        "title": "Hotel California",
+        "url": "https://tabs.ultimate-guitar.com/tab/eagles/hotel-california-chords-46190",
+        "chorus_chords": [
+          "F",
+          "C",
+          "E7",
+          "Am",
+          "F",
+          "C",
+          "Dm",
+          "E7"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5463,
+      "absolute_score": 0.6286,
+      "interval_score": 0.4242,
+      "quality_score": 0.6857,
+      "chord_overlap": 0.5,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 34,
+        "artist": "Train",
+        "title": "Hey Soul Sister",
+        "url": "https://tabs.ultimate-guitar.com/tab/train/hey-soul-sister-chords-884388",
+        "chorus_chords": [
+          "F",
+          "G",
+          "C",
+          "G",
+          "F",
+          "G",
+          "C",
+          "G",
+          "F",
+          "G",
+          "C",
+          "G",
+          "F",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 39,
+        "artist": "John Lennon",
+        "title": "Imagine",
+        "url": "https://tabs.ultimate-guitar.com/tab/john-lennon/imagine-chords-9306",
+        "chorus_chords": [
+          "F",
+          "G",
+          "C",
+          "Cmaj7",
+          "E",
+          "E7",
+          "F",
+          "G",
+          "C",
+          "Cmaj7",
+          "E",
+          "E7",
+          "F",
+          "G",
+          "C",
+          "Cmaj7",
+          "E",
+          "E7",
+          "F",
+          "G",
+          "C"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5458,
+      "absolute_score": 0.6667,
+      "interval_score": 0.2857,
+      "quality_score": 0.6667,
+      "chord_overlap": 0.75,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 9,
+        "artist": "Vance Joy",
+        "title": "Riptide",
+        "url": "https://tabs.ultimate-guitar.com/tab/vance-joy/riptide-chords-1237247",
+        "chorus_chords": [
+          "Am",
+          "G",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 24,
+        "artist": "Taylor Swift",
+        "title": "Love Story",
+        "url": "https://tabs.ultimate-guitar.com/tab/taylor-swift/love-story-chords-730809",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "C"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5456,
+      "absolute_score": 0.5714,
+      "interval_score": 0.4211,
+      "quality_score": 0.5714,
+      "chord_overlap": 0.75,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 4,
+        "artist": "Passenger",
+        "title": "Let Her Go",
+        "url": "https://tabs.ultimate-guitar.com/tab/passenger/let-her-go-chords-1137467",
+        "chorus_chords": [
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 34,
+        "artist": "Train",
+        "title": "Hey Soul Sister",
+        "url": "https://tabs.ultimate-guitar.com/tab/train/hey-soul-sister-chords-884388",
+        "chorus_chords": [
+          "F",
+          "G",
+          "C",
+          "G",
+          "F",
+          "G",
+          "C",
+          "G",
+          "F",
+          "G",
+          "C",
+          "G",
+          "F",
+          "G"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5453,
+      "absolute_score": 0.56,
+      "interval_score": 0.2609,
+      "quality_score": 0.72,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 2,
+        "artist": "Jeff Buckley",
+        "title": "Hallelujah",
+        "url": "https://tabs.ultimate-guitar.com/tab/jeff-buckley/hallelujah-chords-198052",
+        "chorus_chords": [
+          "F",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "C",
+          "Am",
+          "C",
+          "Am"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 45,
+        "artist": "Johnny Cash",
+        "title": "Hurt",
+        "url": "https://tabs.ultimate-guitar.com/tab/johnny-cash/hurt-chords-89849",
+        "chorus_chords": [
+          "Am",
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "Am"
+        ],
+        "global_transpose_by": 0
+      }
+    },
+    {
+      "score": 0.5444,
+      "absolute_score": 0.5333,
+      "interval_score": 0.3077,
+      "quality_score": 0.6667,
+      "chord_overlap": 1.0,
+      "transpose_right_by": 0,
+      "left": {
+        "rank": 2,
+        "artist": "Jeff Buckley",
+        "title": "Hallelujah",
+        "url": "https://tabs.ultimate-guitar.com/tab/jeff-buckley/hallelujah-chords-198052",
+        "chorus_chords": [
+          "F",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "C",
+          "Am",
+          "C",
+          "Am"
+        ],
+        "global_transpose_by": 0
+      },
+      "right": {
+        "rank": 24,
+        "artist": "Taylor Swift",
+        "title": "Love Story",
+        "url": "https://tabs.ultimate-guitar.com/tab/taylor-swift/love-story-chords-730809",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "C"
+        ],
+        "global_transpose_by": 0
+      }
+    }
+  ],
+  "medley": {
+    "average_transition_score": 0.5276,
+    "target_root": "C",
+    "songs": [
+      {
+        "rank": 44,
+        "artist": "The Beatles",
+        "title": "Yesterday",
+        "url": "https://tabs.ultimate-guitar.com/tab/the-beatles/yesterday-chords-17450",
+        "chorus_chords": [
+          "Em7",
+          "A7",
+          "Dm",
+          "Dm/C",
+          "Bb",
+          "Gm",
+          "C",
+          "F"
+        ],
+        "global_transpose_by": -4
+      },
+      {
+        "rank": 3,
+        "artist": "Elvis Presley",
+        "title": "Cant Help Falling In Love",
+        "url": "https://tabs.ultimate-guitar.com/tab/elvis-presley/cant-help-falling-in-love-chords-1086983",
+        "chorus_chords": [
+          "Em",
+          "B7",
+          "Em",
+          "B7",
+          "Em",
+          "B7",
+          "Em",
+          "A7",
+          "Dm",
+          "G"
+        ],
+        "global_transpose_by": -4
+      },
+      {
+        "rank": 25,
+        "artist": "Paramore",
+        "title": "The Only Exception",
+        "url": "https://tabs.ultimate-guitar.com/tab/paramore/the-only-exception-chords-874862",
+        "chorus_chords": [
+          "G",
+          "Dm",
+          "Cmaj7",
+          "G",
+          "Dm",
+          "Cmaj7",
+          "G"
+        ],
+        "global_transpose_by": 5
+      },
+      {
+        "rank": 26,
+        "artist": "John Denver",
+        "title": "Take Me Home Country Roads",
+        "url": "https://tabs.ultimate-guitar.com/tab/john-denver/take-me-home-country-roads-chords-1101747",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 5
+      },
+      {
+        "rank": 48,
+        "artist": "James Arthur",
+        "title": "Say You Wont Let Go",
+        "url": "https://tabs.ultimate-guitar.com/tab/james-arthur/say-you-wont-let-go-chords-1874747",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "global_transpose_by": 5
+      },
+      {
+        "rank": 7,
+        "artist": "Jason Mraz",
+        "title": "Im Yours",
+        "url": "https://tabs.ultimate-guitar.com/tab/jason-mraz/im-yours-chords-373896",
+        "chorus_chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "global_transpose_by": 5
+      },
+      {
+        "rank": 12,
+        "artist": "Ed Sheeran",
+        "title": "Photograph",
+        "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/photograph-chords-1493446",
+        "chorus_chords": [
+          "D",
+          "A",
+          "Bm",
+          "G",
+          "D"
+        ],
+        "global_transpose_by": -2
+      },
+      {
+        "rank": 21,
+        "artist": "Adele",
+        "title": "Someone Like You",
+        "url": "https://tabs.ultimate-guitar.com/tab/adele/someone-like-you-chords-1006040",
+        "chorus_chords": [
+          "A",
+          "E",
+          "F#m",
+          "D"
+        ],
+        "global_transpose_by": 3
+      },
+      {
+        "rank": 49,
+        "artist": "Lewis Capaldi",
+        "title": "Someone You Loved",
+        "url": "https://tabs.ultimate-guitar.com/tab/lewis-capaldi/someone-you-loved-chords-2512737",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ],
+        "global_transpose_by": 0
+      },
+      {
+        "rank": 24,
+        "artist": "Taylor Swift",
+        "title": "Love Story",
+        "url": "https://tabs.ultimate-guitar.com/tab/taylor-swift/love-story-chords-730809",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      {
+        "rank": 16,
+        "artist": "Justin Bieber",
+        "title": "Love Yourself",
+        "url": "https://tabs.ultimate-guitar.com/tab/justin-bieber/love-yourself-chords-1780199",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "F",
+          "C"
+        ],
+        "global_transpose_by": 0
+      },
+      {
+        "rank": 4,
+        "artist": "Passenger",
+        "title": "Let Her Go",
+        "url": "https://tabs.ultimate-guitar.com/tab/passenger/let-her-go-chords-1137467",
+        "chorus_chords": [
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": -5
+      },
+      {
+        "rank": 43,
+        "artist": "Kodaline",
+        "title": "All I Want",
+        "url": "https://tabs.ultimate-guitar.com/tab/kodaline/all-i-want-chords-1180259",
+        "chorus_chords": [
+          "Am",
+          "F",
+          "C",
+          "G"
+        ],
+        "global_transpose_by": 3
+      },
+      {
+        "rank": 50,
+        "artist": "Imagine Dragons",
+        "title": "Radioactive",
+        "url": "https://tabs.ultimate-guitar.com/tab/imagine-dragons/radioactive-chords-1171909",
+        "chorus_chords": [
+          "Am",
+          "C",
+          "G",
+          "D"
+        ],
+        "global_transpose_by": 3
+      },
+      {
+        "rank": 38,
+        "artist": "The Cranberries",
+        "title": "Zombie",
+        "url": "https://tabs.ultimate-guitar.com/tab/the-cranberries/zombie-chords-844902",
+        "chorus_chords": [
+          "Em",
+          "C",
+          "G",
+          "D/F#"
+        ],
+        "global_transpose_by": -4
+      },
+      {
+        "rank": 2,
+        "artist": "Jeff Buckley",
+        "title": "Hallelujah",
+        "url": "https://tabs.ultimate-guitar.com/tab/jeff-buckley/hallelujah-chords-198052",
+        "chorus_chords": [
+          "F",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "C",
+          "Am",
+          "C",
+          "Am"
+        ],
+        "global_transpose_by": -5
+      },
+      {
+        "rank": 45,
+        "artist": "Johnny Cash",
+        "title": "Hurt",
+        "url": "https://tabs.ultimate-guitar.com/tab/johnny-cash/hurt-chords-89849",
+        "chorus_chords": [
+          "Am",
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "Am"
+        ],
+        "global_transpose_by": 3
+      },
+      {
+        "rank": 14,
+        "artist": "Oasis",
+        "title": "Dont Look Back In Anger",
+        "url": "https://tabs.ultimate-guitar.com/tab/oasis/dont-look-back-in-anger-chords-6097",
+        "chorus_chords": [
+          "C",
+          "G",
+          "Am",
+          "E7",
+          "F",
+          "G",
+          "C",
+          "Am",
+          "G",
+          "C",
+          "G",
+          "Am",
+          "E7",
+          "F",
+          "G",
+          "C",
+          "G",
+          "Am",
+          "E7",
+          "F",
+          "G",
+          "C",
+          "Am",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      {
+        "rank": 39,
+        "artist": "John Lennon",
+        "title": "Imagine",
+        "url": "https://tabs.ultimate-guitar.com/tab/john-lennon/imagine-chords-9306",
+        "chorus_chords": [
+          "F",
+          "G",
+          "C",
+          "Cmaj7",
+          "E",
+          "E7",
+          "F",
+          "G",
+          "C",
+          "Cmaj7",
+          "E",
+          "E7",
+          "F",
+          "G",
+          "C",
+          "Cmaj7",
+          "E",
+          "E7",
+          "F",
+          "G",
+          "C"
+        ],
+        "global_transpose_by": -5
+      },
+      {
+        "rank": 34,
+        "artist": "Train",
+        "title": "Hey Soul Sister",
+        "url": "https://tabs.ultimate-guitar.com/tab/train/hey-soul-sister-chords-884388",
+        "chorus_chords": [
+          "F",
+          "G",
+          "C",
+          "G",
+          "F",
+          "G",
+          "C",
+          "G",
+          "F",
+          "G",
+          "C",
+          "G",
+          "F",
+          "G"
+        ],
+        "global_transpose_by": -5
+      },
+      {
+        "rank": 10,
+        "artist": "Ed Sheeran",
+        "title": "Thinking Out Loud",
+        "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/thinking-out-loud-chords-1486860",
+        "chorus_chords": [
+          "F",
+          "G",
+          "C",
+          "C/E",
+          "F",
+          "G",
+          "C",
+          "C/E",
+          "F",
+          "G",
+          "C",
+          "C/E",
+          "F",
+          "G",
+          "Am",
+          "G",
+          "F",
+          "C/E",
+          "Dm",
+          "G",
+          "C"
+        ],
+        "global_transpose_by": -5
+      },
+      {
+        "rank": 13,
+        "artist": "Bruno Mars",
+        "title": "When I Was Your Man",
+        "url": "https://tabs.ultimate-guitar.com/tab/bruno-mars/when-i-was-your-man-chords-1198871",
+        "chorus_chords": [
+          "G",
+          "F",
+          "G",
+          "C",
+          "F",
+          "G",
+          "C",
+          "F",
+          "G",
+          "Am",
+          "D7",
+          "F",
+          "Fm",
+          "C",
+          "F",
+          "C",
+          "Em/B"
+        ],
+        "global_transpose_by": 5
+      },
+      {
+        "rank": 41,
+        "artist": "Creedence Clearwater Revival",
+        "title": "Have You Ever Seen The Rain",
+        "url": "https://tabs.ultimate-guitar.com/tab/creedence-clearwater-revival/have-you-ever-seen-the-rain-chords-56479",
+        "chorus_chords": [
+          "F",
+          "G",
+          "C",
+          "C/B",
+          "Am",
+          "Am7/G",
+          "F",
+          "G",
+          "C",
+          "C/B",
+          "Am",
+          "Am7/G",
+          "F",
+          "G",
+          "C"
+        ],
+        "global_transpose_by": -5
+      },
+      {
+        "rank": 23,
+        "artist": "Coldplay",
+        "title": "Viva La Vida",
+        "url": "https://tabs.ultimate-guitar.com/tab/coldplay/viva-la-vida-chords-675427",
+        "chorus_chords": [
+          "C",
+          "Dadd11",
+          "G",
+          "Em",
+          "C",
+          "Dadd11",
+          "G",
+          "Em",
+          "C",
+          "Dadd11",
+          "G",
+          "Em",
+          "C",
+          "Dadd11",
+          "Bm",
+          "Em"
+        ],
+        "global_transpose_by": 0
+      },
+      {
+        "rank": 36,
+        "artist": "Green Day",
+        "title": "Boulevard Of Broken Dreams",
+        "url": "https://tabs.ultimate-guitar.com/tab/green-day/boulevard-of-broken-dreams-chords-146744",
+        "chorus_chords": [
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "B7"
+        ],
+        "global_transpose_by": 0
+      },
+      {
+        "rank": 1,
+        "artist": "Ed Sheeran",
+        "title": "Perfect",
+        "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/perfect-chords-1956589",
+        "chorus_chords": [
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "G"
+        ],
+        "global_transpose_by": -4
+      },
+      {
+        "rank": 5,
+        "artist": "John Legend",
+        "title": "All Of Me",
+        "url": "https://tabs.ultimate-guitar.com/tab/john-legend/all-of-me-chords-1248578",
+        "chorus_chords": [
+          "G",
+          "Emadd9",
+          "Am/C",
+          "C/D",
+          "D",
+          "G",
+          "Emadd9",
+          "Am/C",
+          "C/D",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "Dadd9",
+          "Em",
+          "C",
+          "G",
+          "Dadd9"
+        ],
+        "global_transpose_by": 5
+      },
+      {
+        "rank": 31,
+        "artist": "Misc Soundtrack/Lady Gaga\u00a0&\u00a0Bradley Cooper",
+        "title": "A Star Is Born - Shallow",
+        "url": "https://tabs.ultimate-guitar.com/tab/misc-soundtrack/a-star-is-born-shallow-chords-2488086",
+        "chorus_chords": [
+          "Am",
+          "D",
+          "G",
+          "D",
+          "Em"
+        ],
+        "global_transpose_by": 3
+      },
+      {
+        "rank": 30,
+        "artist": "Eagles",
+        "title": "Hotel California Tab By Eagles @ Ultimate-Guitar.Com",
+        "url": "https://tabs.ultimate-guitar.com/tab/eagles/hotel-california-tabs-14288",
+        "chorus_chords": [
+          "G",
+          "D",
+          "F#",
+          "Bm",
+          "G",
+          "D",
+          "Em",
+          "F#"
+        ],
+        "global_transpose_by": 5
+      },
+      {
+        "rank": 15,
+        "artist": "Eagles",
+        "title": "Hotel California",
+        "url": "https://tabs.ultimate-guitar.com/tab/eagles/hotel-california-chords-46190",
+        "chorus_chords": [
+          "F",
+          "C",
+          "E7",
+          "Am",
+          "F",
+          "C",
+          "Dm",
+          "E7"
+        ],
+        "global_transpose_by": -5
+      },
+      {
+        "rank": 33,
+        "artist": "The Beatles",
+        "title": "Let It Be",
+        "url": "https://tabs.ultimate-guitar.com/tab/the-beatles/let-it-be-chords-17427",
+        "chorus_chords": [
+          "Am",
+          "G",
+          "F",
+          "C",
+          "C",
+          "G",
+          "F",
+          "C/E",
+          "Dm7",
+          "C"
+        ],
+        "global_transpose_by": 3
+      },
+      {
+        "rank": 9,
+        "artist": "Vance Joy",
+        "title": "Riptide",
+        "url": "https://tabs.ultimate-guitar.com/tab/vance-joy/riptide-chords-1237247",
+        "chorus_chords": [
+          "Am",
+          "G",
+          "C"
+        ],
+        "global_transpose_by": 3
+      },
+      {
+        "rank": 11,
+        "artist": "Goo Goo Dolls",
+        "title": "Iris",
+        "url": "https://tabs.ultimate-guitar.com/tab/goo-goo-dolls/iris-chords-54512",
+        "chorus_chords": [
+          "Bm",
+          "A",
+          "G"
+        ],
+        "global_transpose_by": 1
+      },
+      {
+        "rank": 35,
+        "artist": "Plain White T's",
+        "title": "Hey There Delilah",
+        "url": "https://tabs.ultimate-guitar.com/tab/plain-white-ts/hey-there-delilah-chords-337676",
+        "chorus_chords": [
+          "D",
+          "Bm",
+          "D",
+          "Bm",
+          "A",
+          "D",
+          "Bm",
+          "D",
+          "Bm",
+          "D"
+        ],
+        "global_transpose_by": -2
+      },
+      {
+        "rank": 47,
+        "artist": "Green Day",
+        "title": "Good Riddance Time Of Your Life",
+        "url": "https://tabs.ultimate-guitar.com/tab/green-day/good-riddance-time-of-your-life-chords-12835",
+        "chorus_chords": [
+          "Em",
+          "G",
+          "Em",
+          "G",
+          "Em",
+          "D",
+          "G"
+        ],
+        "global_transpose_by": -4
+      },
+      {
+        "rank": 19,
+        "artist": "Oasis",
+        "title": "Wonderwall",
+        "url": "https://tabs.ultimate-guitar.com/tab/oasis/wonderwall-chords-27596",
+        "chorus_chords": [
+          "C",
+          "Em",
+          "G",
+          "Em"
+        ],
+        "global_transpose_by": 0
+      },
+      {
+        "rank": 20,
+        "artist": "Plain White T's",
+        "title": "Airplane Tab By Plain White T'S @ Ultimate-Guitar.Com",
+        "url": "https://tabs.ultimate-guitar.com/tab/plain-white-ts/airplane-tabs-1026549",
+        "chorus_chords": [
+          "Cm",
+          "G"
+        ],
+        "global_transpose_by": 0
+      },
+      {
+        "rank": 6,
+        "artist": "Radiohead",
+        "title": "Creep",
+        "url": "https://tabs.ultimate-guitar.com/tab/radiohead/creep-chords-4169",
+        "chorus_chords": [
+          "G",
+          "B",
+          "C",
+          "Cm",
+          "G",
+          "G",
+          "B",
+          "C",
+          "Cm",
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "global_transpose_by": 5
+      },
+      {
+        "rank": 42,
+        "artist": "Extreme",
+        "title": "More Than Words",
+        "url": "https://tabs.ultimate-guitar.com/tab/extreme/more-than-words-chords-14087",
+        "chorus_chords": [
+          "G",
+          "D/F#",
+          "Em",
+          "Bm",
+          "C",
+          "C",
+          "G/B",
+          "Am7",
+          "D7",
+          "G",
+          "G",
+          "D/F#",
+          "Em7",
+          "Bm",
+          "C",
+          "C",
+          "G/B",
+          "Am7",
+          "D7",
+          "G"
+        ],
+        "global_transpose_by": 5
+      },
+      {
+        "rank": 32,
+        "artist": "Ed Sheeran",
+        "title": "I See Fire",
+        "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/i-see-fire-chords-1430599",
+        "chorus_chords": [
+          "Em",
+          "C",
+          "D",
+          "Em",
+          "Em",
+          "C",
+          "D",
+          "Em",
+          "Em",
+          "C",
+          "D",
+          "Em",
+          "Em",
+          "C",
+          "D",
+          "Am7"
+        ],
+        "global_transpose_by": -4
+      },
+      {
+        "rank": 28,
+        "artist": "Coldplay",
+        "title": "Yellow",
+        "url": "https://tabs.ultimate-guitar.com/tab/coldplay/yellow-chords-114080",
+        "chorus_chords": [
+          "Cmaj7",
+          "Em7",
+          "D",
+          "Cmaj7",
+          "Em7",
+          "D",
+          "Cmaj7",
+          "Em7",
+          "D",
+          "Cmaj7"
+        ],
+        "global_transpose_by": 0
+      }
+    ],
+    "transitions": [
+      {
+        "from": {
+          "rank": 44,
+          "artist": "The Beatles",
+          "title": "Yesterday",
+          "url": "https://tabs.ultimate-guitar.com/tab/the-beatles/yesterday-chords-17450",
+          "chorus_chords": [
+            "Em7",
+            "A7",
+            "Dm",
+            "Dm/C",
+            "Bb",
+            "Gm",
+            "C",
+            "F"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 3,
+          "artist": "Elvis Presley",
+          "title": "Cant Help Falling In Love",
+          "url": "https://tabs.ultimate-guitar.com/tab/elvis-presley/cant-help-falling-in-love-chords-1086983",
+          "chorus_chords": [
+            "Em",
+            "B7",
+            "Em",
+            "B7",
+            "Em",
+            "B7",
+            "Em",
+            "A7",
+            "Dm",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.3634,
+        "transpose_to_by": -2
+      },
+      {
+        "from": {
+          "rank": 3,
+          "artist": "Elvis Presley",
+          "title": "Cant Help Falling In Love",
+          "url": "https://tabs.ultimate-guitar.com/tab/elvis-presley/cant-help-falling-in-love-chords-1086983",
+          "chorus_chords": [
+            "Em",
+            "B7",
+            "Em",
+            "B7",
+            "Em",
+            "B7",
+            "Em",
+            "A7",
+            "Dm",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 25,
+          "artist": "Paramore",
+          "title": "The Only Exception",
+          "url": "https://tabs.ultimate-guitar.com/tab/paramore/the-only-exception-chords-874862",
+          "chorus_chords": [
+            "G",
+            "Dm",
+            "Cmaj7",
+            "G",
+            "Dm",
+            "Cmaj7",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.3253,
+        "transpose_to_by": -3
+      },
+      {
+        "from": {
+          "rank": 25,
+          "artist": "Paramore",
+          "title": "The Only Exception",
+          "url": "https://tabs.ultimate-guitar.com/tab/paramore/the-only-exception-chords-874862",
+          "chorus_chords": [
+            "G",
+            "Dm",
+            "Cmaj7",
+            "G",
+            "Dm",
+            "Cmaj7",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 26,
+          "artist": "John Denver",
+          "title": "Take Me Home Country Roads",
+          "url": "https://tabs.ultimate-guitar.com/tab/john-denver/take-me-home-country-roads-chords-1101747",
+          "chorus_chords": [
+            "G",
+            "D",
+            "Em",
+            "C",
+            "G",
+            "D",
+            "C",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.5142,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 26,
+          "artist": "John Denver",
+          "title": "Take Me Home Country Roads",
+          "url": "https://tabs.ultimate-guitar.com/tab/john-denver/take-me-home-country-roads-chords-1101747",
+          "chorus_chords": [
+            "G",
+            "D",
+            "Em",
+            "C",
+            "G",
+            "D",
+            "C",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 48,
+          "artist": "James Arthur",
+          "title": "Say You Wont Let Go",
+          "url": "https://tabs.ultimate-guitar.com/tab/james-arthur/say-you-wont-let-go-chords-1874747",
+          "chorus_chords": [
+            "G",
+            "D",
+            "Em",
+            "C"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.6933,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 48,
+          "artist": "James Arthur",
+          "title": "Say You Wont Let Go",
+          "url": "https://tabs.ultimate-guitar.com/tab/james-arthur/say-you-wont-let-go-chords-1874747",
+          "chorus_chords": [
+            "G",
+            "D",
+            "Em",
+            "C"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 7,
+          "artist": "Jason Mraz",
+          "title": "Im Yours",
+          "url": "https://tabs.ultimate-guitar.com/tab/jason-mraz/im-yours-chords-373896",
+          "chorus_chords": [
+            "G",
+            "D",
+            "Em",
+            "C"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 1.0,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 7,
+          "artist": "Jason Mraz",
+          "title": "Im Yours",
+          "url": "https://tabs.ultimate-guitar.com/tab/jason-mraz/im-yours-chords-373896",
+          "chorus_chords": [
+            "G",
+            "D",
+            "Em",
+            "C"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 12,
+          "artist": "Ed Sheeran",
+          "title": "Photograph",
+          "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/photograph-chords-1493446",
+          "chorus_chords": [
+            "D",
+            "A",
+            "Bm",
+            "G",
+            "D"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.6389,
+        "transpose_to_by": 5
+      },
+      {
+        "from": {
+          "rank": 12,
+          "artist": "Ed Sheeran",
+          "title": "Photograph",
+          "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/photograph-chords-1493446",
+          "chorus_chords": [
+            "D",
+            "A",
+            "Bm",
+            "G",
+            "D"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 21,
+          "artist": "Adele",
+          "title": "Someone Like You",
+          "url": "https://tabs.ultimate-guitar.com/tab/adele/someone-like-you-chords-1006040",
+          "chorus_chords": [
+            "A",
+            "E",
+            "F#m",
+            "D"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.5611,
+        "transpose_to_by": 5
+      },
+      {
+        "from": {
+          "rank": 21,
+          "artist": "Adele",
+          "title": "Someone Like You",
+          "url": "https://tabs.ultimate-guitar.com/tab/adele/someone-like-you-chords-1006040",
+          "chorus_chords": [
+            "A",
+            "E",
+            "F#m",
+            "D"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 49,
+          "artist": "Lewis Capaldi",
+          "title": "Someone You Loved",
+          "url": "https://tabs.ultimate-guitar.com/tab/lewis-capaldi/someone-you-loved-chords-2512737",
+          "chorus_chords": [
+            "C",
+            "G",
+            "Am",
+            "F"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.5,
+        "transpose_to_by": -3
+      },
+      {
+        "from": {
+          "rank": 49,
+          "artist": "Lewis Capaldi",
+          "title": "Someone You Loved",
+          "url": "https://tabs.ultimate-guitar.com/tab/lewis-capaldi/someone-you-loved-chords-2512737",
+          "chorus_chords": [
+            "C",
+            "G",
+            "Am",
+            "F"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 24,
+          "artist": "Taylor Swift",
+          "title": "Love Story",
+          "url": "https://tabs.ultimate-guitar.com/tab/taylor-swift/love-story-chords-730809",
+          "chorus_chords": [
+            "C",
+            "G",
+            "Am",
+            "F",
+            "G",
+            "C"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.8125,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 24,
+          "artist": "Taylor Swift",
+          "title": "Love Story",
+          "url": "https://tabs.ultimate-guitar.com/tab/taylor-swift/love-story-chords-730809",
+          "chorus_chords": [
+            "C",
+            "G",
+            "Am",
+            "F",
+            "G",
+            "C"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 16,
+          "artist": "Justin Bieber",
+          "title": "Love Yourself",
+          "url": "https://tabs.ultimate-guitar.com/tab/justin-bieber/love-yourself-chords-1780199",
+          "chorus_chords": [
+            "C",
+            "G",
+            "Am",
+            "F",
+            "C",
+            "F",
+            "C"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.8122,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 16,
+          "artist": "Justin Bieber",
+          "title": "Love Yourself",
+          "url": "https://tabs.ultimate-guitar.com/tab/justin-bieber/love-yourself-chords-1780199",
+          "chorus_chords": [
+            "C",
+            "G",
+            "Am",
+            "F",
+            "C",
+            "F",
+            "C"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 4,
+          "artist": "Passenger",
+          "title": "Let Her Go",
+          "url": "https://tabs.ultimate-guitar.com/tab/passenger/let-her-go-chords-1137467",
+          "chorus_chords": [
+            "F",
+            "C",
+            "G",
+            "Am",
+            "F",
+            "C",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.8202,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 4,
+          "artist": "Passenger",
+          "title": "Let Her Go",
+          "url": "https://tabs.ultimate-guitar.com/tab/passenger/let-her-go-chords-1137467",
+          "chorus_chords": [
+            "F",
+            "C",
+            "G",
+            "Am",
+            "F",
+            "C",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 43,
+          "artist": "Kodaline",
+          "title": "All I Want",
+          "url": "https://tabs.ultimate-guitar.com/tab/kodaline/all-i-want-chords-1180259",
+          "chorus_chords": [
+            "Am",
+            "F",
+            "C",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.747,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 43,
+          "artist": "Kodaline",
+          "title": "All I Want",
+          "url": "https://tabs.ultimate-guitar.com/tab/kodaline/all-i-want-chords-1180259",
+          "chorus_chords": [
+            "Am",
+            "F",
+            "C",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 50,
+          "artist": "Imagine Dragons",
+          "title": "Radioactive",
+          "url": "https://tabs.ultimate-guitar.com/tab/imagine-dragons/radioactive-chords-1171909",
+          "chorus_chords": [
+            "Am",
+            "C",
+            "G",
+            "D"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.7358,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 50,
+          "artist": "Imagine Dragons",
+          "title": "Radioactive",
+          "url": "https://tabs.ultimate-guitar.com/tab/imagine-dragons/radioactive-chords-1171909",
+          "chorus_chords": [
+            "Am",
+            "C",
+            "G",
+            "D"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 38,
+          "artist": "The Cranberries",
+          "title": "Zombie",
+          "url": "https://tabs.ultimate-guitar.com/tab/the-cranberries/zombie-chords-844902",
+          "chorus_chords": [
+            "Em",
+            "C",
+            "G",
+            "D/F#"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.6083,
+        "transpose_to_by": 5
+      },
+      {
+        "from": {
+          "rank": 38,
+          "artist": "The Cranberries",
+          "title": "Zombie",
+          "url": "https://tabs.ultimate-guitar.com/tab/the-cranberries/zombie-chords-844902",
+          "chorus_chords": [
+            "Em",
+            "C",
+            "G",
+            "D/F#"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 2,
+          "artist": "Jeff Buckley",
+          "title": "Hallelujah",
+          "url": "https://tabs.ultimate-guitar.com/tab/jeff-buckley/hallelujah-chords-198052",
+          "chorus_chords": [
+            "F",
+            "Am",
+            "F",
+            "C",
+            "G",
+            "C",
+            "Am",
+            "C",
+            "Am"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.4409,
+        "transpose_to_by": -5
+      },
+      {
+        "from": {
+          "rank": 2,
+          "artist": "Jeff Buckley",
+          "title": "Hallelujah",
+          "url": "https://tabs.ultimate-guitar.com/tab/jeff-buckley/hallelujah-chords-198052",
+          "chorus_chords": [
+            "F",
+            "Am",
+            "F",
+            "C",
+            "G",
+            "C",
+            "Am",
+            "C",
+            "Am"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 45,
+          "artist": "Johnny Cash",
+          "title": "Hurt",
+          "url": "https://tabs.ultimate-guitar.com/tab/johnny-cash/hurt-chords-89849",
+          "chorus_chords": [
+            "Am",
+            "F",
+            "C",
+            "G",
+            "Am",
+            "F",
+            "C",
+            "G",
+            "Am",
+            "F",
+            "G",
+            "G",
+            "Am",
+            "F",
+            "G",
+            "Am"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.5453,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 45,
+          "artist": "Johnny Cash",
+          "title": "Hurt",
+          "url": "https://tabs.ultimate-guitar.com/tab/johnny-cash/hurt-chords-89849",
+          "chorus_chords": [
+            "Am",
+            "F",
+            "C",
+            "G",
+            "Am",
+            "F",
+            "C",
+            "G",
+            "Am",
+            "F",
+            "G",
+            "G",
+            "Am",
+            "F",
+            "G",
+            "Am"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 14,
+          "artist": "Oasis",
+          "title": "Dont Look Back In Anger",
+          "url": "https://tabs.ultimate-guitar.com/tab/oasis/dont-look-back-in-anger-chords-6097",
+          "chorus_chords": [
+            "C",
+            "G",
+            "Am",
+            "E7",
+            "F",
+            "G",
+            "C",
+            "Am",
+            "G",
+            "C",
+            "G",
+            "Am",
+            "E7",
+            "F",
+            "G",
+            "C",
+            "G",
+            "Am",
+            "E7",
+            "F",
+            "G",
+            "C",
+            "Am",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.6174,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 14,
+          "artist": "Oasis",
+          "title": "Dont Look Back In Anger",
+          "url": "https://tabs.ultimate-guitar.com/tab/oasis/dont-look-back-in-anger-chords-6097",
+          "chorus_chords": [
+            "C",
+            "G",
+            "Am",
+            "E7",
+            "F",
+            "G",
+            "C",
+            "Am",
+            "G",
+            "C",
+            "G",
+            "Am",
+            "E7",
+            "F",
+            "G",
+            "C",
+            "G",
+            "Am",
+            "E7",
+            "F",
+            "G",
+            "C",
+            "Am",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 39,
+          "artist": "John Lennon",
+          "title": "Imagine",
+          "url": "https://tabs.ultimate-guitar.com/tab/john-lennon/imagine-chords-9306",
+          "chorus_chords": [
+            "F",
+            "G",
+            "C",
+            "Cmaj7",
+            "E",
+            "E7",
+            "F",
+            "G",
+            "C",
+            "Cmaj7",
+            "E",
+            "E7",
+            "F",
+            "G",
+            "C",
+            "Cmaj7",
+            "E",
+            "E7",
+            "F",
+            "G",
+            "C"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.5574,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 39,
+          "artist": "John Lennon",
+          "title": "Imagine",
+          "url": "https://tabs.ultimate-guitar.com/tab/john-lennon/imagine-chords-9306",
+          "chorus_chords": [
+            "F",
+            "G",
+            "C",
+            "Cmaj7",
+            "E",
+            "E7",
+            "F",
+            "G",
+            "C",
+            "Cmaj7",
+            "E",
+            "E7",
+            "F",
+            "G",
+            "C",
+            "Cmaj7",
+            "E",
+            "E7",
+            "F",
+            "G",
+            "C"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 34,
+          "artist": "Train",
+          "title": "Hey Soul Sister",
+          "url": "https://tabs.ultimate-guitar.com/tab/train/hey-soul-sister-chords-884388",
+          "chorus_chords": [
+            "F",
+            "G",
+            "C",
+            "G",
+            "F",
+            "G",
+            "C",
+            "G",
+            "F",
+            "G",
+            "C",
+            "G",
+            "F",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.5463,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 34,
+          "artist": "Train",
+          "title": "Hey Soul Sister",
+          "url": "https://tabs.ultimate-guitar.com/tab/train/hey-soul-sister-chords-884388",
+          "chorus_chords": [
+            "F",
+            "G",
+            "C",
+            "G",
+            "F",
+            "G",
+            "C",
+            "G",
+            "F",
+            "G",
+            "C",
+            "G",
+            "F",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 10,
+          "artist": "Ed Sheeran",
+          "title": "Thinking Out Loud",
+          "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/thinking-out-loud-chords-1486860",
+          "chorus_chords": [
+            "F",
+            "G",
+            "C",
+            "C/E",
+            "F",
+            "G",
+            "C",
+            "C/E",
+            "F",
+            "G",
+            "C",
+            "C/E",
+            "F",
+            "G",
+            "Am",
+            "G",
+            "F",
+            "C/E",
+            "Dm",
+            "G",
+            "C"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.5635,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 10,
+          "artist": "Ed Sheeran",
+          "title": "Thinking Out Loud",
+          "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/thinking-out-loud-chords-1486860",
+          "chorus_chords": [
+            "F",
+            "G",
+            "C",
+            "C/E",
+            "F",
+            "G",
+            "C",
+            "C/E",
+            "F",
+            "G",
+            "C",
+            "C/E",
+            "F",
+            "G",
+            "Am",
+            "G",
+            "F",
+            "C/E",
+            "Dm",
+            "G",
+            "C"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 13,
+          "artist": "Bruno Mars",
+          "title": "When I Was Your Man",
+          "url": "https://tabs.ultimate-guitar.com/tab/bruno-mars/when-i-was-your-man-chords-1198871",
+          "chorus_chords": [
+            "G",
+            "F",
+            "G",
+            "C",
+            "F",
+            "G",
+            "C",
+            "F",
+            "G",
+            "Am",
+            "D7",
+            "F",
+            "Fm",
+            "C",
+            "F",
+            "C",
+            "Em/B"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.5743,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 13,
+          "artist": "Bruno Mars",
+          "title": "When I Was Your Man",
+          "url": "https://tabs.ultimate-guitar.com/tab/bruno-mars/when-i-was-your-man-chords-1198871",
+          "chorus_chords": [
+            "G",
+            "F",
+            "G",
+            "C",
+            "F",
+            "G",
+            "C",
+            "F",
+            "G",
+            "Am",
+            "D7",
+            "F",
+            "Fm",
+            "C",
+            "F",
+            "C",
+            "Em/B"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 41,
+          "artist": "Creedence Clearwater Revival",
+          "title": "Have You Ever Seen The Rain",
+          "url": "https://tabs.ultimate-guitar.com/tab/creedence-clearwater-revival/have-you-ever-seen-the-rain-chords-56479",
+          "chorus_chords": [
+            "F",
+            "G",
+            "C",
+            "C/B",
+            "Am",
+            "Am7/G",
+            "F",
+            "G",
+            "C",
+            "C/B",
+            "Am",
+            "Am7/G",
+            "F",
+            "G",
+            "C"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.4973,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 41,
+          "artist": "Creedence Clearwater Revival",
+          "title": "Have You Ever Seen The Rain",
+          "url": "https://tabs.ultimate-guitar.com/tab/creedence-clearwater-revival/have-you-ever-seen-the-rain-chords-56479",
+          "chorus_chords": [
+            "F",
+            "G",
+            "C",
+            "C/B",
+            "Am",
+            "Am7/G",
+            "F",
+            "G",
+            "C",
+            "C/B",
+            "Am",
+            "Am7/G",
+            "F",
+            "G",
+            "C"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 23,
+          "artist": "Coldplay",
+          "title": "Viva La Vida",
+          "url": "https://tabs.ultimate-guitar.com/tab/coldplay/viva-la-vida-chords-675427",
+          "chorus_chords": [
+            "C",
+            "Dadd11",
+            "G",
+            "Em",
+            "C",
+            "Dadd11",
+            "G",
+            "Em",
+            "C",
+            "Dadd11",
+            "G",
+            "Em",
+            "C",
+            "Dadd11",
+            "Bm",
+            "Em"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.465,
+        "transpose_to_by": 5
+      },
+      {
+        "from": {
+          "rank": 23,
+          "artist": "Coldplay",
+          "title": "Viva La Vida",
+          "url": "https://tabs.ultimate-guitar.com/tab/coldplay/viva-la-vida-chords-675427",
+          "chorus_chords": [
+            "C",
+            "Dadd11",
+            "G",
+            "Em",
+            "C",
+            "Dadd11",
+            "G",
+            "Em",
+            "C",
+            "Dadd11",
+            "G",
+            "Em",
+            "C",
+            "Dadd11",
+            "Bm",
+            "Em"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 36,
+          "artist": "Green Day",
+          "title": "Boulevard Of Broken Dreams",
+          "url": "https://tabs.ultimate-guitar.com/tab/green-day/boulevard-of-broken-dreams-chords-146744",
+          "chorus_chords": [
+            "C",
+            "G",
+            "D",
+            "Em",
+            "C",
+            "G",
+            "D",
+            "Em",
+            "C",
+            "G",
+            "D",
+            "Em",
+            "C",
+            "G",
+            "B7"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.5317,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 36,
+          "artist": "Green Day",
+          "title": "Boulevard Of Broken Dreams",
+          "url": "https://tabs.ultimate-guitar.com/tab/green-day/boulevard-of-broken-dreams-chords-146744",
+          "chorus_chords": [
+            "C",
+            "G",
+            "D",
+            "Em",
+            "C",
+            "G",
+            "D",
+            "Em",
+            "C",
+            "G",
+            "D",
+            "Em",
+            "C",
+            "G",
+            "B7"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 1,
+          "artist": "Ed Sheeran",
+          "title": "Perfect",
+          "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/perfect-chords-1956589",
+          "chorus_chords": [
+            "Em",
+            "C",
+            "G",
+            "D",
+            "Em",
+            "C",
+            "G",
+            "D",
+            "Em",
+            "C",
+            "G",
+            "D",
+            "Em",
+            "C",
+            "G",
+            "D",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.8608,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 1,
+          "artist": "Ed Sheeran",
+          "title": "Perfect",
+          "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/perfect-chords-1956589",
+          "chorus_chords": [
+            "Em",
+            "C",
+            "G",
+            "D",
+            "Em",
+            "C",
+            "G",
+            "D",
+            "Em",
+            "C",
+            "G",
+            "D",
+            "Em",
+            "C",
+            "G",
+            "D",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 5,
+          "artist": "John Legend",
+          "title": "All Of Me",
+          "url": "https://tabs.ultimate-guitar.com/tab/john-legend/all-of-me-chords-1248578",
+          "chorus_chords": [
+            "G",
+            "Emadd9",
+            "Am/C",
+            "C/D",
+            "D",
+            "G",
+            "Emadd9",
+            "Am/C",
+            "C/D",
+            "D",
+            "Em",
+            "C",
+            "G",
+            "Dadd9",
+            "Em",
+            "C",
+            "G",
+            "Dadd9"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.5161,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 5,
+          "artist": "John Legend",
+          "title": "All Of Me",
+          "url": "https://tabs.ultimate-guitar.com/tab/john-legend/all-of-me-chords-1248578",
+          "chorus_chords": [
+            "G",
+            "Emadd9",
+            "Am/C",
+            "C/D",
+            "D",
+            "G",
+            "Emadd9",
+            "Am/C",
+            "C/D",
+            "D",
+            "Em",
+            "C",
+            "G",
+            "Dadd9",
+            "Em",
+            "C",
+            "G",
+            "Dadd9"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 31,
+          "artist": "Misc Soundtrack/Lady Gaga\u00a0&\u00a0Bradley Cooper",
+          "title": "A Star Is Born - Shallow",
+          "url": "https://tabs.ultimate-guitar.com/tab/misc-soundtrack/a-star-is-born-shallow-chords-2488086",
+          "chorus_chords": [
+            "Am",
+            "D",
+            "G",
+            "D",
+            "Em"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.3703,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 31,
+          "artist": "Misc Soundtrack/Lady Gaga\u00a0&\u00a0Bradley Cooper",
+          "title": "A Star Is Born - Shallow",
+          "url": "https://tabs.ultimate-guitar.com/tab/misc-soundtrack/a-star-is-born-shallow-chords-2488086",
+          "chorus_chords": [
+            "Am",
+            "D",
+            "G",
+            "D",
+            "Em"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 30,
+          "artist": "Eagles",
+          "title": "Hotel California Tab By Eagles @ Ultimate-Guitar.Com",
+          "url": "https://tabs.ultimate-guitar.com/tab/eagles/hotel-california-tabs-14288",
+          "chorus_chords": [
+            "G",
+            "D",
+            "F#",
+            "Bm",
+            "G",
+            "D",
+            "Em",
+            "F#"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.5736,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 30,
+          "artist": "Eagles",
+          "title": "Hotel California Tab By Eagles @ Ultimate-Guitar.Com",
+          "url": "https://tabs.ultimate-guitar.com/tab/eagles/hotel-california-tabs-14288",
+          "chorus_chords": [
+            "G",
+            "D",
+            "F#",
+            "Bm",
+            "G",
+            "D",
+            "Em",
+            "F#"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 15,
+          "artist": "Eagles",
+          "title": "Hotel California",
+          "url": "https://tabs.ultimate-guitar.com/tab/eagles/hotel-california-chords-46190",
+          "chorus_chords": [
+            "F",
+            "C",
+            "E7",
+            "Am",
+            "F",
+            "C",
+            "Dm",
+            "E7"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.4625,
+        "transpose_to_by": 2
+      },
+      {
+        "from": {
+          "rank": 15,
+          "artist": "Eagles",
+          "title": "Hotel California",
+          "url": "https://tabs.ultimate-guitar.com/tab/eagles/hotel-california-chords-46190",
+          "chorus_chords": [
+            "F",
+            "C",
+            "E7",
+            "Am",
+            "F",
+            "C",
+            "Dm",
+            "E7"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 33,
+          "artist": "The Beatles",
+          "title": "Let It Be",
+          "url": "https://tabs.ultimate-guitar.com/tab/the-beatles/let-it-be-chords-17427",
+          "chorus_chords": [
+            "Am",
+            "G",
+            "F",
+            "C",
+            "C",
+            "G",
+            "F",
+            "C/E",
+            "Dm7",
+            "C"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.4097,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 33,
+          "artist": "The Beatles",
+          "title": "Let It Be",
+          "url": "https://tabs.ultimate-guitar.com/tab/the-beatles/let-it-be-chords-17427",
+          "chorus_chords": [
+            "Am",
+            "G",
+            "F",
+            "C",
+            "C",
+            "G",
+            "F",
+            "C/E",
+            "Dm7",
+            "C"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 9,
+          "artist": "Vance Joy",
+          "title": "Riptide",
+          "url": "https://tabs.ultimate-guitar.com/tab/vance-joy/riptide-chords-1237247",
+          "chorus_chords": [
+            "Am",
+            "G",
+            "C"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.3694,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 9,
+          "artist": "Vance Joy",
+          "title": "Riptide",
+          "url": "https://tabs.ultimate-guitar.com/tab/vance-joy/riptide-chords-1237247",
+          "chorus_chords": [
+            "Am",
+            "G",
+            "C"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 11,
+          "artist": "Goo Goo Dolls",
+          "title": "Iris",
+          "url": "https://tabs.ultimate-guitar.com/tab/goo-goo-dolls/iris-chords-54512",
+          "chorus_chords": [
+            "Bm",
+            "A",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.4717,
+        "transpose_to_by": -2
+      },
+      {
+        "from": {
+          "rank": 11,
+          "artist": "Goo Goo Dolls",
+          "title": "Iris",
+          "url": "https://tabs.ultimate-guitar.com/tab/goo-goo-dolls/iris-chords-54512",
+          "chorus_chords": [
+            "Bm",
+            "A",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 35,
+          "artist": "Plain White T's",
+          "title": "Hey There Delilah",
+          "url": "https://tabs.ultimate-guitar.com/tab/plain-white-ts/hey-there-delilah-chords-337676",
+          "chorus_chords": [
+            "D",
+            "Bm",
+            "D",
+            "Bm",
+            "A",
+            "D",
+            "Bm",
+            "D",
+            "Bm",
+            "D"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.3156,
+        "transpose_to_by": -2
+      },
+      {
+        "from": {
+          "rank": 35,
+          "artist": "Plain White T's",
+          "title": "Hey There Delilah",
+          "url": "https://tabs.ultimate-guitar.com/tab/plain-white-ts/hey-there-delilah-chords-337676",
+          "chorus_chords": [
+            "D",
+            "Bm",
+            "D",
+            "Bm",
+            "A",
+            "D",
+            "Bm",
+            "D",
+            "Bm",
+            "D"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 47,
+          "artist": "Green Day",
+          "title": "Good Riddance Time Of Your Life",
+          "url": "https://tabs.ultimate-guitar.com/tab/green-day/good-riddance-time-of-your-life-chords-12835",
+          "chorus_chords": [
+            "Em",
+            "G",
+            "Em",
+            "G",
+            "Em",
+            "D",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.4104,
+        "transpose_to_by": -5
+      },
+      {
+        "from": {
+          "rank": 47,
+          "artist": "Green Day",
+          "title": "Good Riddance Time Of Your Life",
+          "url": "https://tabs.ultimate-guitar.com/tab/green-day/good-riddance-time-of-your-life-chords-12835",
+          "chorus_chords": [
+            "Em",
+            "G",
+            "Em",
+            "G",
+            "Em",
+            "D",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 19,
+          "artist": "Oasis",
+          "title": "Wonderwall",
+          "url": "https://tabs.ultimate-guitar.com/tab/oasis/wonderwall-chords-27596",
+          "chorus_chords": [
+            "C",
+            "Em",
+            "G",
+            "Em"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.5306,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 19,
+          "artist": "Oasis",
+          "title": "Wonderwall",
+          "url": "https://tabs.ultimate-guitar.com/tab/oasis/wonderwall-chords-27596",
+          "chorus_chords": [
+            "C",
+            "Em",
+            "G",
+            "Em"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 20,
+          "artist": "Plain White T's",
+          "title": "Airplane Tab By Plain White T'S @ Ultimate-Guitar.Com",
+          "url": "https://tabs.ultimate-guitar.com/tab/plain-white-ts/airplane-tabs-1026549",
+          "chorus_chords": [
+            "Cm",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.2542,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 20,
+          "artist": "Plain White T's",
+          "title": "Airplane Tab By Plain White T'S @ Ultimate-Guitar.Com",
+          "url": "https://tabs.ultimate-guitar.com/tab/plain-white-ts/airplane-tabs-1026549",
+          "chorus_chords": [
+            "Cm",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 6,
+          "artist": "Radiohead",
+          "title": "Creep",
+          "url": "https://tabs.ultimate-guitar.com/tab/radiohead/creep-chords-4169",
+          "chorus_chords": [
+            "G",
+            "B",
+            "C",
+            "Cm",
+            "G",
+            "G",
+            "B",
+            "C",
+            "Cm",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.1924,
+        "transpose_to_by": 5
+      },
+      {
+        "from": {
+          "rank": 6,
+          "artist": "Radiohead",
+          "title": "Creep",
+          "url": "https://tabs.ultimate-guitar.com/tab/radiohead/creep-chords-4169",
+          "chorus_chords": [
+            "G",
+            "B",
+            "C",
+            "Cm",
+            "G",
+            "G",
+            "B",
+            "C",
+            "Cm",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 42,
+          "artist": "Extreme",
+          "title": "More Than Words",
+          "url": "https://tabs.ultimate-guitar.com/tab/extreme/more-than-words-chords-14087",
+          "chorus_chords": [
+            "G",
+            "D/F#",
+            "Em",
+            "Bm",
+            "C",
+            "C",
+            "G/B",
+            "Am7",
+            "D7",
+            "G",
+            "G",
+            "D/F#",
+            "Em7",
+            "Bm",
+            "C",
+            "C",
+            "G/B",
+            "Am7",
+            "D7",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.4002,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 42,
+          "artist": "Extreme",
+          "title": "More Than Words",
+          "url": "https://tabs.ultimate-guitar.com/tab/extreme/more-than-words-chords-14087",
+          "chorus_chords": [
+            "G",
+            "D/F#",
+            "Em",
+            "Bm",
+            "C",
+            "C",
+            "G/B",
+            "Am7",
+            "D7",
+            "G",
+            "G",
+            "D/F#",
+            "Em7",
+            "Bm",
+            "C",
+            "C",
+            "G/B",
+            "Am7",
+            "D7",
+            "G"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 32,
+          "artist": "Ed Sheeran",
+          "title": "I See Fire",
+          "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/i-see-fire-chords-1430599",
+          "chorus_chords": [
+            "Em",
+            "C",
+            "D",
+            "Em",
+            "Em",
+            "C",
+            "D",
+            "Em",
+            "Em",
+            "C",
+            "D",
+            "Em",
+            "Em",
+            "C",
+            "D",
+            "Am7"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.3195,
+        "transpose_to_by": 0
+      },
+      {
+        "from": {
+          "rank": 32,
+          "artist": "Ed Sheeran",
+          "title": "I See Fire",
+          "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/i-see-fire-chords-1430599",
+          "chorus_chords": [
+            "Em",
+            "C",
+            "D",
+            "Em",
+            "Em",
+            "C",
+            "D",
+            "Em",
+            "Em",
+            "C",
+            "D",
+            "Em",
+            "Em",
+            "C",
+            "D",
+            "Am7"
+          ],
+          "global_transpose_by": 0
+        },
+        "to": {
+          "rank": 28,
+          "artist": "Coldplay",
+          "title": "Yellow",
+          "url": "https://tabs.ultimate-guitar.com/tab/coldplay/yellow-chords-114080",
+          "chorus_chords": [
+            "Cmaj7",
+            "Em7",
+            "D",
+            "Cmaj7",
+            "Em7",
+            "D",
+            "Cmaj7",
+            "Em7",
+            "D",
+            "Cmaj7"
+          ],
+          "global_transpose_by": 0
+        },
+        "score": 0.175,
+        "transpose_to_by": 2
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}{{ song.artist }} - {{ song.title }}{% endblock %}
+{% block content %}
+<section class="page-header">
+  <h1>{{ song.artist }} - {{ song.title }}</h1>
+  <p><a href="{{ song.url }}" target="_blank" rel="noreferrer">{{ song.url }}</a></p>
+</section>
+
+<section class="panel">
+  <dl class="details">
+    <dt>{{ t("explore_title") }}</dt><dd>{{ song.explore_title or "" }}</dd>
+    <dt>{{ t("explore_rank") }}</dt><dd>{{ song.explore_rank or "" }}</dd>
+    <dt>{{ t("first_seen") }}</dt><dd>{{ song.first_seen_at or "" }}</dd>
+    <dt>{{ t("last_seen") }}</dt><dd>{{ song.last_seen_at or "" }}</dd>
+    <dt>{{ t("last_scraped") }}</dt><dd>{{ song.last_scraped_at or "" }}</dd>
+    <dt>{{ t("scrape_count") }}</dt><dd>{{ song.scrape_count or 0 }}</dd>
+  </dl>
+
+  <h2>{{ t("original_chorus_chords") }}</h2>
+  {% if song.chorus_chords %}
+    <div class="chords">
+      {% for chord in song.chorus_chords %}<span>{{ chord }}</span>{% endfor %}
+    </div>
+  {% else %}
+    <p>{{ t("no_chorus_stored") }}</p>
+  {% endif %}
+</section>
+
+<section class="panel">
+  <h2>{{ t("sources") }}</h2>
+  <ul class="source-list">
+    {% for source in song.sources %}
+      <li>
+        <span>{{ source|source_label }}</span>
+        <a href="{{ lang_url('medley', source_id=source) }}">{{ t("open_medley") }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+{% if song.errors %}
+<section class="panel">
+  <h2>{{ t("errors") }}</h2>
+  <table>
+    <thead><tr><th>{{ t("at") }}</th><th>{{ t("source") }}</th><th>{{ t("error") }}</th></tr></thead>
+    <tbody>
+      {% for error in song.errors %}
+        <tr><td>{{ error.at }}</td><td>{{ error.source|source_label }}</td><td>{{ error.error }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endif %}
+{% endblock %}

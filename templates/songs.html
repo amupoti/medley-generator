@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}{{ t("songs_title") }}{% endblock %}
+{% block content %}
+<section class="page-header">
+  <h1>{{ t("songs_title") }}</h1>
+  <p>{{ songs|length }} {{ t("stored_songs") }}{% if query %} {{ t("matching") }} "{{ query }}"{% endif %}</p>
+</section>
+
+<form class="search" method="get" action="{{ lang_url('songs') }}">
+  <input type="hidden" name="lang" value="{{ current_lang }}">
+  <input name="q" value="{{ query }}" placeholder="{{ t("search_placeholder") }}">
+  <button type="submit">{{ t("search") }}</button>
+</form>
+
+<section class="panel">
+  <table>
+    <thead>
+      <tr><th>{{ t("artist") }}</th><th>{{ t("title") }}</th><th>{{ t("chorus") }}</th><th>{{ t("sources") }}</th><th></th></tr>
+    </thead>
+    <tbody>
+      {% for song in songs %}
+        <tr>
+          <td>{{ song.artist or "" }}</td>
+          <td>{{ song.title or song.explore_title or "" }}</td>
+          <td>{{ song.chorus_chords|length }}</td>
+          <td>{{ song.sources|length }}</td>
+          <td><a href="{{ lang_url('song_detail', encoded_url=song.url|song_url) }}">{{ t("view") }}</a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

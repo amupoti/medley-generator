@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}{{ t("analysis_job") }} {{ job.id }}{% endblock %}
+{% block head %}
+  {% if job.status in ["queued", "running"] %}
+    <meta http-equiv="refresh" content="5">
+  {% endif %}
+{% endblock %}
+{% block content %}
+<section class="page-header">
+  <h1>{{ t("analysis_job") }}</h1>
+  <p>{{ job.source_id|source_label }}</p>
+</section>
+
+<section class="panel">
+  <dl class="details">
+    <dt>{{ t("status") }}</dt><dd><span class="status {{ job.status }}">{{ status_text(job.status) }}</span></dd>
+    <dt>{{ t("kind") }}</dt><dd>{{ kind_text(job.kind) }}</dd>
+    <dt>{{ t("created") }}</dt><dd>{{ job.created_at }}</dd>
+    <dt>{{ t("updated") }}</dt><dd>{{ job.updated_at }}</dd>
+  </dl>
+
+  {% if job.error %}
+    <p class="error">{{ job.error }}</p>
+  {% endif %}
+
+  {% if job.summary %}
+    <div class="summary-grid">
+      <div><span>{{ job.summary.discovered_count }}</span><label>{{ t("discovered") }}</label></div>
+      <div><span>{{ job.summary.skipped_count }}</span><label>{{ t("skipped") }}</label></div>
+      <div><span>{{ job.summary.scraped_count }}</span><label>{{ t("scraped") }}</label></div>
+      <div><span>{{ job.summary.failure_count }}</span><label>{{ t("failures") }}</label></div>
+      <div><span>{{ job.summary.total_db_songs }}</span><label>{{ t("db_songs") }}</label></div>
+    </div>
+    <p><a class="button-link" href="{{ lang_url('medley', source_id=job.source_id) }}">{{ t("open_source_medley") }}</a></p>
+
+    {% if job.summary.failures %}
+      <h2>{{ t("failures") }}</h2>
+      <table>
+        <thead><tr><th>{{ t("song") }}</th><th>{{ t("error") }}</th></tr></thead>
+        <tbody>
+          {% for failure in job.summary.failures %}
+            <tr><td>{{ failure.explore_title or failure.url }}</td><td>{{ failure.error }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% endif %}
+  {% else %}
+    <p>{{ t("job_refresh") }}</p>
+  {% endif %}
+</section>
+{% endblock %}
