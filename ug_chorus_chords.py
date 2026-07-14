@@ -13,6 +13,7 @@ from urllib.request import Request, urlopen
 SECTION_RE = re.compile(r"^\s*\[([^\]]+)\]\s*$")
 ANY_SECTION_RE = re.compile(r"^\s*\[[^\]]+\]\s*$")
 CHORD_RE = re.compile(r"\[ch\](.*?)\[/ch\]", re.IGNORECASE)
+TAB_RE = re.compile(r"\[/?tab\]", re.IGNORECASE)
 CHORD_TOKEN_RE = re.compile(
     r"^[A-G](?:#|b)?(?:maj|min|dim|aug|sus|add|m)?[0-9]*(?:sus[0-9]+)?(?:add[0-9]+)?(?:/[A-G](?:#|b)?)?$",
     re.IGNORECASE,
@@ -206,7 +207,20 @@ def extract_artist(text: str, page_title: str) -> str:
 
 
 def extract_chorus_chords(content: str) -> list[str]:
-    chords = []
+    return [chord["symbol"] for line in extract_chorus_lines(content) for chord in line.get("chords", [])]
+
+
+def extract_chorus_lines(content: str) -> list[dict]:
+    lines = []
+    for line in first_chorus_source_lines(content):
+        parsed = parse_chorus_line(line)
+        if parsed["lyrics"].strip() or parsed["chords"]:
+            lines.append(parsed)
+    return lines
+
+
+def first_chorus_source_lines(content: str) -> list[str]:
+    lines = []
     in_chorus = False
     found_chorus = False
 
@@ -224,13 +238,40 @@ def extract_chorus_chords(content: str) -> list[str]:
         if in_chorus and ANY_SECTION_RE.match(line):
             break
         if in_chorus:
-            marked_chords = [chord.strip() for chord in CHORD_RE.findall(line) if chord.strip()]
-            if marked_chords:
-                chords.extend(marked_chords)
-            elif is_chord_line(line):
-                chords.extend(line.split())
+            lines.append(line)
 
-    return chords
+    return lines
+
+
+def parse_chorus_line(line: str) -> dict:
+    line = TAB_RE.sub("", line)
+    if CHORD_RE.search(line):
+        return parse_marked_chord_line(line)
+    if is_chord_line(line):
+        return {
+            "lyrics": "",
+            "chords": [
+                {"symbol": match.group(0), "position": match.start()}
+                for match in re.finditer(r"\S+", line)
+            ],
+        }
+    return {"lyrics": line, "chords": []}
+
+
+def parse_marked_chord_line(line: str) -> dict:
+    lyrics = []
+    chords = []
+    cursor = 0
+
+    for match in CHORD_RE.finditer(line):
+        lyrics.append(line[cursor : match.start()])
+        chord = match.group(1).strip()
+        if chord:
+            chords.append({"symbol": chord, "position": len("".join(lyrics))})
+        cursor = match.end()
+
+    lyrics.append(line[cursor:])
+    return {"lyrics": "".join(lyrics), "chords": chords}
 
 
 def is_chorus_section(section: str) -> bool:
@@ -261,6 +302,7 @@ def main() -> int:
         "title": song["title"],
         "artist": song["artist"],
         "chorus_chords": extract_chorus_chords(song["content"]),
+        "chorus_lines": extract_chorus_lines(song["content"]),
     }
 
     Path(args.output).write_text(json.dumps(output, indent=2) + "\n", encoding="utf-8")

@@ -17,7 +17,16 @@
   </dl>
 
   <h2>{{ t("original_chorus_chords") }}</h2>
-  {% if song.chorus_chords %}
+  {% if song.tab_lines %}
+    <div class="tab-lines">
+      {% for line in song.tab_lines %}
+        <div class="tab-line">
+          {% if line.chords %}<pre class="tab-chords">{{ line.chords }}</pre>{% endif %}
+          {% if line.lyrics %}<pre class="tab-lyrics">{{ line.lyrics }}</pre>{% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% elif song.chorus_chords %}
     <div class="chords">
       {% for chord in song.chorus_chords %}<span>{{ chord }}</span>{% endfor %}
     </div>

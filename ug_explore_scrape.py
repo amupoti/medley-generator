@@ -7,8 +7,11 @@ from typing import Optional
 
 from ug_chorus_chords import (
     dismiss_cookie_popup,
+    extract_song as extract_store_song,
     extract_artist,
     extract_chorus_chords,
+    extract_chorus_lines,
+    extract_store,
     extract_title,
     launch_browser,
 )
@@ -99,14 +102,24 @@ def scrape_song(page, explore_song: dict, delay_ms: int) -> dict:
     page.goto(explore_song["url"], wait_until="domcontentloaded", timeout=60000)
     dismiss_cookie_popup(page)
     page.wait_for_timeout(delay_ms)
+    page_title = page.title()
     text = page.locator("body").inner_text(timeout=10000)
-    chords = extract_chorus_chords(text)
+    store_song = {}
+    content = text
+    try:
+        store_song = extract_store_song(extract_store(page.content()))
+        content = store_song["content"]
+    except Exception:
+        pass
+
+    chords = extract_chorus_chords(content)
 
     return {
         **explore_song,
-        "title": extract_title(text, page.title()),
-        "artist": extract_artist(text, page.title()),
+        "title": store_song.get("title") or extract_title(text, page_title),
+        "artist": store_song.get("artist") or extract_artist(text, page_title),
         "chorus_chords": chords,
+        "chorus_lines": extract_chorus_lines(content),
         "has_chorus": bool(chords),
     }
 

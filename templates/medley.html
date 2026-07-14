@@ -24,6 +24,8 @@
       {{ t("show_original_choruses") }}
     </label>
     <button type="submit">{{ t("apply") }}</button>
+    <button class="secondary-action" type="button" data-share-html data-export-url="{{ export_url }}" data-export-filename="{{ export_filename }}">{{ t("share_html") }}</button>
+    <a class="button-link secondary-action" href="{{ export_url }}">{{ t("download_html") }}</a>
   </form>
   <div class="summary-grid">
     <div><span>{{ output.song_count }}</span><label>{{ t("comparable_songs") }}</label></div>
@@ -41,14 +43,36 @@
         <h2>{{ song.artist }} - {{ song.title }}</h2>
         {% if show_original %}
           <div class="label">{{ t("original_chorus") }}</div>
-          <div class="chords">
-            {% for chord in song.chorus_chords %}<span>{{ chord }}</span>{% endfor %}
-          </div>
+          {% if song.original_tab_lines %}
+            <div class="tab-lines">
+              {% for line in song.original_tab_lines %}
+                <div class="tab-line">
+                  {% if line.chords %}<pre class="tab-chords">{{ line.chords }}</pre>{% endif %}
+                  {% if line.lyrics %}<pre class="tab-lyrics">{{ line.lyrics }}</pre>{% endif %}
+                </div>
+              {% endfor %}
+            </div>
+          {% else %}
+            <div class="chords">
+              {% for chord in song.chorus_chords %}<span>{{ chord }}</span>{% endfor %}
+            </div>
+          {% endif %}
         {% endif %}
         <div class="label">{{ t("medley_chorus") }} {{ target_root }} ({{ song.transpose_label }})</div>
-        <div class="chords medley-chords">
-          {% for chord in song.medley_chords %}<span>{{ chord }}</span>{% endfor %}
-        </div>
+        {% if song.medley_tab_lines %}
+          <div class="tab-lines medley-tab-lines">
+            {% for line in song.medley_tab_lines %}
+              <div class="tab-line">
+                {% if line.chords %}<pre class="tab-chords">{{ line.chords }}</pre>{% endif %}
+                {% if line.lyrics %}<pre class="tab-lyrics">{{ line.lyrics }}</pre>{% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <div class="chords medley-chords">
+            {% for chord in song.medley_chords %}<span>{{ chord }}</span>{% endfor %}
+          </div>
+        {% endif %}
         {% if transition %}
           <p class="transition">{{ t("next_transition_score") }}: <strong>{{ "%.4f"|format(transition.score) }}</strong></p>
         {% else %}
@@ -61,4 +85,24 @@
 {% else %}
   <section class="panel"><p>{{ t("no_chorus_source") }}</p></section>
 {% endif %}
+<script>
+  document.querySelector("[data-share-html]")?.addEventListener("click", async (event) => {
+    const button = event.currentTarget;
+    const url = button.dataset.exportUrl;
+    const filename = button.dataset.exportFilename || "medley.html";
+    try {
+      const response = await fetch(url);
+      const blob = await response.blob();
+      const file = new File([blob], filename, { type: "text/html" });
+      if (navigator.canShare && navigator.canShare({ files: [file] }) && navigator.share) {
+        await navigator.share({ files: [file], title: document.title });
+        return;
+      }
+      window.location.href = url;
+      alert("{{ t("share_not_available") }}");
+    } catch (error) {
+      window.location.href = url;
+    }
+  });
+</script>
 {% endblock %}
