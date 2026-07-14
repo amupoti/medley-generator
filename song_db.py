@@ -68,6 +68,7 @@ def merge_song(db: dict, song: dict, source_url: Optional[str] = None, scraped_a
         "explore_title",
         "explore_rank",
         "chorus_chords",
+        "chorus_lines",
         "has_chorus",
     ]:
         if field in song:

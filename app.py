@@ -2,14 +2,15 @@
 from __future__ import annotations
 
 import base64
+import re
 import threading
 import uuid
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import quote, urljoin
 
-from flask import Flask, abort, redirect, render_template, request, url_for
+from flask import Flask, Response, abort, redirect, render_template, request, url_for
 
 from chord_utils import PITCH_CLASSES
 from chord_utils import transpose_chords
@@ -81,6 +82,10 @@ TRANSLATIONS = {
         "target_root": "Tonalitat objectiu",
         "target_key": "Tonalitat objectiu",
         "show_original_choruses": "Mostra les tornades originals",
+        "export_whatsapp": "Exporta a WhatsApp",
+        "share_html": "Comparteix HTML",
+        "download_html": "Descarrega HTML",
+        "share_not_available": "Aquest navegador no pot compartir fitxers. S'ha descarregat l'HTML.",
         "apply": "Aplica",
         "original_chorus": "Tornada original",
         "medley_chorus": "Tornada del medley en",
@@ -169,6 +174,10 @@ TRANSLATIONS = {
         "target_root": "Tonalidad objetivo",
         "target_key": "Tonalidad objetivo",
         "show_original_choruses": "Mostrar los estribillos originales",
+        "export_whatsapp": "Exportar a WhatsApp",
+        "share_html": "Compartir HTML",
+        "download_html": "Descargar HTML",
+        "share_not_available": "Este navegador no puede compartir archivos. Se ha descargado el HTML.",
         "apply": "Aplicar",
         "original_chorus": "Estribillo original",
         "medley_chorus": "Estribillo del medley en",
@@ -305,6 +314,100 @@ def localized_transpose_label(shift: int, lang: str) -> str:
     direction = labels["transpose_up"] if shift > 0 else labels["transpose_down"]
     semitone = labels["semitone_one"] if amount == 1 else labels["semitone_other"]
     return f"{direction} {amount} {semitone}"
+
+
+def format_chorus_lines(lines: list[dict], shift: int = 0) -> list[dict]:
+    formatted = []
+    for line in lines or []:
+        chords = line.get("chords", [])
+        symbols = [chord["symbol"] for chord in chords]
+        shifted_symbols = transpose_chords(symbols, shift)
+        chord_line = build_chord_line(line.get("lyrics", ""), chords, shifted_symbols)
+        formatted.append({"chords": chord_line, "lyrics": line.get("lyrics", "")})
+    return formatted
+
+
+def build_chord_line(lyrics: str, chords: list[dict], symbols: list[str]) -> str:
+    width = len(lyrics)
+    for chord, symbol in zip(chords, symbols):
+        width = max(width, int(chord.get("position", 0)) + len(symbol))
+    chars = [" "] * width
+    for chord, symbol in zip(chords, symbols):
+        position = int(chord.get("position", 0))
+        for index, char in enumerate(symbol):
+            target = position + index
+            if target < len(chars):
+                chars[target] = char
+    return "".join(chars).rstrip()
+
+
+def build_whatsapp_text(source_id: str, songs: list[dict], target_root: str, show_original: bool) -> str:
+    lines = [
+        f"Medley - {source_label_filter(source_id)}",
+        f"Target root: {target_root}",
+        "",
+    ]
+    for index, song in enumerate(songs, 1):
+        lines.append(f"{index}. {song.get('artist')} - {song.get('title')}")
+        if show_original and song.get("original_tab_lines"):
+            lines.append("Original:")
+            lines.extend(tab_lines_as_text(song["original_tab_lines"]))
+        lines.append(f"Medley ({target_root}):")
+        if song.get("medley_tab_lines"):
+            lines.extend(tab_lines_as_text(song["medley_tab_lines"]))
+        else:
+            lines.append(" ".join(song.get("medley_chords", [])))
+        lines.append("")
+    return "\n".join(lines).strip()
+
+
+def tab_lines_as_text(lines: list[dict]) -> list[str]:
+    text = []
+    for line in lines:
+        if line.get("chords"):
+            text.append(line["chords"])
+        if line.get("lyrics"):
+            text.append(line["lyrics"])
+    return text
+
+
+def build_medley_context(source_id: str) -> dict:
+    target_root = request.args.get("target_root", DEFAULT_TARGET_ROOT)
+    if target_root not in PITCH_CLASSES:
+        target_root = DEFAULT_TARGET_ROOT
+    limit = parse_int(request.args.get("limit"), MEDLEY_LIMIT)
+    show_original = request.args.get("show_original", "1") != "0"
+    songs = source_songs(source_id)
+    output = build_output(songs, TOP_PAIR_COUNT, target_root)
+    medley_songs = []
+    for song in output["medley"]["songs"][:limit]:
+        shift = song.get("global_transpose_by", 0)
+        medley_songs.append(
+            {
+                **song,
+                "medley_chords": transpose_chords(song["chorus_chords"], shift),
+                "transpose_label": localized_transpose_label(shift, current_lang()),
+                "original_tab_lines": format_chorus_lines(song.get("chorus_lines", [])),
+                "medley_tab_lines": format_chorus_lines(song.get("chorus_lines", []), shift),
+            }
+        )
+    transitions = output["medley"]["transitions"][: max(0, limit - 1)]
+    return {
+        "source_id": source_id,
+        "output": output,
+        "songs": medley_songs,
+        "transitions": transitions,
+        "limit": limit,
+        "target_root": target_root,
+        "target_roots": sorted(PITCH_CLASSES),
+        "show_original": show_original,
+    }
+
+
+def export_filename(source_id: str, target_root: str) -> str:
+    label = source_label_filter(source_id).rsplit("/", 1)[-1] or "medley"
+    safe_label = re.sub(r"[^A-Za-z0-9._-]+", "-", label).strip("-").lower() or "medley"
+    return f"medley-{safe_label}-{target_root}.html"
 
 
 def create_job(kind: str, source_id: str) -> str:
@@ -479,36 +582,38 @@ def job_detail(job_id: str):
     return render_template("job.html", job=job)
 
 
+@app.get("/medley/<path:source_id>/export.html")
+def medley_export(source_id: str):
+    context = build_medley_context(source_id)
+    html = render_template("medley_export.html", **context)
+    return Response(
+        html,
+        headers={
+            "Content-Type": "text/html; charset=utf-8",
+            "Content-Disposition": f'attachment; filename="{export_filename(source_id, context["target_root"])}"',
+        },
+    )
+
+
 @app.get("/medley/<path:source_id>")
 def medley(source_id: str):
-    target_root = request.args.get("target_root", DEFAULT_TARGET_ROOT)
-    if target_root not in PITCH_CLASSES:
-        target_root = DEFAULT_TARGET_ROOT
-    limit = parse_int(request.args.get("limit"), MEDLEY_LIMIT)
-    show_original = request.args.get("show_original", "1") != "0"
-    songs = source_songs(source_id)
-    output = build_output(songs, TOP_PAIR_COUNT, target_root)
-    medley_songs = []
-    for song in output["medley"]["songs"][:limit]:
-        shift = song.get("global_transpose_by", 0)
-        medley_songs.append(
-            {
-                **song,
-                "medley_chords": transpose_chords(song["chorus_chords"], shift),
-                "transpose_label": localized_transpose_label(shift, current_lang()),
-            }
-        )
-    transitions = output["medley"]["transitions"][: max(0, limit - 1)]
+    context = build_medley_context(source_id)
+    target_root = context["target_root"]
+    medley_songs = context["songs"]
+    show_original = context["show_original"]
     return render_template(
         "medley.html",
-        source_id=source_id,
-        output=output,
-        songs=medley_songs,
-        transitions=transitions,
-        limit=limit,
-        target_root=target_root,
-        target_roots=sorted(PITCH_CLASSES),
-        show_original=show_original,
+        **context,
+        whatsapp_url=f"https://wa.me/?text={quote(build_whatsapp_text(source_id, medley_songs, target_root, show_original))}",
+        export_url=url_for(
+            "medley_export",
+            source_id=source_id,
+            lang=current_lang(),
+            target_root=target_root,
+            limit=context["limit"],
+            show_original="1" if show_original else "0",
+        ),
+        export_filename=export_filename(source_id, target_root),
     )
 
 
@@ -531,7 +636,7 @@ def song_detail(encoded_url: str):
     song = load_db(DB_PATH).get("songs", {}).get(url)
     if not song:
         abort(404)
-    return render_template("song.html", song=song)
+    return render_template("song.html", song={**song, "tab_lines": format_chorus_lines(song.get("chorus_lines", []))})
 
 
 def parse_optional_int(value: str | None) -> int | None:

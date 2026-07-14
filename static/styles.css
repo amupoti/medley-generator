@@ -235,6 +235,12 @@ button,
   cursor: pointer;
 }
 
+.secondary-action {
+  border-color: #1f8f57;
+  color: #1f5b3d;
+  background: var(--accent-bg);
+}
+
 .notice {
   border-radius: 6px;
   padding: 10px 12px;
@@ -371,6 +377,46 @@ th {
 .medley-chords span {
   border-color: var(--accent);
   background: var(--accent-bg);
+}
+
+.tab-lines {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin: 7px 0 14px;
+  padding: 12px;
+  background: #fbfcfa;
+}
+
+.medley-tab-lines {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.tab-line {
+  margin: 0 0 8px;
+}
+
+.tab-line:last-child {
+  margin-bottom: 0;
+}
+
+.tab-chords,
+.tab-lyrics {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.35;
+  white-space: pre;
+}
+
+.tab-chords {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.tab-lyrics {
+  color: var(--text);
 }
 
 .transition {

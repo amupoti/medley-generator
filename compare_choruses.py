@@ -141,7 +141,7 @@ def pairwise_scores(songs: list[dict]) -> list[dict]:
 
 
 def song_ref(song: dict) -> dict:
-    return {
+    ref = {
         "rank": song.get("explore_rank"),
         "artist": song.get("artist"),
         "title": song.get("title"),
@@ -149,6 +149,9 @@ def song_ref(song: dict) -> dict:
         "chorus_chords": song.get("normalized_chords", song.get("chorus_chords")),
         "global_transpose_by": song.get("global_transpose_by", 0),
     }
+    if song.get("chorus_lines"):
+        ref["chorus_lines"] = song["chorus_lines"]
+    return ref
 
 
 def medley_order(songs: list[dict], pairs: list[dict], target_root: str) -> dict:
