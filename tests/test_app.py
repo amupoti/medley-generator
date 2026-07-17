@@ -7,6 +7,16 @@ import app
 from song_db import load_db, save_db
 
 
+class TranslationsTest(unittest.TestCase):
+    def test_loads_translations_for_every_supported_language(self):
+        translations = app.load_translations()
+
+        self.assertEqual(set(translations), set(app.SUPPORTED_LANGUAGES))
+        for labels in translations.values():
+            self.assertTrue(labels)
+            self.assertEqual(set(labels), set(translations[app.DEFAULT_LANG]))
+
+
 class ParseTabUrlsTest(unittest.TestCase):
     def test_parses_and_deduplicates_ultimate_guitar_tab_urls(self):
         first = "https://tabs.ultimate-guitar.com/tab/oasis/wonderwall-chords-27596"
