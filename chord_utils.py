@@ -1,5 +1,15 @@
+from __future__ import annotations
+
 import re
-from typing import Optional, Tuple
+from typing import TypedDict
+
+
+class ParsedChord(TypedDict):
+    chord: str
+    root: str | None
+    pitch: int | None
+    quality: str
+    bass: str | None
 
 
 PITCH_CLASSES = {
@@ -31,7 +41,7 @@ FLAT_MAJOR_KEYS = {5, 10, 3, 8, 1, 6}
 SHARP_MAJOR_KEYS = {7, 2, 9, 4, 11}
 
 
-def parse_chord(chord: str) -> dict:
+def parse_chord(chord: str) -> ParsedChord:
     root_part, bass_part = split_bass(chord)
     root_match = CHORD_PART_RE.match(root_part)
     if not root_match:
@@ -48,21 +58,23 @@ def parse_chord(chord: str) -> dict:
     }
 
 
-def split_bass(chord: str) -> Tuple[str, Optional[str]]:
+def split_bass(chord: str) -> tuple[str, str | None]:
     if "/" not in chord:
         return chord, None
     root_part, bass_part = chord.split("/", 1)
     return root_part, bass_part
 
 
-def transpose_chord(chord: str, semitones: int, prefer_flats: Optional[bool] = None) -> str:
+def transpose_chord(chord: str, semitones: int, prefer_flats: bool | None = None) -> str:
     parsed = parse_chord(chord)
     if parsed["pitch"] is None:
         return chord
 
     use_flats = prefer_flats
     if use_flats is None:
-        use_flats = "b" in parsed["root"] or (parsed["bass"] and "b" in parsed["bass"])
+        root = parsed["root"] or ""
+        inferred_bass = parsed["bass"] or ""
+        use_flats = "b" in root or "b" in inferred_bass
     names = FLAT_NAMES if use_flats else SHARP_NAMES
     transposed_root = names[(parsed["pitch"] + semitones) % 12]
     transposed = f"{transposed_root}{parsed['quality']}"
@@ -100,13 +112,17 @@ def infer_prefer_flats(chords: list[str], semitones: int = 0) -> bool:
     return original_flat_count(parsed) > original_sharp_count(parsed)
 
 
-def best_context_key(pitches: list[int], parsed_chords: list[dict]) -> tuple[int, str]:
+def best_context_key(pitches: list[int], parsed_chords: list[ParsedChord]) -> tuple[int, str]:
     pitch_set = set(pitches)
-    candidates = []
+    candidates: list[tuple[int, int, str]] = []
     for root in range(12):
         candidates.append((key_score(pitch_set, root, MAJOR_SCALE_INTERVALS), root, "major"))
         candidates.append((key_score(pitch_set, root, MINOR_SCALE_INTERVALS), root, "minor"))
-    return max(candidates, key=lambda candidate: (candidate[0], original_root_bonus(candidate[1], parsed_chords)))[1:]
+    best = max(
+        candidates,
+        key=lambda candidate: (candidate[0], original_root_bonus(candidate[1], parsed_chords)),
+    )
+    return best[1], best[2]
 
 
 def key_score(pitches: set[int], root: int, scale_intervals: set[int]) -> int:
@@ -114,16 +130,16 @@ def key_score(pitches: set[int], root: int, scale_intervals: set[int]) -> int:
     return len(pitches & scale) - len(pitches - scale)
 
 
-def original_root_bonus(root: int, parsed_chords: list[dict]) -> int:
+def original_root_bonus(root: int, parsed_chords: list[ParsedChord]) -> int:
     for item in parsed_chords:
         if item["pitch"] == root:
             return 1
     return 0
 
 
-def original_flat_count(parsed_chords: list[dict]) -> int:
+def original_flat_count(parsed_chords: list[ParsedChord]) -> int:
     return sum("b" in item["root"] for item in parsed_chords if item["root"])
 
 
-def original_sharp_count(parsed_chords: list[dict]) -> int:
+def original_sharp_count(parsed_chords: list[ParsedChord]) -> int:
     return sum("#" in item["root"] for item in parsed_chords if item["root"])

@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 import argparse
 import json
 import sys
 from pathlib import Path
-from typing import Optional
+from typing import Any
 
+from song_db import SongRecord
 from ug_chorus_chords import (
     dismiss_cookie_popup,
-    extract_song as extract_store_song,
     extract_artist,
     extract_chorus_chords,
     extract_chorus_lines,
@@ -15,12 +17,17 @@ from ug_chorus_chords import (
     extract_title,
     launch_browser,
 )
-
+from ug_chorus_chords import (
+    extract_song as extract_store_song,
+)
 
 EXPLORE_URL = "https://www.ultimate-guitar.com/explore"
+ScrapeSummary = dict[str, Any]
 
 
-def scrape_explore(source_url: str, limit: Optional[int], delay_ms: int, skip_existing: Optional[Path]) -> dict:
+def scrape_explore(
+    source_url: str, limit: int | None, delay_ms: int, skip_existing: Path | None
+) -> ScrapeSummary:
     from playwright.sync_api import sync_playwright
 
     existing_urls = load_existing_urls(skip_existing)
@@ -57,7 +64,7 @@ def scrape_explore(source_url: str, limit: Optional[int], delay_ms: int, skip_ex
         }
 
 
-def load_existing_urls(path: Optional[Path]) -> set[str]:
+def load_existing_urls(path: Path | None) -> set[str]:
     if not path:
         return set()
     data = json.loads(path.read_text(encoding="utf-8"))
@@ -65,10 +72,10 @@ def load_existing_urls(path: Optional[Path]) -> set[str]:
     return {song["url"] for song in songs if song.get("url")}
 
 
-def extract_explore_links(page, limit: Optional[int]) -> list[dict]:
+def extract_explore_links(page: Any, limit: int | None) -> list[SongRecord]:
     links = page.locator('a[href*="/tab/"]')
     seen = set()
-    songs = []
+    songs: list[SongRecord] = []
 
     for index in range(links.count()):
         link = links.nth(index)
@@ -84,8 +91,8 @@ def extract_explore_links(page, limit: Optional[int]) -> list[dict]:
     return songs
 
 
-def scrape_song_with_retry(playwright, explore_song: dict, delay_ms: int) -> dict:
-    last_error = None
+def scrape_song_with_retry(playwright: Any, explore_song: SongRecord, delay_ms: int) -> SongRecord:
+    last_error: Exception | None = None
     for _ in range(2):
         browser = launch_browser(playwright)
         try:
@@ -95,16 +102,18 @@ def scrape_song_with_retry(playwright, explore_song: dict, delay_ms: int) -> dic
             last_error = exc
         finally:
             browser.close()
+    if last_error is None:
+        raise RuntimeError("Song scrape did not run")
     raise last_error
 
 
-def scrape_song(page, explore_song: dict, delay_ms: int) -> dict:
+def scrape_song(page: Any, explore_song: SongRecord, delay_ms: int) -> SongRecord:
     page.goto(explore_song["url"], wait_until="domcontentloaded", timeout=60000)
     dismiss_cookie_popup(page)
     page.wait_for_timeout(delay_ms)
     page_title = page.title()
     text = page.locator("body").inner_text(timeout=10000)
-    store_song = {}
+    store_song: SongRecord = {}
     content = text
     try:
         store_song = extract_store_song(extract_store(page.content()))
@@ -180,4 +189,4 @@ if __name__ == "__main__":
         raise SystemExit(main())
     except Exception as exc:
         print(f"error: {exc}", file=sys.stderr)
-        raise SystemExit(1)
+        raise SystemExit(1) from exc
