@@ -1,15 +1,24 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 import argparse
 import json
 import sys
 from difflib import SequenceMatcher
 from pathlib import Path
-from typing import Optional
+from typing import Any
 
 from chord_utils import PITCH_CLASSES, parse_chord
+from song_db import SongRecord
+
+PairScore = dict[str, Any]
+Transition = dict[str, Any]
+MedleyOutput = dict[str, Any]
+ComparisonOutput = dict[str, Any]
+PairScoreMap = dict[tuple[str, str], PairScore]
 
 
-def load_songs(path: Path, source_url: Optional[str] = None) -> list[dict]:
+def load_songs(path: Path, source_url: str | None = None) -> list[SongRecord]:
     data = json.loads(path.read_text(encoding="utf-8"))
     if isinstance(data, dict) and isinstance(data.get("songs"), dict):
         songs = list(data["songs"].values())
@@ -22,8 +31,8 @@ def load_songs(path: Path, source_url: Optional[str] = None) -> list[dict]:
     return dedupe_songs([song for song in songs if song.get("chorus_chords")])
 
 
-def dedupe_songs(songs: list[dict]) -> list[dict]:
-    best = {}
+def dedupe_songs(songs: list[SongRecord]) -> list[SongRecord]:
+    best: dict[str, SongRecord] = {}
     for song in songs:
         key = canonical_song_key(song)
         current = best.get(key)
@@ -32,18 +41,18 @@ def dedupe_songs(songs: list[dict]) -> list[dict]:
     return sorted(best.values(), key=song_rank)
 
 
-def canonical_song_key(song: dict) -> str:
+def canonical_song_key(song: SongRecord) -> str:
     artist = clean_name(song.get("artist"))
     title = clean_name(song.get("title"))
     return f"{artist}::{title}"
 
 
-def clean_name(value: str) -> str:
+def clean_name(value: str | None) -> str:
     value = value or ""
     return " ".join(value.casefold().split())
 
 
-def song_rank(song: dict) -> int:
+def song_rank(song: SongRecord) -> int:
     return song.get("explore_rank") or 999999
 
 
@@ -74,7 +83,7 @@ def reduce_repeated_loop(chords: list[str]) -> list[str]:
     return chords
 
 
-def normalize_song(song: dict) -> dict:
+def normalize_song(song: SongRecord) -> SongRecord:
     chords = reduce_repeated_loop(song["chorus_chords"])
     parsed = [parse_chord(chord) for chord in chords]
     pitch_sequence = [item["pitch"] for item in parsed if item["pitch"] is not None]
@@ -95,13 +104,13 @@ def intervals(pitches: list[int]) -> list[int]:
     return [(pitches[index + 1] - pitches[index]) % 12 for index in range(len(pitches) - 1)]
 
 
-def sequence_score(left: list, right: list) -> float:
+def sequence_score(left: list[Any], right: list[Any]) -> float:
     if not left or not right:
         return 0.0
     return SequenceMatcher(a=left, b=right, autojunk=False).ratio()
 
 
-def jaccard_score(left: list, right: list) -> float:
+def jaccard_score(left: list[Any], right: list[Any]) -> float:
     left_set = set(left)
     right_set = set(right)
     if not left_set or not right_set:
@@ -109,7 +118,7 @@ def jaccard_score(left: list, right: list) -> float:
     return len(left_set & right_set) / len(left_set | right_set)
 
 
-def similarity(left: dict, right: dict) -> dict:
+def similarity(left: SongRecord, right: SongRecord) -> PairScore:
     absolute = sequence_score(left["normalized_chords"], right["normalized_chords"])
     interval = sequence_score(left["interval_sequence"], right["interval_sequence"])
     qualities = sequence_score(left["quality_sequence"], right["quality_sequence"])
@@ -125,8 +134,8 @@ def similarity(left: dict, right: dict) -> dict:
     }
 
 
-def pairwise_scores(songs: list[dict]) -> list[dict]:
-    pairs = []
+def pairwise_scores(songs: list[SongRecord]) -> list[PairScore]:
+    pairs: list[PairScore] = []
     for left_index, left in enumerate(songs):
         for right in songs[left_index + 1 :]:
             scores = similarity(left, right)
@@ -140,8 +149,8 @@ def pairwise_scores(songs: list[dict]) -> list[dict]:
     return sorted(pairs, key=lambda pair: pair["score"], reverse=True)
 
 
-def song_ref(song: dict) -> dict:
-    ref = {
+def song_ref(song: SongRecord) -> SongRecord:
+    ref: SongRecord = {
         "rank": song.get("explore_rank"),
         "artist": song.get("artist"),
         "title": song.get("title"),
@@ -154,12 +163,12 @@ def song_ref(song: dict) -> dict:
     return ref
 
 
-def medley_order(songs: list[dict], pairs: list[dict], target_root: str) -> dict:
+def medley_order(songs: list[SongRecord], pairs: list[PairScore], target_root: str) -> MedleyOutput:
     if not songs:
         return {"average_transition_score": 0.0, "songs": [], "transitions": []}
 
     by_key = {song_key(song): song for song in songs}
-    pair_score = {}
+    pair_score: PairScoreMap = {}
     for pair in pairs:
         left_key = ref_key(pair["left"])
         right_key = ref_key(pair["right"])
@@ -178,7 +187,7 @@ def medley_order(songs: list[dict], pairs: list[dict], target_root: str) -> dict
     }
 
 
-def apply_target_root_transpose(songs: list[dict], target_root: str) -> list[dict]:
+def apply_target_root_transpose(songs: list[SongRecord], target_root: str) -> list[SongRecord]:
     target_pitch = PITCH_CLASSES[target_root]
     return [
         {**song, "global_transpose_by": transpose_to_target(song["pitch_sequence"], target_pitch)}
@@ -193,7 +202,7 @@ def transpose_to_target(pitches: list[int], target_pitch: int) -> int:
     return shift - 12 if shift > 6 else shift
 
 
-def greedy_order_from(start: str, all_keys: set[str], pair_score: dict) -> list[str]:
+def greedy_order_from(start: str, all_keys: set[str], pair_score: PairScoreMap) -> list[str]:
     order = [start]
     unused = set(all_keys)
     unused.remove(start)
@@ -204,15 +213,20 @@ def greedy_order_from(start: str, all_keys: set[str], pair_score: dict) -> list[
     return order
 
 
-def path_score(order: list[str], pair_score: dict) -> float:
+def path_score(order: list[str], pair_score: PairScoreMap) -> float:
     if len(order) < 2:
         return 0.0
-    total = sum(transition_score(pair_score, order[index], order[index + 1]) for index in range(len(order) - 1))
+    total = sum(
+        transition_score(pair_score, order[index], order[index + 1])
+        for index in range(len(order) - 1)
+    )
     return total / (len(order) - 1)
 
 
-def build_transitions(order: list[str], by_key: dict, pair_score: dict) -> list[dict]:
-    transitions = []
+def build_transitions(
+    order: list[str], by_key: dict[str, SongRecord], pair_score: PairScoreMap
+) -> list[Transition]:
+    transitions: list[Transition] = []
     for index in range(len(order) - 1):
         pair = pair_score.get((order[index], order[index + 1]))
         transitions.append(
@@ -226,15 +240,15 @@ def build_transitions(order: list[str], by_key: dict, pair_score: dict) -> list[
     return transitions
 
 
-def song_key(song: dict) -> str:
+def song_key(song: SongRecord) -> str:
     return f"{song.get('artist')}::{song.get('title')}::{song.get('url')}"
 
 
-def ref_key(ref: dict) -> str:
+def ref_key(ref: SongRecord) -> str:
     return f"{ref.get('artist')}::{ref.get('title')}::{ref.get('url')}"
 
 
-def reverse_pair(pair: dict) -> dict:
+def reverse_pair(pair: PairScore) -> PairScore:
     return {
         **pair,
         "left": pair["right"],
@@ -243,7 +257,7 @@ def reverse_pair(pair: dict) -> dict:
     }
 
 
-def transition_score(pair_score: dict, current: str, candidate: str) -> float:
+def transition_score(pair_score: PairScoreMap, current: str, candidate: str) -> float:
     pair = pair_score.get((current, candidate))
     return pair["score"] if pair else 0.0
 
@@ -262,7 +276,7 @@ def best_transpose(left: list[int], right: list[int]) -> int:
     return best_shift
 
 
-def build_output(songs: list[dict], top: int, target_root: str) -> dict:
+def build_output(songs: list[SongRecord], top: int, target_root: str) -> ComparisonOutput:
     normalized = [normalize_song(song) for song in songs]
     pairs = pairwise_scores(normalized)
     return {
@@ -279,13 +293,24 @@ def main() -> int:
     parser.add_argument("input", help="JSON generated by ug_explore_scrape.py")
     parser.add_argument("-o", "--output", default="medley_candidates.json")
     parser.add_argument("--top", type=int, default=25, help="Number of top pairs to keep")
-    parser.add_argument("--source-url", default=None, help="Only compare DB songs seen in this source URL")
-    parser.add_argument("--target-root", default="C", choices=sorted(PITCH_CLASSES), help="Root for rendered medley chords")
+    parser.add_argument(
+        "--source-url", default=None, help="Only compare DB songs seen in this source URL"
+    )
+    parser.add_argument(
+        "--target-root",
+        default="C",
+        choices=sorted(PITCH_CLASSES),
+        help="Root for rendered medley chords",
+    )
     args = parser.parse_args()
 
     output = build_output(load_songs(Path(args.input), args.source_url), args.top, args.target_root)
     Path(args.output).write_text(json.dumps(output, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"song_count": output["song_count"], "top_pairs": len(output["top_pairs"])}, indent=2))
+    print(
+        json.dumps(
+            {"song_count": output["song_count"], "top_pairs": len(output["top_pairs"])}, indent=2
+        )
+    )
     return 0
 
 
@@ -294,4 +319,4 @@ if __name__ == "__main__":
         raise SystemExit(main())
     except Exception as exc:
         print(f"error: {exc}", file=sys.stderr)
-        raise SystemExit(1)
+        raise SystemExit(1) from exc

@@ -6,20 +6,31 @@ import json
 import re
 import threading
 import uuid
+from collections.abc import Callable
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
+from typing import Any, cast
 from urllib.parse import quote, urljoin, urlparse
 
 from flask import Flask, Response, abort, redirect, render_template, request, url_for
 
-from chord_utils import PITCH_CLASSES
-from chord_utils import transpose_chords
+from chord_utils import PITCH_CLASSES, transpose_chords
 from compare_choruses import build_output, canonical_song_key, load_songs
-from song_db import db_songs_as_list, db_urls, load_db, mark_seen, merge_song, record_failure, save_db, save_medley
+from song_db import (
+    SongDatabase,
+    SongRecord,
+    db_songs_as_list,
+    db_urls,
+    load_db,
+    mark_seen,
+    merge_song,
+    record_failure,
+    save_db,
+    save_medley,
+)
 from ug_explore_scrape import scrape_song_with_retry
 from update_song_db import update_db
-
 
 BASE_DIR = Path(__file__).resolve().parent
 LOCALES_DIR = BASE_DIR / "locales"
@@ -33,10 +44,12 @@ SUPPORTED_LANGUAGES = {
     "ca": "Català",
     "es": "Español",
 }
+DynamicRecord = dict[str, Any]
+JobRecord = dict[str, Any]
 
 
 def load_translations(locales_dir: Path = LOCALES_DIR) -> dict[str, dict[str, str]]:
-    translations = {}
+    translations: dict[str, dict[str, str]] = {}
     for lang in SUPPORTED_LANGUAGES:
         with (locales_dir / f"{lang}.json").open(encoding="utf-8") as locale_file:
             translations[lang] = json.load(locale_file)
@@ -46,28 +59,28 @@ def load_translations(locales_dir: Path = LOCALES_DIR) -> dict[str, dict[str, st
 TRANSLATIONS = load_translations()
 
 app = Flask(__name__)
-jobs = {}
+jobs: dict[str, JobRecord] = {}
 jobs_lock = threading.Lock()
 
 
 class ExploreLinkParser(HTMLParser):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
-        self.links = []
-        self.current = None
+        self.links: list[SongRecord] = []
+        self.current: SongRecord | None = None
 
-    def handle_starttag(self, tag, attrs):
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         if tag != "a":
             return
         href = dict(attrs).get("href")
         if href and "/tab/" in href:
             self.current = {"url": normalize_tab_url(href), "text": []}
 
-    def handle_data(self, data):
+    def handle_data(self, data: str) -> None:
         if self.current is not None:
             self.current["text"].append(data)
 
-    def handle_endtag(self, tag):
+    def handle_endtag(self, tag: str) -> None:
         if tag == "a" and self.current is not None:
             title = " ".join("".join(self.current["text"]).split())
             self.links.append({"url": self.current["url"], "explore_title": title})
@@ -102,13 +115,13 @@ def source_label_filter(value: str) -> str:
 
 
 @app.context_processor
-def template_context() -> dict:
+def template_context() -> dict[str, Any]:
     lang = current_lang()
 
     def translate(key: str) -> str:
         return TRANSLATIONS[lang].get(key, key)
 
-    def lang_url(endpoint: str, **values) -> str:
+    def lang_url(endpoint: str, **values: Any) -> str:
         values.setdefault("lang", lang)
         return url_for(endpoint, **values)
 
@@ -143,8 +156,8 @@ def localized_transpose_label(shift: int, lang: str) -> str:
     return f"{direction} {amount} {semitone}"
 
 
-def format_chorus_lines(lines: list[dict], shift: int = 0) -> list[dict]:
-    formatted = []
+def format_chorus_lines(lines: list[DynamicRecord], shift: int = 0) -> list[DynamicRecord]:
+    formatted: list[DynamicRecord] = []
     for line in lines or []:
         chords = line.get("chords", [])
         symbols = [chord["symbol"] for chord in chords]
@@ -154,12 +167,14 @@ def format_chorus_lines(lines: list[dict], shift: int = 0) -> list[dict]:
     return formatted
 
 
-def build_chord_line(lyrics: str, chords: list[dict], symbols: list[str]) -> str:
+def build_chord_line(lyrics: str, chords: list[DynamicRecord], symbols: list[str]) -> str:
+    if len(chords) != len(symbols):
+        raise ValueError("chords and symbols must have the same length")
     width = len(lyrics)
-    for chord, symbol in zip(chords, symbols):
+    for chord, symbol in zip(chords, symbols):  # noqa: B905
         width = max(width, int(chord.get("position", 0)) + len(symbol))
     chars = [" "] * width
-    for chord, symbol in zip(chords, symbols):
+    for chord, symbol in zip(chords, symbols):  # noqa: B905
         position = int(chord.get("position", 0))
         for index, char in enumerate(symbol):
             target = position + index
@@ -168,7 +183,9 @@ def build_chord_line(lyrics: str, chords: list[dict], symbols: list[str]) -> str
     return "".join(chars).rstrip()
 
 
-def build_whatsapp_text(source_id: str, songs: list[dict], target_root: str, show_original: bool) -> str:
+def build_whatsapp_text(
+    source_id: str, songs: list[SongRecord], target_root: str, show_original: bool
+) -> str:
     lines = [
         f"Medley - {source_label_filter(source_id)}",
         f"Target root: {target_root}",
@@ -188,7 +205,7 @@ def build_whatsapp_text(source_id: str, songs: list[dict], target_root: str, sho
     return "\n".join(lines).strip()
 
 
-def tab_lines_as_text(lines: list[dict]) -> list[str]:
+def tab_lines_as_text(lines: list[DynamicRecord]) -> list[str]:
     text = []
     for line in lines:
         if line.get("chords"):
@@ -198,7 +215,7 @@ def tab_lines_as_text(lines: list[dict]) -> list[str]:
     return text
 
 
-def build_medley_context(source_id: str) -> dict:
+def build_medley_context(source_id: str) -> DynamicRecord:
     target_root = request.args.get("target_root", DEFAULT_TARGET_ROOT)
     if target_root not in PITCH_CLASSES:
         target_root = DEFAULT_TARGET_ROOT
@@ -255,7 +272,7 @@ def create_job(kind: str, source_id: str) -> str:
     return job_id
 
 
-def update_job(job_id: str, **fields) -> None:
+def update_job(job_id: str, **fields: Any) -> None:
     with jobs_lock:
         job = jobs[job_id]
         job.update(fields)
@@ -266,12 +283,12 @@ def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
-def run_background(job_id: str, target, *args) -> None:
+def run_background(job_id: str, target: Callable[..., Any], *args: Any) -> None:
     thread = threading.Thread(target=run_job, args=(job_id, target, args), daemon=True)
     thread.start()
 
 
-def run_job(job_id: str, target, args: tuple) -> None:
+def run_job(job_id: str, target: Callable[..., Any], args: tuple[Any, ...]) -> None:
     update_job(job_id, status="running")
     try:
         summary = target(*args)
@@ -280,16 +297,20 @@ def run_job(job_id: str, target, args: tuple) -> None:
         update_job(job_id, status="failed", error=str(exc))
 
 
-def analyze_url(source_url: str, limit: int | None, delay_ms: int, refresh: bool) -> dict:
+def analyze_url(source_url: str, limit: int | None, delay_ms: int, refresh: bool) -> DynamicRecord:
     return update_db(DB_PATH, source_url, limit, delay_ms, refresh)
 
 
-def analyze_upload(html_text: str, source_id: str, limit: int | None, delay_ms: int, refresh: bool) -> dict:
+def analyze_upload(
+    html_text: str, source_id: str, limit: int | None, delay_ms: int, refresh: bool
+) -> DynamicRecord:
     discovered = extract_uploaded_links(html_text, limit)
     return analyze_songs(discovered, source_id, delay_ms, refresh)
 
 
-def analyze_url_list(urls: list[str], source_id: str, delay_ms: int, refresh: bool) -> dict:
+def analyze_url_list(
+    urls: list[str], source_id: str, delay_ms: int, refresh: bool
+) -> DynamicRecord:
     discovered = [
         {
             "explore_rank": index,
@@ -301,7 +322,9 @@ def analyze_url_list(urls: list[str], source_id: str, delay_ms: int, refresh: bo
     return analyze_songs(discovered, source_id, delay_ms, refresh)
 
 
-def analyze_songs(discovered: list[dict], source_id: str, delay_ms: int, refresh: bool) -> dict:
+def analyze_songs(
+    discovered: list[SongRecord], source_id: str, delay_ms: int, refresh: bool
+) -> DynamicRecord:
     from playwright.sync_api import sync_playwright
 
     db = load_db(DB_PATH)
@@ -339,11 +362,11 @@ def analyze_songs(discovered: list[dict], source_id: str, delay_ms: int, refresh
     }
 
 
-def extract_uploaded_links(html_text: str, limit: int | None) -> list[dict]:
+def extract_uploaded_links(html_text: str, limit: int | None) -> list[SongRecord]:
     parser = ExploreLinkParser()
     parser.feed(html_text)
     seen = set()
-    songs = []
+    songs: list[SongRecord] = []
     for link in parser.links:
         url = link["url"]
         if url in seen:
@@ -370,7 +393,9 @@ def parse_tab_urls(value: str) -> list[str]:
             continue
         url = normalize_tab_url(raw_url)
         parsed = urlparse(url)
-        is_ug_host = parsed.hostname == "ultimate-guitar.com" or (parsed.hostname or "").endswith(".ultimate-guitar.com")
+        is_ug_host = parsed.hostname == "ultimate-guitar.com" or (parsed.hostname or "").endswith(
+            ".ultimate-guitar.com"
+        )
         if parsed.scheme not in {"http", "https"} or not is_ug_host:
             raise ValueError(f"Unsupported Ultimate Guitar URL: {raw_url}")
         if "/tab/" not in parsed.path:
@@ -381,10 +406,12 @@ def parse_tab_urls(value: str) -> list[str]:
     return urls
 
 
-def db_stats() -> dict:
+def db_stats() -> DynamicRecord:
     db = load_db(DB_PATH)
     songs = db_songs_as_list(db)
-    sources = {source for song in songs for source in song.get("sources", [])} | set(db.get("medleys", {}))
+    sources = {source for song in songs for source in song.get("sources", [])} | set(
+        db.get("medleys", {})
+    )
     return {
         "song_count": len(songs),
         "chorus_count": sum(1 for song in songs if song.get("chorus_chords")),
@@ -394,22 +421,25 @@ def db_stats() -> dict:
     }
 
 
-def sorted_songs() -> list[dict]:
+def sorted_songs() -> list[SongRecord]:
     return sorted(
         db_songs_as_list(load_db(DB_PATH)),
-        key=lambda song: ((song.get("artist") or "").casefold(), (song.get("title") or "").casefold()),
+        key=lambda song: (
+            (song.get("artist") or "").casefold(),
+            (song.get("title") or "").casefold(),
+        ),
     )
 
 
-def source_songs(source_id: str) -> list[dict]:
+def source_songs(source_id: str) -> list[SongRecord]:
     return load_songs(DB_PATH, source_id)
 
 
-def comparison_exclusions(source_id: str, comparable_songs: list[dict] | None = None) -> list[dict]:
+def comparison_exclusions(
+    source_id: str, comparable_songs: list[SongRecord] | None = None
+) -> list[SongRecord]:
     source_entries = [
-        song
-        for song in db_songs_as_list(load_db(DB_PATH))
-        if source_id in song.get("sources", [])
+        song for song in db_songs_as_list(load_db(DB_PATH)) if source_id in song.get("sources", [])
     ]
     comparable_songs = comparable_songs if comparable_songs is not None else source_songs(source_id)
     comparable_urls = {song.get("url") for song in comparable_songs}
@@ -451,10 +481,10 @@ def store_medley(source_id: str, name: str, urls: list[str]) -> None:
     save_db(DB_PATH, db)
 
 
-def medley_definition(db: dict, source_id: str) -> dict | None:
+def medley_definition(db: SongDatabase, source_id: str) -> DynamicRecord | None:
     definition = db.get("medleys", {}).get(source_id)
     if definition:
-        return definition
+        return cast(DynamicRecord, definition)
     if not source_id.startswith("list:"):
         return None
     songs = sorted(
@@ -468,13 +498,13 @@ def medley_definition(db: dict, source_id: str) -> dict | None:
 
 
 @app.get("/")
-def index():
+def index() -> Any:
     recent_jobs = sorted(snapshot_jobs(), key=lambda job: job["created_at"], reverse=True)[:8]
     return render_template("index.html", stats=db_stats(), jobs=recent_jobs)
 
 
 @app.post("/analyze/url")
-def analyze_url_route():
+def analyze_url_route() -> Any:
     source_url = request.form.get("source_url", "").strip()
     if not source_url:
         abort(400, "source_url is required")
@@ -487,7 +517,7 @@ def analyze_url_route():
 
 
 @app.post("/analyze/upload")
-def analyze_upload_route():
+def analyze_upload_route() -> Any:
     uploaded = request.files.get("explore_html")
     if not uploaded or not uploaded.filename:
         abort(400, "explore_html is required")
@@ -502,7 +532,7 @@ def analyze_upload_route():
 
 
 @app.post("/analyze/url-list")
-def analyze_url_list_route():
+def analyze_url_list_route() -> Any:
     try:
         urls = parse_tab_urls(request.form.get("tab_urls", ""))
     except ValueError as exc:
@@ -520,7 +550,7 @@ def analyze_url_list_route():
 
 
 @app.get("/jobs/<job_id>")
-def job_detail(job_id: str):
+def job_detail(job_id: str) -> Any:
     job = get_job(job_id)
     if not job:
         abort(404)
@@ -528,28 +558,30 @@ def job_detail(job_id: str):
 
 
 @app.get("/medley/<path:source_id>/export.html")
-def medley_export(source_id: str):
+def medley_export(source_id: str) -> Any:
     context = build_medley_context(source_id)
     html = render_template("medley_export.html", **context)
+    filename = export_filename(source_id, context["target_root"])
     return Response(
         html,
         headers={
             "Content-Type": "text/html; charset=utf-8",
-            "Content-Disposition": f'attachment; filename="{export_filename(source_id, context["target_root"])}"',
+            "Content-Disposition": f'attachment; filename="{filename}"',
         },
     )
 
 
 @app.get("/medley/<path:source_id>")
-def medley(source_id: str):
+def medley(source_id: str) -> Any:
     context = build_medley_context(source_id)
     target_root = context["target_root"]
     medley_songs = context["songs"]
     show_original = context["show_original"]
+    whatsapp_text = build_whatsapp_text(source_id, medley_songs, target_root, show_original)
     return render_template(
         "medley.html",
         **context,
-        whatsapp_url=f"https://wa.me/?text={quote(build_whatsapp_text(source_id, medley_songs, target_root, show_original))}",
+        whatsapp_url=f"https://wa.me/?text={quote(whatsapp_text)}",
         export_url=url_for(
             "medley_export",
             source_id=source_id,
@@ -563,7 +595,7 @@ def medley(source_id: str):
 
 
 @app.route("/medley/<path:source_id>/edit", methods=["GET", "POST"])
-def edit_medley(source_id: str):
+def edit_medley(source_id: str) -> Any:
     db = load_db(DB_PATH)
     definition = medley_definition(db, source_id)
     if not definition:
@@ -587,31 +619,36 @@ def edit_medley(source_id: str):
 
 
 @app.post("/medley/<path:source_id>/delete")
-def delete_medley(source_id: str):
+def delete_medley(source_id: str) -> Any:
     delete_source(source_id)
     return redirect(url_for("index", lang=current_lang()))
 
 
 @app.get("/songs")
-def songs():
+def songs() -> Any:
     query = request.args.get("q", "").strip().casefold()
     songs_list = sorted_songs()
     if query:
         songs_list = [
             song
             for song in songs_list
-            if query in " ".join([song.get("artist") or "", song.get("title") or "", song.get("url") or ""]).casefold()
+            if query
+            in " ".join(
+                [song.get("artist") or "", song.get("title") or "", song.get("url") or ""]
+            ).casefold()
         ]
     return render_template("songs.html", songs=songs_list, query=request.args.get("q", "").strip())
 
 
 @app.get("/songs/<encoded_url>")
-def song_detail(encoded_url: str):
+def song_detail(encoded_url: str) -> Any:
     url = decode_url(encoded_url)
     song = load_db(DB_PATH).get("songs", {}).get(url)
     if not song:
         abort(404)
-    return render_template("song.html", song={**song, "tab_lines": format_chorus_lines(song.get("chorus_lines", []))})
+    return render_template(
+        "song.html", song={**song, "tab_lines": format_chorus_lines(song.get("chorus_lines", []))}
+    )
 
 
 def parse_optional_int(value: str | None) -> int | None:
@@ -626,12 +663,12 @@ def parse_int(value: str | None, default: int) -> int:
     return int(value)
 
 
-def snapshot_jobs() -> list[dict]:
+def snapshot_jobs() -> list[JobRecord]:
     with jobs_lock:
         return [job.copy() for job in jobs.values()]
 
 
-def get_job(job_id: str) -> dict | None:
+def get_job(job_id: str) -> JobRecord | None:
     with jobs_lock:
         job = jobs.get(job_id)
         return job.copy() if job else None

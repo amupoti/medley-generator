@@ -1,16 +1,22 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 import argparse
 import json
 import sys
 from pathlib import Path
-from typing import Optional
+from typing import Any
 
 from song_db import db_urls, load_db, mark_seen, merge_song, record_failure, save_db
-from ug_explore_scrape import EXPLORE_URL, extract_explore_links, scrape_song_with_retry
 from ug_chorus_chords import dismiss_cookie_popup, launch_browser
+from ug_explore_scrape import EXPLORE_URL, extract_explore_links, scrape_song_with_retry
+
+UpdateSummary = dict[str, Any]
 
 
-def update_db(db_path: Path, source_url: str, limit: Optional[int], delay_ms: int, refresh: bool) -> dict:
+def update_db(
+    db_path: Path, source_url: str, limit: int | None, delay_ms: int, refresh: bool
+) -> UpdateSummary:
     from playwright.sync_api import sync_playwright
 
     db = load_db(db_path)
@@ -62,7 +68,9 @@ def update_db(db_path: Path, source_url: str, limit: Optional[int], delay_ms: in
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Update local Ultimate Guitar song DB from an Explore URL.")
+    parser = argparse.ArgumentParser(
+        description="Update local Ultimate Guitar song DB from an Explore URL."
+    )
     parser.add_argument("--url", default=EXPLORE_URL)
     parser.add_argument("--db", type=Path, default=Path("songs_db.json"))
     parser.add_argument("--limit", type=int, default=None)
@@ -80,4 +88,4 @@ if __name__ == "__main__":
         raise SystemExit(main())
     except Exception as exc:
         print(f"error: {exc}", file=sys.stderr)
-        raise SystemExit(1)
+        raise SystemExit(1) from exc

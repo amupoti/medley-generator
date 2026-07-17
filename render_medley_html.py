@@ -4,6 +4,7 @@ import html
 import json
 import sys
 from pathlib import Path
+from typing import Any
 
 from chord_utils import transpose_chords
 
@@ -21,7 +22,7 @@ def transpose_label(shift: int) -> str:
     return f"transpose {direction} {amount} {semitone}"
 
 
-def render_report(data: dict, limit: int) -> str:
+def render_report(data: dict[str, Any], limit: int) -> str:
     songs = data["medley"]["songs"][:limit]
     transitions = data["medley"]["transitions"][: max(0, limit - 1)]
     target_root = data["medley"].get("target_root", "C")
@@ -30,10 +31,12 @@ def render_report(data: dict, limit: int) -> str:
     for index, song in enumerate(songs):
         transition = transitions[index] if index < len(transitions) else None
         medley_chords = transpose_chords(song["chorus_chords"], song.get("global_transpose_by", 0))
+        transposition = html.escape(transpose_label(song.get("global_transpose_by", 0)))
+        medley_label = f"Medley chorus in {html.escape(target_root)} ({transposition})"
         if transition:
             transition_html = (
                 f'<div class="transition">Next transition score: '
-                f'<strong>{transition["score"]:.4f}</strong></div>'
+                f"<strong>{transition['score']:.4f}</strong></div>"
             )
         else:
             transition_html = '<div class="transition end">End of top list</div>'
@@ -46,7 +49,7 @@ def render_report(data: dict, limit: int) -> str:
                 <h2>{html.escape(song["artist"])} - {html.escape(song["title"])}</h2>
                 <div class="chords-label">Original chorus</div>
                 <div class="chords">{render_chords(song["chorus_chords"])}</div>
-                <div class="chords-label">Medley chorus in {html.escape(target_root)} ({html.escape(transpose_label(song.get("global_transpose_by", 0)))})</div>
+                <div class="chords-label">{medley_label}</div>
                 <div class="chords medley-chords">{render_chords(medley_chords)}</div>
                 {transition_html}
                 <a href="{html.escape(song["url"])}">Ultimate Guitar source</a>
@@ -55,6 +58,10 @@ def render_report(data: dict, limit: int) -> str:
             """
         )
 
+    average_score = data["medley"]["average_transition_score"]
+    report_meta = (
+        f"Target root: {html.escape(target_root)}. Average transition score: {average_score:.4f}"
+    )
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -169,7 +176,7 @@ def render_report(data: dict, limit: int) -> str:
   <main>
     <header>
       <h1>Medley Top {len(songs)}</h1>
-      <div class="meta">Target root: {html.escape(target_root)}. Average transition score: {data["medley"]["average_transition_score"]:.4f}</div>
+      <div class="meta">{report_meta}</div>
     </header>
     {"".join(rows)}
   </main>
@@ -188,7 +195,12 @@ def main() -> int:
     data = json.loads(Path(args.input).read_text(encoding="utf-8"))
     html_text = render_report(data, args.limit)
     Path(args.output).write_text(html_text, encoding="utf-8")
-    print(json.dumps({"output": args.output, "song_count": min(args.limit, len(data["medley"]["songs"]))}, indent=2))
+    print(
+        json.dumps(
+            {"output": args.output, "song_count": min(args.limit, len(data["medley"]["songs"]))},
+            indent=2,
+        )
+    )
     return 0
 
 
@@ -197,4 +209,4 @@ if __name__ == "__main__":
         raise SystemExit(main())
     except Exception as exc:
         print(f"error: {exc}", file=sys.stderr)
-        raise SystemExit(1)
+        raise SystemExit(1) from exc

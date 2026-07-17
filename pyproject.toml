@@ -1,0 +1,69 @@
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "B",
+    "UP",
+    "SIM",
+    "C4",
+    "RUF",
+]
+ignore = ["UP017"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = [
+    "-ra",
+    "--strict-markers",
+    "--strict-config",
+]
+
+[tool.coverage.run]
+branch = true
+source = [
+    "app",
+    "chord_utils",
+    "compare_choruses",
+    "render_medley_html",
+    "song_db",
+    "ug_chorus_chords",
+    "ug_explore_scrape",
+    "update_song_db",
+]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 80
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unreachable = true
+show_error_codes = true
+files = [
+    "app.py",
+    "chord_utils.py",
+    "compare_choruses.py",
+    "render_medley_html.py",
+    "song_db.py",
+    "ug_chorus_chords.py",
+    "ug_explore_scrape.py",
+    "update_song_db.py",
+    "tests/test_chord_utils.py",
+    "tests/test_app.py",
+    "tests/test_compare_choruses.py",
+    "tests/test_song_db.py",
+    "tests/test_ug_chorus_chords.py",
+    "tests/test_ug_explore_scrape.py",
+    "tests/test_update_song_db.py",
+]
