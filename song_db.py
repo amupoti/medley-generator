@@ -14,6 +14,7 @@ def empty_db() -> dict:
         "version": 1,
         "updated_at": now_iso(),
         "songs": {},
+        "medleys": {},
     }
 
 
@@ -25,7 +26,19 @@ def load_db(path: Path) -> dict:
         data["songs"] = {song["url"]: song for song in data["songs"] if song.get("url")}
     data.setdefault("version", 1)
     data.setdefault("songs", {})
+    data.setdefault("medleys", {})
     return data
+
+
+def save_medley(db: dict, source_id: str, name: str, urls: list[str]) -> None:
+    existing = db.setdefault("medleys", {}).get(source_id, {})
+    timestamp = now_iso()
+    db["medleys"][source_id] = {
+        "name": name,
+        "urls": urls,
+        "created_at": existing.get("created_at", timestamp),
+        "updated_at": timestamp,
+    }
 
 
 def save_db(path: Path, db: dict) -> None:

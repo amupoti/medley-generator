@@ -1,4 +1,19 @@
 {
+  "medleys": {
+    "list:794d3dc7:Strato test 2": {
+      "created_at": "2026-07-15T08:41:13+00:00",
+      "name": "Strato medley",
+      "updated_at": "2026-07-15T11:44:37+00:00",
+      "urls": [
+        "https://tabs.ultimate-guitar.com/tab/stratovarius/forever-chords-634064",
+        "https://tabs.ultimate-guitar.com/tab/stratovarius/paradise-chords-4312826",
+        "https://tabs.ultimate-guitar.com/tab/stratovarius/unbreakable-chords-3332165",
+        "https://tabs.ultimate-guitar.com/tab/stratovarius/winter-skies-chords-2446737",
+        "https://tabs.ultimate-guitar.com/tab/stratovarius/black-diamond-chords-1760774",
+        "https://tabs.ultimate-guitar.com/tab/stratovarius/hunting-high-and-low-chords-1898821"
+      ]
+    }
+  },
   "songs": {
     "https://tabs.ultimate-guitar.com/tab/1035794": {
       "artist": "Los Rodr\u00edguez",
@@ -19476,20 +19491,894 @@
       "title": "White Pearl Black Oceans",
       "url": "https://tabs.ultimate-guitar.com/tab/sonata-arctica/white-pearl-black-oceans-chords-828274"
     },
+    "https://tabs.ultimate-guitar.com/tab/stratovarius/black-diamond-chords-1760774": {
+      "artist": "Stratovarius",
+      "chorus_chords": [
+        "Am",
+        "F",
+        "G",
+        "Am",
+        "Am",
+        "F",
+        "G",
+        "Am"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am"
+            },
+            {
+              "position": 16,
+              "symbol": "F"
+            },
+            {
+              "position": 28,
+              "symbol": "G"
+            },
+            {
+              "position": 33,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I know I can't stay by your side forever"
+        },
+        {
+          "chords": [
+            {
+              "position": 6,
+              "symbol": "Am"
+            },
+            {
+              "position": 22,
+              "symbol": "F"
+            },
+            {
+              "position": 34,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "But I know I won't forget your beauty"
+        },
+        {
+          "chords": [
+            {
+              "position": 12,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "My black diamond"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 5,
+      "explore_title": "black-diamond-chords-1760774",
+      "first_seen_at": "2026-07-15T07:54:40+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-15T11:44:55+00:00",
+      "last_seen_at": "2026-07-15T11:44:55+00:00",
+      "scrape_count": 2,
+      "sources": [
+        "list:794d3dc7:Strato test 2"
+      ],
+      "title": "Black Diamond",
+      "url": "https://tabs.ultimate-guitar.com/tab/stratovarius/black-diamond-chords-1760774"
+    },
+    "https://tabs.ultimate-guitar.com/tab/stratovarius/forever-chords-634064": {
+      "artist": "Stratovarius",
+      "chorus_chords": [
+        "Gb",
+        "Ab",
+        "Db",
+        "Db/C",
+        "Bbm",
+        "Gb",
+        "Ab",
+        "Bbm",
+        "Gb",
+        "Ab",
+        "Db",
+        "Db/C",
+        "Bbm",
+        "Gb",
+        "Ab",
+        "Bbm"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 11,
+              "symbol": "Gb"
+            },
+            {
+              "position": 22,
+              "symbol": "Ab"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I'm still there everywhere"
+        },
+        {
+          "chords": [
+            {
+              "position": 8,
+              "symbol": "Db"
+            },
+            {
+              "position": 14,
+              "symbol": "Db/C"
+            },
+            {
+              "position": 22,
+              "symbol": "Bbm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I'm the dust in the wind"
+        },
+        {
+          "chords": [
+            {
+              "position": 8,
+              "symbol": "Gb"
+            },
+            {
+              "position": 20,
+              "symbol": "Ab"
+            },
+            {
+              "position": 29,
+              "symbol": "Bbm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I'm the star in the northern sky"
+        },
+        {
+          "chords": [
+            {
+              "position": 11,
+              "symbol": "Gb"
+            },
+            {
+              "position": 19,
+              "symbol": "Ab"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I never stayed anywhere"
+        },
+        {
+          "chords": [
+            {
+              "position": 8,
+              "symbol": "Db"
+            },
+            {
+              "position": 14,
+              "symbol": "Db/C"
+            },
+            {
+              "position": 22,
+              "symbol": "Bbm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I'm the wind in the trees"
+        },
+        {
+          "chords": [
+            {
+              "position": 11,
+              "symbol": "Gb"
+            },
+            {
+              "position": 19,
+              "symbol": "Ab"
+            },
+            {
+              "position": 23,
+              "symbol": "Bbm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Would you wait for me forever?"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 1,
+      "explore_title": "forever-chords-634064",
+      "first_seen_at": "2026-07-15T07:54:36+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-15T11:44:41+00:00",
+      "last_seen_at": "2026-07-15T11:44:41+00:00",
+      "scrape_count": 2,
+      "sources": [
+        "list:794d3dc7:Strato test 2"
+      ],
+      "title": "Forever",
+      "url": "https://tabs.ultimate-guitar.com/tab/stratovarius/forever-chords-634064"
+    },
+    "https://tabs.ultimate-guitar.com/tab/stratovarius/hunting-high-and-low-chords-1898821": {
+      "artist": "Stratovarius",
+      "chorus_chords": [
+        "C#m",
+        "A",
+        "B",
+        "G#m",
+        "A",
+        "A#dim",
+        "B",
+        "Cdim",
+        "C#m",
+        "A",
+        "B",
+        "G#m",
+        "A",
+        "A#dim",
+        "B",
+        "Cdim"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 6,
+              "symbol": "C#m"
+            },
+            {
+              "position": 14,
+              "symbol": "A"
+            },
+            {
+              "position": 23,
+              "symbol": "B"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I am Hunting High and Low"
+        },
+        {
+          "chords": [
+            {
+              "position": 1,
+              "symbol": "G#m"
+            },
+            {
+              "position": 16,
+              "symbol": "A"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Diving from the sky above"
+        },
+        {
+          "chords": [
+            {
+              "position": 2,
+              "symbol": "A#dim"
+            },
+            {
+              "position": 14,
+              "symbol": "B"
+            },
+            {
+              "position": 29,
+              "symbol": "Cdim"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Looking for, more and more, once again"
+        },
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "C#m"
+            },
+            {
+              "position": 12,
+              "symbol": "A"
+            },
+            {
+              "position": 22,
+              "symbol": "B"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I'm Hunting High and Low"
+        },
+        {
+          "chords": [
+            {
+              "position": 2,
+              "symbol": "G#m"
+            },
+            {
+              "position": 12,
+              "symbol": "A"
+            },
+            {
+              "position": 27,
+              "symbol": "A#dim"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Sometimes I may win sometimes I'll lose"
+        },
+        {
+          "chords": [
+            {
+              "position": 5,
+              "symbol": "B"
+            },
+            {
+              "position": 18,
+              "symbol": "Cdim"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "It's just a game that I play"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 6,
+      "explore_title": "hunting-high-and-low-chords-1898821",
+      "first_seen_at": "2026-07-15T07:54:33+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-15T11:44:58+00:00",
+      "last_seen_at": "2026-07-15T11:44:58+00:00",
+      "scrape_count": 2,
+      "sources": [
+        "list:794d3dc7:Strato test 2"
+      ],
+      "title": "Hunting High And Low",
+      "url": "https://tabs.ultimate-guitar.com/tab/stratovarius/hunting-high-and-low-chords-1898821"
+    },
+    "https://tabs.ultimate-guitar.com/tab/stratovarius/hunting-high-and-low-official-2102545": {
+      "artist": null,
+      "chorus_chords": [],
+      "chorus_lines": [],
+      "errors": [],
+      "explore_rank": 1,
+      "explore_title": "hunting-high-and-low-official-2102545",
+      "first_seen_at": "2026-07-15T07:51:38+00:00",
+      "has_chorus": false,
+      "last_scraped_at": "2026-07-15T07:51:38+00:00",
+      "last_seen_at": "2026-07-15T07:51:38+00:00",
+      "scrape_count": 1,
+      "sources": [],
+      "title": "Ultimate Guitar Pro - Play Like A Pro",
+      "url": "https://tabs.ultimate-guitar.com/tab/stratovarius/hunting-high-and-low-official-2102545"
+    },
+    "https://tabs.ultimate-guitar.com/tab/stratovarius/paradise-chords-4312826": {
+      "artist": "Stratovarius",
+      "chorus_chords": [
+        "Bbm",
+        "Gb",
+        "Db",
+        "Ab",
+        "F",
+        "A",
+        "Bbm",
+        "Gb",
+        "F",
+        "Bbm",
+        "Gbm"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 10,
+              "symbol": "Bbm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Like the birds in the sky"
+        },
+        {
+          "chords": [
+            {
+              "position": 9,
+              "symbol": "Gb"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "We are flying so high"
+        },
+        {
+          "chords": [
+            {
+              "position": 10,
+              "symbol": "Db"
+            },
+            {
+              "position": 31,
+              "symbol": "Ab"
+            },
+            {
+              "position": 37,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Without making any kind of sacrifice"
+        },
+        {
+          "chords": [
+            {
+              "position": 1,
+              "symbol": "A"
+            },
+            {
+              "position": 10,
+              "symbol": "Bbm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "We've got so little time"
+        },
+        {
+          "chords": [
+            {
+              "position": 5,
+              "symbol": "Gb"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "To undo this crime"
+        },
+        {
+          "chords": [
+            {
+              "position": 10,
+              "symbol": "F"
+            },
+            {
+              "position": 23,
+              "symbol": "Bbm"
+            },
+            {
+              "position": 28,
+              "symbol": "Gbm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Or we'll lose our paradise"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 2,
+      "explore_title": "paradise-chords-4312826",
+      "first_seen_at": "2026-07-15T07:54:47+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-15T11:44:45+00:00",
+      "last_seen_at": "2026-07-15T11:44:45+00:00",
+      "scrape_count": 2,
+      "sources": [
+        "list:794d3dc7:Strato test 2"
+      ],
+      "title": "Paradise",
+      "url": "https://tabs.ultimate-guitar.com/tab/stratovarius/paradise-chords-4312826"
+    },
+    "https://tabs.ultimate-guitar.com/tab/stratovarius/unbreakable-chords-3332165": {
+      "artist": "Stratovarius",
+      "chorus_chords": [
+        "A",
+        "F#m",
+        "C#m",
+        "B",
+        "F#m",
+        "A",
+        "C#m",
+        "B",
+        "F#m",
+        "A",
+        "C#m",
+        "B",
+        "F#m",
+        "A",
+        "C#m",
+        "G#",
+        "C#m"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 13,
+              "symbol": "A"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "You carry me away"
+        },
+        {
+          "chords": [
+            {
+              "position": 9,
+              "symbol": "F#m"
+            },
+            {
+              "position": 19,
+              "symbol": "C#m"
+            },
+            {
+              "position": 30,
+              "symbol": "B"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "'Til 'morrow we're unbreakable"
+        },
+        {
+          "chords": [
+            {
+              "position": 21,
+              "symbol": "F#m"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I hold my breath and wait"
+        },
+        {
+          "chords": [
+            {
+              "position": 7,
+              "symbol": "A"
+            },
+            {
+              "position": 15,
+              "symbol": "C#m"
+            },
+            {
+              "position": 26,
+              "symbol": "B"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "This moment is unbreakable"
+        },
+        {
+          "chords": [
+            {
+              "position": 14,
+              "symbol": "F#m"
+            },
+            {
+              "position": 29,
+              "symbol": "A"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I can feel it deep within my heart and my soul"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "C#m"
+            },
+            {
+              "position": 17,
+              "symbol": "B"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "You make me whole"
+        },
+        {
+          "chords": [
+            {
+              "position": 20,
+              "symbol": "F#m"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I want to live this second forever"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "A"
+            },
+            {
+              "position": 17,
+              "symbol": "C#m"
+            },
+            {
+              "position": 28,
+              "symbol": "G#"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Always together, forevermore"
+        },
+        {
+          "chords": [
+            {
+              "position": 21,
+              "symbol": "C#m"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I hold my breath and wait"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 3,
+      "explore_title": "unbreakable-chords-3332165",
+      "first_seen_at": "2026-07-15T07:54:44+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-15T11:44:48+00:00",
+      "last_seen_at": "2026-07-15T11:44:48+00:00",
+      "scrape_count": 2,
+      "sources": [
+        "list:794d3dc7:Strato test 2"
+      ],
+      "title": "Unbreakable",
+      "url": "https://tabs.ultimate-guitar.com/tab/stratovarius/unbreakable-chords-3332165"
+    },
     "https://tabs.ultimate-guitar.com/tab/stratovarius/winter-skies-chords-2446737": {
       "artist": "Stratovarius",
-      "chorus_chords": [],
+      "chorus_chords": [
+        "Gm",
+        "Bb",
+        "C",
+        "Dm",
+        "C",
+        "Bb",
+        "Gm",
+        "C",
+        "G",
+        "Gm",
+        "Bb",
+        "C",
+        "Dm",
+        "C",
+        "Bb",
+        "Gm",
+        "C",
+        "Dm"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Gm"
+            },
+            {
+              "position": 10,
+              "symbol": "Bb"
+            },
+            {
+              "position": 22,
+              "symbol": "C"
+            },
+            {
+              "position": 27,
+              "symbol": "Dm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "   Winter skies leave me alone"
+        },
+        {
+          "chords": [
+            {
+              "position": 7,
+              "symbol": "C"
+            },
+            {
+              "position": 16,
+              "symbol": "Bb"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "When I lose my way"
+        },
+        {
+          "chords": [
+            {
+              "position": 7,
+              "symbol": "Gm"
+            },
+            {
+              "position": 18,
+              "symbol": "C"
+            },
+            {
+              "position": 26,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Winter skies, you call me home"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Gm"
+            },
+            {
+              "position": 10,
+              "symbol": "Bb"
+            },
+            {
+              "position": 22,
+              "symbol": "C"
+            },
+            {
+              "position": 27,
+              "symbol": "Dm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "   Winter skies leave me alone"
+        },
+        {
+          "chords": [
+            {
+              "position": 7,
+              "symbol": "C"
+            },
+            {
+              "position": 16,
+              "symbol": "Bb"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "When I lose my way"
+        },
+        {
+          "chords": [
+            {
+              "position": 7,
+              "symbol": "Gm"
+            },
+            {
+              "position": 18,
+              "symbol": "C"
+            },
+            {
+              "position": 26,
+              "symbol": "Dm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Winter skies, you call me home"
+        }
+      ],
       "errors": [],
-      "explore_rank": 50,
-      "explore_title": "Winter Skies",
+      "explore_rank": 4,
+      "explore_title": "winter-skies-chords-2446737",
       "first_seen_at": "2026-07-14T10:23:24+00:00",
-      "has_chorus": false,
-      "last_scraped_at": "2026-07-14T10:23:24+00:00",
-      "last_seen_at": "2026-07-14T10:28:36+00:00",
-      "scrape_count": 1,
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-15T11:44:51+00:00",
+      "last_seen_at": "2026-07-15T11:44:51+00:00",
+      "scrape_count": 2,
       "sources": [
         "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html",
+        "list:794d3dc7:Strato test 2"
       ],
       "title": "Winter Skies",
       "url": "https://tabs.ultimate-guitar.com/tab/stratovarius/winter-skies-chords-2446737"
@@ -20076,6 +20965,6 @@
       "url": "https://tabs.ultimate-guitar.com/tab/zaz/si-jamais-joublie-chords-1776260"
     }
   },
-  "updated_at": "2026-07-14T17:54:47+00:00",
+  "updated_at": "2026-07-15T11:44:58+00:00",
   "version": 1
 }

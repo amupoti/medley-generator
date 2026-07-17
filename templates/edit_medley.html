@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}{{ t("edit_medley") }}{% endblock %}
+{% block content %}
+<section class="page-header">
+  <h1>{{ t("edit_medley") }}</h1>
+  <p>{{ t("edit_medley_intro") }}</p>
+</section>
+
+<form class="panel edit-medley-form" method="post" action="{{ lang_url('edit_medley', source_id=source_id) }}">
+  <label>
+    {{ t("medley_name") }}
+    <input name="medley_name" type="text" maxlength="80" value="{{ medley.name }}">
+  </label>
+  <label>
+    {{ t("tab_urls") }}
+    <textarea name="tab_urls" rows="12" required>{{ medley.urls|join('\n') }}</textarea>
+  </label>
+  <div class="inline-fields">
+    <label>
+      {{ t("delay_ms") }}
+      <input name="delay_ms" type="number" min="0" value="2000">
+    </label>
+  </div>
+  <label class="checkbox">
+    <input name="refresh" type="checkbox">
+    {{ t("refresh_known") }}
+  </label>
+  <button type="submit">{{ t("save_and_recreate") }}</button>
+</form>
+{% endblock %}

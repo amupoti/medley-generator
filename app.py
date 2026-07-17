@@ -8,14 +8,14 @@ import uuid
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import quote, urljoin
+from urllib.parse import quote, urljoin, urlparse
 
 from flask import Flask, Response, abort, redirect, render_template, request, url_for
 
 from chord_utils import PITCH_CLASSES
 from chord_utils import transpose_chords
-from compare_choruses import build_output, load_songs
-from song_db import db_songs_as_list, db_urls, load_db, mark_seen, merge_song, record_failure, save_db
+from compare_choruses import build_output, canonical_song_key, load_songs
+from song_db import db_songs_as_list, db_urls, load_db, mark_seen, merge_song, record_failure, save_db, save_medley
 from ug_explore_scrape import scrape_song_with_retry
 from update_song_db import update_db
 
@@ -39,6 +39,11 @@ TRANSLATIONS = {
         "language": "Idioma",
         "dashboard_title": "Anàlisi de medleys",
         "dashboard_intro": "Analitza una pàgina Explore d'Ultimate Guitar, actualitza la base de dades local i crea un medley limitat a aquesta font.",
+        "create_medley": "Crea un medley",
+        "choose_analysis_method": "Tria com vols afegir les cançons.",
+        "edit_medley": "Edita medley",
+        "edit_medley_intro": "Afegeix, elimina o reordena les URLs i torna a crear el medley.",
+        "save_and_recreate": "Desa i torna a crear",
         "songs_count": "Cançons",
         "chorus_count": "Amb acords de tornada",
         "source_count": "Fonts",
@@ -52,6 +57,11 @@ TRANSLATIONS = {
         "delay_ms": "Retard ms",
         "refresh_known": "Torna a analitzar cançons conegudes",
         "start_url_analysis": "Inicia anàlisi d'URL",
+        "analyze_url_list": "Crea un medley des d'URLs",
+        "url_list_notice": "Enganxa una URL de pestanya d'Ultimate Guitar per línia.",
+        "medley_name": "Nom del medley",
+        "tab_urls": "URLs de pestanyes",
+        "start_url_list_analysis": "Crea el medley",
         "analyze_upload": "Analitza HTML d'Explore desat",
         "upload_notice": "La pujada es tracta com un llistat d'Explore; les pàgines de cançons que faltin encara s'analitzen.",
         "explore_html": "HTML d'Explore",
@@ -59,6 +69,8 @@ TRANSLATIONS = {
         "stored_sources": "Fonts desades",
         "no_sources": "Encara no hi ha fonts.",
         "open_medley": "Obre medley",
+        "delete_medley": "Elimina medley",
+        "confirm_delete_medley": "Vols eliminar aquest medley? Les cançons es conservaran a la base de dades.",
         "recent_jobs": "Tasques recents",
         "status": "Estat",
         "source": "Font",
@@ -78,6 +90,11 @@ TRANSLATIONS = {
         "job_refresh": "La pàgina de la tasca es refresca mentre l'anàlisi està en marxa.",
         "source_medley": "Medley de la font",
         "comparable_songs": "Cançons comparables",
+        "excluded_songs": "Cançons excloses",
+        "exclusion_reason": "Motiu",
+        "reason_no_chorus": "No s'han trobat acords de tornada",
+        "reason_duplicate": "Duplicada d'una altra pestanya de la mateixa cançó",
+        "reason_scrape_failed": "No s'ha pogut analitzar la pestanya",
         "average_transition": "Transició mitjana",
         "target_root": "Tonalitat objectiu",
         "target_key": "Tonalitat objectiu",
@@ -117,6 +134,7 @@ TRANSLATIONS = {
         "status_complete": "completada",
         "status_failed": "fallida",
         "kind_url": "URL",
+        "kind_url_list": "llista d'URLs",
         "kind_upload": "pujada",
         "no_transpose": "sense transposició",
         "transpose_up": "transposa amunt",
@@ -131,6 +149,11 @@ TRANSLATIONS = {
         "language": "Idioma",
         "dashboard_title": "Análisis de medleys",
         "dashboard_intro": "Analiza una página Explore de Ultimate Guitar, actualiza la base de datos local y crea un medley limitado a esa fuente.",
+        "create_medley": "Crear un medley",
+        "choose_analysis_method": "Elige cómo quieres añadir las canciones.",
+        "edit_medley": "Editar medley",
+        "edit_medley_intro": "Añade, elimina o reordena las URLs y vuelve a crear el medley.",
+        "save_and_recreate": "Guardar y volver a crear",
         "songs_count": "Canciones",
         "chorus_count": "Con acordes de estribillo",
         "source_count": "Fuentes",
@@ -144,6 +167,11 @@ TRANSLATIONS = {
         "delay_ms": "Retardo ms",
         "refresh_known": "Volver a analizar canciones conocidas",
         "start_url_analysis": "Iniciar análisis de URL",
+        "analyze_url_list": "Crear un medley desde URLs",
+        "url_list_notice": "Pega una URL de tablatura de Ultimate Guitar por línea.",
+        "medley_name": "Nombre del medley",
+        "tab_urls": "URLs de tablaturas",
+        "start_url_list_analysis": "Crear el medley",
         "analyze_upload": "Analizar HTML de Explore guardado",
         "upload_notice": "La subida se trata como un listado de Explore; las páginas de canciones que falten todavía se analizan.",
         "explore_html": "HTML de Explore",
@@ -151,6 +179,8 @@ TRANSLATIONS = {
         "stored_sources": "Fuentes guardadas",
         "no_sources": "Todavía no hay fuentes.",
         "open_medley": "Abrir medley",
+        "delete_medley": "Eliminar medley",
+        "confirm_delete_medley": "¿Quieres eliminar este medley? Las canciones se conservarán en la base de datos.",
         "recent_jobs": "Tareas recientes",
         "status": "Estado",
         "source": "Fuente",
@@ -170,6 +200,11 @@ TRANSLATIONS = {
         "job_refresh": "La página de la tarea se actualiza mientras el análisis está en marcha.",
         "source_medley": "Medley de la fuente",
         "comparable_songs": "Canciones comparables",
+        "excluded_songs": "Canciones excluidas",
+        "exclusion_reason": "Motivo",
+        "reason_no_chorus": "No se encontraron acordes de estribillo",
+        "reason_duplicate": "Duplicada de otra tablatura de la misma canción",
+        "reason_scrape_failed": "No se pudo analizar la tablatura",
         "average_transition": "Transición media",
         "target_root": "Tonalidad objetivo",
         "target_key": "Tonalidad objetivo",
@@ -209,6 +244,7 @@ TRANSLATIONS = {
         "status_complete": "completada",
         "status_failed": "fallida",
         "kind_url": "URL",
+        "kind_url_list": "lista de URLs",
         "kind_upload": "subida",
         "no_transpose": "sin transposición",
         "transpose_up": "transponer arriba",
@@ -269,7 +305,7 @@ def song_url_filter(value: str) -> str:
 
 @app.template_filter("source_label")
 def source_label_filter(value: str) -> str:
-    if value.startswith("upload:"):
+    if value.startswith(("upload:", "list:")):
         return value.rsplit(":", 1)[-1]
     return value
 
@@ -378,6 +414,7 @@ def build_medley_context(source_id: str) -> dict:
     limit = parse_int(request.args.get("limit"), MEDLEY_LIMIT)
     show_original = request.args.get("show_original", "1") != "0"
     songs = source_songs(source_id)
+    exclusions = comparison_exclusions(source_id, songs)
     output = build_output(songs, TOP_PAIR_COUNT, target_root)
     medley_songs = []
     for song in output["medley"]["songs"][:limit]:
@@ -401,6 +438,7 @@ def build_medley_context(source_id: str) -> dict:
         "target_root": target_root,
         "target_roots": sorted(PITCH_CLASSES),
         "show_original": show_original,
+        "exclusions": exclusions,
     }
 
 
@@ -456,9 +494,25 @@ def analyze_url(source_url: str, limit: int | None, delay_ms: int, refresh: bool
 
 
 def analyze_upload(html_text: str, source_id: str, limit: int | None, delay_ms: int, refresh: bool) -> dict:
+    discovered = extract_uploaded_links(html_text, limit)
+    return analyze_songs(discovered, source_id, delay_ms, refresh)
+
+
+def analyze_url_list(urls: list[str], source_id: str, delay_ms: int, refresh: bool) -> dict:
+    discovered = [
+        {
+            "explore_rank": index,
+            "explore_title": url.rsplit("/", 1)[-1],
+            "url": url,
+        }
+        for index, url in enumerate(urls, 1)
+    ]
+    return analyze_songs(discovered, source_id, delay_ms, refresh)
+
+
+def analyze_songs(discovered: list[dict], source_id: str, delay_ms: int, refresh: bool) -> dict:
     from playwright.sync_api import sync_playwright
 
-    discovered = extract_uploaded_links(html_text, limit)
     db = load_db(DB_PATH)
     known_urls = db_urls(db)
     skipped = []
@@ -516,10 +570,30 @@ def extract_uploaded_links(html_text: str, limit: int | None) -> list[dict]:
     return songs
 
 
+def parse_tab_urls(value: str) -> list[str]:
+    urls = []
+    seen = set()
+    for line in value.splitlines():
+        raw_url = line.strip()
+        if not raw_url:
+            continue
+        url = normalize_tab_url(raw_url)
+        parsed = urlparse(url)
+        is_ug_host = parsed.hostname == "ultimate-guitar.com" or (parsed.hostname or "").endswith(".ultimate-guitar.com")
+        if parsed.scheme not in {"http", "https"} or not is_ug_host:
+            raise ValueError(f"Unsupported Ultimate Guitar URL: {raw_url}")
+        if "/tab/" not in parsed.path:
+            raise ValueError(f"Not an Ultimate Guitar tab URL: {raw_url}")
+        if url not in seen:
+            seen.add(url)
+            urls.append(url)
+    return urls
+
+
 def db_stats() -> dict:
     db = load_db(DB_PATH)
     songs = db_songs_as_list(db)
-    sources = {source for song in songs for source in song.get("sources", [])}
+    sources = {source for song in songs for source in song.get("sources", [])} | set(db.get("medleys", {}))
     return {
         "song_count": len(songs),
         "chorus_count": sum(1 for song in songs if song.get("chorus_chords")),
@@ -538,6 +612,68 @@ def sorted_songs() -> list[dict]:
 
 def source_songs(source_id: str) -> list[dict]:
     return load_songs(DB_PATH, source_id)
+
+
+def comparison_exclusions(source_id: str, comparable_songs: list[dict] | None = None) -> list[dict]:
+    source_entries = [
+        song
+        for song in db_songs_as_list(load_db(DB_PATH))
+        if source_id in song.get("sources", [])
+    ]
+    comparable_songs = comparable_songs if comparable_songs is not None else source_songs(source_id)
+    comparable_urls = {song.get("url") for song in comparable_songs}
+    comparable_keys = {canonical_song_key(song) for song in comparable_songs}
+    exclusions = []
+    for song in source_entries:
+        if song.get("url") in comparable_urls:
+            continue
+        if song.get("errors") and not song.get("chorus_chords"):
+            reason = "scrape_failed"
+            detail = song["errors"][-1].get("error")
+        elif not song.get("chorus_chords"):
+            reason = "no_chorus"
+            detail = None
+        elif canonical_song_key(song) in comparable_keys:
+            reason = "duplicate"
+            detail = None
+        else:
+            continue
+        exclusions.append({**song, "exclusion_reason": reason, "exclusion_detail": detail})
+    return sorted(exclusions, key=lambda song: song.get("explore_rank") or 999999)
+
+
+def delete_source(source_id: str) -> None:
+    db = load_db(DB_PATH)
+    for song in db.get("songs", {}).values():
+        song["sources"] = [source for source in song.get("sources", []) if source != source_id]
+    db.get("medleys", {}).pop(source_id, None)
+    save_db(DB_PATH, db)
+
+
+def store_medley(source_id: str, name: str, urls: list[str]) -> None:
+    db = load_db(DB_PATH)
+    kept_urls = set(urls)
+    for url, song in db.get("songs", {}).items():
+        if url not in kept_urls:
+            song["sources"] = [source for source in song.get("sources", []) if source != source_id]
+    save_medley(db, source_id, name, urls)
+    save_db(DB_PATH, db)
+
+
+def medley_definition(db: dict, source_id: str) -> dict | None:
+    definition = db.get("medleys", {}).get(source_id)
+    if definition:
+        return definition
+    if not source_id.startswith("list:"):
+        return None
+    songs = sorted(
+        (song for song in db_songs_as_list(db) if source_id in song.get("sources", [])),
+        key=lambda song: song.get("explore_rank") or 999999,
+    )
+    urls = [song["url"] for song in songs if song.get("url")]
+    if not urls:
+        return None
+    return {"name": source_id.split(":", 2)[-1], "urls": urls}
 
 
 @app.get("/")
@@ -571,6 +707,24 @@ def analyze_upload_route():
     refresh = request.form.get("refresh") == "on"
     job_id = create_job("upload", source_id)
     run_background(job_id, analyze_upload, html_text, source_id, limit, delay_ms, refresh)
+    return redirect(url_for("job_detail", job_id=job_id, lang=current_lang()))
+
+
+@app.post("/analyze/url-list")
+def analyze_url_list_route():
+    try:
+        urls = parse_tab_urls(request.form.get("tab_urls", ""))
+    except ValueError as exc:
+        abort(400, str(exc))
+    if not urls:
+        abort(400, "At least one tab URL is required")
+    name = request.form.get("medley_name", "").strip()[:80] or f"URL list {uuid.uuid4().hex[:8]}"
+    source_id = f"list:{uuid.uuid4().hex[:8]}:{name}"
+    delay_ms = parse_int(request.form.get("delay_ms"), DEFAULT_DELAY_MS)
+    refresh = request.form.get("refresh") == "on"
+    store_medley(source_id, name, urls)
+    job_id = create_job("url_list", source_id)
+    run_background(job_id, analyze_url_list, urls, source_id, delay_ms, refresh)
     return redirect(url_for("job_detail", job_id=job_id, lang=current_lang()))
 
 
@@ -615,6 +769,36 @@ def medley(source_id: str):
         ),
         export_filename=export_filename(source_id, target_root),
     )
+
+
+@app.route("/medley/<path:source_id>/edit", methods=["GET", "POST"])
+def edit_medley(source_id: str):
+    db = load_db(DB_PATH)
+    definition = medley_definition(db, source_id)
+    if not definition:
+        abort(404)
+    if request.method == "GET":
+        return render_template("edit_medley.html", source_id=source_id, medley=definition)
+
+    try:
+        urls = parse_tab_urls(request.form.get("tab_urls", ""))
+    except ValueError as exc:
+        abort(400, str(exc))
+    if not urls:
+        abort(400, "At least one tab URL is required")
+    name = request.form.get("medley_name", "").strip()[:80] or definition["name"]
+    delay_ms = parse_int(request.form.get("delay_ms"), DEFAULT_DELAY_MS)
+    refresh = request.form.get("refresh") == "on"
+    store_medley(source_id, name, urls)
+    job_id = create_job("url_list", source_id)
+    run_background(job_id, analyze_url_list, urls, source_id, delay_ms, refresh)
+    return redirect(url_for("job_detail", job_id=job_id, lang=current_lang()))
+
+
+@app.post("/medley/<path:source_id>/delete")
+def delete_medley(source_id: str):
+    delete_source(source_id)
+    return redirect(url_for("index", lang=current_lang()))
 
 
 @app.get("/songs")

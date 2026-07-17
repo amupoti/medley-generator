@@ -34,6 +34,26 @@
   </div>
 </section>
 
+{% if exclusions %}
+  <section class="panel">
+    <h2>{{ t("excluded_songs") }} ({{ exclusions|length }})</h2>
+    <table>
+      <thead><tr><th>{{ t("song") }}</th><th>{{ t("exclusion_reason") }}</th></tr></thead>
+      <tbody>
+        {% for song in exclusions %}
+          <tr>
+            <td><a href="{{ song.url }}" target="_blank" rel="noreferrer">{{ song.artist or song.explore_title or song.url }}{% if song.artist and song.title %} - {{ song.title }}{% endif %}</a></td>
+            <td>
+              {{ t("reason_" ~ song.exclusion_reason) }}
+              {% if song.exclusion_detail %}<div class="error-detail">{{ song.exclusion_detail }}</div>{% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+{% endif %}
+
 {% if songs %}
   {% for song in songs %}
     {% set transition = transitions[loop.index0] if loop.index0 < transitions|length else none %}
