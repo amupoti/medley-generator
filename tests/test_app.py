@@ -157,7 +157,44 @@ class ParseTabUrlsTest(unittest.TestCase):
 
 class UrlListRouteTest(unittest.TestCase):
     def setUp(self) -> None:
+        app.jobs.clear()
+        self.addCleanup(app.jobs.clear)
         self.client = app.app.test_client()
+
+    @patch("app.run_background")
+    def test_creates_group_search_job(self, run_background: MagicMock) -> None:
+        response = self.client.post(
+            "/analyze/group?lang=es",
+            data={"group": "Oasis", "limit": "200", "delay_ms": "0"},
+        )
+
+        self.assertEqual(response.status_code, 302)
+        job = max(app.snapshot_jobs(), key=lambda item: item["created_at"])
+        self.assertEqual(job["kind"], "group")
+        self.assertTrue(job["source_id"].endswith(":Oasis"))
+        self.assertEqual(run_background.call_args.args[3:6], (job["source_id"], 50, 0))
+
+    def test_group_search_requires_a_group(self) -> None:
+        response = self.client.post("/analyze/group", data={"group": ""})
+
+        self.assertEqual(response.status_code, 400)
+
+    @patch("app.analyze_songs")
+    @patch("app.store_medley")
+    @patch("app.discover_group_songs")
+    def test_group_analysis_keeps_search_url_in_summary(
+        self, discover: MagicMock, store_medley: MagicMock, analyze_songs: MagicMock
+    ) -> None:
+        discover.return_value = [{"url": "tab"}]
+        analyze_songs.return_value = {"eligible_count": 1}
+
+        summary = app.analyze_group("Blind Guardian", "source", 50, 0, False)
+
+        self.assertEqual(
+            summary["search_url"],
+            "https://www.ultimate-guitar.com/search.php?title=Blind+Guardian&page=1&type=300",
+        )
+        store_medley.assert_called_once_with("source", "Blind Guardian", ["tab"])
 
     @patch("app.run_background")
     def test_creates_url_list_job(self, run_background: MagicMock) -> None:

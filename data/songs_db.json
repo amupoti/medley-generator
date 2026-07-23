@@ -1,5 +1,17 @@
 {
   "medleys": {
+    "list:29626dd0:After forever": {
+      "created_at": "2026-07-23T08:13:37+00:00",
+      "name": "After forever",
+      "updated_at": "2026-07-23T08:13:37+00:00",
+      "urls": [
+        "https://tabs.ultimate-guitar.com/tab/after-forever/alone-chords-3438434",
+        "https://tabs.ultimate-guitar.com/tab/after-forever/imperfect-tenses-chords-1798466",
+        "https://tabs.ultimate-guitar.com/tab/after-forever/cry-with-a-smile-chords-1697325",
+        "https://tabs.ultimate-guitar.com/tab/after-forever/digital-deceit-chords-4993138",
+        "https://tabs.ultimate-guitar.com/tab/after-forever/strong-chords-4605020"
+      ]
+    },
     "list:794d3dc7:Strato test 2": {
       "created_at": "2026-07-15T08:41:13+00:00",
       "name": "Strato medley",
@@ -11,6 +23,51 @@
         "https://tabs.ultimate-guitar.com/tab/stratovarius/winter-skies-chords-2446737",
         "https://tabs.ultimate-guitar.com/tab/stratovarius/black-diamond-chords-1760774",
         "https://tabs.ultimate-guitar.com/tab/stratovarius/hunting-high-and-low-chords-1898821"
+      ]
+    },
+    "list:ec1a8e38:Blind Guardian": {
+      "created_at": "2026-07-23T08:25:28+00:00",
+      "name": "Blind Guardian",
+      "updated_at": "2026-07-23T08:25:28+00:00",
+      "urls": [
+        "https://tabs.ultimate-guitar.com/tab/blind-guardian/the-bards-song-in-the-forest-chords-839146",
+        "https://tabs.ultimate-guitar.com/tab/blind-guardian/nightfall-chords-512392",
+        "https://tabs.ultimate-guitar.com/tab/blind-guardian/valhalla-chords-4309919",
+        "https://tabs.ultimate-guitar.com/tab/blind-guardian/mirror-mirror-chords-2362339"
+      ]
+    },
+    "list:fe654ba8:Nightwish": {
+      "created_at": "2026-07-23T08:44:21+00:00",
+      "name": "Nightwish",
+      "updated_at": "2026-07-23T08:44:21+00:00",
+      "urls": [
+        "https://tabs.ultimate-guitar.com/tab/nightwish/turn-loose-the-mermaids-chords-1112907",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/swanheart-chords-1760724",
+        "https://tabs.ultimate-guitar.com/tab/1712023",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/while-your-lips-are-still-red-chords-613616",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/the-islander-chords-692447",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/the-crow-the-owl-and-the-dove-chords-1217062",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/dead-boys-poem-chords-1185553",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/nemo-chords-1747041",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/sleeping-sun-chords-77362",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/amaranth-chords-1101170",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/the-poet-and-the-pendulum-chords-638516",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/i-want-my-tears-back-chords-1141148",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/walking-in-the-air-chords-123890",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/noise-chords-3089906",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/hows-the-heart-chords-3107522",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/alpenglow-chords-1736568",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/ever-dream-chords-171367",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/wish-i-had-an-angel-chords-1058343",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/stargazers-chords-1765465",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/over-the-hills-and-far-away-chords-269318",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/bless-the-child-chords-3675596",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/lanternlight-chords-5434869",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/nightwish-chords-1750182",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/wishmaster-chords-2690622",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/nightquest-chords-3693464",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/romanticide-chords-5131300",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/weak-fantasy-chords-5145589"
       ]
     }
   },
@@ -319,16 +376,17 @@
         }
       ],
       "errors": [],
-      "explore_rank": 47,
+      "explore_rank": 3,
       "explore_title": "\u00c9lan",
       "first_seen_at": "2026-07-14T10:23:14+00:00",
       "has_chorus": true,
       "last_scraped_at": "2026-07-14T16:24:31+00:00",
-      "last_seen_at": "2026-07-14T16:24:31+00:00",
+      "last_seen_at": "2026-07-23T08:44:29+00:00",
       "scrape_count": 2,
       "sources": [
         "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html",
+        "list:fe654ba8:Nightwish"
       ],
       "title": "\u00c9lan",
       "url": "https://tabs.ultimate-guitar.com/tab/1712023"
@@ -2515,6 +2573,737 @@
       "title": "I Dont Want To Miss A Thing",
       "url": "https://tabs.ultimate-guitar.com/tab/aerosmith/i-dont-want-to-miss-a-thing-chords-59465"
     },
+    "https://tabs.ultimate-guitar.com/tab/after-forever/alone-chords-3438434": {
+      "artist": "After Forever",
+      "chorus_chords": [
+        "Em",
+        "C",
+        "G",
+        "D/F#",
+        "Em",
+        "C",
+        "G",
+        "D/F#",
+        "Em",
+        "C",
+        "G",
+        "D",
+        "G",
+        "C",
+        "D"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Em"
+            },
+            {
+              "position": 7,
+              "symbol": "C"
+            },
+            {
+              "position": 14,
+              "symbol": "G"
+            },
+            {
+              "position": 24,
+              "symbol": "D/F#"
+            },
+            {
+              "position": 33,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "  Till now I always got by on my own"
+        },
+        {
+          "chords": [
+            {
+              "position": 2,
+              "symbol": "C"
+            },
+            {
+              "position": 15,
+              "symbol": "G"
+            },
+            {
+              "position": 27,
+              "symbol": "D/F#"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I never really cared until I met you"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Em"
+            },
+            {
+              "position": 4,
+              "symbol": "C"
+            },
+            {
+              "position": 16,
+              "symbol": "G"
+            },
+            {
+              "position": 29,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "     And now it chills me to the bone"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "G"
+            },
+            {
+              "position": 9,
+              "symbol": "C"
+            },
+            {
+              "position": 18,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "How do I get you alone"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 1,
+      "explore_title": "Alone",
+      "first_seen_at": "2026-07-23T08:13:40+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:13:40+00:00",
+      "last_seen_at": "2026-07-23T08:13:40+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:29626dd0:After forever"
+      ],
+      "title": "Alone",
+      "url": "https://tabs.ultimate-guitar.com/tab/after-forever/alone-chords-3438434"
+    },
+    "https://tabs.ultimate-guitar.com/tab/after-forever/cry-with-a-smile-chords-1697325": {
+      "artist": "After Forever",
+      "chorus_chords": [
+        "Dm",
+        "Bb",
+        "A7/C#",
+        "Dm",
+        "Gm7",
+        "Dm",
+        "Bb",
+        "Gm",
+        "C",
+        "Am",
+        "Dm",
+        "Bb",
+        "A7/C#",
+        "Dm",
+        "Gm7",
+        "Dm",
+        "Bb",
+        "Gm",
+        "A7/C#"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Dm"
+            },
+            {
+              "position": 24,
+              "symbol": "Bb"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "      Take my heart and set it free"
+        },
+        {
+          "chords": [
+            {
+              "position": 6,
+              "symbol": "A7/C#"
+            },
+            {
+              "position": 24,
+              "symbol": "Dm"
+            },
+            {
+              "position": 40,
+              "symbol": "Gm7"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "      Take my heart and give it time to heal"
+        },
+        {
+          "chords": [
+            {
+              "position": 8,
+              "symbol": "Dm"
+            },
+            {
+              "position": 20,
+              "symbol": "Bb"
+            },
+            {
+              "position": 25,
+              "symbol": "Gm"
+            },
+            {
+              "position": 42,
+              "symbol": "C"
+            },
+            {
+              "position": 47,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "      I know; in my me - mo - ries you'll live"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Dm"
+            },
+            {
+              "position": 22,
+              "symbol": "Bb"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "      Take my heart a little while"
+        },
+        {
+          "chords": [
+            {
+              "position": 6,
+              "symbol": "A7/C#"
+            },
+            {
+              "position": 23,
+              "symbol": "Dm"
+            },
+            {
+              "position": 43,
+              "symbol": "Gm7"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "      Take it with you to the place you'll go"
+        },
+        {
+          "chords": [
+            {
+              "position": 8,
+              "symbol": "Dm"
+            },
+            {
+              "position": 21,
+              "symbol": "Bb"
+            },
+            {
+              "position": 27,
+              "symbol": "Gm"
+            },
+            {
+              "position": 40,
+              "symbol": "A7/C#"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "      I know we will meet a - gain some day"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 3,
+      "explore_title": "Cry With A Smile",
+      "first_seen_at": "2026-07-23T08:13:47+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:13:47+00:00",
+      "last_seen_at": "2026-07-23T08:13:47+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:29626dd0:After forever"
+      ],
+      "title": "Cry With A Smile",
+      "url": "https://tabs.ultimate-guitar.com/tab/after-forever/cry-with-a-smile-chords-1697325"
+    },
+    "https://tabs.ultimate-guitar.com/tab/after-forever/digital-deceit-chords-4993138": {
+      "artist": "After Forever",
+      "chorus_chords": [
+        "Am",
+        "Bb",
+        "Am",
+        "F",
+        "Am",
+        "Am",
+        "F",
+        "Dm",
+        "Dm",
+        "G",
+        "F",
+        "Am",
+        "Am",
+        "Dm",
+        "F",
+        "F",
+        "G",
+        "B",
+        "Em",
+        "C",
+        "Em",
+        "D",
+        "C",
+        "B"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am"
+            },
+            {
+              "position": 28,
+              "symbol": "Bb"
+            },
+            {
+              "position": 37,
+              "symbol": "Am"
+            },
+            {
+              "position": 40,
+              "symbol": "F"
+            },
+            {
+              "position": 43,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I am the queen I'm pure and loved by everyone"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am"
+            },
+            {
+              "position": 5,
+              "symbol": "F"
+            },
+            {
+              "position": 22,
+              "symbol": "Dm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Come enter, here's my code"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Dm"
+            },
+            {
+              "position": 12,
+              "symbol": "G"
+            },
+            {
+              "position": 23,
+              "symbol": "F"
+            },
+            {
+              "position": 35,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Through the world wide wire you'll know "
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am"
+            },
+            {
+              "position": 6,
+              "symbol": "Dm"
+            },
+            {
+              "position": 21,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "The queen of her own world"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "F"
+            },
+            {
+              "position": 3,
+              "symbol": "G"
+            },
+            {
+              "position": 14,
+              "symbol": "B"
+            },
+            {
+              "position": 16,
+              "symbol": "Em"
+            },
+            {
+              "position": 21,
+              "symbol": "C"
+            },
+            {
+              "position": 23,
+              "symbol": "Em"
+            },
+            {
+              "position": 26,
+              "symbol": "D"
+            },
+            {
+              "position": 28,
+              "symbol": "C"
+            },
+            {
+              "position": 30,
+              "symbol": "B"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "My story meet my life"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 4,
+      "explore_title": "Digital Deceit",
+      "first_seen_at": "2026-07-23T08:13:51+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:13:51+00:00",
+      "last_seen_at": "2026-07-23T08:13:51+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:29626dd0:After forever"
+      ],
+      "title": "Digital Deceit",
+      "url": "https://tabs.ultimate-guitar.com/tab/after-forever/digital-deceit-chords-4993138"
+    },
+    "https://tabs.ultimate-guitar.com/tab/after-forever/imperfect-tenses-chords-1798466": {
+      "artist": "After Forever",
+      "chorus_chords": [
+        "Am",
+        "E7",
+        "Am",
+        "Em7",
+        "F",
+        "Dm",
+        "F",
+        "G",
+        "Am",
+        "Am7",
+        "F/A",
+        "Am"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "Am"
+            },
+            {
+              "position": 20,
+              "symbol": "E7"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I'm waiting for the perfect sign"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am"
+            },
+            {
+              "position": 22,
+              "symbol": "Em7"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "To reveal what lies inside"
+        },
+        {
+          "chords": [
+            {
+              "position": 11,
+              "symbol": "F"
+            },
+            {
+              "position": 18,
+              "symbol": "Dm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "There's no lie in trying, "
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "F"
+            },
+            {
+              "position": 7,
+              "symbol": "G"
+            },
+            {
+              "position": 15,
+              "symbol": "Am"
+            },
+            {
+              "position": 20,
+              "symbol": "Am7"
+            },
+            {
+              "position": 24,
+              "symbol": "F/A"
+            },
+            {
+              "position": 28,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Why do you fear  me? "
+        }
+      ],
+      "errors": [],
+      "explore_rank": 2,
+      "explore_title": "Imperfect Tenses",
+      "first_seen_at": "2026-07-23T08:13:44+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:13:44+00:00",
+      "last_seen_at": "2026-07-23T08:13:44+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:29626dd0:After forever"
+      ],
+      "title": "Imperfect Tenses",
+      "url": "https://tabs.ultimate-guitar.com/tab/after-forever/imperfect-tenses-chords-1798466"
+    },
+    "https://tabs.ultimate-guitar.com/tab/after-forever/strong-chords-4605020": {
+      "artist": "After Forever",
+      "chorus_chords": [
+        "C",
+        "Em",
+        "C",
+        "Em",
+        "C",
+        "Em",
+        "C",
+        "Bb",
+        "A",
+        "A",
+        "D",
+        "Bm",
+        "G"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "C"
+            },
+            {
+              "position": 3,
+              "symbol": "Em"
+            },
+            {
+              "position": 9,
+              "symbol": "C"
+            },
+            {
+              "position": 24,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I  see  every smile you fake"
+        },
+        {
+          "chords": [
+            {
+              "position": 1,
+              "symbol": "C"
+            },
+            {
+              "position": 17,
+              "symbol": "Em"
+            },
+            {
+              "position": 32,
+              "symbol": "C"
+            },
+            {
+              "position": 47,
+              "symbol": "Bb"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Strong emotion, strong devotion to ignore the pain"
+        },
+        {
+          "chords": [
+            {
+              "position": 11,
+              "symbol": "A"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "To stand strong"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "A"
+            },
+            {
+              "position": 14,
+              "symbol": "D"
+            },
+            {
+              "position": 32,
+              "symbol": "Bm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Day after day,  to be there for us, always"
+        },
+        {
+          "chords": [
+            {
+              "position": 5,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "To pretend there's nothing wrong"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 5,
+      "explore_title": "Strong",
+      "first_seen_at": "2026-07-23T08:13:54+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:13:54+00:00",
+      "last_seen_at": "2026-07-23T08:13:54+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:29626dd0:After forever"
+      ],
+      "title": "Strong",
+      "url": "https://tabs.ultimate-guitar.com/tab/after-forever/strong-chords-4605020"
+    },
     "https://tabs.ultimate-guitar.com/tab/alanis-morissette/you-oughta-know-chords-352404": {
       "artist": "Alanis Morissette",
       "chorus_chords": [
@@ -3282,6 +4071,388 @@
       ],
       "title": "Pa Amb Oli I Sal",
       "url": "https://tabs.ultimate-guitar.com/tab/blaumut/pa-amb-oli-i-sal-chords-1533312"
+    },
+    "https://tabs.ultimate-guitar.com/tab/blind-guardian/mirror-mirror-chords-2362339": {
+      "artist": "Blind Guardian",
+      "chorus_chords": [
+        "Am",
+        "G",
+        "Dm",
+        "F",
+        "G",
+        "Am",
+        "G",
+        "Dm",
+        "F",
+        "G",
+        "Am",
+        "G",
+        "Dm",
+        "F",
+        "G",
+        "Am",
+        "G",
+        "Dm",
+        "C",
+        "G",
+        "Am"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am"
+            },
+            {
+              "position": 7,
+              "symbol": "G"
+            },
+            {
+              "position": 24,
+              "symbol": "Dm"
+            },
+            {
+              "position": 41,
+              "symbol": "F"
+            },
+            {
+              "position": 48,
+              "symbol": "G"
+            },
+            {
+              "position": 57,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Mirror Mirror on the wall     True hope lies beyond the coast"
+        },
+        {
+          "chords": [
+            {
+              "position": 12,
+              "symbol": "G"
+            },
+            {
+              "position": 31,
+              "symbol": "Dm"
+            },
+            {
+              "position": 45,
+              "symbol": "F"
+            },
+            {
+              "position": 57,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "You're a damned kind can't you see that the winds will change"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am"
+            },
+            {
+              "position": 7,
+              "symbol": "G"
+            },
+            {
+              "position": 24,
+              "symbol": "Dm"
+            },
+            {
+              "position": 41,
+              "symbol": "F"
+            },
+            {
+              "position": 48,
+              "symbol": "G"
+            },
+            {
+              "position": 57,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Mirror Mirror on the wall     True hope lies beyond the coast"
+        },
+        {
+          "chords": [
+            {
+              "position": 12,
+              "symbol": "G"
+            },
+            {
+              "position": 31,
+              "symbol": "Dm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "You're a damned kind can't you see"
+        },
+        {
+          "chords": [
+            {
+              "position": 8,
+              "symbol": "C"
+            },
+            {
+              "position": 16,
+              "symbol": "G"
+            },
+            {
+              "position": 24,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "That tomorrows bears insanity"
+        },
+        {
+          "chords": [],
+          "lyrics": "| Am   | Am G | x2"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 4,
+      "explore_title": "Mirror Mirror",
+      "first_seen_at": "2026-07-23T08:25:42+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:25:42+00:00",
+      "last_seen_at": "2026-07-23T08:25:42+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:ec1a8e38:Blind Guardian"
+      ],
+      "title": "Mirror Mirror",
+      "url": "https://tabs.ultimate-guitar.com/tab/blind-guardian/mirror-mirror-chords-2362339"
+    },
+    "https://tabs.ultimate-guitar.com/tab/blind-guardian/nightfall-chords-512392": {
+      "artist": "Blind Guardian",
+      "chorus_chords": [],
+      "chorus_lines": [],
+      "errors": [],
+      "explore_rank": 2,
+      "explore_title": "Nightfall",
+      "first_seen_at": "2026-07-23T08:25:35+00:00",
+      "has_chorus": false,
+      "last_scraped_at": "2026-07-23T08:25:35+00:00",
+      "last_seen_at": "2026-07-23T08:25:35+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:ec1a8e38:Blind Guardian"
+      ],
+      "title": "Nightfall",
+      "url": "https://tabs.ultimate-guitar.com/tab/blind-guardian/nightfall-chords-512392"
+    },
+    "https://tabs.ultimate-guitar.com/tab/blind-guardian/the-bards-song-in-the-forest-chords-839146": {
+      "artist": "Blind Guardian",
+      "chorus_chords": [],
+      "chorus_lines": [],
+      "errors": [],
+      "explore_rank": 1,
+      "explore_title": "The Bards Song - In The Forest",
+      "first_seen_at": "2026-07-23T08:25:31+00:00",
+      "has_chorus": false,
+      "last_scraped_at": "2026-07-23T08:25:31+00:00",
+      "last_seen_at": "2026-07-23T08:25:31+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:ec1a8e38:Blind Guardian"
+      ],
+      "title": "The Bards Song - In The Forest",
+      "url": "https://tabs.ultimate-guitar.com/tab/blind-guardian/the-bards-song-in-the-forest-chords-839146"
+    },
+    "https://tabs.ultimate-guitar.com/tab/blind-guardian/valhalla-chords-4309919": {
+      "artist": "Blind Guardian",
+      "chorus_chords": [
+        "Am",
+        "Em",
+        "G",
+        "F",
+        "Am",
+        "Em",
+        "G",
+        "F",
+        "Am",
+        "Em",
+        "G",
+        "F",
+        "Am",
+        "Em",
+        "G",
+        "F"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am"
+            },
+            {
+              "position": 14,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "  Valhalla, deliverance"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "G"
+            },
+            {
+              "position": 21,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "  Why've you ever forgotten me?"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am"
+            },
+            {
+              "position": 14,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "  Valhalla, deliverance"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "G"
+            },
+            {
+              "position": 21,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "  Why've you ever forgotten me?"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am"
+            },
+            {
+              "position": 14,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "  Valhalla, deliverance"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "G"
+            },
+            {
+              "position": 21,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "  Why've you ever forgotten me?"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am"
+            },
+            {
+              "position": 4,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Oh, oh-oh-oh"
+        },
+        {
+          "chords": [
+            {
+              "position": 2,
+              "symbol": "G"
+            },
+            {
+              "position": 10,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Valhalla"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 3,
+      "explore_title": "Valhalla",
+      "first_seen_at": "2026-07-23T08:25:38+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:25:38+00:00",
+      "last_seen_at": "2026-07-23T08:25:38+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:ec1a8e38:Blind Guardian"
+      ],
+      "title": "Valhalla",
+      "url": "https://tabs.ultimate-guitar.com/tab/blind-guardian/valhalla-chords-4309919"
     },
     "https://tabs.ultimate-guitar.com/tab/bob-dylan/knockin-on-heavens-door-chords-66559": {
       "artist": "Bob Dylan",
@@ -14123,6 +15294,391 @@
       "title": "Red River Valley",
       "url": "https://tabs.ultimate-guitar.com/tab/misc-traditional/red-river-valley-chords-1051628"
     },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/alpenglow-chords-1736568": {
+      "artist": "Nightwish",
+      "chorus_chords": [
+        "G",
+        "F#",
+        "Em",
+        "Bm",
+        "Em",
+        "Bm",
+        "Em",
+        "Bm",
+        "D",
+        "G",
+        "F#",
+        "Em",
+        "Bm",
+        "G",
+        "D",
+        "Am",
+        "G",
+        "D",
+        "Gm",
+        "Eb",
+        "F",
+        "Gm",
+        "Bb",
+        "F",
+        "Gm",
+        "Eb",
+        "F",
+        "Gm"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "G"
+            },
+            {
+              "position": 3,
+              "symbol": "F#"
+            },
+            {
+              "position": 8,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "We were here"
+        },
+        {
+          "chords": [
+            {
+              "position": 15,
+              "symbol": "Bm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Roaming on the endless prairie"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Em"
+            },
+            {
+              "position": 11,
+              "symbol": "Bm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Writing an endless story"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Em"
+            },
+            {
+              "position": 11,
+              "symbol": "Bm"
+            },
+            {
+              "position": 25,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Building a Walden of our own"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "G"
+            },
+            {
+              "position": 3,
+              "symbol": "F#"
+            },
+            {
+              "position": 8,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "We were here"
+        },
+        {
+          "chords": [
+            {
+              "position": 13,
+              "symbol": "Bm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Grieving the saddened faces"
+        },
+        {
+          "chords": [],
+          "lyrics": "Em-G              D       Em"
+        },
+        {
+          "chords": [],
+          "lyrics": "   Conquering the darkest places"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "G"
+            },
+            {
+              "position": 24,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Time to rest now and to finish the show"
+        },
+        {
+          "chords": [
+            {
+              "position": 6,
+              "symbol": "Am"
+            },
+            {
+              "position": 31,
+              "symbol": "G"
+            },
+            {
+              "position": 36,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "And become the music, one with alpenglow"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Gm"
+            },
+            {
+              "position": 3,
+              "symbol": "Eb"
+            },
+            {
+              "position": 6,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Gm"
+            },
+            {
+              "position": 3,
+              "symbol": "Bb"
+            },
+            {
+              "position": 6,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Gm"
+            },
+            {
+              "position": 3,
+              "symbol": "Eb"
+            },
+            {
+              "position": 6,
+              "symbol": "F"
+            },
+            {
+              "position": 8,
+              "symbol": "Gm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Gm-F#"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 16,
+      "explore_title": "Alpenglow",
+      "first_seen_at": "2026-07-23T08:45:11+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:45:11+00:00",
+      "last_seen_at": "2026-07-23T08:45:11+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Alpenglow",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/alpenglow-chords-1736568"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/amaranth-chords-1101170": {
+      "artist": "Nightwish",
+      "chorus_chords": [
+        "Em",
+        "C",
+        "G",
+        "D",
+        "Em",
+        "C",
+        "G",
+        "D",
+        "Em",
+        "C",
+        "G",
+        "D",
+        "C",
+        "F"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Em"
+            },
+            {
+              "position": 11,
+              "symbol": "C"
+            },
+            {
+              "position": 27,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Caress the one, the Never-Fading"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "D"
+            },
+            {
+              "position": 8,
+              "symbol": "Em"
+            },
+            {
+              "position": 13,
+              "symbol": "C"
+            },
+            {
+              "position": 34,
+              "symbol": "G"
+            },
+            {
+              "position": 45,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Rain in your heart - the tears of snow-white sorrow"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Em"
+            },
+            {
+              "position": 11,
+              "symbol": "C"
+            },
+            {
+              "position": 27,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Caress the one, the hiding amaranth"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "D"
+            },
+            {
+              "position": 10,
+              "symbol": "C"
+            },
+            {
+              "position": 17,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "In a land of the daybreak"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 10,
+      "explore_title": "Amaranth",
+      "first_seen_at": "2026-07-23T08:44:50+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:44:50+00:00",
+      "last_seen_at": "2026-07-23T08:44:50+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Amaranth Acoustic",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/amaranth-chords-1101170"
+    },
     "https://tabs.ultimate-guitar.com/tab/nightwish/amaranth-chords-662747": {
       "artist": "Nightwish",
       "chorus_chords": [],
@@ -14141,6 +15697,160 @@
       ],
       "title": "Amaranth",
       "url": "https://tabs.ultimate-guitar.com/tab/nightwish/amaranth-chords-662747"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/bless-the-child-chords-3675596": {
+      "artist": "Nightwish",
+      "chorus_chords": [
+        "Dm",
+        "Am",
+        "F",
+        "C",
+        "G",
+        "Dm",
+        "G",
+        "Am",
+        "Dm",
+        "Am",
+        "F",
+        "C",
+        "G",
+        "Dm",
+        "G",
+        "Am"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Dm"
+            },
+            {
+              "position": 10,
+              "symbol": "Am"
+            },
+            {
+              "position": 15,
+              "symbol": "F"
+            },
+            {
+              "position": 30,
+              "symbol": "C"
+            },
+            {
+              "position": 36,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Why am I loved only when I'm gone?"
+        },
+        {
+          "chords": [
+            {
+              "position": 1,
+              "symbol": "Dm"
+            },
+            {
+              "position": 14,
+              "symbol": "G"
+            },
+            {
+              "position": 32,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Gone back in time to bless the child"
+        },
+        {
+          "chords": [
+            {
+              "position": 1,
+              "symbol": "Dm"
+            },
+            {
+              "position": 13,
+              "symbol": "Am"
+            },
+            {
+              "position": 28,
+              "symbol": "F"
+            },
+            {
+              "position": 39,
+              "symbol": "C"
+            },
+            {
+              "position": 43,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Think of me long enough to make a memory"
+        },
+        {
+          "chords": [
+            {
+              "position": 1,
+              "symbol": "Dm"
+            },
+            {
+              "position": 17,
+              "symbol": "G"
+            },
+            {
+              "position": 30,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Come bless the child one more time"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 21,
+      "explore_title": "Bless The Child",
+      "first_seen_at": "2026-07-23T08:45:25+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:45:25+00:00",
+      "last_seen_at": "2026-07-23T08:45:25+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Bless The Child",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/bless-the-child-chords-3675596"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/dead-boys-poem-chords-1185553": {
+      "artist": "Nightwish",
+      "chorus_chords": [],
+      "chorus_lines": [],
+      "errors": [],
+      "explore_rank": 7,
+      "explore_title": "Dead Boys Poem",
+      "first_seen_at": "2026-07-23T08:44:43+00:00",
+      "has_chorus": false,
+      "last_scraped_at": "2026-07-23T08:44:43+00:00",
+      "last_seen_at": "2026-07-23T08:44:43+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Dead Boys Poem",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/dead-boys-poem-chords-1185553"
     },
     "https://tabs.ultimate-guitar.com/tab/nightwish/ever-dream-chords-171367": {
       "artist": "Nightwish",
@@ -14257,16 +15967,17 @@
         }
       ],
       "errors": [],
-      "explore_rank": 46,
+      "explore_rank": 17,
       "explore_title": "Ever Dream",
       "first_seen_at": "2026-07-14T10:23:10+00:00",
       "has_chorus": true,
       "last_scraped_at": "2026-07-14T16:50:33+00:00",
-      "last_seen_at": "2026-07-14T16:50:33+00:00",
+      "last_seen_at": "2026-07-23T08:45:11+00:00",
       "scrape_count": 2,
       "sources": [
         "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html",
+        "list:fe654ba8:Nightwish"
       ],
       "title": "Ever Dream",
       "url": "https://tabs.ultimate-guitar.com/tab/nightwish/ever-dream-chords-171367"
@@ -14424,6 +16135,1126 @@
       "title": "Ghost Love Score",
       "url": "https://tabs.ultimate-guitar.com/tab/nightwish/ghost-love-score-chords-1797238"
     },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/hows-the-heart-chords-3107522": {
+      "artist": "Nightwish",
+      "chorus_chords": [
+        "Am",
+        "Em",
+        "F",
+        "Am",
+        "F",
+        "C",
+        "G",
+        "C",
+        "G"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 10,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "How`s the heart"
+        },
+        {
+          "chords": [
+            {
+              "position": 15,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Underneath the silence?"
+        },
+        {
+          "chords": [
+            {
+              "position": 10,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "How`s the one"
+        },
+        {
+          "chords": [
+            {
+              "position": 16,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Drowning in the mire?"
+        },
+        {
+          "chords": [
+            {
+              "position": 7,
+              "symbol": "F"
+            },
+            {
+              "position": 21,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Let us sound a human paean"
+        },
+        {
+          "chords": [
+            {
+              "position": 5,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Come in, the fire`s warm"
+        },
+        {
+          "chords": [
+            {
+              "position": 9,
+              "symbol": "C"
+            },
+            {
+              "position": 29,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Burn the rope and dance some more"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 15,
+      "explore_title": "Hows The Heart",
+      "first_seen_at": "2026-07-23T08:45:07+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:45:07+00:00",
+      "last_seen_at": "2026-07-23T08:45:07+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Hows The Heart",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/hows-the-heart-chords-3107522"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/i-want-my-tears-back-chords-1141148": {
+      "artist": "Nightwish",
+      "chorus_chords": [
+        "Am",
+        "Em",
+        "Am",
+        "F",
+        "C",
+        "G"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Where is the wonder? Where's the awe?"
+        },
+        {
+          "chords": [
+            {
+              "position": 28,
+              "symbol": "Em"
+            },
+            {
+              "position": 35,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Where's dear Alice knocking on the door?"
+        },
+        {
+          "chords": [
+            {
+              "position": 26,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Where's the trapdoor that takes me there"
+        },
+        {
+          "chords": [
+            {
+              "position": 9,
+              "symbol": "C"
+            },
+            {
+              "position": 32,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "were the real is shattered by a Mad Marsh Hare."
+        }
+      ],
+      "errors": [],
+      "explore_rank": 12,
+      "explore_title": "I Want My Tears Back",
+      "first_seen_at": "2026-07-23T08:44:57+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:44:57+00:00",
+      "last_seen_at": "2026-07-23T08:44:57+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "I Want My Tears Back",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/i-want-my-tears-back-chords-1141148"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/lanternlight-chords-5434869": {
+      "artist": "Nightwish",
+      "chorus_chords": [
+        "G",
+        "C",
+        "G",
+        "C",
+        "Em",
+        "Am",
+        "B",
+        "C",
+        "D",
+        "Em",
+        "C",
+        "D",
+        "Bm",
+        "Em"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "G"
+            },
+            {
+              "position": 23,
+              "symbol": "C"
+            },
+            {
+              "position": 35,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Last night brought the heaviest of snows"
+        },
+        {
+          "chords": [
+            {
+              "position": 12,
+              "symbol": "C"
+            },
+            {
+              "position": 21,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Melting the songs of old"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am"
+            },
+            {
+              "position": 24,
+              "symbol": "B"
+            },
+            {
+              "position": 32,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Tying the boat, write a new one soon"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "D"
+            },
+            {
+              "position": 18,
+              "symbol": "Em"
+            },
+            {
+              "position": 27,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Sending me to the drowning moon"
+        },
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "D"
+            },
+            {
+              "position": 12,
+              "symbol": "Bm"
+            },
+            {
+              "position": 19,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Far above a lanternlight"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 22,
+      "explore_title": "Lanternlight",
+      "first_seen_at": "2026-07-23T08:45:28+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:45:28+00:00",
+      "last_seen_at": "2026-07-23T08:45:28+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Lanternlight",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/lanternlight-chords-5434869"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/nemo-chords-1747041": {
+      "artist": "Nightwish",
+      "chorus_chords": [
+        "Dm",
+        "F/C",
+        "C",
+        "Dm",
+        "F",
+        "C"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Dm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "    Oh how I wish for soothing rain "
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "F/C"
+            },
+            {
+              "position": 17,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "    All I wish is to dream again "
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Dm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "    My loving heart, lost in the dark "
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "F"
+            },
+            {
+              "position": 21,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "    For hope I\u2019d give my everything "
+        }
+      ],
+      "errors": [],
+      "explore_rank": 8,
+      "explore_title": "Nemo",
+      "first_seen_at": "2026-07-23T08:44:47+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:44:47+00:00",
+      "last_seen_at": "2026-07-23T08:44:47+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Nemo",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/nemo-chords-1747041"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/nightquest-chords-3693464": {
+      "artist": "Nightwish",
+      "chorus_chords": [
+        "Am",
+        "F",
+        "G",
+        "Am",
+        "F",
+        "G",
+        "Am"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Nightquest quest not for the past"
+        },
+        {
+          "chords": [],
+          "lyrics": "But for tomorrow to make it last"
+        },
+        {
+          "chords": [],
+          "lyrics": "Simply the best way to walk this life"
+        },
+        {
+          "chords": [],
+          "lyrics": "Hand in hand with the dreamers'minds"
+        },
+        {
+          "chords": [
+            {
+              "position": 29,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Enter the realm, don't stay awake"
+        },
+        {
+          "chords": [
+            {
+              "position": 13,
+              "symbol": "G"
+            },
+            {
+              "position": 29,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "The dreams remain, they only brake"
+        },
+        {
+          "chords": [
+            {
+              "position": 27,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Forget the task, enjoy the ride"
+        },
+        {
+          "chords": [
+            {
+              "position": 11,
+              "symbol": "G"
+            },
+            {
+              "position": 23,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "And follow us into the night"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 25,
+      "explore_title": "Nightquest",
+      "first_seen_at": "2026-07-23T08:45:39+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:45:39+00:00",
+      "last_seen_at": "2026-07-23T08:45:39+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Nightquest",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/nightquest-chords-3693464"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/nightwish-chords-1750182": {
+      "artist": "Nightwish",
+      "chorus_chords": [],
+      "chorus_lines": [],
+      "errors": [],
+      "explore_rank": 23,
+      "explore_title": "Nightwish",
+      "first_seen_at": "2026-07-23T08:45:32+00:00",
+      "has_chorus": false,
+      "last_scraped_at": "2026-07-23T08:45:32+00:00",
+      "last_seen_at": "2026-07-23T08:45:32+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Nightwish",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/nightwish-chords-1750182"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/noise-chords-3089906": {
+      "artist": "Nightwish",
+      "chorus_chords": [
+        "Em",
+        "D",
+        "C",
+        "Em",
+        "D",
+        "Em",
+        "C",
+        "D",
+        "Em"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Noise"
+        },
+        {
+          "chords": [],
+          "lyrics": "From a sunless world"
+        },
+        {
+          "chords": [
+            {
+              "position": 5,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Your mirror is black, only a copy stares back"
+        },
+        {
+          "chords": [
+            {
+              "position": 5,
+              "symbol": "C"
+            },
+            {
+              "position": 14,
+              "symbol": "Em"
+            },
+            {
+              "position": 24,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "At a slave of brave new world"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Noise"
+        },
+        {
+          "chords": [],
+          "lyrics": "To decoy the human voice"
+        },
+        {
+          "chords": [
+            {
+              "position": 10,
+              "symbol": "C"
+            },
+            {
+              "position": 21,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Brain insomniac, paranoiac"
+        },
+        {
+          "chords": [
+            {
+              "position": 8,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Endless noise"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 14,
+      "explore_title": "Noise",
+      "first_seen_at": "2026-07-23T08:45:04+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:45:04+00:00",
+      "last_seen_at": "2026-07-23T08:45:04+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Noise",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/noise-chords-3089906"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/over-the-hills-and-far-away-chords-269318": {
+      "artist": "Nightwish",
+      "chorus_chords": [
+        "Em",
+        "G",
+        "D",
+        "Em",
+        "D",
+        "G",
+        "C",
+        "D",
+        "Em",
+        "G",
+        "D",
+        "Em",
+        "D",
+        "G",
+        "C",
+        "D"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Em"
+            },
+            {
+              "position": 9,
+              "symbol": "G"
+            },
+            {
+              "position": 19,
+              "symbol": "D"
+            },
+            {
+              "position": 24,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Over the hills and far away,"
+        },
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "D"
+            },
+            {
+              "position": 13,
+              "symbol": "G"
+            },
+            {
+              "position": 25,
+              "symbol": "C"
+            },
+            {
+              "position": 35,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "for ten long years he'll count the days."
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Em"
+            },
+            {
+              "position": 9,
+              "symbol": "G"
+            },
+            {
+              "position": 19,
+              "symbol": "D"
+            },
+            {
+              "position": 27,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Over the mountains and the seas,"
+        },
+        {
+          "chords": [
+            {
+              "position": 2,
+              "symbol": "D"
+            },
+            {
+              "position": 13,
+              "symbol": "G"
+            },
+            {
+              "position": 22,
+              "symbol": "C"
+            },
+            {
+              "position": 35,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "a prisoner's life for him there'll be."
+        }
+      ],
+      "errors": [],
+      "explore_rank": 20,
+      "explore_title": "Over The Hills And Far Away",
+      "first_seen_at": "2026-07-23T08:45:21+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:45:21+00:00",
+      "last_seen_at": "2026-07-23T08:45:21+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Over The Hills And Far Away",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/over-the-hills-and-far-away-chords-269318"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/romanticide-chords-5131300": {
+      "artist": "Nightwish",
+      "chorus_chords": [
+        "D5",
+        "Bb5",
+        "D5",
+        "Bb5",
+        "D5",
+        "Bb5",
+        "G5",
+        "Bb5",
+        "A5",
+        "Bb5",
+        "D5",
+        "Bb5",
+        "D5",
+        "Bb5",
+        "D5",
+        "Bb5",
+        "G5",
+        "Bb5",
+        "A5",
+        "Bb5",
+        "D5",
+        "Bb5",
+        "D5",
+        "Bb5",
+        "D5",
+        "Bb5",
+        "G5",
+        "Bb5",
+        "A5",
+        "Bb5",
+        "D5",
+        "Bb5",
+        "D5",
+        "Bb5",
+        "D5",
+        "G5",
+        "Bb5",
+        "A5",
+        "Bb5",
+        "D5"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "D5"
+            },
+            {
+              "position": 6,
+              "symbol": "Bb5"
+            },
+            {
+              "position": 10,
+              "symbol": "D5"
+            },
+            {
+              "position": 13,
+              "symbol": "Bb5"
+            },
+            {
+              "position": 17,
+              "symbol": "D5"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Leave me  be and cease"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Bb5"
+            },
+            {
+              "position": 4,
+              "symbol": "G5"
+            },
+            {
+              "position": 9,
+              "symbol": "Bb5"
+            },
+            {
+              "position": 13,
+              "symbol": "A5"
+            },
+            {
+              "position": 17,
+              "symbol": "Bb5"
+            },
+            {
+              "position": 21,
+              "symbol": "D5"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "To  tell me  how to  feel"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Bb5"
+            },
+            {
+              "position": 4,
+              "symbol": "D5"
+            },
+            {
+              "position": 11,
+              "symbol": "Bb5"
+            },
+            {
+              "position": 15,
+              "symbol": "D5"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "To  grieve to  shield"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Bb5"
+            },
+            {
+              "position": 4,
+              "symbol": "G5"
+            },
+            {
+              "position": 9,
+              "symbol": "Bb5"
+            },
+            {
+              "position": 14,
+              "symbol": "A5"
+            },
+            {
+              "position": 17,
+              "symbol": "Bb5"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "My--self from e--vil"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "D5"
+            },
+            {
+              "position": 6,
+              "symbol": "Bb5"
+            },
+            {
+              "position": 10,
+              "symbol": "D5"
+            },
+            {
+              "position": 13,
+              "symbol": "Bb5"
+            },
+            {
+              "position": 17,
+              "symbol": "D5"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Leave me  be O---D"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Bb5"
+            },
+            {
+              "position": 4,
+              "symbol": "G5"
+            },
+            {
+              "position": 9,
+              "symbol": "Bb5"
+            },
+            {
+              "position": 13,
+              "symbol": "A5"
+            },
+            {
+              "position": 16,
+              "symbol": "Bb5"
+            },
+            {
+              "position": 21,
+              "symbol": "D5"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Of  lies is  killing me"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Bb5"
+            },
+            {
+              "position": 4,
+              "symbol": "D5"
+            },
+            {
+              "position": 7,
+              "symbol": "Bb5"
+            },
+            {
+              "position": 11,
+              "symbol": "D5"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Ro--manti--cide"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "G5"
+            },
+            {
+              "position": 5,
+              "symbol": "Bb5"
+            },
+            {
+              "position": 10,
+              "symbol": "A5"
+            },
+            {
+              "position": 13,
+              "symbol": "Bb5"
+            },
+            {
+              "position": 17,
+              "symbol": "D5"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Till love do me  part"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 26,
+      "explore_title": "Romanticide",
+      "first_seen_at": "2026-07-23T08:45:43+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:45:43+00:00",
+      "last_seen_at": "2026-07-23T08:45:43+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Romanticide",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/romanticide-chords-5131300"
+    },
     "https://tabs.ultimate-guitar.com/tab/nightwish/sleeping-sun-chords-77362": {
       "artist": "Nightwish",
       "chorus_chords": [
@@ -14555,19 +17386,333 @@
         }
       ],
       "errors": [],
-      "explore_rank": 44,
+      "explore_rank": 9,
       "explore_title": "Sleeping Sun",
       "first_seen_at": "2026-07-14T10:23:04+00:00",
       "has_chorus": true,
       "last_scraped_at": "2026-07-14T16:50:53+00:00",
-      "last_seen_at": "2026-07-14T16:50:53+00:00",
+      "last_seen_at": "2026-07-23T08:44:47+00:00",
       "scrape_count": 2,
       "sources": [
         "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html",
+        "list:fe654ba8:Nightwish"
       ],
       "title": "Sleeping Sun",
       "url": "https://tabs.ultimate-guitar.com/tab/nightwish/sleeping-sun-chords-77362"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/stargazers-chords-1765465": {
+      "artist": "Nightwish",
+      "chorus_chords": [],
+      "chorus_lines": [],
+      "errors": [],
+      "explore_rank": 19,
+      "explore_title": "Stargazers",
+      "first_seen_at": "2026-07-23T08:45:18+00:00",
+      "has_chorus": false,
+      "last_scraped_at": "2026-07-23T08:45:18+00:00",
+      "last_seen_at": "2026-07-23T08:45:18+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Stargazers",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/stargazers-chords-1765465"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/swanheart-chords-1760724": {
+      "artist": "Nightwish",
+      "chorus_chords": [],
+      "chorus_lines": [],
+      "errors": [],
+      "explore_rank": 2,
+      "explore_title": "Swanheart",
+      "first_seen_at": "2026-07-23T08:44:29+00:00",
+      "has_chorus": false,
+      "last_scraped_at": "2026-07-23T08:44:29+00:00",
+      "last_seen_at": "2026-07-23T08:44:29+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Swanheart",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/swanheart-chords-1760724"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/the-crow-the-owl-and-the-dove-chords-1217062": {
+      "artist": "Nightwish",
+      "chorus_chords": [
+        "Am",
+        "G",
+        "Am",
+        "Em",
+        "F",
+        "C",
+        "F",
+        "G",
+        "Am",
+        "Am",
+        "G",
+        "Am",
+        "Em",
+        "F",
+        "C",
+        "F",
+        "G",
+        "Am"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am"
+            },
+            {
+              "position": 6,
+              "symbol": "G"
+            },
+            {
+              "position": 13,
+              "symbol": "Am"
+            },
+            {
+              "position": 25,
+              "symbol": "Em"
+            },
+            {
+              "position": 34,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": " Don't give me love, don't give me faith"
+        },
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "C"
+            },
+            {
+              "position": 19,
+              "symbol": "F"
+            },
+            {
+              "position": 28,
+              "symbol": "G"
+            },
+            {
+              "position": 36,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": " Wisdom nor pride, give innocence instead"
+        },
+        {
+          "chords": [
+            {
+              "position": 1,
+              "symbol": "Am"
+            },
+            {
+              "position": 7,
+              "symbol": "G"
+            },
+            {
+              "position": 14,
+              "symbol": "Am"
+            },
+            {
+              "position": 26,
+              "symbol": "Em"
+            },
+            {
+              "position": 33,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": " Don't give me love, I've had my share"
+        },
+        {
+          "chords": [
+            {
+              "position": 7,
+              "symbol": "C"
+            },
+            {
+              "position": 26,
+              "symbol": "F"
+            },
+            {
+              "position": 35,
+              "symbol": "G"
+            },
+            {
+              "position": 46,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": " Beauty nor rest, give me truth instead"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 6,
+      "explore_title": "The Crow The Owl And The Dove",
+      "first_seen_at": "2026-07-23T08:44:40+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:44:40+00:00",
+      "last_seen_at": "2026-07-23T08:44:40+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "The Crow The Owl And The Dove",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/the-crow-the-owl-and-the-dove-chords-1217062"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/the-islander-chords-692447": {
+      "artist": "Nightwish",
+      "chorus_chords": [
+        "G",
+        "D",
+        "A",
+        "Bm",
+        "G",
+        "D",
+        "Em",
+        "Bm",
+        "G",
+        "D",
+        "A",
+        "Bm",
+        "G",
+        "D",
+        "Em"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 8,
+              "symbol": "G"
+            },
+            {
+              "position": 13,
+              "symbol": "D"
+            },
+            {
+              "position": 17,
+              "symbol": "A"
+            },
+            {
+              "position": 21,
+              "symbol": "Bm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "This is long for-got-ten"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "G"
+            },
+            {
+              "position": 13,
+              "symbol": "D"
+            },
+            {
+              "position": 24,
+              "symbol": "Em"
+            },
+            {
+              "position": 31,
+              "symbol": "Bm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Light at the end of the world"
+        },
+        {
+          "chords": [
+            {
+              "position": 3,
+              "symbol": "G"
+            },
+            {
+              "position": 6,
+              "symbol": "D"
+            },
+            {
+              "position": 10,
+              "symbol": "A"
+            },
+            {
+              "position": 13,
+              "symbol": "Bm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Ho-ri-zon cry-ing"
+        },
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "G"
+            },
+            {
+              "position": 20,
+              "symbol": "D"
+            },
+            {
+              "position": 31,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "The tears he left behind long ago"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 5,
+      "explore_title": "The Islander",
+      "first_seen_at": "2026-07-23T08:44:36+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:44:36+00:00",
+      "last_seen_at": "2026-07-23T08:44:36+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "The Islander",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/the-islander-chords-692447"
     },
     "https://tabs.ultimate-guitar.com/tab/nightwish/the-islander-official-2904995": {
       "artist": null,
@@ -14587,6 +17732,674 @@
       ],
       "title": "Ultimate Guitar Pro - Play Like A Pro",
       "url": "https://tabs.ultimate-guitar.com/tab/nightwish/the-islander-official-2904995"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/the-poet-and-the-pendulum-chords-638516": {
+      "artist": "Nightwish",
+      "chorus_chords": [],
+      "chorus_lines": [],
+      "errors": [],
+      "explore_rank": 11,
+      "explore_title": "The Poet And The Pendulum",
+      "first_seen_at": "2026-07-23T08:44:54+00:00",
+      "has_chorus": false,
+      "last_scraped_at": "2026-07-23T08:44:54+00:00",
+      "last_seen_at": "2026-07-23T08:44:54+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "The Poet And The Pendulum",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/the-poet-and-the-pendulum-chords-638516"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/turn-loose-the-mermaids-chords-1112907": {
+      "artist": "Nightwish",
+      "chorus_chords": [],
+      "chorus_lines": [],
+      "errors": [],
+      "explore_rank": 1,
+      "explore_title": "Turn Loose The Mermaids",
+      "first_seen_at": "2026-07-23T08:44:25+00:00",
+      "has_chorus": false,
+      "last_scraped_at": "2026-07-23T08:44:25+00:00",
+      "last_seen_at": "2026-07-23T08:44:25+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Turn Loose The Mermaids",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/turn-loose-the-mermaids-chords-1112907"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/walking-in-the-air-chords-123890": {
+      "artist": "Nightwish",
+      "chorus_chords": [],
+      "chorus_lines": [],
+      "errors": [],
+      "explore_rank": 13,
+      "explore_title": "Walking In The Air",
+      "first_seen_at": "2026-07-23T08:45:00+00:00",
+      "has_chorus": false,
+      "last_scraped_at": "2026-07-23T08:45:00+00:00",
+      "last_seen_at": "2026-07-23T08:45:00+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Walking In The Air",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/walking-in-the-air-chords-123890"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/weak-fantasy-chords-5145589": {
+      "artist": "Nightwish",
+      "chorus_chords": [
+        "F",
+        "D",
+        "Ab",
+        "D",
+        "Bb",
+        "Dsus2",
+        "Csus4",
+        "D",
+        "Ab",
+        "Bb",
+        "Gm",
+        "Gm",
+        "Dm",
+        "Fm7",
+        "Dm",
+        "Bb",
+        "Dsus2",
+        "Csus4",
+        "Dm",
+        "Dsus2",
+        "Ab",
+        "Bb",
+        "Gm"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "F"
+            },
+            {
+              "position": 5,
+              "symbol": "D"
+            },
+            {
+              "position": 14,
+              "symbol": "Ab"
+            },
+            {
+              "position": 17,
+              "symbol": "D"
+            },
+            {
+              "position": 19,
+              "symbol": "Bb"
+            },
+            {
+              "position": 22,
+              "symbol": "Dsus2"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Your only truth"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Csus4"
+            },
+            {
+              "position": 7,
+              "symbol": "D"
+            },
+            {
+              "position": 14,
+              "symbol": "Ab"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Tribal poetry"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Bb"
+            },
+            {
+              "position": 19,
+              "symbol": "Gm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Witchcraft filling your void"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Gm"
+            },
+            {
+              "position": 9,
+              "symbol": "Dm"
+            },
+            {
+              "position": 16,
+              "symbol": "Fm7"
+            },
+            {
+              "position": 20,
+              "symbol": "Dm"
+            },
+            {
+              "position": 23,
+              "symbol": "Bb"
+            },
+            {
+              "position": 26,
+              "symbol": "Dsus2"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Lust for fantasy"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Csus4"
+            },
+            {
+              "position": 8,
+              "symbol": "Dm"
+            },
+            {
+              "position": 16,
+              "symbol": "Dsus2"
+            },
+            {
+              "position": 22,
+              "symbol": "Ab"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Male  necrocracy"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Bb"
+            },
+            {
+              "position": 24,
+              "symbol": "Gm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Every child worthy of a better tale"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 27,
+      "explore_title": "Weak Fantasy",
+      "first_seen_at": "2026-07-23T08:45:46+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:45:46+00:00",
+      "last_seen_at": "2026-07-23T08:45:46+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Weak Fantasy",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/weak-fantasy-chords-5145589"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/while-your-lips-are-still-red-chords-613616": {
+      "artist": "Nightwish",
+      "chorus_chords": [
+        "Em",
+        "Bm",
+        "D",
+        "Am",
+        "Em",
+        "Bm",
+        "C",
+        "D",
+        "Em",
+        "Bm",
+        "D",
+        "Am",
+        "Em",
+        "Bm",
+        "C",
+        "D"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Em"
+            },
+            {
+              "position": 12,
+              "symbol": "Bm"
+            },
+            {
+              "position": 32,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Kiss, while your lips are still red"
+        },
+        {
+          "chords": [
+            {
+              "position": 6,
+              "symbol": "Am"
+            },
+            {
+              "position": 27,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "While he\u2019s still in silent rest"
+        },
+        {
+          "chords": [
+            {
+              "position": 6,
+              "symbol": "Bm"
+            },
+            {
+              "position": 23,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "While bosom is still untouched,"
+        },
+        {
+          "chords": [
+            {
+              "position": 2,
+              "symbol": "D"
+            },
+            {
+              "position": 23,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "unveiled, hold another hand"
+        },
+        {
+          "chords": [
+            {
+              "position": 10,
+              "symbol": "Bm"
+            },
+            {
+              "position": 33,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "While the hand\u2019s still without a tool"
+        },
+        {
+          "chords": [
+            {
+              "position": 11,
+              "symbol": "Am"
+            },
+            {
+              "position": 36,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Drown into eyes while they\u2019re still blind"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Bm"
+            },
+            {
+              "position": 27,
+              "symbol": "C"
+            },
+            {
+              "position": 47,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Love while the night still hides the withering dawn"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 4,
+      "explore_title": "While Your Lips Are Still Red",
+      "first_seen_at": "2026-07-23T08:44:33+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:44:33+00:00",
+      "last_seen_at": "2026-07-23T08:44:33+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "While Your Lips Are Still Red",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/while-your-lips-are-still-red-chords-613616"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/wish-i-had-an-angel-chords-1058343": {
+      "artist": "Nightwish",
+      "chorus_chords": [
+        "Am/E",
+        "Em",
+        "C",
+        "G",
+        "D",
+        "Am/E",
+        "Em",
+        "D/F#",
+        "G",
+        "Am",
+        "C",
+        "D",
+        "Em"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [],
+          "lyrics": "N.C.   Am/E      Em"
+        },
+        {
+          "chords": [],
+          "lyrics": "I wish I had an angel"
+        },
+        {
+          "chords": [
+            {
+              "position": 8,
+              "symbol": "Am/E"
+            },
+            {
+              "position": 18,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "For one moment of love"
+        },
+        {
+          "chords": [
+            {
+              "position": 7,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I wish I had your angel"
+        },
+        {
+          "chords": [
+            {
+              "position": 5,
+              "symbol": "G"
+            },
+            {
+              "position": 19,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Your Virgin Mary undone"
+        },
+        {
+          "chords": [
+            {
+              "position": 7,
+              "symbol": "Am/E"
+            },
+            {
+              "position": 20,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I'm in love with my lust"
+        },
+        {
+          "chords": [
+            {
+              "position": 8,
+              "symbol": "D/F#"
+            },
+            {
+              "position": 22,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Burning angelwings to dust"
+        },
+        {
+          "chords": [
+            {
+              "position": 7,
+              "symbol": "Am"
+            },
+            {
+              "position": 18,
+              "symbol": "C"
+            },
+            {
+              "position": 21,
+              "symbol": "D"
+            },
+            {
+              "position": 26,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I wish I had your angel tonight"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 18,
+      "explore_title": "Wish I Had An Angel",
+      "first_seen_at": "2026-07-23T08:45:14+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:45:14+00:00",
+      "last_seen_at": "2026-07-23T08:45:14+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Wish I Had An Angel",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/wish-i-had-an-angel-chords-1058343"
+    },
+    "https://tabs.ultimate-guitar.com/tab/nightwish/wishmaster-chords-2690622": {
+      "artist": "Nightwish",
+      "chorus_chords": [],
+      "chorus_lines": [
+        {
+          "chords": [],
+          "lyrics": "Bm  Em |"
+        },
+        {
+          "chords": [],
+          "lyrics": "Master!"
+        },
+        {
+          "chords": [],
+          "lyrics": "Am        |"
+        },
+        {
+          "chords": [],
+          "lyrics": "Apprentice!"
+        },
+        {
+          "chords": [],
+          "lyrics": "Bm   Em   | G   D  Am |"
+        },
+        {
+          "chords": [],
+          "lyrics": "Heartborne, 7th Seeker"
+        },
+        {
+          "chords": [],
+          "lyrics": "Bm  Em |"
+        },
+        {
+          "chords": [],
+          "lyrics": "Warrior!"
+        },
+        {
+          "chords": [],
+          "lyrics": "Am      |"
+        },
+        {
+          "chords": [],
+          "lyrics": "Disciple!"
+        },
+        {
+          "chords": [],
+          "lyrics": "Bm Em | G      D  Am |"
+        },
+        {
+          "chords": [],
+          "lyrics": "In me the Wishmaster"
+        },
+        {
+          "chords": [],
+          "lyrics": "Em      C |"
+        },
+        {
+          "chords": [],
+          "lyrics": "Master!"
+        },
+        {
+          "chords": [],
+          "lyrics": "Em      D | Em"
+        },
+        {
+          "chords": [],
+          "lyrics": "Apprentice!"
+        },
+        {
+          "chords": [],
+          "lyrics": "     C    |     G   D |"
+        },
+        {
+          "chords": [],
+          "lyrics": "Heartborne, 7th Seeker"
+        },
+        {
+          "chords": [],
+          "lyrics": "Em     C |"
+        },
+        {
+          "chords": [],
+          "lyrics": "Warrior!"
+        },
+        {
+          "chords": [],
+          "lyrics": "Em     D | Em"
+        },
+        {
+          "chords": [],
+          "lyrics": "Disciple!"
+        },
+        {
+          "chords": [],
+          "lyrics": "   C  |       G   D |"
+        },
+        {
+          "chords": [],
+          "lyrics": "In me the Wishmaster"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 24,
+      "explore_title": "Wishmaster",
+      "first_seen_at": "2026-07-23T08:45:36+00:00",
+      "has_chorus": false,
+      "last_scraped_at": "2026-07-23T08:45:36+00:00",
+      "last_seen_at": "2026-07-23T08:45:36+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:fe654ba8:Nightwish"
+      ],
+      "title": "Wishmaster",
+      "url": "https://tabs.ultimate-guitar.com/tab/nightwish/wishmaster-chords-2690622"
     },
     "https://tabs.ultimate-guitar.com/tab/nil-moliner/libertad-chords-3690944": {
       "artist": "Nil Moliner",
@@ -20965,6 +24778,6 @@
       "url": "https://tabs.ultimate-guitar.com/tab/zaz/si-jamais-joublie-chords-1776260"
     }
   },
-  "updated_at": "2026-07-15T11:44:58+00:00",
+  "updated_at": "2026-07-23T08:45:46+00:00",
   "version": 1
 }

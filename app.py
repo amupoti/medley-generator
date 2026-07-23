@@ -30,6 +30,7 @@ from song_db import (
     save_medley,
 )
 from ug_explore_scrape import scrape_song_with_retry
+from ug_group_search import build_group_search_url, discover_group_songs
 from update_song_db import update_db
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -39,6 +40,7 @@ DEFAULT_DELAY_MS = 2000
 DEFAULT_TARGET_ROOT = "C"
 TOP_PAIR_COUNT = 50
 MEDLEY_LIMIT = 20
+GROUP_SEARCH_LIMIT = 50
 DEFAULT_LANG = "ca"
 SUPPORTED_LANGUAGES = {
     "ca": "Català",
@@ -322,6 +324,16 @@ def analyze_url_list(
     return analyze_songs(discovered, source_id, delay_ms, refresh)
 
 
+def analyze_group(
+    group: str, source_id: str, limit: int, delay_ms: int, refresh: bool
+) -> DynamicRecord:
+    discovered = discover_group_songs(group, limit, delay_ms)
+    store_medley(source_id, group, [song["url"] for song in discovered])
+    summary = analyze_songs(discovered, source_id, delay_ms, refresh)
+    summary["search_url"] = build_group_search_url(group)
+    return summary
+
+
 def analyze_songs(
     discovered: list[SongRecord], source_id: str, delay_ms: int, refresh: bool
 ) -> DynamicRecord:
@@ -350,6 +362,11 @@ def analyze_songs(
                 failures.append({**song, "error": error})
 
     save_db(DB_PATH, db)
+    eligible_count = sum(
+        1
+        for song in db["songs"].values()
+        if source_id in song.get("sources", []) and song.get("chorus_chords")
+    )
     return {
         "db": str(DB_PATH),
         "source": source_id,
@@ -357,6 +374,7 @@ def analyze_songs(
         "skipped_count": len(skipped),
         "scraped_count": len(scraped),
         "failure_count": len(failures),
+        "eligible_count": eligible_count,
         "total_db_songs": len(db["songs"]),
         "failures": failures,
     }
@@ -546,6 +564,20 @@ def analyze_url_list_route() -> Any:
     store_medley(source_id, name, urls)
     job_id = create_job("url_list", source_id)
     run_background(job_id, analyze_url_list, urls, source_id, delay_ms, refresh)
+    return redirect(url_for("job_detail", job_id=job_id, lang=current_lang()))
+
+
+@app.post("/analyze/group")
+def analyze_group_route() -> Any:
+    group = request.form.get("group", "").strip()[:80]
+    if not group:
+        abort(400, "group is required")
+    limit = max(1, min(parse_int(request.form.get("limit"), GROUP_SEARCH_LIMIT), 50))
+    delay_ms = parse_int(request.form.get("delay_ms"), DEFAULT_DELAY_MS)
+    refresh = request.form.get("refresh") == "on"
+    source_id = f"list:{uuid.uuid4().hex[:8]}:{group}"
+    job_id = create_job("group", source_id)
+    run_background(job_id, analyze_group, group, source_id, limit, delay_ms, refresh)
     return redirect(url_for("job_detail", job_id=job_id, lang=current_lang()))
 
 

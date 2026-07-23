@@ -17,6 +17,9 @@
     <dt>{{ t("kind") }}</dt><dd>{{ kind_text(job.kind) }}</dd>
     <dt>{{ t("created") }}</dt><dd>{{ job.created_at }}</dd>
     <dt>{{ t("updated") }}</dt><dd>{{ job.updated_at }}</dd>
+    {% if job.summary and job.summary.search_url %}
+      <dt>{{ t("search_url") }}</dt><dd><a href="{{ job.summary.search_url }}" target="_blank" rel="noopener noreferrer">{{ job.summary.search_url }}</a></dd>
+    {% endif %}
   </dl>
 
   {% if job.error %}
@@ -28,6 +31,9 @@
       <div><span>{{ job.summary.discovered_count }}</span><label>{{ t("discovered") }}</label></div>
       <div><span>{{ job.summary.skipped_count }}</span><label>{{ t("skipped") }}</label></div>
       <div><span>{{ job.summary.scraped_count }}</span><label>{{ t("scraped") }}</label></div>
+      {% if job.summary.eligible_count is defined %}
+        <div><span>{{ job.summary.eligible_count }}</span><label>{{ t("eligible_songs") }}</label></div>
+      {% endif %}
       <div><span>{{ job.summary.failure_count }}</span><label>{{ t("failures") }}</label></div>
       <div><span>{{ job.summary.total_db_songs }}</span><label>{{ t("db_songs") }}</label></div>
     </div>

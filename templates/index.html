@@ -33,9 +33,36 @@
     </div>
     <div class="method-switcher" role="tablist" aria-label="Analysis method">
       <button class="method-tab active" type="button" role="tab" aria-selected="true" aria-controls="url-analysis" data-method="url-analysis">{{ t("analyze_url") }}</button>
+      <button class="method-tab" type="button" role="tab" aria-selected="false" aria-controls="group-analysis" data-method="group-analysis">{{ t("analyze_group") }}</button>
       <button class="method-tab" type="button" role="tab" aria-selected="false" aria-controls="upload-analysis" data-method="upload-analysis">{{ t("analyze_upload") }}</button>
       <button class="method-tab" type="button" role="tab" aria-selected="false" aria-controls="list-analysis" data-method="list-analysis">{{ t("analyze_url_list") }}</button>
     </div>
+  </div>
+
+  <div class="method-panel" id="group-analysis" role="tabpanel" hidden>
+  <form method="post" action="{{ lang_url('analyze_group_route') }}">
+    <h2>{{ t("analyze_group") }}</h2>
+    <p class="notice">{{ t("group_notice") }}</p>
+    <label>
+      {{ t("group") }}
+      <input name="group" type="text" maxlength="80" required>
+    </label>
+    <div class="inline-fields">
+      <label>
+        {{ t("limit") }}
+        <input name="limit" type="number" min="1" max="50" value="50">
+      </label>
+      <label>
+        {{ t("delay_ms") }}
+        <input name="delay_ms" type="number" min="0" value="2000">
+      </label>
+    </div>
+    <label class="checkbox">
+      <input name="refresh" type="checkbox">
+      {{ t("refresh_known") }}
+    </label>
+    <button type="submit">{{ t("start_group_analysis") }}</button>
+  </form>
   </div>
 
   <div class="method-panel active" id="url-analysis" role="tabpanel">
