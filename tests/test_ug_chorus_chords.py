@@ -5,7 +5,7 @@ from email.message import Message
 from io import BytesIO
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from unittest.mock import MagicMock, patch
+from unittest.mock import MagicMock, call, patch
 from urllib.error import HTTPError, URLError
 
 import ug_chorus_chords as ug
@@ -103,6 +103,10 @@ class LoadingTest(unittest.TestCase):
         playwright.chromium.launch.side_effect = [RuntimeError("missing"), "browser"]
         self.assertEqual(ug.launch_browser(playwright), "browser")
         self.assertEqual(playwright.chromium.launch.call_count, 2)
+        self.assertEqual(
+            playwright.chromium.launch.call_args_list,
+            [call(channel="chrome", headless=True), call(headless=True)],
+        )
 
     def test_dismiss_cookie_popup_tries_labels_until_button_exists(self) -> None:
         page = MagicMock()

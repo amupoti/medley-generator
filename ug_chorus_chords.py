@@ -143,9 +143,9 @@ def load_song_with_browser(url: str) -> SongRecord:
 
 def launch_browser(playwright: Any) -> Any:
     try:
-        return playwright.chromium.launch(channel="chrome", headless=False)
+        return playwright.chromium.launch(channel="chrome", headless=True)
     except Exception:
-        return playwright.chromium.launch(headless=False)
+        return playwright.chromium.launch(headless=True)
 
 
 def dismiss_cookie_popup(page: Any) -> None:
