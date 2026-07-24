@@ -1,5 +1,22 @@
 {
   "medleys": {
+    "list:038740ad:Lacuna Coil": {
+      "created_at": "2026-07-23T08:57:47+00:00",
+      "name": "Lacuna Coil",
+      "updated_at": "2026-07-23T08:57:47+00:00",
+      "urls": [
+        "https://tabs.ultimate-guitar.com/tab/lacuna-coil/enjoy-the-silence-chords-2371047",
+        "https://tabs.ultimate-guitar.com/tab/lacuna-coil/swamped-chords-3649505",
+        "https://tabs.ultimate-guitar.com/tab/lacuna-coil/end-of-time-chords-3193811",
+        "https://tabs.ultimate-guitar.com/tab/lacuna-coil/spellbound-chords-1991549",
+        "https://tabs.ultimate-guitar.com/tab/lacuna-coil/nothing-stands-in-our-way-chords-1513522",
+        "https://tabs.ultimate-guitar.com/tab/lacuna-coil/heavens-a-lie-chords-332351",
+        "https://tabs.ultimate-guitar.com/tab/lacuna-coil/within-me-chords-1715710",
+        "https://tabs.ultimate-guitar.com/tab/lacuna-coil/trip-the-darkness-chords-2695191",
+        "https://tabs.ultimate-guitar.com/tab/lacuna-coil/the-ghost-woman-and-the-hunter-chords-376813",
+        "https://tabs.ultimate-guitar.com/tab/lacuna-coil/to-myself-i-turned-chords-965279"
+      ]
+    },
     "list:29626dd0:After forever": {
       "created_at": "2026-07-23T08:13:37+00:00",
       "name": "After forever",
@@ -25,15 +42,61 @@
         "https://tabs.ultimate-guitar.com/tab/stratovarius/hunting-high-and-low-chords-1898821"
       ]
     },
+    "list:83301295:URL list da9f150c": {
+      "created_at": "2026-07-24T15:33:38+00:00",
+      "name": "URL list da9f150c",
+      "updated_at": "2026-07-24T15:33:38+00:00",
+      "urls": [
+        "https://tabs.ultimate-guitar.com/tab/nightwish/noise-chords-3089906",
+        "https://tabs.ultimate-guitar.com/tab/nightwish/over-the-hills-and-far-away-chords-269318"
+      ]
+    },
+    "list:84399e71:Keane": {
+      "created_at": "2026-07-23T09:01:43+00:00",
+      "name": "Keane",
+      "updated_at": "2026-07-23T09:01:43+00:00",
+      "urls": [
+        "https://tabs.ultimate-guitar.com/tab/keane/the-starting-line-chords-1152738",
+        "https://tabs.ultimate-guitar.com/tab/1155663",
+        "https://tabs.ultimate-guitar.com/tab/keane/bedshaped-chords-1833952",
+        "https://tabs.ultimate-guitar.com/tab/keane/bend-and-break-chords-996749",
+        "https://tabs.ultimate-guitar.com/tab/keane/somewhere-only-we-know-chords-1871714",
+        "https://tabs.ultimate-guitar.com/tab/keane/everybodys-changing-chords-111685",
+        "https://tabs.ultimate-guitar.com/tab/keane/a-bad-dream-chords-664356",
+        "https://tabs.ultimate-guitar.com/tab/keane/nothing-in-my-way-chords-805461",
+        "https://tabs.ultimate-guitar.com/tab/keane/this-is-the-last-time-chords-115680"
+      ]
+    },
+    "list:d50e1899:Metallica": {
+      "created_at": "2026-07-23T08:56:41+00:00",
+      "name": "Metallica",
+      "updated_at": "2026-07-23T08:56:41+00:00",
+      "urls": [
+        "https://tabs.ultimate-guitar.com/tab/metallica/turn-the-page-chords-1776210",
+        "https://tabs.ultimate-guitar.com/tab/metallica/blackened-chords-3134390",
+        "https://tabs.ultimate-guitar.com/tab/metallica/mama-said-chords-136125"
+      ]
+    },
     "list:ec1a8e38:Blind Guardian": {
       "created_at": "2026-07-23T08:25:28+00:00",
       "name": "Blind Guardian",
-      "updated_at": "2026-07-23T08:25:28+00:00",
+      "updated_at": "2026-07-24T15:12:27+00:00",
       "urls": [
         "https://tabs.ultimate-guitar.com/tab/blind-guardian/the-bards-song-in-the-forest-chords-839146",
-        "https://tabs.ultimate-guitar.com/tab/blind-guardian/nightfall-chords-512392",
         "https://tabs.ultimate-guitar.com/tab/blind-guardian/valhalla-chords-4309919",
-        "https://tabs.ultimate-guitar.com/tab/blind-guardian/mirror-mirror-chords-2362339"
+        "https://tabs.ultimate-guitar.com/tab/blind-guardian/mirror-mirror-chords-2362339",
+        "https://tabs.ultimate-guitar.com/tab/blind-guardian/nightfall-chords-512392"
+      ]
+    },
+    "list:f3d86d10:El pot petit": {
+      "created_at": "2026-07-24T15:09:31+00:00",
+      "name": "El pot petit",
+      "updated_at": "2026-07-24T15:09:31+00:00",
+      "urls": [
+        "https://tabs.ultimate-guitar.com/tab/el-pot-petit/els-pirates-chords-3397451",
+        "https://tabs.ultimate-guitar.com/tab/4048030",
+        "https://tabs.ultimate-guitar.com/tab/el-pot-petit/soc-un-mico-chords-5548824",
+        "https://tabs.ultimate-guitar.com/tab/el-pot-petit/el-pirata-despistat-chords-4050799"
       ]
     },
     "list:fe654ba8:Nightwish": {
@@ -85,11 +148,92 @@
       "last_seen_at": "2026-07-14T16:35:43+00:00",
       "scrape_count": 3,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Sin Documentos",
       "url": "https://tabs.ultimate-guitar.com/tab/1035794"
+    },
+    "https://tabs.ultimate-guitar.com/tab/1155663": {
+      "artist": "Keane",
+      "chorus_chords": [
+        "E",
+        "B",
+        "G#m",
+        "F#",
+        "E",
+        "G#m",
+        "F#"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 15,
+              "symbol": "E"
+            },
+            {
+              "position": 30,
+              "symbol": "B"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Go down to the rides on East Parade,"
+        },
+        {
+          "chords": [
+            {
+              "position": 8,
+              "symbol": "G#m"
+            },
+            {
+              "position": 30,
+              "symbol": "F#"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "By the lights of the Palace Arcade"
+        },
+        {
+          "chords": [
+            {
+              "position": 24,
+              "symbol": "E"
+            },
+            {
+              "position": 46,
+              "symbol": "G#m"
+            },
+            {
+              "position": 52,
+              "symbol": "F#"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "And watch night coming down on the Sovereign Light Caf\u00e9"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 2,
+      "explore_title": "Sovereign Light Caf\u00e9",
+      "first_seen_at": "2026-07-23T09:01:50+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T09:01:50+00:00",
+      "last_seen_at": "2026-07-23T09:01:50+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:84399e71:Keane"
+      ],
+      "title": "Sovereign Light Caf\u00e9",
+      "url": "https://tabs.ultimate-guitar.com/tab/1155663"
     },
     "https://tabs.ultimate-guitar.com/tab/1552083": {
       "artist": "Extremoduro",
@@ -200,8 +344,7 @@
       "last_seen_at": "2026-07-14T16:35:53+00:00",
       "scrape_count": 3,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Insurrecci\u00f3n",
       "url": "https://tabs.ultimate-guitar.com/tab/1604441"
@@ -219,8 +362,7 @@
       "last_seen_at": "2026-07-14T16:36:03+00:00",
       "scrape_count": 3,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "La Revoluci\u00f3n Sexual",
       "url": "https://tabs.ultimate-guitar.com/tab/1656836"
@@ -385,7 +527,6 @@
       "scrape_count": 2,
       "sources": [
         "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html",
         "list:fe654ba8:Nightwish"
       ],
       "title": "\u00c9lan",
@@ -404,8 +545,7 @@
       "last_seen_at": "2026-07-14T16:36:12+00:00",
       "scrape_count": 3,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Aunque T\u00fa No Lo Sepas",
       "url": "https://tabs.ultimate-guitar.com/tab/1825100"
@@ -503,8 +643,7 @@
       "last_seen_at": "2026-07-14T16:24:51+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Lodo",
       "url": "https://tabs.ultimate-guitar.com/tab/2393501"
@@ -698,8 +837,7 @@
       "last_seen_at": "2026-07-14T16:25:01+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Calma",
       "url": "https://tabs.ultimate-guitar.com/tab/2435921"
@@ -717,8 +855,7 @@
       "last_seen_at": "2026-07-14T16:36:22+00:00",
       "scrape_count": 3,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "El Rel\u00e1mpago",
       "url": "https://tabs.ultimate-guitar.com/tab/2684118"
@@ -804,8 +941,7 @@
       "last_seen_at": "2026-07-14T16:25:20+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Una Altra Manera De Viure",
       "url": "https://tabs.ultimate-guitar.com/tab/2757912"
@@ -977,8 +1113,7 @@
       "last_seen_at": "2026-07-14T16:25:29+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Escriurem",
       "url": "https://tabs.ultimate-guitar.com/tab/2829877"
@@ -996,8 +1131,7 @@
       "last_seen_at": "2026-07-14T16:36:32+00:00",
       "scrape_count": 3,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Aves Enjauladas",
       "url": "https://tabs.ultimate-guitar.com/tab/3224240"
@@ -1147,8 +1281,7 @@
       "last_seen_at": "2026-07-14T16:25:49+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Tacones Rojos",
       "url": "https://tabs.ultimate-guitar.com/tab/3940172"
@@ -1368,11 +1501,106 @@
       "last_seen_at": "2026-07-14T16:26:08+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Ay Mam\u00e1",
       "url": "https://tabs.ultimate-guitar.com/tab/4014748"
+    },
+    "https://tabs.ultimate-guitar.com/tab/4048030": {
+      "artist": "El Pot Petit",
+      "chorus_chords": [
+        "C",
+        "F",
+        "G",
+        "C",
+        "Am",
+        "F",
+        "G",
+        "C"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "C"
+            },
+            {
+              "position": 14,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Tigres i cavalls,"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "G"
+            },
+            {
+              "position": 15,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "hipop\u00f2tams i algun gall,"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am"
+            },
+            {
+              "position": 19,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "tots reunits amb el lle\u00f3"
+        },
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "G"
+            },
+            {
+              "position": 18,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "busquen una soluci\u00f3."
+        }
+      ],
+      "errors": [],
+      "explore_rank": 2,
+      "explore_title": "El Lle\u00f3 Vergony\u00f3s",
+      "first_seen_at": "2026-07-24T15:09:39+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-24T15:09:39+00:00",
+      "last_seen_at": "2026-07-24T15:09:39+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:f3d86d10:El pot petit"
+      ],
+      "title": "El Lle\u00f3 Vergony\u00f3s",
+      "url": "https://tabs.ultimate-guitar.com/tab/4048030"
     },
     "https://tabs.ultimate-guitar.com/tab/6021695": {
       "artist": "Rosal\u00eda (Rosal\u00eda Vila)",
@@ -1621,8 +1849,7 @@
       "last_seen_at": "2026-07-14T16:26:28+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Clavado En Un Bar",
       "url": "https://tabs.ultimate-guitar.com/tab/7543"
@@ -1640,8 +1867,7 @@
       "last_seen_at": "2026-07-14T16:36:42+00:00",
       "scrape_count": 3,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Les Choristes - Caresse Sur Loc\u00e9an",
       "url": "https://tabs.ultimate-guitar.com/tab/927072"
@@ -1913,8 +2139,7 @@
       "last_seen_at": "2026-07-14T16:26:48+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Hello",
       "url": "https://tabs.ultimate-guitar.com/tab/adele/hello-chords-1775928"
@@ -2080,8 +2305,7 @@
       "scrape_count": 3,
       "sources": [
         "https://www.ultimate-guitar.com/explore?country_chart=1&order=hitstotal_desc",
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Someone Like You",
       "url": "https://tabs.ultimate-guitar.com/tab/adele/someone-like-you-chords-1006040"
@@ -2419,8 +2643,7 @@
       "last_seen_at": "2026-07-14T16:27:17+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Dream On",
       "url": "https://tabs.ultimate-guitar.com/tab/aerosmith/dream-on-chords-905779"
@@ -2567,8 +2790,7 @@
       "last_seen_at": "2026-07-14T16:27:27+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "I Dont Want To Miss A Thing",
       "url": "https://tabs.ultimate-guitar.com/tab/aerosmith/i-dont-want-to-miss-a-thing-chords-59465"
@@ -3403,8 +3625,7 @@
       "last_seen_at": "2026-07-14T16:27:37+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "You Oughta Know",
       "url": "https://tabs.ultimate-guitar.com/tab/alanis-morissette/you-oughta-know-chords-352404"
@@ -3676,8 +3897,7 @@
       "last_seen_at": "2026-07-14T16:27:46+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Miedo",
       "url": "https://tabs.ultimate-guitar.com/tab/amaia-romero/miedo-chords-2309707"
@@ -3695,8 +3915,7 @@
       "last_seen_at": "2026-07-14T16:36:52+00:00",
       "scrape_count": 3,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Moon River",
       "url": "https://tabs.ultimate-guitar.com/tab/audrey-hepburn/moon-river-chords-1788365"
@@ -3714,8 +3933,7 @@
       "last_seen_at": "2026-07-14T16:37:01+00:00",
       "scrape_count": 3,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Another Sunny Day",
       "url": "https://tabs.ultimate-guitar.com/tab/belle-and-sebastian/another-sunny-day-chords-331692"
@@ -4066,8 +4284,7 @@
       "last_seen_at": "2026-07-14T16:28:34+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Pa Amb Oli I Sal",
       "url": "https://tabs.ultimate-guitar.com/tab/blaumut/pa-amb-oli-i-sal-chords-1533312"
@@ -4233,12 +4450,12 @@
         }
       ],
       "errors": [],
-      "explore_rank": 4,
+      "explore_rank": 3,
       "explore_title": "Mirror Mirror",
       "first_seen_at": "2026-07-23T08:25:42+00:00",
       "has_chorus": true,
       "last_scraped_at": "2026-07-23T08:25:42+00:00",
-      "last_seen_at": "2026-07-23T08:25:42+00:00",
+      "last_seen_at": "2026-07-24T15:12:27+00:00",
       "scrape_count": 1,
       "sources": [
         "list:ec1a8e38:Blind Guardian"
@@ -4251,12 +4468,12 @@
       "chorus_chords": [],
       "chorus_lines": [],
       "errors": [],
-      "explore_rank": 2,
+      "explore_rank": 4,
       "explore_title": "Nightfall",
       "first_seen_at": "2026-07-23T08:25:35+00:00",
       "has_chorus": false,
       "last_scraped_at": "2026-07-23T08:25:35+00:00",
-      "last_seen_at": "2026-07-23T08:25:35+00:00",
+      "last_seen_at": "2026-07-24T15:12:27+00:00",
       "scrape_count": 1,
       "sources": [
         "list:ec1a8e38:Blind Guardian"
@@ -4274,7 +4491,7 @@
       "first_seen_at": "2026-07-23T08:25:31+00:00",
       "has_chorus": false,
       "last_scraped_at": "2026-07-23T08:25:31+00:00",
-      "last_seen_at": "2026-07-23T08:25:31+00:00",
+      "last_seen_at": "2026-07-24T15:12:27+00:00",
       "scrape_count": 1,
       "sources": [
         "list:ec1a8e38:Blind Guardian"
@@ -4441,12 +4658,12 @@
         }
       ],
       "errors": [],
-      "explore_rank": 3,
+      "explore_rank": 2,
       "explore_title": "Valhalla",
       "first_seen_at": "2026-07-23T08:25:38+00:00",
       "has_chorus": true,
       "last_scraped_at": "2026-07-23T08:25:38+00:00",
-      "last_seen_at": "2026-07-23T08:25:38+00:00",
+      "last_seen_at": "2026-07-24T15:12:27+00:00",
       "scrape_count": 1,
       "sources": [
         "list:ec1a8e38:Blind Guardian"
@@ -5148,8 +5365,7 @@
       "last_seen_at": "2026-07-14T16:29:13+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "More Than A Feeling",
       "url": "https://tabs.ultimate-guitar.com/tab/boston/more-than-a-feeling-chords-2367019"
@@ -5518,8 +5734,7 @@
       "last_seen_at": "2026-07-14T16:29:51+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "My Life Is Going On",
       "url": "https://tabs.ultimate-guitar.com/tab/cecilia-krull/my-life-is-going-on-chords-2271547"
@@ -5712,8 +5927,7 @@
       "last_seen_at": "2026-07-14T16:30:11+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Fix You",
       "url": "https://tabs.ultimate-guitar.com/tab/coldplay/fix-you-chords-202602"
@@ -5940,8 +6154,7 @@
       "sources": [
         "ug_explore_combined_choruses.json",
         "https://www.ultimate-guitar.com/explore?country_chart=1&order=hitstotal_desc",
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Viva La Vida",
       "url": "https://tabs.ultimate-guitar.com/tab/coldplay/viva-la-vida-chords-675427"
@@ -6190,8 +6403,7 @@
       "last_seen_at": "2026-07-14T16:31:01+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Hold Me Closer",
       "url": "https://tabs.ultimate-guitar.com/tab/cornelia-jakobs/hold-me-closer-chords-4062280"
@@ -6350,8 +6562,7 @@
       "last_seen_at": "2026-07-14T16:37:40+00:00",
       "scrape_count": 3,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Time After Time",
       "url": "https://tabs.ultimate-guitar.com/tab/cyndi-lauper/time-after-time-chords-1054329"
@@ -6475,8 +6686,7 @@
       "last_seen_at": "2026-07-14T16:31:30+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "The Blowers Daughter",
       "url": "https://tabs.ultimate-guitar.com/tab/damien-rice/the-blowers-daughter-chords-149330"
@@ -6892,8 +7102,7 @@
       "last_seen_at": "2026-07-14T16:31:40+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Ay Ay Ay",
       "url": "https://tabs.ultimate-guitar.com/tab/david-bisbal/ay-ay-ay-chords-4900858"
@@ -7157,8 +7366,7 @@
       "last_seen_at": "2026-07-14T16:37:50+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Titanium",
       "url": "https://tabs.ultimate-guitar.com/tab/david-guetta/titanium-chords-1085977"
@@ -7286,8 +7494,7 @@
       "last_seen_at": "2026-07-14T16:38:00+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "See Me In Shadow",
       "url": "https://tabs.ultimate-guitar.com/tab/delain/see-me-in-shadow-chords-773965"
@@ -7305,8 +7512,7 @@
       "last_seen_at": "2026-07-14T16:38:09+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "The Sound Of Silence",
       "url": "https://tabs.ultimate-guitar.com/tab/disturbed/the-sound-of-silence-chords-1762333"
@@ -7324,8 +7530,7 @@
       "last_seen_at": "2026-07-14T16:38:19+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "A Cualquier Otra Parte",
       "url": "https://tabs.ultimate-guitar.com/tab/dorian/a-cualquier-otra-parte-chords-1539923"
@@ -7447,8 +7652,7 @@
       "last_seen_at": "2026-07-14T16:38:29+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Love Again",
       "url": "https://tabs.ultimate-guitar.com/tab/dua-lipa/love-again-chords-3043638"
@@ -7574,8 +7778,7 @@
       "last_seen_at": "2026-07-14T16:38:39+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Ordinary World",
       "url": "https://tabs.ultimate-guitar.com/tab/duran-duran/ordinary-world-chords-197392"
@@ -8055,8 +8258,7 @@
       "sources": [
         "ug_explore_combined_choruses.json",
         "https://www.ultimate-guitar.com/explore?country_chart=1&order=hitstotal_desc",
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Perfect",
       "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/perfect-chords-1956589"
@@ -8314,6 +8516,188 @@
       "title": "Thinking Out Loud",
       "url": "https://tabs.ultimate-guitar.com/tab/ed-sheeran/thinking-out-loud-chords-1486860"
     },
+    "https://tabs.ultimate-guitar.com/tab/el-pot-petit/el-pirata-despistat-chords-4050799": {
+      "artist": "El Pot Petit feat. Els Amics de les Arts",
+      "chorus_chords": [
+        "F",
+        "C",
+        "F",
+        "C",
+        "F",
+        "C",
+        "Dm",
+        "A7",
+        "Dm",
+        "F",
+        "C",
+        "F",
+        "C",
+        "F",
+        "C",
+        "Dm",
+        "A7",
+        "Dm"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "F"
+            },
+            {
+              "position": 25,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Va veure rondar el gran capit\u00e0,"
+        },
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "F"
+            },
+            {
+              "position": 21,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "el mestre de les can\u00e7ons,"
+        },
+        {
+          "chords": [
+            {
+              "position": 6,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "que br\u00faixola en m\u00e0"
+        },
+        {
+          "chords": [
+            {
+              "position": 3,
+              "symbol": "C"
+            },
+            {
+              "position": 14,
+              "symbol": "Dm"
+            },
+            {
+              "position": 19,
+              "symbol": "A7"
+            },
+            {
+              "position": 26,
+              "symbol": "Dm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "podia trobar mil i un tresors."
+        },
+        {
+          "chords": [
+            {
+              "position": 2,
+              "symbol": "F"
+            },
+            {
+              "position": 17,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Tra la-ra-la-ra-la-la,"
+        },
+        {
+          "chords": [
+            {
+              "position": 2,
+              "symbol": "F"
+            },
+            {
+              "position": 14,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "tra la-ra-ra-ra!"
+        },
+        {
+          "chords": [
+            {
+              "position": 2,
+              "symbol": "F"
+            },
+            {
+              "position": 17,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Tra la-ra-la-ra-la-la,"
+        },
+        {
+          "chords": [
+            {
+              "position": 3,
+              "symbol": "Dm"
+            },
+            {
+              "position": 8,
+              "symbol": "A7"
+            },
+            {
+              "position": 13,
+              "symbol": "Dm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "escola de pirates!"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 4,
+      "explore_title": "El Pirata Despistat",
+      "first_seen_at": "2026-07-24T15:09:45+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-24T15:09:45+00:00",
+      "last_seen_at": "2026-07-24T15:09:45+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:f3d86d10:El pot petit"
+      ],
+      "title": "El Pirata Despistat",
+      "url": "https://tabs.ultimate-guitar.com/tab/el-pot-petit/el-pirata-despistat-chords-4050799"
+    },
     "https://tabs.ultimate-guitar.com/tab/el-pot-petit/els-pirates-chords-3397451": {
       "artist": "El Pot Petit",
       "chorus_chords": [
@@ -8394,19 +8778,37 @@
         }
       ],
       "errors": [],
-      "explore_rank": 115,
+      "explore_rank": 1,
       "explore_title": "Els Pirates",
       "first_seen_at": "2026-07-14T10:26:59+00:00",
       "has_chorus": true,
       "last_scraped_at": "2026-07-14T16:39:46+00:00",
-      "last_seen_at": "2026-07-14T16:39:46+00:00",
+      "last_seen_at": "2026-07-24T15:09:32+00:00",
       "scrape_count": 2,
       "sources": [
         "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "list:f3d86d10:El pot petit"
       ],
       "title": "Els Pirates",
       "url": "https://tabs.ultimate-guitar.com/tab/el-pot-petit/els-pirates-chords-3397451"
+    },
+    "https://tabs.ultimate-guitar.com/tab/el-pot-petit/soc-un-mico-chords-5548824": {
+      "artist": "El Pot Petit",
+      "chorus_chords": [],
+      "chorus_lines": [],
+      "errors": [],
+      "explore_rank": 3,
+      "explore_title": "Soc Un Mico",
+      "first_seen_at": "2026-07-24T15:09:42+00:00",
+      "has_chorus": false,
+      "last_scraped_at": "2026-07-24T15:09:42+00:00",
+      "last_seen_at": "2026-07-24T15:09:42+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:f3d86d10:El pot petit"
+      ],
+      "title": "Soc Un Mico",
+      "url": "https://tabs.ultimate-guitar.com/tab/el-pot-petit/soc-un-mico-chords-5548824"
     },
     "https://tabs.ultimate-guitar.com/tab/ella-langley/choosin-texas-chords-5991200": {
       "artist": "Ella Langley",
@@ -8646,8 +9048,7 @@
       "last_seen_at": "2026-07-14T16:40:04+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Love Me Like You Do",
       "url": "https://tabs.ultimate-guitar.com/tab/ellie-goulding/love-me-like-you-do-chords-1699921"
@@ -8792,8 +9193,7 @@
       "last_seen_at": "2026-07-14T16:40:15+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Your Song",
       "url": "https://tabs.ultimate-guitar.com/tab/elton-john/your-song-chords-29113"
@@ -8811,8 +9211,7 @@
       "last_seen_at": "2026-07-14T16:40:25+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "She",
       "url": "https://tabs.ultimate-guitar.com/tab/elvis-costello/she-chords-1509278"
@@ -8911,8 +9310,7 @@
       "sources": [
         "ug_explore_combined_choruses.json",
         "https://www.ultimate-guitar.com/explore?country_chart=1&order=hitstotal_desc",
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Cant Help Falling In Love",
       "url": "https://tabs.ultimate-guitar.com/tab/elvis-presley/cant-help-falling-in-love-chords-1086983"
@@ -9012,8 +9410,7 @@
       "last_seen_at": "2026-07-14T16:40:44+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Tears In Heaven",
       "url": "https://tabs.ultimate-guitar.com/tab/eric-clapton/tears-in-heaven-chords-1089370"
@@ -9110,8 +9507,7 @@
       "last_seen_at": "2026-07-14T16:40:54+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Lithium",
       "url": "https://tabs.ultimate-guitar.com/tab/evanescence/lithium-chords-422180"
@@ -9579,8 +9975,7 @@
       "last_seen_at": "2026-07-14T16:41:24+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "La Casa Por El Tejado",
       "url": "https://tabs.ultimate-guitar.com/tab/fito-fitipaldis/la-casa-por-el-tejado-chords-1737393"
@@ -9892,8 +10287,7 @@
       "last_seen_at": "2026-07-14T16:41:53+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Mariposas",
       "url": "https://tabs.ultimate-guitar.com/tab/fredi-leis/mariposas-chords-2391991"
@@ -9911,8 +10305,7 @@
       "last_seen_at": "2026-07-14T16:42:03+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Nessun Dorma",
       "url": "https://tabs.ultimate-guitar.com/tab/giacomo-puccini/nessun-dorma-chords-1513620"
@@ -10143,8 +10536,7 @@
       "last_seen_at": "2026-07-14T16:42:23+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Falling Slowly",
       "url": "https://tabs.ultimate-guitar.com/tab/glen-hansard/falling-slowly-chords-542037"
@@ -10887,8 +11279,7 @@
       "last_seen_at": "2026-07-14T16:43:21+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Fear Of The Dark",
       "url": "https://tabs.ultimate-guitar.com/tab/iron-maiden/fear-of-the-dark-chords-1016805"
@@ -11076,8 +11467,7 @@
       "last_seen_at": "2026-07-14T16:43:41+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Humo",
       "url": "https://tabs.ultimate-guitar.com/tab/jarabe-de-palo/humo-chords-2234597"
@@ -11096,8 +11486,7 @@
       "scrape_count": 2,
       "sources": [
         "ug_explore_combined_choruses.json",
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "La Flaca Acoustic",
       "url": "https://tabs.ultimate-guitar.com/tab/jarabe-de-palo/la-flaca-chords-1405514"
@@ -11277,8 +11666,7 @@
       "last_seen_at": "2026-07-14T16:44:19+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Jo Mai Mai",
       "url": "https://tabs.ultimate-guitar.com/tab/joan-dausa-i-els-tipus-dinteres/jo-mai-mai-chords-1459813"
@@ -11321,8 +11709,7 @@
       "last_seen_at": "2026-07-14T16:44:29+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Mediterraneo",
       "url": "https://tabs.ultimate-guitar.com/tab/joan-manuel-serrat/mediterraneo-chords-2798588"
@@ -12235,8 +12622,7 @@
       "last_seen_at": "2026-07-14T16:45:38+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Abandoned",
       "url": "https://tabs.ultimate-guitar.com/tab/kamelot/abandoned-chords-1727917"
@@ -12421,8 +12807,7 @@
       "last_seen_at": "2026-07-14T16:45:48+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Liar Liar Wasteland Monarchy",
       "url": "https://tabs.ultimate-guitar.com/tab/kamelot/liar-liar-wasteland-monarchy-chords-1744107"
@@ -12440,11 +12825,700 @@
       "last_seen_at": "2026-07-14T16:45:57+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Si Antes Te Hubiera Conocido",
       "url": "https://tabs.ultimate-guitar.com/tab/karol-g/si-antes-te-hubiera-conocido-chords-5328552"
+    },
+    "https://tabs.ultimate-guitar.com/tab/keane/a-bad-dream-chords-664356": {
+      "artist": "Keane",
+      "chorus_chords": [
+        "F",
+        "Dm",
+        "G",
+        "Em",
+        "F",
+        "Dm",
+        "G",
+        "G7"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 3,
+              "symbol": "F"
+            },
+            {
+              "position": 23,
+              "symbol": "Dm"
+            },
+            {
+              "position": 43,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I wake up, it's a bad dream, no one on my side"
+        },
+        {
+          "chords": [
+            {
+              "position": 15,
+              "symbol": "Em"
+            },
+            {
+              "position": 35,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I was fighting but I just feel too tired to be fighting"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Dm"
+            },
+            {
+              "position": 28,
+              "symbol": "G"
+            },
+            {
+              "position": 35,
+              "symbol": "G7"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Guess I'm not the fighting kind"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 7,
+      "explore_title": "A Bad Dream",
+      "first_seen_at": "2026-07-23T09:02:07+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T09:02:07+00:00",
+      "last_seen_at": "2026-07-23T09:02:07+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:84399e71:Keane"
+      ],
+      "title": "A Bad Dream",
+      "url": "https://tabs.ultimate-guitar.com/tab/keane/a-bad-dream-chords-664356"
+    },
+    "https://tabs.ultimate-guitar.com/tab/keane/bedshaped-chords-1833952": {
+      "artist": "Keane",
+      "chorus_chords": [
+        "F#",
+        "E",
+        "C#m",
+        "B",
+        "F#",
+        "E",
+        "C#m",
+        "B",
+        "A",
+        "F#m"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [],
+          "lyrics": "You'll follow me back,"
+        },
+        {
+          "chords": [
+            {
+              "position": 10,
+              "symbol": "F#"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "With the sun in your eyes,"
+        },
+        {
+          "chords": [
+            {
+              "position": 5,
+              "symbol": "E"
+            },
+            {
+              "position": 17,
+              "symbol": "C#m"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "And on your own, bedshaped,"
+        },
+        {
+          "chords": [
+            {
+              "position": 6,
+              "symbol": "B"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Your legs of stone."
+        },
+        {
+          "chords": [
+            {
+              "position": 8,
+              "symbol": "F#"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "You'll knock on my door,"
+        },
+        {
+          "chords": [
+            {
+              "position": 5,
+              "symbol": "E"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "And up we'll go,"
+        },
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "C#m"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "In white light,"
+        },
+        {
+          "chords": [
+            {
+              "position": 3,
+              "symbol": "B"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I don't think so."
+        },
+        {
+          "chords": [
+            {
+              "position": 6,
+              "symbol": "A"
+            },
+            {
+              "position": 20,
+              "symbol": "F#m"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "But what do I know? What do I know?"
+        },
+        {
+          "chords": [],
+          "lyrics": "I know."
+        }
+      ],
+      "errors": [],
+      "explore_rank": 3,
+      "explore_title": "Bedshaped",
+      "first_seen_at": "2026-07-23T09:01:53+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T09:01:53+00:00",
+      "last_seen_at": "2026-07-23T09:01:53+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:84399e71:Keane"
+      ],
+      "title": "Bedshaped",
+      "url": "https://tabs.ultimate-guitar.com/tab/keane/bedshaped-chords-1833952"
+    },
+    "https://tabs.ultimate-guitar.com/tab/keane/bend-and-break-chords-996749": {
+      "artist": "Keane",
+      "chorus_chords": [
+        "E",
+        "E/G#",
+        "Asus4",
+        "A/G#",
+        "F#m",
+        "B",
+        "G#m",
+        "A",
+        "E",
+        "E/G#",
+        "Asus4",
+        "A/G#",
+        "F#m",
+        "A/B",
+        "E"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "E"
+            },
+            {
+              "position": 8,
+              "symbol": "E/G#"
+            },
+            {
+              "position": 16,
+              "symbol": "Asus4"
+            },
+            {
+              "position": 25,
+              "symbol": "A/G#"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "If only I don't bend and break"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "F#m"
+            },
+            {
+              "position": 22,
+              "symbol": "B"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I'll meet you on the other side"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "G#m"
+            },
+            {
+              "position": 21,
+              "symbol": "A"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I'll meet you in the light"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "E"
+            },
+            {
+              "position": 8,
+              "symbol": "E/G#"
+            },
+            {
+              "position": 16,
+              "symbol": "Asus4"
+            },
+            {
+              "position": 24,
+              "symbol": "A/G#"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "If only I don't suff - ocate"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "F#m"
+            },
+            {
+              "position": 21,
+              "symbol": "A/B"
+            },
+            {
+              "position": 38,
+              "symbol": "E"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I'll meet you in the morning when you wake"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 4,
+      "explore_title": "Bend And Break",
+      "first_seen_at": "2026-07-23T09:01:57+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T09:01:57+00:00",
+      "last_seen_at": "2026-07-23T09:01:57+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:84399e71:Keane"
+      ],
+      "title": "Bend And Break",
+      "url": "https://tabs.ultimate-guitar.com/tab/keane/bend-and-break-chords-996749"
+    },
+    "https://tabs.ultimate-guitar.com/tab/keane/everybodys-changing-chords-111685": {
+      "artist": "Keane",
+      "chorus_chords": [
+        "F",
+        "G",
+        "C",
+        "F",
+        "Dm",
+        "G",
+        "Em",
+        "A",
+        "Dm",
+        "G",
+        "C",
+        "Cmaj7",
+        "C",
+        "Cmaj7"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "F"
+            },
+            {
+              "position": 12,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": " So little time"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "C"
+            },
+            {
+              "position": 24,
+              "symbol": "F"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Try to understand that I'm"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Dm"
+            },
+            {
+              "position": 30,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Trying to make a move just to stay in the game"
+        },
+        {
+          "chords": [
+            {
+              "position": 2,
+              "symbol": "Em"
+            },
+            {
+              "position": 26,
+              "symbol": "A"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I try to stay awake and remember my name"
+        },
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "Dm"
+            },
+            {
+              "position": 29,
+              "symbol": "G"
+            },
+            {
+              "position": 49,
+              "symbol": "C"
+            },
+            {
+              "position": 52,
+              "symbol": "Cmaj7"
+            },
+            {
+              "position": 59,
+              "symbol": "C"
+            },
+            {
+              "position": 62,
+              "symbol": "Cmaj7"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "But everybody's changing and I don't feel the same"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 6,
+      "explore_title": "Everybodys Changing",
+      "first_seen_at": "2026-07-23T09:02:04+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T09:02:04+00:00",
+      "last_seen_at": "2026-07-23T09:02:04+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:84399e71:Keane"
+      ],
+      "title": "Everybodys Changing",
+      "url": "https://tabs.ultimate-guitar.com/tab/keane/everybodys-changing-chords-111685"
+    },
+    "https://tabs.ultimate-guitar.com/tab/keane/nothing-in-my-way-chords-805461": {
+      "artist": "Keane",
+      "chorus_chords": [
+        "Am",
+        "G",
+        "Am",
+        "G",
+        "F",
+        "Am",
+        "Dm",
+        "Em",
+        "Dm",
+        "Em",
+        "Am",
+        "G",
+        "Am",
+        "G",
+        "F",
+        "Am",
+        "Dm",
+        "Em",
+        "C"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 5,
+              "symbol": "Am"
+            },
+            {
+              "position": 18,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "It's just another day, "
+        },
+        {
+          "chords": [
+            {
+              "position": 8,
+              "symbol": "Am"
+            },
+            {
+              "position": 18,
+              "symbol": "G"
+            },
+            {
+              "position": 32,
+              "symbol": "F"
+            },
+            {
+              "position": 44,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "nothing in my way I don't wanna go, I don't wanna stay"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Dm"
+            },
+            {
+              "position": 19,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "So there's nothing left to say"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Dm"
+            },
+            {
+              "position": 14,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "And why'd you lie?"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am"
+            },
+            {
+              "position": 16,
+              "symbol": "G"
+            },
+            {
+              "position": 29,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "When you wanna die, when you hurt inside"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "G"
+            },
+            {
+              "position": 20,
+              "symbol": "F"
+            },
+            {
+              "position": 29,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Don't know what you lie for anyway"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Dm"
+            },
+            {
+              "position": 21,
+              "symbol": "Em"
+            },
+            {
+              "position": 29,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Now there's nothing left to say"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 8,
+      "explore_title": "Nothing In My Way",
+      "first_seen_at": "2026-07-23T09:02:10+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T09:02:10+00:00",
+      "last_seen_at": "2026-07-23T09:02:10+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:84399e71:Keane"
+      ],
+      "title": "Nothing In My Way",
+      "url": "https://tabs.ultimate-guitar.com/tab/keane/nothing-in-my-way-chords-805461"
     },
     "https://tabs.ultimate-guitar.com/tab/keane/somewhere-only-we-know-chords-109970": {
       "artist": "Keane",
@@ -12595,6 +13669,154 @@
       "title": "Somewhere Only We Know",
       "url": "https://tabs.ultimate-guitar.com/tab/keane/somewhere-only-we-know-chords-109970"
     },
+    "https://tabs.ultimate-guitar.com/tab/keane/somewhere-only-we-know-chords-1871714": {
+      "artist": "Keane",
+      "chorus_chords": [
+        "Am7",
+        "G/B",
+        "Dsus4",
+        "D",
+        "Am7",
+        "G/B",
+        "Dsus4",
+        "D",
+        "Am7",
+        "G/B",
+        "Dsus4",
+        "D",
+        "C6",
+        "D6",
+        "G"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am7"
+            },
+            {
+              "position": 20,
+              "symbol": "G/B"
+            },
+            {
+              "position": 37,
+              "symbol": "Dsus4"
+            },
+            {
+              "position": 43,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "  And if you have a minute why don't we    go"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am7"
+            },
+            {
+              "position": 16,
+              "symbol": "G/B"
+            },
+            {
+              "position": 31,
+              "symbol": "Dsus4"
+            },
+            {
+              "position": 37,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "  Talk about it somewhere only we    know"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Am7"
+            },
+            {
+              "position": 20,
+              "symbol": "G/B"
+            },
+            {
+              "position": 32,
+              "symbol": "Dsus4"
+            },
+            {
+              "position": 38,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "  This could be the end of everythi - ing "
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "C6"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "So why don't we go"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "D6"
+            },
+            {
+              "position": 15,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Somewhere only we know"
+        },
+        {
+          "chords": [],
+          "lyrics": "| C6 | D6                       | C6 | D6   D D6 |"
+        },
+        {
+          "chords": [],
+          "lyrics": "        Somewhere only we know"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 5,
+      "explore_title": "Somewhere Only We Know",
+      "first_seen_at": "2026-07-23T09:02:00+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T09:02:00+00:00",
+      "last_seen_at": "2026-07-23T09:02:00+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:84399e71:Keane"
+      ],
+      "title": "Somewhere Only We Know",
+      "url": "https://tabs.ultimate-guitar.com/tab/keane/somewhere-only-we-know-chords-1871714"
+    },
     "https://tabs.ultimate-guitar.com/tab/keane/somewhere-only-we-know-chords-493327": {
       "artist": "Keane",
       "chorus_chords": [
@@ -12744,11 +13966,323 @@
       "last_seen_at": "2026-07-14T16:46:17+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Somewhere Only We Know",
       "url": "https://tabs.ultimate-guitar.com/tab/keane/somewhere-only-we-know-chords-493327"
+    },
+    "https://tabs.ultimate-guitar.com/tab/keane/the-starting-line-chords-1152738": {
+      "artist": "Keane",
+      "chorus_chords": [
+        "F",
+        "C",
+        "Em",
+        "Am",
+        "F",
+        "C",
+        "G",
+        "F",
+        "C",
+        "Em",
+        "Am",
+        "Dm",
+        "F",
+        "C",
+        "Em",
+        "G",
+        "C"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "F"
+            },
+            {
+              "position": 11,
+              "symbol": "C"
+            },
+            {
+              "position": 28,
+              "symbol": "Em"
+            },
+            {
+              "position": 36,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Drag your heart up to the starting line"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "F"
+            },
+            {
+              "position": 13,
+              "symbol": "C"
+            },
+            {
+              "position": 33,
+              "symbol": "G"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Forget the ghosts that make you old before your time"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "F"
+            },
+            {
+              "position": 8,
+              "symbol": "C"
+            },
+            {
+              "position": 21,
+              "symbol": "Em"
+            },
+            {
+              "position": 28,
+              "symbol": "Am"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Its too easy to get left behind"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Dm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I know you've been kicked around"
+        },
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "F"
+            },
+            {
+              "position": 48,
+              "symbol": "C"
+            },
+            {
+              "position": 54,
+              "symbol": "Em"
+            },
+            {
+              "position": 60,
+              "symbol": "G"
+            },
+            {
+              "position": 64,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "but tie up your thoughts and lay them down on me."
+        }
+      ],
+      "errors": [],
+      "explore_rank": 1,
+      "explore_title": "The Starting Line",
+      "first_seen_at": "2026-07-23T09:01:47+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T09:01:47+00:00",
+      "last_seen_at": "2026-07-23T09:01:47+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:84399e71:Keane"
+      ],
+      "title": "The Starting Line",
+      "url": "https://tabs.ultimate-guitar.com/tab/keane/the-starting-line-chords-1152738"
+    },
+    "https://tabs.ultimate-guitar.com/tab/keane/this-is-the-last-time-chords-115680": {
+      "artist": "Keane",
+      "chorus_chords": [
+        "G",
+        "Bm",
+        "Am",
+        "D/F#",
+        "G",
+        "Bm",
+        "Am",
+        "D/F#",
+        "Em",
+        "Bm",
+        "Am",
+        "D/F#",
+        "Em",
+        "Bm",
+        "Am",
+        "Dsus2"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 5,
+              "symbol": "G"
+            },
+            {
+              "position": 9,
+              "symbol": "Bm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "The last time"
+        },
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "Am"
+            },
+            {
+              "position": 19,
+              "symbol": "D/F#"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "You fall on me for anything you like"
+        },
+        {
+          "chords": [
+            {
+              "position": 5,
+              "symbol": "G"
+            },
+            {
+              "position": 14,
+              "symbol": "Bm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Your one last line"
+        },
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "Am"
+            },
+            {
+              "position": 19,
+              "symbol": "D/F#"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "You fall on me for anything you like"
+        },
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "Em"
+            },
+            {
+              "position": 15,
+              "symbol": "Bm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "And years make everything right"
+        },
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "Am"
+            },
+            {
+              "position": 19,
+              "symbol": "D/F#"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "You fall on me for anything you like"
+        },
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "Em"
+            },
+            {
+              "position": 11,
+              "symbol": "Bm"
+            },
+            {
+              "position": 19,
+              "symbol": "Am"
+            },
+            {
+              "position": 24,
+              "symbol": "Dsus2"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "And I know I don't mind"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 9,
+      "explore_title": "This Is The Last Time",
+      "first_seen_at": "2026-07-23T09:02:14+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T09:02:14+00:00",
+      "last_seen_at": "2026-07-23T09:02:14+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:84399e71:Keane"
+      ],
+      "title": "This Is The Last Time",
+      "url": "https://tabs.ultimate-guitar.com/tab/keane/this-is-the-last-time-chords-115680"
     },
     "https://tabs.ultimate-guitar.com/tab/kodaline/all-i-want-chords-1180259": {
       "artist": "Kodaline",
@@ -12895,11 +14429,106 @@
       "last_seen_at": "2026-07-14T16:46:37+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Cometas Por El Cielo",
       "url": "https://tabs.ultimate-guitar.com/tab/la-oreja-de-van-gogh/cometas-por-el-cielo-chords-1176593"
+    },
+    "https://tabs.ultimate-guitar.com/tab/lacuna-coil/end-of-time-chords-3193811": {
+      "artist": "Lacuna Coil",
+      "chorus_chords": [
+        "C",
+        "Em",
+        "G",
+        "D",
+        "C",
+        "Em",
+        "G",
+        "D"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "C"
+            },
+            {
+              "position": 15,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I've come to realise"
+        },
+        {
+          "chords": [
+            {
+              "position": 3,
+              "symbol": "G"
+            },
+            {
+              "position": 21,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Tonight my dear the end of time"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "C"
+            },
+            {
+              "position": 11,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Is not so far away"
+        },
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "G"
+            },
+            {
+              "position": 28,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "We cannot pray to save our lives"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 3,
+      "explore_title": "End Of Time",
+      "first_seen_at": "2026-07-23T08:57:55+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:57:55+00:00",
+      "last_seen_at": "2026-07-23T08:57:55+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:038740ad:Lacuna Coil"
+      ],
+      "title": "End Of Time",
+      "url": "https://tabs.ultimate-guitar.com/tab/lacuna-coil/end-of-time-chords-3193811"
     },
     "https://tabs.ultimate-guitar.com/tab/lacuna-coil/enjoy-the-silence-chords-2371047": {
       "artist": "Lacuna Coil",
@@ -12984,19 +14613,531 @@
         }
       ],
       "errors": [],
-      "explore_rank": 17,
+      "explore_rank": 1,
       "explore_title": "Enjoy The Silence",
       "first_seen_at": "2026-07-14T10:21:42+00:00",
       "has_chorus": true,
       "last_scraped_at": "2026-07-14T16:46:47+00:00",
-      "last_seen_at": "2026-07-14T16:46:47+00:00",
+      "last_seen_at": "2026-07-23T08:57:47+00:00",
       "scrape_count": 2,
       "sources": [
         "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "list:038740ad:Lacuna Coil"
       ],
       "title": "Enjoy The Silence",
       "url": "https://tabs.ultimate-guitar.com/tab/lacuna-coil/enjoy-the-silence-chords-2371047"
+    },
+    "https://tabs.ultimate-guitar.com/tab/lacuna-coil/heavens-a-lie-chords-332351": {
+      "artist": "Lacuna Coil",
+      "chorus_chords": [],
+      "chorus_lines": [],
+      "errors": [],
+      "explore_rank": 6,
+      "explore_title": "Heavens A Lie",
+      "first_seen_at": "2026-07-23T08:58:05+00:00",
+      "has_chorus": false,
+      "last_scraped_at": "2026-07-23T08:58:05+00:00",
+      "last_seen_at": "2026-07-23T08:58:05+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:038740ad:Lacuna Coil"
+      ],
+      "title": "Heavens A Lie Acoustic",
+      "url": "https://tabs.ultimate-guitar.com/tab/lacuna-coil/heavens-a-lie-chords-332351"
+    },
+    "https://tabs.ultimate-guitar.com/tab/lacuna-coil/nothing-stands-in-our-way-chords-1513522": {
+      "artist": "Lacuna Coil",
+      "chorus_chords": [],
+      "chorus_lines": [],
+      "errors": [],
+      "explore_rank": 5,
+      "explore_title": "Nothing Stands In Our Way",
+      "first_seen_at": "2026-07-23T08:58:01+00:00",
+      "has_chorus": false,
+      "last_scraped_at": "2026-07-23T08:58:01+00:00",
+      "last_seen_at": "2026-07-23T08:58:01+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:038740ad:Lacuna Coil"
+      ],
+      "title": "Nothing Stands In Our Way",
+      "url": "https://tabs.ultimate-guitar.com/tab/lacuna-coil/nothing-stands-in-our-way-chords-1513522"
+    },
+    "https://tabs.ultimate-guitar.com/tab/lacuna-coil/spellbound-chords-1991549": {
+      "artist": "Lacuna Coil",
+      "chorus_chords": [
+        "C#m",
+        "A",
+        "F#",
+        "E",
+        "F#",
+        "C#m",
+        "A",
+        "F#",
+        "E",
+        "F#"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "C#m"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Tell me who you are"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "A"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I am spellbound"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "F#"
+            },
+            {
+              "position": 17,
+              "symbol": "E"
+            },
+            {
+              "position": 25,
+              "symbol": "F#"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "You cannot have this control of me"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "C#m"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": " Everywhere I go"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "A"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I am spellbound"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "F#"
+            },
+            {
+              "position": 18,
+              "symbol": "E"
+            },
+            {
+              "position": 28,
+              "symbol": "F#"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I will break the spell you put on me"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 4,
+      "explore_title": "Spellbound",
+      "first_seen_at": "2026-07-23T08:57:58+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:57:58+00:00",
+      "last_seen_at": "2026-07-23T08:57:58+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:038740ad:Lacuna Coil"
+      ],
+      "title": "Spellbound Acoustic",
+      "url": "https://tabs.ultimate-guitar.com/tab/lacuna-coil/spellbound-chords-1991549"
+    },
+    "https://tabs.ultimate-guitar.com/tab/lacuna-coil/swamped-chords-3649505": {
+      "artist": "Lacuna Coil",
+      "chorus_chords": [
+        "E",
+        "C",
+        "D",
+        "E",
+        "C",
+        "D",
+        "E",
+        "E",
+        "E",
+        "D",
+        "E",
+        "C",
+        "A",
+        "E"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 10,
+              "symbol": "E"
+            },
+            {
+              "position": 19,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "It's just another day"
+        },
+        {
+          "chords": [
+            {
+              "position": 4,
+              "symbol": "D"
+            },
+            {
+              "position": 13,
+              "symbol": "E"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "The shame is gone"
+        },
+        {
+          "chords": [
+            {
+              "position": 16,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Hard to believe"
+        },
+        {
+          "chords": [
+            {
+              "position": 10,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "That I've let it go"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "E"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Let it go"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "E"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Let it go"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "E"
+            },
+            {
+              "position": 2,
+              "symbol": "D"
+            },
+            {
+              "position": 4,
+              "symbol": "E"
+            },
+            {
+              "position": 6,
+              "symbol": "C"
+            },
+            {
+              "position": 8,
+              "symbol": "A"
+            },
+            {
+              "position": 10,
+              "symbol": "E"
+            }
+          ],
+          "lyrics": ""
+        }
+      ],
+      "errors": [],
+      "explore_rank": 2,
+      "explore_title": "Swamped",
+      "first_seen_at": "2026-07-23T08:57:51+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:57:51+00:00",
+      "last_seen_at": "2026-07-23T08:57:51+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:038740ad:Lacuna Coil"
+      ],
+      "title": "Swamped Acoustic",
+      "url": "https://tabs.ultimate-guitar.com/tab/lacuna-coil/swamped-chords-3649505"
+    },
+    "https://tabs.ultimate-guitar.com/tab/lacuna-coil/the-ghost-woman-and-the-hunter-chords-376813": {
+      "artist": "Lacuna Coil",
+      "chorus_chords": [],
+      "chorus_lines": [],
+      "errors": [],
+      "explore_rank": 9,
+      "explore_title": "The Ghost Woman And The Hunter",
+      "first_seen_at": "2026-07-23T08:58:15+00:00",
+      "has_chorus": false,
+      "last_scraped_at": "2026-07-23T08:58:15+00:00",
+      "last_seen_at": "2026-07-23T08:58:15+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:038740ad:Lacuna Coil"
+      ],
+      "title": "The Ghost Woman And The Hunter",
+      "url": "https://tabs.ultimate-guitar.com/tab/lacuna-coil/the-ghost-woman-and-the-hunter-chords-376813"
+    },
+    "https://tabs.ultimate-guitar.com/tab/lacuna-coil/to-myself-i-turned-chords-965279": {
+      "artist": "Lacuna Coil",
+      "chorus_chords": [],
+      "chorus_lines": [],
+      "errors": [],
+      "explore_rank": 10,
+      "explore_title": "To Myself I Turned",
+      "first_seen_at": "2026-07-23T08:58:18+00:00",
+      "has_chorus": false,
+      "last_scraped_at": "2026-07-23T08:58:18+00:00",
+      "last_seen_at": "2026-07-23T08:58:18+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:038740ad:Lacuna Coil"
+      ],
+      "title": "To Myself I Turned",
+      "url": "https://tabs.ultimate-guitar.com/tab/lacuna-coil/to-myself-i-turned-chords-965279"
+    },
+    "https://tabs.ultimate-guitar.com/tab/lacuna-coil/trip-the-darkness-chords-2695191": {
+      "artist": "Lacuna Coil",
+      "chorus_chords": [
+        "Cm",
+        "Ab",
+        "Fm",
+        "Cm",
+        "Fm",
+        "Cm",
+        "Ab",
+        "Fm",
+        "Cm",
+        "Fm",
+        "C",
+        "Fm",
+        "C",
+        "Fm"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Cm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Follow me, follow me"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Ab"
+            },
+            {
+              "position": 5,
+              "symbol": "Fm"
+            },
+            {
+              "position": 14,
+              "symbol": "Cm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "As I trip the darkness"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Fm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "One more time"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Cm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Follow me, follow me"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Ab"
+            },
+            {
+              "position": 3,
+              "symbol": "Fm"
+            },
+            {
+              "position": 13,
+              "symbol": "Cm"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "I awake from madness"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Fm"
+            },
+            {
+              "position": 9,
+              "symbol": "C"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Just in time"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Fm"
+            },
+            {
+              "position": 4,
+              "symbol": "C"
+            },
+            {
+              "position": 7,
+              "symbol": "Fm"
+            }
+          ],
+          "lyrics": ""
+        }
+      ],
+      "errors": [],
+      "explore_rank": 8,
+      "explore_title": "Trip The Darkness",
+      "first_seen_at": "2026-07-23T08:58:12+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:58:12+00:00",
+      "last_seen_at": "2026-07-23T08:58:12+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:038740ad:Lacuna Coil"
+      ],
+      "title": "Trip The Darkness Acoustic",
+      "url": "https://tabs.ultimate-guitar.com/tab/lacuna-coil/trip-the-darkness-chords-2695191"
+    },
+    "https://tabs.ultimate-guitar.com/tab/lacuna-coil/within-me-chords-1715710": {
+      "artist": "Lacuna Coil",
+      "chorus_chords": [],
+      "chorus_lines": [],
+      "errors": [],
+      "explore_rank": 7,
+      "explore_title": "Within Me",
+      "first_seen_at": "2026-07-23T08:58:08+00:00",
+      "has_chorus": false,
+      "last_scraped_at": "2026-07-23T08:58:08+00:00",
+      "last_seen_at": "2026-07-23T08:58:08+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:038740ad:Lacuna Coil"
+      ],
+      "title": "Within Me",
+      "url": "https://tabs.ultimate-guitar.com/tab/lacuna-coil/within-me-chords-1715710"
     },
     "https://tabs.ultimate-guitar.com/tab/led-zeppelin/stairway-to-heaven-tabs-9488": {
       "artist": "Led Zeppelin",
@@ -13029,8 +15170,7 @@
       "last_seen_at": "2026-07-14T16:47:07+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "En El Espacio",
       "url": "https://tabs.ultimate-guitar.com/tab/leiva/en-el-espacio-chords-3089642"
@@ -13275,8 +15415,7 @@
       "last_seen_at": "2026-07-14T16:47:27+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Good Things Go",
       "url": "https://tabs.ultimate-guitar.com/tab/linkin-park/good-things-go-chords-5507190"
@@ -13386,8 +15525,7 @@
       "last_seen_at": "2026-07-14T16:47:37+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Heavy Is The Crown",
       "url": "https://tabs.ultimate-guitar.com/tab/linkin-park/heavy-is-the-crown-chords-5437842"
@@ -13524,8 +15662,7 @@
       "last_seen_at": "2026-07-14T16:47:46+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "The Emptiness Machine",
       "url": "https://tabs.ultimate-guitar.com/tab/linkin-park/the-emptiness-machine-chords-5415831"
@@ -13656,8 +15793,7 @@
       "last_seen_at": "2026-07-14T16:47:56+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Carolina",
       "url": "https://tabs.ultimate-guitar.com/tab/m-clan/carolina-chords-1112078"
@@ -13782,8 +15918,7 @@
       "last_seen_at": "2026-07-14T16:48:06+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "All I Want For Christmas Is You",
       "url": "https://tabs.ultimate-guitar.com/tab/mariah-carey/all-i-want-for-christmas-is-you-chords-903566"
@@ -13847,6 +15982,164 @@
       ],
       "title": "Ven",
       "url": "https://tabs.ultimate-guitar.com/tab/mbongo/ven-chords-6295853"
+    },
+    "https://tabs.ultimate-guitar.com/tab/metallica/blackened-chords-3134390": {
+      "artist": "Metallica",
+      "chorus_chords": [
+        "E5",
+        "D5",
+        "A5",
+        "E5",
+        "G5",
+        "D5",
+        "E5",
+        "D5",
+        "A5",
+        "C5",
+        "G5",
+        "Bb5"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "E5"
+            },
+            {
+              "position": 8,
+              "symbol": "D5"
+            },
+            {
+              "position": 23,
+              "symbol": "A5"
+            },
+            {
+              "position": 36,
+              "symbol": "E5"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Fire to begin whipping dance of the dead"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "G5"
+            },
+            {
+              "position": 10,
+              "symbol": "D5"
+            },
+            {
+              "position": 17,
+              "symbol": "E5"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Blackened is the end"
+        },
+        {
+          "chords": [
+            {
+              "position": 3,
+              "symbol": "D5"
+            },
+            {
+              "position": 18,
+              "symbol": "A5"
+            },
+            {
+              "position": 31,
+              "symbol": "C5"
+            },
+            {
+              "position": 37,
+              "symbol": "G5"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "To begin whipping dance of the dead"
+        },
+        {
+          "chords": [
+            {
+              "position": 0,
+              "symbol": "Bb5"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Color our world blackened"
+        },
+        {
+          "chords": [],
+          "lyrics": "e|--------------------------------|"
+        },
+        {
+          "chords": [],
+          "lyrics": "B|--------------------------------|"
+        },
+        {
+          "chords": [],
+          "lyrics": "G|--------------------------------|    2x"
+        },
+        {
+          "chords": [],
+          "lyrics": "D|---------------9------8-8-8-8---|"
+        },
+        {
+          "chords": [],
+          "lyrics": "A|--7-7-7-8-7-7-7-7-7-7-8-8-8-8---|"
+        },
+        {
+          "chords": [],
+          "lyrics": "E|-0-0-0-----0-0---0-0--6-6-6-6---|"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 2,
+      "explore_title": "Blackened",
+      "first_seen_at": "2026-07-23T08:56:48+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:56:48+00:00",
+      "last_seen_at": "2026-07-23T08:56:48+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:d50e1899:Metallica"
+      ],
+      "title": "Blackened Acoustic",
+      "url": "https://tabs.ultimate-guitar.com/tab/metallica/blackened-chords-3134390"
+    },
+    "https://tabs.ultimate-guitar.com/tab/metallica/mama-said-chords-136125": {
+      "artist": "Metallica",
+      "chorus_chords": [],
+      "chorus_lines": [],
+      "errors": [],
+      "explore_rank": 3,
+      "explore_title": "Mama Said",
+      "first_seen_at": "2026-07-23T08:56:51+00:00",
+      "has_chorus": false,
+      "last_scraped_at": "2026-07-23T08:56:51+00:00",
+      "last_seen_at": "2026-07-23T08:56:51+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:d50e1899:Metallica"
+      ],
+      "title": "Mama Said",
+      "url": "https://tabs.ultimate-guitar.com/tab/metallica/mama-said-chords-136125"
     },
     "https://tabs.ultimate-guitar.com/tab/metallica/nothing-else-matters-tabs-8519": {
       "artist": "Metallica",
@@ -13942,6 +16235,143 @@
       ],
       "title": "Nothing Else Matters Tab By Metallica @ Ultimate-Guitar.Com",
       "url": "https://tabs.ultimate-guitar.com/tab/metallica/nothing-else-matters-tabs-8519"
+    },
+    "https://tabs.ultimate-guitar.com/tab/metallica/turn-the-page-chords-1776210": {
+      "artist": "Metallica",
+      "chorus_chords": [
+        "D",
+        "Em",
+        "D",
+        "Em",
+        "D",
+        "A",
+        "C",
+        "D",
+        "Em"
+      ],
+      "chorus_lines": [
+        {
+          "chords": [
+            {
+              "position": 7,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Here I am"
+        },
+        {
+          "chords": [
+            {
+              "position": 8,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "On the road again"
+        },
+        {
+          "chords": [
+            {
+              "position": 8,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "There I am"
+        },
+        {
+          "chords": [
+            {
+              "position": 3,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Up on the stage"
+        },
+        {
+          "chords": [
+            {
+              "position": 8,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Here I go"
+        },
+        {
+          "chords": [
+            {
+              "position": 10,
+              "symbol": "A"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Playin' star again"
+        },
+        {
+          "chords": [
+            {
+              "position": 9,
+              "symbol": "C"
+            },
+            {
+              "position": 13,
+              "symbol": "D"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "There I go"
+        },
+        {
+          "chords": [
+            {
+              "position": 9,
+              "symbol": "Em"
+            }
+          ],
+          "lyrics": ""
+        },
+        {
+          "chords": [],
+          "lyrics": "Turn the page"
+        }
+      ],
+      "errors": [],
+      "explore_rank": 1,
+      "explore_title": "Turn The Page",
+      "first_seen_at": "2026-07-23T08:56:44+00:00",
+      "has_chorus": true,
+      "last_scraped_at": "2026-07-23T08:56:44+00:00",
+      "last_seen_at": "2026-07-23T08:56:44+00:00",
+      "scrape_count": 1,
+      "sources": [
+        "list:d50e1899:Metallica"
+      ],
+      "title": "Turn The Page",
+      "url": "https://tabs.ultimate-guitar.com/tab/metallica/turn-the-page-chords-1776210"
     },
     "https://tabs.ultimate-guitar.com/tab/miley-cyrus/malibu-chords-1994889": {
       "artist": "Miley Cyrus",
@@ -14064,8 +16494,7 @@
       "last_seen_at": "2026-07-14T16:48:35+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Malibu",
       "url": "https://tabs.ultimate-guitar.com/tab/miley-cyrus/malibu-chords-1994889"
@@ -14249,8 +16678,7 @@
       "last_seen_at": "2026-07-14T16:48:45+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Dragon Ball Gt - Dan Dan Kokoro Hikareteku",
       "url": "https://tabs.ultimate-guitar.com/tab/misc-cartoons/dragon-ball-gt-dan-dan-kokoro-hikareteku-chords-1096570"
@@ -14408,8 +16836,7 @@
       "last_seen_at": "2026-07-14T16:48:54+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Frozen - Let It Go",
       "url": "https://tabs.ultimate-guitar.com/tab/misc-cartoons/frozen-let-it-go-chords-1472230"
@@ -14551,8 +16978,7 @@
       "last_seen_at": "2026-07-14T16:49:04+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Kpop Demon Hunters - Golden",
       "url": "https://tabs.ultimate-guitar.com/tab/misc-cartoons/kpop-demon-hunters-golden-chords-5844500"
@@ -14704,8 +17130,7 @@
       "last_seen_at": "2026-07-14T16:49:14+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Neon Genesis Evangelion - A Cruel Angels Thesis",
       "url": "https://tabs.ultimate-guitar.com/tab/misc-cartoons/neon-genesis-evangelion-a-cruel-angels-thesis-chords-460280"
@@ -14723,8 +17148,7 @@
       "last_seen_at": "2026-07-14T16:49:24+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "The Sound Of Music - My Favorite Things",
       "url": "https://tabs.ultimate-guitar.com/tab/misc-musicals/the-sound-of-music-my-favorite-things-chords-1483693"
@@ -14845,8 +17269,7 @@
       "last_seen_at": "2026-07-14T16:49:34+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "A Star Is Born - Always Remember Us This Way",
       "url": "https://tabs.ultimate-guitar.com/tab/misc-soundtrack/a-star-is-born-always-remember-us-this-way-chords-2484211"
@@ -14972,8 +17395,7 @@
       "sources": [
         "ug_explore_combined_choruses.json",
         "https://www.ultimate-guitar.com/explore?country_chart=1&order=hitstotal_desc",
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "A Star Is Born - Shallow",
       "url": "https://tabs.ultimate-guitar.com/tab/misc-soundtrack/a-star-is-born-shallow-chords-2488086"
@@ -15132,8 +17554,7 @@
       "last_seen_at": "2026-07-14T16:49:54+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Barbie - What Was I Made For",
       "url": "https://tabs.ultimate-guitar.com/tab/misc-soundtrack/barbie-what-was-i-made-for-chords-4871180"
@@ -15269,8 +17690,7 @@
       "last_seen_at": "2026-07-14T16:50:03+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Outlander - The Skye Boat Song",
       "url": "https://tabs.ultimate-guitar.com/tab/misc-television/outlander-the-skye-boat-song-chords-1732364"
@@ -15288,8 +17708,7 @@
       "last_seen_at": "2026-07-14T16:50:13+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Red River Valley",
       "url": "https://tabs.ultimate-guitar.com/tab/misc-traditional/red-river-valley-chords-1051628"
@@ -15692,8 +18111,7 @@
       "last_seen_at": "2026-07-14T16:50:23+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Amaranth",
       "url": "https://tabs.ultimate-guitar.com/tab/nightwish/amaranth-chords-662747"
@@ -15976,7 +18394,6 @@
       "scrape_count": 2,
       "sources": [
         "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html",
         "list:fe654ba8:Nightwish"
       ],
       "title": "Ever Dream",
@@ -16129,8 +18546,7 @@
       "last_seen_at": "2026-07-14T16:50:43+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Ghost Love Score",
       "url": "https://tabs.ultimate-guitar.com/tab/nightwish/ghost-love-score-chords-1797238"
@@ -16814,15 +19230,16 @@
         }
       ],
       "errors": [],
-      "explore_rank": 14,
+      "explore_rank": 1,
       "explore_title": "Noise",
       "first_seen_at": "2026-07-23T08:45:04+00:00",
       "has_chorus": true,
       "last_scraped_at": "2026-07-23T08:45:04+00:00",
-      "last_seen_at": "2026-07-23T08:45:04+00:00",
+      "last_seen_at": "2026-07-24T15:33:38+00:00",
       "scrape_count": 1,
       "sources": [
-        "list:fe654ba8:Nightwish"
+        "list:fe654ba8:Nightwish",
+        "list:83301295:URL list da9f150c"
       ],
       "title": "Noise",
       "url": "https://tabs.ultimate-guitar.com/tab/nightwish/noise-chords-3089906"
@@ -16950,15 +19367,16 @@
         }
       ],
       "errors": [],
-      "explore_rank": 20,
+      "explore_rank": 2,
       "explore_title": "Over The Hills And Far Away",
       "first_seen_at": "2026-07-23T08:45:21+00:00",
       "has_chorus": true,
       "last_scraped_at": "2026-07-23T08:45:21+00:00",
-      "last_seen_at": "2026-07-23T08:45:21+00:00",
+      "last_seen_at": "2026-07-24T15:33:38+00:00",
       "scrape_count": 1,
       "sources": [
-        "list:fe654ba8:Nightwish"
+        "list:fe654ba8:Nightwish",
+        "list:83301295:URL list da9f150c"
       ],
       "title": "Over The Hills And Far Away",
       "url": "https://tabs.ultimate-guitar.com/tab/nightwish/over-the-hills-and-far-away-chords-269318"
@@ -17395,7 +19813,6 @@
       "scrape_count": 2,
       "sources": [
         "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html",
         "list:fe654ba8:Nightwish"
       ],
       "title": "Sleeping Sun",
@@ -17727,8 +20144,7 @@
       "last_seen_at": "2026-07-14T16:51:02+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Ultimate Guitar Pro - Play Like A Pro",
       "url": "https://tabs.ultimate-guitar.com/tab/nightwish/the-islander-official-2904995"
@@ -18624,8 +21040,7 @@
       "last_seen_at": "2026-07-14T16:51:12+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Libertad",
       "url": "https://tabs.ultimate-guitar.com/tab/nil-moliner/libertad-chords-3690944"
@@ -19350,8 +21765,7 @@
       "scrape_count": 3,
       "sources": [
         "https://www.ultimate-guitar.com/explore?country_chart=1&order=hitstotal_desc",
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Wonderwall",
       "url": "https://tabs.ultimate-guitar.com/tab/oasis/wonderwall-chords-39144"
@@ -20399,8 +22813,7 @@
       "last_seen_at": "2026-07-14T16:52:58+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Vampire",
       "url": "https://tabs.ultimate-guitar.com/tab/olivia-rodrigo/vampire-chords-4843571"
@@ -20514,8 +22927,7 @@
       "last_seen_at": "2026-07-14T16:53:18+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "In The Night",
       "url": "https://tabs.ultimate-guitar.com/tab/oques-grasses/in-the-night-chords-2824604"
@@ -20620,8 +23032,7 @@
       "last_seen_at": "2026-07-14T16:53:28+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "La Gent Que Estimo",
       "url": "https://tabs.ultimate-guitar.com/tab/oques-grasses/la-gent-que-estimo-chords-3734273"
@@ -21363,8 +23774,7 @@
       "last_seen_at": "2026-07-14T17:11:06+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Deja Vu",
       "url": "https://tabs.ultimate-guitar.com/tab/prince-royce/deja-vu-chords-1962183"
@@ -21383,8 +23793,7 @@
       "scrape_count": 2,
       "sources": [
         "ug_explore_combined_choruses.json",
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Love Of My Life",
       "url": "https://tabs.ultimate-guitar.com/tab/queen/love-of-my-life-chords-340088"
@@ -21402,8 +23811,7 @@
       "last_seen_at": "2026-07-14T17:26:59+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Creep",
       "url": "https://tabs.ultimate-guitar.com/tab/radiohead/creep-chords-1086985"
@@ -22274,8 +24682,7 @@
       "last_seen_at": "2026-07-14T17:27:18+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "No Surprises",
       "url": "https://tabs.ultimate-guitar.com/tab/radiohead/no-surprises-chords-183884"
@@ -22342,8 +24749,7 @@
       "last_seen_at": "2026-07-14T17:27:28+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Under The Bridge",
       "url": "https://tabs.ultimate-guitar.com/tab/red-hot-chili-peppers/under-the-bridge-chords-703476"
@@ -22361,8 +24767,7 @@
       "last_seen_at": "2026-07-14T17:42:59+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Emerald Sword",
       "url": "https://tabs.ultimate-guitar.com/tab/rhapsody-of-fire/emerald-sword-chords-1706599"
@@ -22552,8 +24957,7 @@
       "last_seen_at": "2026-07-14T17:43:09+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Anywhere",
       "url": "https://tabs.ultimate-guitar.com/tab/rita-ora/anywhere-chords-2212027"
@@ -22571,8 +24975,7 @@
       "last_seen_at": "2026-07-14T17:43:19+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Tuyo",
       "url": "https://tabs.ultimate-guitar.com/tab/rodrigo-amarante/tuyo-chords-1766677"
@@ -22720,8 +25123,7 @@
       "last_seen_at": "2026-07-14T17:43:29+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Boig Per Tu",
       "url": "https://tabs.ultimate-guitar.com/tab/sau/boig-per-tu-chords-1597106"
@@ -23045,8 +25447,7 @@
       "last_seen_at": "2026-07-14T17:53:59+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Kiss Me",
       "url": "https://tabs.ultimate-guitar.com/tab/sixpence-none-the-richer/kiss-me-chords-2707"
@@ -23064,8 +25465,7 @@
       "last_seen_at": "2026-07-14T17:54:08+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Amor De Anticuario",
       "url": "https://tabs.ultimate-guitar.com/tab/sofia-ellar/amor-de-anticuario-chords-2236793"
@@ -23132,8 +25532,7 @@
       "last_seen_at": "2026-07-14T17:54:19+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Verano Con Lima",
       "url": "https://tabs.ultimate-guitar.com/tab/sofia-ellar/verano-con-lima-chords-2383579"
@@ -23249,8 +25648,7 @@
       "last_seen_at": "2026-07-14T17:54:28+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "I Have A Right",
       "url": "https://tabs.ultimate-guitar.com/tab/sonata-arctica/i-have-a-right-chords-1158011"
@@ -23268,8 +25666,7 @@
       "last_seen_at": "2026-07-14T17:54:38+00:00",
       "scrape_count": 2,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Replica",
       "url": "https://tabs.ultimate-guitar.com/tab/sonata-arctica/replica-chords-1513336"
@@ -23298,8 +25695,7 @@
       "last_seen_at": "2026-07-14T10:28:36+00:00",
       "scrape_count": 1,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "White Pearl Black Oceans",
       "url": "https://tabs.ultimate-guitar.com/tab/sonata-arctica/white-pearl-black-oceans-chords-828274"
@@ -24190,7 +26586,6 @@
       "scrape_count": 2,
       "sources": [
         "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html",
         "list:794d3dc7:Strato test 2"
       ],
       "title": "Winter Skies",
@@ -24208,8 +26603,7 @@
       "last_seen_at": "2026-07-14T10:28:36+00:00",
       "scrape_count": 1,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Nostalgia",
       "url": "https://tabs.ultimate-guitar.com/tab/stream-of-passion/nostalgia-chords-1154468"
@@ -24243,8 +26637,7 @@
       "last_seen_at": "2026-07-14T10:28:36+00:00",
       "scrape_count": 1,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Anti-Hero",
       "url": "https://tabs.ultimate-guitar.com/tab/taylor-swift/anti-hero-chords-4392359"
@@ -24337,8 +26730,7 @@
       "last_seen_at": "2026-07-14T10:28:36+00:00",
       "scrape_count": 1,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Umbrella",
       "url": "https://tabs.ultimate-guitar.com/tab/the-baseballs/umbrella-chords-1746064"
@@ -24458,8 +26850,7 @@
       "sources": [
         "ug_explore_combined_choruses.json",
         "https://www.ultimate-guitar.com/explore?country_chart=1&order=hitstotal_desc",
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Yesterday",
       "url": "https://tabs.ultimate-guitar.com/tab/the-beatles/yesterday-chords-17450"
@@ -24489,8 +26880,7 @@
       "last_seen_at": "2026-07-14T10:28:36+00:00",
       "scrape_count": 1,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Radio Acoustic Live",
       "url": "https://tabs.ultimate-guitar.com/tab/the-corrs/radio-chords-16233"
@@ -24558,8 +26948,7 @@
       "last_seen_at": "2026-07-14T10:28:36+00:00",
       "scrape_count": 1,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Saturnine",
       "url": "https://tabs.ultimate-guitar.com/tab/the-gathering/saturnine-chords-1445422"
@@ -24593,8 +26982,7 @@
       "last_seen_at": "2026-07-14T10:28:36+00:00",
       "scrape_count": 1,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Human",
       "url": "https://tabs.ultimate-guitar.com/tab/the-killers/human-chords-741479"
@@ -24628,8 +27016,7 @@
       "last_seen_at": "2026-07-14T10:28:36+00:00",
       "scrape_count": 1,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Another Love",
       "url": "https://tabs.ultimate-guitar.com/tab/tom-odell/another-love-chords-1198980"
@@ -24709,8 +27096,7 @@
       "last_seen_at": "2026-07-14T10:28:36+00:00",
       "scrape_count": 1,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Memories",
       "url": "https://tabs.ultimate-guitar.com/tab/within-temptation/memories-chords-408434"
@@ -24742,8 +27128,7 @@
       "last_seen_at": "2026-07-14T10:28:36+00:00",
       "scrape_count": 1,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Je Veux",
       "url": "https://tabs.ultimate-guitar.com/tab/zaz/je-veux-chords-991205"
@@ -24771,13 +27156,12 @@
       "last_seen_at": "2026-07-14T10:28:36+00:00",
       "scrape_count": 1,
       "sources": [
-        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html",
-        "upload:e977a60b:(1) My tabs @ Ultimate-Guitar.Com.html"
+        "upload:685ebb1f:(1) My tabs @ Ultimate-Guitar.Com.html"
       ],
       "title": "Si Jamais Joublie",
       "url": "https://tabs.ultimate-guitar.com/tab/zaz/si-jamais-joublie-chords-1776260"
     }
   },
-  "updated_at": "2026-07-23T08:45:46+00:00",
+  "updated_at": "2026-07-24T15:33:38+00:00",
   "version": 1
 }
