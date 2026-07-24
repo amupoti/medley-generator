@@ -1,0 +1,46 @@
+<div
+  class="song-picker"
+  data-song-picker
+  data-search-url="{{ lang_url('search_songs_api') }}"
+  data-move-up-label="{{ t('move_up') }}"
+  data-move-down-label="{{ t('move_down') }}"
+  data-remove-label="{{ t('remove_song') }}"
+  data-new-song-label="{{ t('new_song') }}"
+  data-remove-text="{{ t('remove') }}"
+>
+  <div class="song-list-heading">
+    <h2>{{ t("selected_songs") }}</h2>
+    <span class="song-list-count" data-song-count>{{ picker_songs|length }}</span>
+  </div>
+  <ol class="editable-song-list" data-song-list>
+    {% for song in picker_songs %}
+      <li class="editable-song" data-song-url="{{ song.url }}">
+        <span class="editable-song-position">{{ loop.index }}</span>
+        <span class="editable-song-details">
+          <strong>{{ song.artist or song.explore_title or t("unknown_song") }}{% if song.artist and song.title %} - {{ song.title }}{% endif %}</strong>
+          <span>{{ song.url }}</span>
+        </span>
+        <span class="editable-song-actions">
+          <button class="secondary-action" type="button" data-move-up aria-label="{{ t('move_up') }}">↑</button>
+          <button class="secondary-action" type="button" data-move-down aria-label="{{ t('move_down') }}">↓</button>
+          <button class="danger-action" type="button" data-remove-song>{{ t("remove") }}</button>
+        </span>
+      </li>
+    {% endfor %}
+  </ol>
+  <label>
+    {{ t("search_db_songs") }}
+    <input data-song-search type="search" autocomplete="off" placeholder="{{ t('search_song_placeholder') }}">
+  </label>
+  <div class="song-search-results" data-song-search-results hidden></div>
+  {% if allow_url_add %}
+    <div class="add-song">
+      <label>
+        {{ t("add_song_url") }}
+        <input data-new-song-url type="url" placeholder="https://tabs.ultimate-guitar.com/tab/..." />
+      </label>
+      <button class="secondary-action" type="button" data-add-song>{{ t("add_song") }}</button>
+    </div>
+  {% endif %}
+  <textarea class="visually-hidden" name="tab_urls" required data-tab-urls>{{ picker_songs|map(attribute='url')|join('\n') }}</textarea>
+</div>

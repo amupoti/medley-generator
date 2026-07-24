@@ -36,6 +36,7 @@
       <button class="method-tab" type="button" role="tab" aria-selected="false" aria-controls="group-analysis" data-method="group-analysis">{{ t("analyze_group") }}</button>
       <button class="method-tab" type="button" role="tab" aria-selected="false" aria-controls="upload-analysis" data-method="upload-analysis">{{ t("analyze_upload") }}</button>
       <button class="method-tab" type="button" role="tab" aria-selected="false" aria-controls="list-analysis" data-method="list-analysis">{{ t("analyze_url_list") }}</button>
+      <button class="method-tab" type="button" role="tab" aria-selected="false" aria-controls="db-analysis" data-method="db-analysis">{{ t("analyze_database") }}</button>
     </div>
   </div>
 
@@ -117,6 +118,22 @@
   </form>
   </div>
 
+  <div class="method-panel" id="db-analysis" role="tabpanel" hidden>
+  <form method="post" action="{{ lang_url('analyze_url_list_route') }}">
+    <h2>{{ t("analyze_database") }}</h2>
+    <p class="notice">{{ t("database_medley_notice") }}</p>
+    <label>
+      {{ t("medley_name") }}
+      <input name="medley_name" type="text" maxlength="80">
+    </label>
+    {% set picker_songs = [] %}
+    {% set allow_url_add = false %}
+    {% include "_song_picker.html" %}
+    <input name="delay_ms" type="hidden" value="0">
+    <button type="submit">{{ t("start_database_medley") }}</button>
+  </form>
+  </div>
+
   <div class="method-panel" id="list-analysis" role="tabpanel" hidden>
   <form method="post" action="{{ lang_url('analyze_url_list_route') }}">
   <h2>{{ t("analyze_url_list") }}</h2>
@@ -143,6 +160,7 @@
   </form>
   </div>
 </section>
+<script src="{{ url_for('static', filename='song_picker.js') }}" defer></script>
 
 <section class="panel">
   <h2>{{ t("stored_sources") }}</h2>

@@ -226,6 +226,15 @@ class UrlListRouteTest(unittest.TestCase):
 
         self.assertEqual(response.status_code, 400)
 
+    def test_index_includes_database_song_picker(self) -> None:
+        response = self.client.get("/?lang=ca")
+
+        self.assertEqual(response.status_code, 200)
+        html = response.get_data(as_text=True)
+        self.assertIn("Crea des de la BD", html)
+        self.assertIn("data-song-picker", html)
+        self.assertIn("/api/songs", html)
+
     @patch("app.run_background")
     def test_edits_saved_medley_and_reuses_source_id(self, run_background: MagicMock) -> None:
         source_id = "list:1234:Fiesta"
@@ -254,16 +263,25 @@ class UrlListRouteTest(unittest.TestCase):
 
     def test_edit_page_returns_saved_urls(self) -> None:
         source_id = "list:1234:Fiesta"
-        url = "https://tabs.ultimate-guitar.com/tab/oasis/wonderwall-chords-27596"
+        first = "https://tabs.ultimate-guitar.com/tab/oasis/wonderwall-chords-27596"
+        second = "https://www.ultimate-guitar.com/tab/blur/song-chords-123"
         with TemporaryDirectory() as directory:
             db_path = Path(directory) / "songs.json"
-            save_db(db_path, empty_db())
+            db = empty_db()
+            db["songs"][first] = {"url": first, "artist": "Oasis", "title": "Wonderwall"}
+            save_db(db_path, db)
             with patch("app.DB_PATH", db_path):
-                app.store_medley(source_id, "Fiesta", [url])
+                app.store_medley(source_id, "Fiesta", [second, first])
                 response = self.client.get(f"/medley/{source_id}/edit?lang=es")
 
         self.assertEqual(response.status_code, 200)
-        self.assertIn(url.encode(), response.data)
+        html = response.get_data(as_text=True)
+        self.assertIn("Oasis - Wonderwall", html)
+        self.assertIn(second, html)
+        self.assertLess(html.index(second), html.index("Oasis - Wonderwall"))
+        self.assertIn("data-add-song", html)
+        self.assertIn("data-remove-song", html)
+        self.assertIn("data-move-up", html)
 
     def test_edit_page_reconstructs_legacy_medley_urls(self) -> None:
         source_id = "list:1234:Legacy"
@@ -278,6 +296,58 @@ class UrlListRouteTest(unittest.TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertIn(url.encode(), response.data)
+
+
+class SongSearchApiTest(unittest.TestCase):
+    def setUp(self) -> None:
+        self.client = app.app.test_client()
+
+    def test_searches_stored_songs_by_artist_title_and_url(self) -> None:
+        with TemporaryDirectory() as directory:
+            db_path = Path(directory) / "songs.json"
+            db = empty_db()
+            db["songs"] = {
+                "oasis-url": {
+                    "url": "oasis-url",
+                    "artist": "Oasis",
+                    "title": "Wonderwall",
+                },
+                "blur-url": {
+                    "url": "blur-url",
+                    "artist": "Blur",
+                    "title": "Song 2",
+                },
+            }
+            save_db(db_path, db)
+            with patch("app.DB_PATH", db_path):
+                response = self.client.get("/api/songs?q=wonder")
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(
+            response.get_json()["songs"],
+            [
+                {
+                    "artist": "Oasis",
+                    "explore_title": None,
+                    "title": "Wonderwall",
+                    "url": "oasis-url",
+                }
+            ],
+        )
+
+    def test_limits_empty_search_to_twenty_songs(self) -> None:
+        with TemporaryDirectory() as directory:
+            db_path = Path(directory) / "songs.json"
+            db = empty_db()
+            db["songs"] = {
+                f"url-{index}": {"url": f"url-{index}", "title": f"Song {index}"}
+                for index in range(25)
+            }
+            save_db(db_path, db)
+            with patch("app.DB_PATH", db_path):
+                response = self.client.get("/api/songs")
+
+        self.assertEqual(len(response.get_json()["songs"]), 20)
 
 
 class DeleteMedleyTest(unittest.TestCase):

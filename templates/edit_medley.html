@@ -11,10 +11,9 @@
     {{ t("medley_name") }}
     <input name="medley_name" type="text" maxlength="80" value="{{ medley.name }}">
   </label>
-  <label>
-    {{ t("tab_urls") }}
-    <textarea name="tab_urls" rows="12" required>{{ medley.urls|join('\n') }}</textarea>
-  </label>
+  {% set picker_songs = songs %}
+  {% set allow_url_add = true %}
+  {% include "_song_picker.html" %}
   <div class="inline-fields">
     <label>
       {{ t("delay_ms") }}
@@ -25,6 +24,10 @@
     <input name="refresh" type="checkbox">
     {{ t("refresh_known") }}
   </label>
-  <button type="submit">{{ t("save_and_recreate") }}</button>
+  <div class="form-actions">
+    <button type="submit">{{ t("save_and_recreate") }}</button>
+    <a class="button-link secondary-action" href="{{ lang_url('medley', source_id=source_id) }}">{{ t("cancel") }}</a>
+  </div>
 </form>
+<script src="{{ url_for('static', filename='song_picker.js') }}" defer></script>
 {% endblock %}

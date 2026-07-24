@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import Any, cast
 from urllib.parse import quote, urljoin, urlparse
 
-from flask import Flask, Response, abort, redirect, render_template, request, url_for
+from flask import Flask, Response, abort, jsonify, redirect, render_template, request, url_for
 
 from chord_utils import PITCH_CLASSES, transpose_chords
 from compare_choruses import build_output, canonical_song_key, load_songs
@@ -633,7 +633,19 @@ def edit_medley(source_id: str) -> Any:
     if not definition:
         abort(404)
     if request.method == "GET":
-        return render_template("edit_medley.html", source_id=source_id, medley=definition)
+        songs = [
+            {
+                "url": url,
+                **{
+                    key: db["songs"].get(url, {}).get(key)
+                    for key in ("artist", "title", "explore_title")
+                },
+            }
+            for url in definition["urls"]
+        ]
+        return render_template(
+            "edit_medley.html", source_id=source_id, medley=definition, songs=songs
+        )
 
     try:
         urls = parse_tab_urls(request.form.get("tab_urls", ""))
@@ -670,6 +682,34 @@ def songs() -> Any:
             ).casefold()
         ]
     return render_template("songs.html", songs=songs_list, query=request.args.get("q", "").strip())
+
+
+@app.get("/api/songs")
+def search_songs_api() -> Any:
+    query = request.args.get("q", "").strip().casefold()
+    songs_list = sorted_songs()
+    if query:
+        songs_list = [
+            song
+            for song in songs_list
+            if query
+            in " ".join(
+                str(song.get(key) or "")
+                for key in ("artist", "title", "explore_title", "url")
+            ).casefold()
+        ]
+    return jsonify(
+        {
+            "songs": [
+                {
+                    key: song.get(key)
+                    for key in ("url", "artist", "title", "explore_title")
+                }
+                for song in songs_list[:20]
+                if song.get("url")
+            ]
+        }
+    )
 
 
 @app.get("/songs/<encoded_url>")
