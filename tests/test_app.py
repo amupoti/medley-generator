@@ -4,8 +4,8 @@ from tempfile import TemporaryDirectory
 from typing import cast
 from unittest.mock import MagicMock, patch
 
-import app
-from song_db import empty_db, load_db, save_db
+import medleys.web.app as app
+from medleys.database import empty_db, load_db, save_db
 
 
 class TranslationsTest(unittest.TestCase):
@@ -102,8 +102,8 @@ class AppHelpersTest(unittest.TestCase):
             ],
         )
 
-    @patch("app.uuid.uuid4")
-    @patch("app.now_iso", side_effect=["created", "created", "updated"])
+    @patch("medleys.web.app.uuid.uuid4")
+    @patch("medleys.web.app.now_iso", side_effect=["created", "created", "updated"])
     def test_create_update_snapshot_and_get_job(self, _now: MagicMock, uuid4: MagicMock) -> None:
         uuid4.return_value.hex = "1234567890abcdef"
         app.jobs.clear()
@@ -118,9 +118,18 @@ class AppHelpersTest(unittest.TestCase):
         self.assertEqual(app.snapshot_jobs()[0]["summary"], {"count": 1})
         self.assertIsNone(app.get_job("missing"))
 
-    @patch("app.update_job")
+    @patch("medleys.web.app.update_job")
     def test_run_job_records_success_and_failure(self, update_job: MagicMock) -> None:
-        app.run_job("one", lambda value: {"value": value}, (3,))
+        progress_updates = []
+
+        def successful_target(value: int, progress: MagicMock) -> dict[str, int]:
+            progress(processed=1, total=1)
+            progress_updates.append(value)
+            return {"value": value}
+
+        app.run_job("one", successful_target, (3,))
+        self.assertEqual(progress_updates, [3])
+        self.assertIn(unittest.mock.call("one", processed=1, total=1), update_job.call_args_list)
         self.assertEqual(update_job.call_args_list[-1].kwargs["status"], "complete")
 
         update_job.reset_mock()
@@ -128,6 +137,30 @@ class AppHelpersTest(unittest.TestCase):
         self.assertEqual(
             update_job.call_args_list[-1].kwargs, {"status": "failed", "error": "broken"}
         )
+
+    def test_job_page_renders_live_progress(self) -> None:
+        app.jobs["progress-job"] = {
+            "id": "progress-job",
+            "kind": "url_list",
+            "source_id": "list:1:Party",
+            "status": "running",
+            "created_at": "created",
+            "updated_at": "updated",
+            "summary": None,
+            "error": None,
+            "total": 10,
+            "processed": 4,
+            "skipped": 1,
+            "scraped": 2,
+            "failed": 1,
+        }
+        self.addCleanup(app.jobs.clear)
+
+        response = app.app.test_client().get("/jobs/progress-job?lang=ca")
+
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b"4 / 10", response.data)
+        self.assertIn(b'<progress value="4" max="10">', response.data)
 
     def test_integer_parsers_handle_missing_and_present_values(self) -> None:
         self.assertIsNone(app.parse_optional_int(None))
@@ -161,7 +194,7 @@ class UrlListRouteTest(unittest.TestCase):
         self.addCleanup(app.jobs.clear)
         self.client = app.app.test_client()
 
-    @patch("app.run_background")
+    @patch("medleys.web.app.run_background")
     def test_creates_group_search_job(self, run_background: MagicMock) -> None:
         response = self.client.post(
             "/analyze/group?lang=es",
@@ -179,9 +212,9 @@ class UrlListRouteTest(unittest.TestCase):
 
         self.assertEqual(response.status_code, 400)
 
-    @patch("app.analyze_songs")
-    @patch("app.store_medley")
-    @patch("app.discover_group_songs")
+    @patch("medleys.web.app.analyze_songs")
+    @patch("medleys.web.app.store_medley")
+    @patch("medleys.web.app.discover_group_songs")
     def test_group_analysis_keeps_search_url_in_summary(
         self, discover: MagicMock, store_medley: MagicMock, analyze_songs: MagicMock
     ) -> None:
@@ -196,11 +229,11 @@ class UrlListRouteTest(unittest.TestCase):
         )
         store_medley.assert_called_once_with("source", "Blind Guardian", ["tab"])
 
-    @patch("app.run_background")
+    @patch("medleys.web.app.run_background")
     def test_creates_url_list_job(self, run_background: MagicMock) -> None:
         with TemporaryDirectory() as directory:
             db_path = Path(directory) / "songs.json"
-            with patch("app.DB_PATH", db_path):
+            with patch("medleys.web.app.DB_PATH", db_path):
                 response = self.client.post(
                     "/analyze/url-list?lang=es",
                     data={
@@ -235,7 +268,7 @@ class UrlListRouteTest(unittest.TestCase):
         self.assertIn("data-song-picker", html)
         self.assertIn("/api/songs", html)
 
-    @patch("app.run_background")
+    @patch("medleys.web.app.run_background")
     def test_edits_saved_medley_and_reuses_source_id(self, run_background: MagicMock) -> None:
         source_id = "list:1234:Fiesta"
         first = "https://tabs.ultimate-guitar.com/tab/oasis/wonderwall-chords-27596"
@@ -244,7 +277,7 @@ class UrlListRouteTest(unittest.TestCase):
             db_path = Path(directory) / "songs.json"
             db = empty_db()
             save_db(db_path, db)
-            with patch("app.DB_PATH", db_path):
+            with patch("medleys.web.app.DB_PATH", db_path):
                 app.store_medley(source_id, "Fiesta", [first])
                 response = self.client.post(
                     f"/medley/{source_id}/edit?lang=ca",
@@ -270,7 +303,7 @@ class UrlListRouteTest(unittest.TestCase):
             db = empty_db()
             db["songs"][first] = {"url": first, "artist": "Oasis", "title": "Wonderwall"}
             save_db(db_path, db)
-            with patch("app.DB_PATH", db_path):
+            with patch("medleys.web.app.DB_PATH", db_path):
                 app.store_medley(source_id, "Fiesta", [second, first])
                 response = self.client.get(f"/medley/{source_id}/edit?lang=es")
 
@@ -291,7 +324,7 @@ class UrlListRouteTest(unittest.TestCase):
             db = empty_db()
             db["songs"] = {url: {"url": url, "sources": [source_id], "explore_rank": 1}}
             save_db(db_path, db)
-            with patch("app.DB_PATH", db_path):
+            with patch("medleys.web.app.DB_PATH", db_path):
                 response = self.client.get(f"/medley/{source_id}/edit")
 
         self.assertEqual(response.status_code, 200)
@@ -319,7 +352,7 @@ class SongSearchApiTest(unittest.TestCase):
                 },
             }
             save_db(db_path, db)
-            with patch("app.DB_PATH", db_path):
+            with patch("medleys.web.app.DB_PATH", db_path):
                 response = self.client.get("/api/songs?q=wonder")
 
         self.assertEqual(response.status_code, 200)
@@ -344,7 +377,7 @@ class SongSearchApiTest(unittest.TestCase):
                 for index in range(25)
             }
             save_db(db_path, db)
-            with patch("app.DB_PATH", db_path):
+            with patch("medleys.web.app.DB_PATH", db_path):
                 response = self.client.get("/api/songs")
 
         self.assertEqual(len(response.get_json()["songs"]), 20)
@@ -360,7 +393,7 @@ class DeleteMedleyTest(unittest.TestCase):
                 "two": {"url": "two", "sources": ["list:1:Party"]},
             }
             save_db(db_path, initial_db)
-            with patch("app.DB_PATH", db_path):
+            with patch("medleys.web.app.DB_PATH", db_path):
                 response = app.app.test_client().post("/medley/list:1:Party/delete?lang=es")
 
             db = load_db(db_path)
@@ -409,7 +442,7 @@ class ComparisonExclusionsTest(unittest.TestCase):
             db = empty_db()
             db["songs"] = songs
             save_db(db_path, db)
-            with patch("app.DB_PATH", db_path):
+            with patch("medleys.web.app.DB_PATH", db_path):
                 exclusions = app.comparison_exclusions(source)
 
         self.assertEqual(

@@ -12,7 +12,7 @@ from typing import Any, TypedDict, cast
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-from song_db import SongRecord
+from medleys.database import SongRecord
 
 JSONObject = dict[str, Any]
 

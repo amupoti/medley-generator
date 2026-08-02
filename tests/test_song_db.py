@@ -4,7 +4,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest.mock import patch
 
-from song_db import (
+from medleys.database import (
     db_songs_as_list,
     db_urls,
     empty_db,
@@ -20,7 +20,10 @@ from song_db import (
 
 class SongDbTest(unittest.TestCase):
     def test_load_missing_database_returns_empty_schema(self) -> None:
-        with TemporaryDirectory() as directory, patch("song_db.now_iso", return_value="created"):
+        with (
+            TemporaryDirectory() as directory,
+            patch("medleys.database.now_iso", return_value="created"),
+        ):
             self.assertEqual(
                 load_db(Path(directory) / "missing.json"),
                 {"version": 1, "updated_at": "created", "songs": {}, "medleys": {}},
@@ -41,7 +44,10 @@ class SongDbTest(unittest.TestCase):
             self.assertEqual(db["medleys"], {})
 
     def test_save_database_updates_timestamp_and_round_trips(self) -> None:
-        with TemporaryDirectory() as directory, patch("song_db.now_iso", return_value="saved"):
+        with (
+            TemporaryDirectory() as directory,
+            patch("medleys.database.now_iso", return_value="saved"),
+        ):
             path = Path(directory) / "songs.json"
             db = empty_db()
             save_db(path, db)
@@ -60,7 +66,7 @@ class SongDbTest(unittest.TestCase):
 
     def test_save_medley_preserves_creation_time_on_update(self) -> None:
         db = empty_db()
-        with patch("song_db.now_iso", side_effect=["created", "updated"]):
+        with patch("medleys.database.now_iso", side_effect=["created", "updated"]):
             save_medley(db, "party", "First", ["one"])
             save_medley(db, "party", "Second", ["two"])
 
@@ -104,7 +110,7 @@ class SongDbTest(unittest.TestCase):
     def test_mark_seen_adds_source_and_rank(self) -> None:
         db = empty_db()
         merge_song(db, {"url": "one"}, scraped_at="first")
-        with patch("song_db.now_iso", return_value="seen"):
+        with patch("medleys.database.now_iso", return_value="seen"):
             mark_seen(db, {"url": "one", "explore_rank": 3}, "source")
 
         self.assertEqual(db["songs"]["one"]["sources"], ["source"])
@@ -113,7 +119,7 @@ class SongDbTest(unittest.TestCase):
 
     def test_record_failure_creates_and_appends_error(self) -> None:
         db = empty_db()
-        with patch("song_db.now_iso", return_value="failed"):
+        with patch("medleys.database.now_iso", return_value="failed"):
             record_failure(db, {"url": "one"}, "source", "timeout")
             record_failure(db, {"url": "one"}, "source", "blocked")
             record_failure(db, {}, "source", "ignored")

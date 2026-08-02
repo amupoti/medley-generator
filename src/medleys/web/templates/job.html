@@ -26,6 +26,18 @@
     <p class="error">{{ job.error }}</p>
   {% endif %}
 
+  {% if job.total is not none %}
+    <div class="job-progress">
+      <p><strong>{{ t("processed") }}: {{ job.processed }} / {{ job.total }}</strong></p>
+      <progress value="{{ job.processed }}" max="{{ job.total or 1 }}">{{ job.processed }} / {{ job.total }}</progress>
+      <div class="progress-counts">
+        <span>{{ t("scraped") }}: {{ job.scraped }}</span>
+        <span>{{ t("skipped") }}: {{ job.skipped }}</span>
+        <span>{{ t("failures") }}: {{ job.failed }}</span>
+      </div>
+    </div>
+  {% endif %}
+
   {% if job.summary %}
     <div class="summary-grid">
       <div><span>{{ job.summary.discovered_count }}</span><label>{{ t("discovered") }}</label></div>

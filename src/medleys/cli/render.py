@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from chord_utils import transpose_chords
+from medleys.chords import transpose_chords
 
 
 def render_chords(chords: list[str]) -> str:

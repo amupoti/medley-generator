@@ -64,6 +64,7 @@
   "analysis_job": "Tarea de análisis",
   "kind": "Tipo",
   "created": "Creada",
+  "processed": "Procesadas",
   "discovered": "Encontradas",
   "skipped": "Omitidas",
   "scraped": "Analizadas",

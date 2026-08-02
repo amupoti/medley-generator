@@ -4,18 +4,29 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
-from song_db import db_urls, load_db, mark_seen, merge_song, record_failure, save_db
-from ug_chorus_chords import dismiss_cookie_popup, launch_browser
-from ug_explore_scrape import EXPLORE_URL, extract_explore_links, scrape_song_with_retry
+from medleys.database import db_urls, load_db, mark_seen, merge_song, record_failure, save_db
+from medleys.ultimate_guitar.explore import (
+    EXPLORE_URL,
+    extract_explore_links,
+    scrape_song_with_retry,
+)
+from medleys.ultimate_guitar.song import dismiss_cookie_popup, launch_browser
 
 UpdateSummary = dict[str, Any]
+ProgressCallback = Callable[..., None]
 
 
 def update_db(
-    db_path: Path, source_url: str, limit: int | None, delay_ms: int, refresh: bool
+    db_path: Path,
+    source_url: str,
+    limit: int | None,
+    delay_ms: int,
+    refresh: bool,
+    progress: ProgressCallback | None = None,
 ) -> UpdateSummary:
     from playwright.sync_api import sync_playwright
 
@@ -44,6 +55,14 @@ def update_db(
 
         scraped = []
         failures = []
+        if progress:
+            progress(
+                total=len(discovered),
+                processed=len(skipped),
+                skipped=len(skipped),
+                scraped=0,
+                failed=0,
+            )
         for song in to_scrape:
             try:
                 scraped_song = scrape_song_with_retry(playwright, song, delay_ms)
@@ -53,6 +72,14 @@ def update_db(
                 error = str(exc)
                 record_failure(db, song, source_url, error)
                 failures.append({**song, "error": error})
+            if progress:
+                progress(
+                    total=len(discovered),
+                    processed=len(skipped) + len(scraped) + len(failures),
+                    skipped=len(skipped),
+                    scraped=len(scraped),
+                    failed=len(failures),
+                )
 
     save_db(db_path, db)
     return {

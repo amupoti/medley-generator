@@ -3,8 +3,8 @@ from __future__ import annotations
 from typing import Any
 from urllib.parse import urlencode
 
-from song_db import SongRecord
-from ug_chorus_chords import (
+from medleys.database import SongRecord
+from medleys.ultimate_guitar.song import (
     dismiss_cookie_popup,
     extract_store,
     launch_browser,

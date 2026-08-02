@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import MagicMock, patch
 
-import ug_group_search as search
+import medleys.ultimate_guitar.group_search as search
 
 
 class GroupSearchTest(unittest.TestCase):
@@ -56,8 +56,8 @@ class GroupSearchTest(unittest.TestCase):
         self.assertEqual([song["url"] for song in songs], ["best", "two"])
         self.assertEqual([song["explore_rank"] for song in songs], [1, 2])
 
-    @patch("ug_group_search.load_html_with_urllib", return_value="search html")
-    @patch("ug_group_search.extract_store")
+    @patch("medleys.ultimate_guitar.group_search.load_html_with_urllib", return_value="search html")
+    @patch("medleys.ultimate_guitar.group_search.extract_store")
     def test_discovers_group_chord_tabs_from_direct_search_response(
         self, extract_store: MagicMock, load_html: MagicMock
     ) -> None:
@@ -78,9 +78,14 @@ class GroupSearchTest(unittest.TestCase):
             "https://www.ultimate-guitar.com/search.php?title=Band&page=1&type=300"
         )
 
-    @patch("ug_group_search.load_search_store_with_browser")
-    @patch("ug_group_search.extract_store", side_effect=ValueError("direct missing"))
-    @patch("ug_group_search.load_html_with_urllib", return_value="missing store")
+    @patch("medleys.ultimate_guitar.group_search.load_search_store_with_browser")
+    @patch(
+        "medleys.ultimate_guitar.group_search.extract_store",
+        side_effect=ValueError("direct missing"),
+    )
+    @patch(
+        "medleys.ultimate_guitar.group_search.load_html_with_urllib", return_value="missing store"
+    )
     def test_search_store_falls_back_to_browser(
         self, _load_html: MagicMock, _extract_store: MagicMock, browser: MagicMock
     ) -> None:
@@ -90,10 +95,16 @@ class GroupSearchTest(unittest.TestCase):
         browser.assert_called_once_with("search", 10)
 
     @patch(
-        "ug_group_search.load_search_store_with_browser", side_effect=ValueError("browser missing")
+        "medleys.ultimate_guitar.group_search.load_search_store_with_browser",
+        side_effect=ValueError("browser missing"),
     )
-    @patch("ug_group_search.extract_store", side_effect=ValueError("direct missing"))
-    @patch("ug_group_search.load_html_with_urllib", return_value="missing store")
+    @patch(
+        "medleys.ultimate_guitar.group_search.extract_store",
+        side_effect=ValueError("direct missing"),
+    )
+    @patch(
+        "medleys.ultimate_guitar.group_search.load_html_with_urllib", return_value="missing store"
+    )
     def test_search_store_reports_both_failures(
         self, _load_html: MagicMock, _extract_store: MagicMock, _browser: MagicMock
     ) -> None:

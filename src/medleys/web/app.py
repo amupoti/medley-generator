@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-import base64
 import json
-import re
 import threading
 import uuid
 from collections.abc import Callable
@@ -11,13 +9,13 @@ from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any, cast
-from urllib.parse import quote, urljoin, urlparse
+from urllib.parse import quote
 
 from flask import Flask, Response, abort, jsonify, redirect, render_template, request, url_for
 
-from chord_utils import PITCH_CLASSES, transpose_chords
-from compare_choruses import build_output, canonical_song_key, load_songs
-from song_db import (
+from medleys.chords import PITCH_CLASSES, transpose_chords
+from medleys.comparison import build_output, canonical_song_key, load_songs
+from medleys.database import (
     SongDatabase,
     SongRecord,
     db_songs_as_list,
@@ -29,13 +27,39 @@ from song_db import (
     save_db,
     save_medley,
 )
-from ug_explore_scrape import scrape_song_with_retry
-from ug_group_search import build_group_search_url, discover_group_songs
-from update_song_db import update_db
+from medleys.services.update_db import update_db
+from medleys.ultimate_guitar.explore import scrape_song_with_retry
+from medleys.ultimate_guitar.group_search import build_group_search_url, discover_group_songs
+from medleys.web.formatting import (
+    build_chord_line,
+    build_whatsapp_text,
+    decode_url,
+    encode_url,
+    export_filename,
+    format_chorus_lines,
+    normalize_tab_url,
+    parse_tab_urls,
+    source_label,
+    tab_lines_as_text,
+)
 
-BASE_DIR = Path(__file__).resolve().parent
-LOCALES_DIR = BASE_DIR / "locales"
-DB_PATH = BASE_DIR / "data" / "songs_db.json"
+__all__ = [
+    "app",
+    "build_chord_line",
+    "build_whatsapp_text",
+    "decode_url",
+    "encode_url",
+    "export_filename",
+    "format_chorus_lines",
+    "normalize_tab_url",
+    "parse_tab_urls",
+    "tab_lines_as_text",
+]
+
+WEB_DIR = Path(__file__).resolve().parent
+PROJECT_DIR = WEB_DIR.parents[2]
+LOCALES_DIR = WEB_DIR / "locales"
+DB_PATH = PROJECT_DIR / "data" / "songs_db.json"
 DEFAULT_DELAY_MS = 2000
 DEFAULT_TARGET_ROOT = "C"
 TOP_PAIR_COUNT = 50
@@ -48,6 +72,7 @@ SUPPORTED_LANGUAGES = {
 }
 DynamicRecord = dict[str, Any]
 JobRecord = dict[str, Any]
+ProgressCallback = Callable[..., None]
 
 
 def load_translations(locales_dir: Path = LOCALES_DIR) -> dict[str, dict[str, str]]:
@@ -89,21 +114,6 @@ class ExploreLinkParser(HTMLParser):
             self.current = None
 
 
-def normalize_tab_url(url: str) -> str:
-    if url.startswith("//"):
-        return f"https:{url}"
-    return urljoin("https://www.ultimate-guitar.com", url)
-
-
-def encode_url(value: str) -> str:
-    return base64.urlsafe_b64encode(value.encode("utf-8")).decode("ascii").rstrip("=")
-
-
-def decode_url(value: str) -> str:
-    padded = value + ("=" * (-len(value) % 4))
-    return base64.urlsafe_b64decode(padded.encode("ascii")).decode("utf-8")
-
-
 @app.template_filter("song_url")
 def song_url_filter(value: str) -> str:
     return encode_url(value)
@@ -111,9 +121,7 @@ def song_url_filter(value: str) -> str:
 
 @app.template_filter("source_label")
 def source_label_filter(value: str) -> str:
-    if value.startswith(("upload:", "list:")):
-        return value.rsplit(":", 1)[-1]
-    return value
+    return source_label(value)
 
 
 @app.context_processor
@@ -158,65 +166,6 @@ def localized_transpose_label(shift: int, lang: str) -> str:
     return f"{direction} {amount} {semitone}"
 
 
-def format_chorus_lines(lines: list[DynamicRecord], shift: int = 0) -> list[DynamicRecord]:
-    formatted: list[DynamicRecord] = []
-    for line in lines or []:
-        chords = line.get("chords", [])
-        symbols = [chord["symbol"] for chord in chords]
-        shifted_symbols = transpose_chords(symbols, shift)
-        chord_line = build_chord_line(line.get("lyrics", ""), chords, shifted_symbols)
-        formatted.append({"chords": chord_line, "lyrics": line.get("lyrics", "")})
-    return formatted
-
-
-def build_chord_line(lyrics: str, chords: list[DynamicRecord], symbols: list[str]) -> str:
-    if len(chords) != len(symbols):
-        raise ValueError("chords and symbols must have the same length")
-    width = len(lyrics)
-    for chord, symbol in zip(chords, symbols):  # noqa: B905
-        width = max(width, int(chord.get("position", 0)) + len(symbol))
-    chars = [" "] * width
-    for chord, symbol in zip(chords, symbols):  # noqa: B905
-        position = int(chord.get("position", 0))
-        for index, char in enumerate(symbol):
-            target = position + index
-            if target < len(chars):
-                chars[target] = char
-    return "".join(chars).rstrip()
-
-
-def build_whatsapp_text(
-    source_id: str, songs: list[SongRecord], target_root: str, show_original: bool
-) -> str:
-    lines = [
-        f"Medley - {source_label_filter(source_id)}",
-        f"Target root: {target_root}",
-        "",
-    ]
-    for index, song in enumerate(songs, 1):
-        lines.append(f"{index}. {song.get('artist')} - {song.get('title')}")
-        if show_original and song.get("original_tab_lines"):
-            lines.append("Original:")
-            lines.extend(tab_lines_as_text(song["original_tab_lines"]))
-        lines.append(f"Medley ({target_root}):")
-        if song.get("medley_tab_lines"):
-            lines.extend(tab_lines_as_text(song["medley_tab_lines"]))
-        else:
-            lines.append(" ".join(song.get("medley_chords", [])))
-        lines.append("")
-    return "\n".join(lines).strip()
-
-
-def tab_lines_as_text(lines: list[DynamicRecord]) -> list[str]:
-    text = []
-    for line in lines:
-        if line.get("chords"):
-            text.append(line["chords"])
-        if line.get("lyrics"):
-            text.append(line["lyrics"])
-    return text
-
-
 def build_medley_context(source_id: str) -> DynamicRecord:
     target_root = request.args.get("target_root", DEFAULT_TARGET_ROOT)
     if target_root not in PITCH_CLASSES:
@@ -252,12 +201,6 @@ def build_medley_context(source_id: str) -> DynamicRecord:
     }
 
 
-def export_filename(source_id: str, target_root: str) -> str:
-    label = source_label_filter(source_id).rsplit("/", 1)[-1] or "medley"
-    safe_label = re.sub(r"[^A-Za-z0-9._-]+", "-", label).strip("-").lower() or "medley"
-    return f"medley-{safe_label}-{target_root}.html"
-
-
 def create_job(kind: str, source_id: str) -> str:
     job_id = uuid.uuid4().hex[:12]
     with jobs_lock:
@@ -270,6 +213,11 @@ def create_job(kind: str, source_id: str) -> str:
             "updated_at": now_iso(),
             "summary": None,
             "error": None,
+            "total": None,
+            "processed": 0,
+            "skipped": 0,
+            "scraped": 0,
+            "failed": 0,
         }
     return job_id
 
@@ -293,25 +241,40 @@ def run_background(job_id: str, target: Callable[..., Any], *args: Any) -> None:
 def run_job(job_id: str, target: Callable[..., Any], args: tuple[Any, ...]) -> None:
     update_job(job_id, status="running")
     try:
-        summary = target(*args)
+        summary = target(*args, progress=lambda **fields: update_job(job_id, **fields))
         update_job(job_id, status="complete", summary=summary)
     except Exception as exc:
         update_job(job_id, status="failed", error=str(exc))
 
 
-def analyze_url(source_url: str, limit: int | None, delay_ms: int, refresh: bool) -> DynamicRecord:
-    return update_db(DB_PATH, source_url, limit, delay_ms, refresh)
+def analyze_url(
+    source_url: str,
+    limit: int | None,
+    delay_ms: int,
+    refresh: bool,
+    progress: ProgressCallback | None = None,
+) -> DynamicRecord:
+    return update_db(DB_PATH, source_url, limit, delay_ms, refresh, progress)
 
 
 def analyze_upload(
-    html_text: str, source_id: str, limit: int | None, delay_ms: int, refresh: bool
+    html_text: str,
+    source_id: str,
+    limit: int | None,
+    delay_ms: int,
+    refresh: bool,
+    progress: ProgressCallback | None = None,
 ) -> DynamicRecord:
     discovered = extract_uploaded_links(html_text, limit)
-    return analyze_songs(discovered, source_id, delay_ms, refresh)
+    return analyze_songs(discovered, source_id, delay_ms, refresh, progress)
 
 
 def analyze_url_list(
-    urls: list[str], source_id: str, delay_ms: int, refresh: bool
+    urls: list[str],
+    source_id: str,
+    delay_ms: int,
+    refresh: bool,
+    progress: ProgressCallback | None = None,
 ) -> DynamicRecord:
     discovered = [
         {
@@ -321,21 +284,30 @@ def analyze_url_list(
         }
         for index, url in enumerate(urls, 1)
     ]
-    return analyze_songs(discovered, source_id, delay_ms, refresh)
+    return analyze_songs(discovered, source_id, delay_ms, refresh, progress)
 
 
 def analyze_group(
-    group: str, source_id: str, limit: int, delay_ms: int, refresh: bool
+    group: str,
+    source_id: str,
+    limit: int,
+    delay_ms: int,
+    refresh: bool,
+    progress: ProgressCallback | None = None,
 ) -> DynamicRecord:
     discovered = discover_group_songs(group, limit, delay_ms)
     store_medley(source_id, group, [song["url"] for song in discovered])
-    summary = analyze_songs(discovered, source_id, delay_ms, refresh)
+    summary = analyze_songs(discovered, source_id, delay_ms, refresh, progress)
     summary["search_url"] = build_group_search_url(group)
     return summary
 
 
 def analyze_songs(
-    discovered: list[SongRecord], source_id: str, delay_ms: int, refresh: bool
+    discovered: list[SongRecord],
+    source_id: str,
+    delay_ms: int,
+    refresh: bool,
+    progress: ProgressCallback | None = None,
 ) -> DynamicRecord:
     from playwright.sync_api import sync_playwright
 
@@ -345,11 +317,22 @@ def analyze_songs(
     scraped = []
     failures = []
 
+    if progress:
+        progress(total=len(discovered), processed=0, skipped=0, scraped=0, failed=0)
+
     with sync_playwright() as playwright:
         for song in discovered:
             if not refresh and song["url"] in known_urls:
                 mark_seen(db, song, source_id)
                 skipped.append(song)
+                if progress:
+                    progress(
+                        total=len(discovered),
+                        processed=len(skipped) + len(scraped) + len(failures),
+                        skipped=len(skipped),
+                        scraped=len(scraped),
+                        failed=len(failures),
+                    )
                 continue
             try:
                 scraped_song = scrape_song_with_retry(playwright, song, delay_ms)
@@ -360,6 +343,14 @@ def analyze_songs(
                 error = str(exc)
                 record_failure(db, song, source_id, error)
                 failures.append({**song, "error": error})
+            if progress:
+                progress(
+                    total=len(discovered),
+                    processed=len(skipped) + len(scraped) + len(failures),
+                    skipped=len(skipped),
+                    scraped=len(scraped),
+                    failed=len(failures),
+                )
 
     save_db(DB_PATH, db)
     eligible_count = sum(
@@ -400,28 +391,6 @@ def extract_uploaded_links(html_text: str, limit: int | None) -> list[SongRecord
         if limit and len(songs) >= limit:
             break
     return songs
-
-
-def parse_tab_urls(value: str) -> list[str]:
-    urls = []
-    seen = set()
-    for line in value.splitlines():
-        raw_url = line.strip()
-        if not raw_url:
-            continue
-        url = normalize_tab_url(raw_url)
-        parsed = urlparse(url)
-        is_ug_host = parsed.hostname == "ultimate-guitar.com" or (parsed.hostname or "").endswith(
-            ".ultimate-guitar.com"
-        )
-        if parsed.scheme not in {"http", "https"} or not is_ug_host:
-            raise ValueError(f"Unsupported Ultimate Guitar URL: {raw_url}")
-        if "/tab/" not in parsed.path:
-            raise ValueError(f"Not an Ultimate Guitar tab URL: {raw_url}")
-        if url not in seen:
-            seen.add(url)
-            urls.append(url)
-    return urls
 
 
 def db_stats() -> DynamicRecord:
@@ -694,17 +663,13 @@ def search_songs_api() -> Any:
             for song in songs_list
             if query
             in " ".join(
-                str(song.get(key) or "")
-                for key in ("artist", "title", "explore_title", "url")
+                str(song.get(key) or "") for key in ("artist", "title", "explore_title", "url")
             ).casefold()
         ]
     return jsonify(
         {
             "songs": [
-                {
-                    key: song.get(key)
-                    for key in ("url", "artist", "title", "explore_title")
-                }
+                {key: song.get(key) for key in ("url", "artist", "title", "explore_title")}
                 for song in songs_list[:20]
                 if song.get("url")
             ]
@@ -746,5 +711,9 @@ def get_job(job_id: str) -> JobRecord | None:
         return job.copy() if job else None
 
 
+def main() -> None:
+    app.run(debug=True, port=5001, use_reloader=False)
+
+
 if __name__ == "__main__":
-    app.run(debug=True, port=5000, use_reloader=False)
+    main()

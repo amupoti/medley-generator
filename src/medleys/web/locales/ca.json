@@ -64,6 +64,7 @@
   "analysis_job": "Tasca d'anàlisi",
   "kind": "Tipus",
   "created": "Creada",
+  "processed": "Processades",
   "discovered": "Trobades",
   "skipped": "Omeses",
   "scraped": "Analitzades",

@@ -8,7 +8,7 @@ from tempfile import TemporaryDirectory
 from unittest.mock import MagicMock, call, patch
 from urllib.error import HTTPError, URLError
 
-import ug_chorus_chords as ug
+import medleys.ultimate_guitar.song as ug
 
 
 class StoreExtractionTest(unittest.TestCase):
@@ -68,8 +68,8 @@ class LoadingTest(unittest.TestCase):
 
         self.assertEqual(song["title"], "Local")
 
-    @patch("ug_chorus_chords.load_song_with_browser")
-    @patch("ug_chorus_chords.load_html_with_urllib", return_value="<html></html>")
+    @patch("medleys.ultimate_guitar.song.load_song_with_browser")
+    @patch("medleys.ultimate_guitar.song.load_html_with_urllib", return_value="<html></html>")
     def test_load_song_falls_back_when_remote_store_is_missing(
         self, _load_html: MagicMock, browser: MagicMock
     ) -> None:
@@ -77,21 +77,21 @@ class LoadingTest(unittest.TestCase):
         self.assertEqual(ug.load_song("https://example.test/song"), {"title": "Browser"})
         browser.assert_called_once_with("https://example.test/song")
 
-    @patch("ug_chorus_chords.urlopen")
+    @patch("medleys.ultimate_guitar.song.urlopen")
     def test_load_html_with_urllib_decodes_response(self, urlopen: MagicMock) -> None:
         response = MagicMock()
         response.read.return_value = b"caf\xc3\xa9"
         urlopen.return_value.__enter__.return_value = response
         self.assertEqual(ug.load_html_with_urllib("https://example.test"), "café")
 
-    @patch("ug_chorus_chords.urlopen")
+    @patch("medleys.ultimate_guitar.song.urlopen")
     def test_load_html_with_urllib_returns_http_error_body(self, urlopen: MagicMock) -> None:
         error = HTTPError("https://example.test", 403, "Forbidden", Message(), BytesIO(b"blocked"))
         urlopen.side_effect = error
         self.assertEqual(ug.load_html_with_urllib("https://example.test"), "blocked")
 
-    @patch("ug_chorus_chords.load_html_with_browser", return_value="browser html")
-    @patch("ug_chorus_chords.urlopen", side_effect=URLError("offline"))
+    @patch("medleys.ultimate_guitar.song.load_html_with_browser", return_value="browser html")
+    @patch("medleys.ultimate_guitar.song.urlopen", side_effect=URLError("offline"))
     def test_load_html_with_urllib_uses_browser_for_url_errors(
         self, _urlopen: MagicMock, browser: MagicMock
     ) -> None:

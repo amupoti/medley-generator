@@ -6,7 +6,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest.mock import MagicMock, patch
 
-import ug_explore_scrape as explore
+import medleys.ultimate_guitar.explore as explore
 
 
 class ExistingUrlsTest(unittest.TestCase):
@@ -53,10 +53,10 @@ class ExploreLinksTest(unittest.TestCase):
 
 
 class ScrapeSongTest(unittest.TestCase):
-    @patch("ug_explore_scrape.extract_chorus_lines")
-    @patch("ug_explore_scrape.extract_chorus_chords")
-    @patch("ug_explore_scrape.extract_store")
-    @patch("ug_explore_scrape.extract_store_song")
+    @patch("medleys.ultimate_guitar.explore.extract_chorus_lines")
+    @patch("medleys.ultimate_guitar.explore.extract_chorus_chords")
+    @patch("medleys.ultimate_guitar.explore.extract_store")
+    @patch("medleys.ultimate_guitar.explore.extract_store_song")
     def test_scrape_song_prefers_store_metadata_and_content(
         self,
         extract_store_song: MagicMock,
@@ -86,11 +86,11 @@ class ScrapeSongTest(unittest.TestCase):
         page.goto.assert_called_once_with("one", wait_until="domcontentloaded", timeout=60000)
         page.wait_for_timeout.assert_any_call(25)
 
-    @patch("ug_explore_scrape.extract_artist", return_value="Fallback Artist")
-    @patch("ug_explore_scrape.extract_title", return_value="Fallback Song")
-    @patch("ug_explore_scrape.extract_chorus_lines", return_value=[])
-    @patch("ug_explore_scrape.extract_chorus_chords", return_value=[])
-    @patch("ug_explore_scrape.extract_store", side_effect=ValueError("missing"))
+    @patch("medleys.ultimate_guitar.explore.extract_artist", return_value="Fallback Artist")
+    @patch("medleys.ultimate_guitar.explore.extract_title", return_value="Fallback Song")
+    @patch("medleys.ultimate_guitar.explore.extract_chorus_lines", return_value=[])
+    @patch("medleys.ultimate_guitar.explore.extract_chorus_chords", return_value=[])
+    @patch("medleys.ultimate_guitar.explore.extract_store", side_effect=ValueError("missing"))
     def test_scrape_song_falls_back_to_rendered_text(
         self,
         _extract_store: MagicMock,
@@ -110,8 +110,8 @@ class ScrapeSongTest(unittest.TestCase):
         self.assertFalse(result["has_chorus"])
         extract_chords.assert_called_once_with("Body text")
 
-    @patch("ug_explore_scrape.scrape_song")
-    @patch("ug_explore_scrape.launch_browser")
+    @patch("medleys.ultimate_guitar.explore.scrape_song")
+    @patch("medleys.ultimate_guitar.explore.launch_browser")
     def test_scrape_song_with_retry_closes_each_browser(
         self, launch_browser: MagicMock, scrape_song: MagicMock
     ) -> None:
@@ -127,9 +127,10 @@ class ScrapeSongTest(unittest.TestCase):
         second_browser.close.assert_called_once()
 
     @patch(
-        "ug_explore_scrape.scrape_song", side_effect=[RuntimeError("first"), RuntimeError("last")]
+        "medleys.ultimate_guitar.explore.scrape_song",
+        side_effect=[RuntimeError("first"), RuntimeError("last")],
     )
-    @patch("ug_explore_scrape.launch_browser")
+    @patch("medleys.ultimate_guitar.explore.launch_browser")
     def test_scrape_song_with_retry_raises_last_error(
         self, launch_browser: MagicMock, _scrape_song: MagicMock
     ) -> None:
@@ -139,9 +140,9 @@ class ScrapeSongTest(unittest.TestCase):
 
 
 class ScrapeExploreTest(unittest.TestCase):
-    @patch("ug_explore_scrape.scrape_song_with_retry")
-    @patch("ug_explore_scrape.extract_explore_links")
-    @patch("ug_explore_scrape.launch_browser")
+    @patch("medleys.ultimate_guitar.explore.scrape_song_with_retry")
+    @patch("medleys.ultimate_guitar.explore.extract_explore_links")
+    @patch("medleys.ultimate_guitar.explore.launch_browser")
     @patch("playwright.sync_api.sync_playwright")
     def test_scrape_explore_reports_skips_successes_and_failures(
         self,

@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from compare_choruses import (
+from medleys.comparison import (
     best_transpose,
     build_output,
     canonical_song_key,

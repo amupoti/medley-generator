@@ -1,6 +1,6 @@
 import unittest
 
-from chord_utils import (
+from medleys.chords import (
     infer_prefer_flats,
     parse_chord,
     split_bass,

@@ -7,8 +7,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from song_db import SongRecord
-from ug_chorus_chords import (
+from medleys.database import SongRecord
+from medleys.ultimate_guitar.song import (
     dismiss_cookie_popup,
     extract_artist,
     extract_chorus_chords,
@@ -17,9 +17,7 @@ from ug_chorus_chords import (
     extract_title,
     launch_browser,
 )
-from ug_chorus_chords import (
-    extract_song as extract_store_song,
-)
+from medleys.ultimate_guitar.song import extract_song as extract_store_song
 
 EXPLORE_URL = "https://www.ultimate-guitar.com/explore"
 ScrapeSummary = dict[str, Any]

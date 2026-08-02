@@ -3,14 +3,14 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest.mock import MagicMock, patch
 
-import update_song_db
-from song_db import empty_db, load_db, save_db
+import medleys.services.update_db as update_song_db
+from medleys.database import empty_db, load_db, save_db
 
 
 class UpdateDbTest(unittest.TestCase):
-    @patch("update_song_db.scrape_song_with_retry")
-    @patch("update_song_db.extract_explore_links")
-    @patch("update_song_db.launch_browser")
+    @patch("medleys.services.update_db.scrape_song_with_retry")
+    @patch("medleys.services.update_db.extract_explore_links")
+    @patch("medleys.services.update_db.launch_browser")
     @patch("playwright.sync_api.sync_playwright")
     def test_update_db_skips_known_scrapes_new_and_records_failures(
         self,
@@ -58,9 +58,9 @@ class UpdateDbTest(unittest.TestCase):
         self.assertEqual(db["songs"]["bad"]["errors"][-1]["error"], "blocked")
         browser.close.assert_called_once()
 
-    @patch("update_song_db.scrape_song_with_retry")
-    @patch("update_song_db.extract_explore_links")
-    @patch("update_song_db.launch_browser")
+    @patch("medleys.services.update_db.scrape_song_with_retry")
+    @patch("medleys.services.update_db.extract_explore_links")
+    @patch("medleys.services.update_db.launch_browser")
     @patch("playwright.sync_api.sync_playwright")
     def test_update_db_refreshes_known_song(
         self,

@@ -8,8 +8,8 @@ from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any
 
-from chord_utils import PITCH_CLASSES, parse_chord
-from song_db import SongRecord
+from medleys.chords import PITCH_CLASSES, parse_chord
+from medleys.database import SongRecord
 
 PairScore = dict[str, Any]
 Transition = dict[str, Any]
