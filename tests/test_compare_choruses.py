@@ -12,6 +12,7 @@ from medleys.comparison import (
     load_songs,
     normalize_quality,
     normalize_song,
+    ordered_medley,
     path_score,
     reduce_repeated_loop,
     reverse_pair,
@@ -146,6 +147,65 @@ class CompareChorusesTest(unittest.TestCase):
         output = build_output([], top=5, target_root="C")
         self.assertEqual(output["top_pairs"], [])
         self.assertEqual(output["medley"]["songs"], [])
+
+    def test_build_output_sorts_medley_by_favorites_when_requested(self) -> None:
+        songs = [
+            {
+                "artist": "One",
+                "title": "First",
+                "url": "one",
+                "chorus_chords": ["C", "G", "Am", "F"],
+                "favorites_count": 5,
+            },
+            {
+                "artist": "Two",
+                "title": "Second",
+                "url": "two",
+                "chorus_chords": ["D", "A", "Bm", "G"],
+                "favorites_count": 50,
+            },
+            {
+                "artist": "Three",
+                "title": "Third",
+                "url": "three",
+                "chorus_chords": ["E", "B", "C#m", "A"],
+            },
+        ]
+
+        output = build_output(songs, top=1, target_root="C", sort="favorites")
+
+        self.assertEqual(
+            [song["title"] for song in output["medley"]["songs"]], ["Second", "First", "Third"]
+        )
+        self.assertEqual(len(output["medley"]["transitions"]), 2)
+
+    def test_ordered_medley_computes_transitions_for_given_order_and_handles_empty(self) -> None:
+        empty_medley = {"average_transition_score": 0.0, "songs": [], "transitions": []}
+        self.assertEqual(ordered_medley([], "C"), empty_medley)
+
+        first = normalize_song(
+            {
+                "artist": "One",
+                "title": "First",
+                "url": "one",
+                "chorus_chords": ["C", "G", "Am", "F"],
+            }
+        )
+        second = normalize_song(
+            {
+                "artist": "Two",
+                "title": "Second",
+                "url": "two",
+                "chorus_chords": ["D", "A", "Bm", "G"],
+            }
+        )
+
+        medley = ordered_medley([second, first], "C")
+
+        self.assertEqual([song["title"] for song in medley["songs"]], ["Second", "First"])
+        self.assertEqual(len(medley["transitions"]), 1)
+        self.assertEqual(medley["transitions"][0]["from"]["title"], "Second")
+        self.assertEqual(medley["transitions"][0]["to"]["title"], "First")
 
 
 if __name__ == "__main__":

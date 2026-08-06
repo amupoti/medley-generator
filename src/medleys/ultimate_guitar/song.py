@@ -8,33 +8,15 @@ import re
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
-from typing import Any, TypedDict, cast
+from typing import Any, cast
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 from medleys.database import SongRecord
+from medleys.ultimate_guitar.chorus_detection import ChorusLine, detect_chorus
 
 JSONObject = dict[str, Any]
 
-
-class ChordPosition(TypedDict):
-    symbol: str
-    position: int
-
-
-class ChorusLine(TypedDict):
-    lyrics: str
-    chords: list[ChordPosition]
-
-
-SECTION_RE = re.compile(r"^\s*\[([^\]]+)\]\s*$")
-ANY_SECTION_RE = re.compile(r"^\s*\[[^\]]+\]\s*$")
-CHORD_RE = re.compile(r"\[ch\](.*?)\[/ch\]", re.IGNORECASE)
-TAB_RE = re.compile(r"\[/?tab\]", re.IGNORECASE)
-CHORD_TOKEN_RE = re.compile(
-    r"^[A-G](?:#|b)?(?:maj|min|dim|aug|sus|add|m)?[0-9]*(?:sus[0-9]+)?(?:add[0-9]+)?(?:/[A-G](?:#|b)?)?$",
-    re.IGNORECASE,
-)
 TITLE_RE = re.compile(r"(?P<title>.+?)\s+Chords\s+by\s+(?P<artist>.+)", re.IGNORECASE)
 UG_BLOCKED_RE = re.compile(r"Just a moment\.\.\.|challenges\.cloudflare\.com", re.IGNORECASE)
 
@@ -201,10 +183,18 @@ def extract_song(store: JSONObject) -> SongRecord:
     if not content:
         raise ValueError("Could not find tab content")
 
+    stats = tab_view.get("stats") or {}
+    # Some tab pages only carry title/artist under headerMeta, leaving
+    # song_name/title/artist_name absent from tab_view entirely.
+    header_meta = tab_view.get("headerMeta") or {}
+    header_artists = header_meta.get("artists") or []
     return {
-        "title": tab_view.get("song_name") or tab_view.get("title"),
-        "artist": tab_view.get("artist_name"),
+        "title": tab_view.get("song_name") or tab_view.get("title") or header_meta.get("name"),
+        "artist": tab_view.get("artist_name")
+        or (header_artists[0].get("name") if header_artists else None),
         "content": content,
+        "favorites_count": stats.get("favorites_count"),
+        "view_total": stats.get("view_total"),
     }
 
 
@@ -225,86 +215,12 @@ def extract_artist(text: str, page_title: str) -> str | None:
     return None
 
 
-def extract_chorus_chords(content: str) -> list[str]:
-    return [
-        chord["symbol"]
-        for line in extract_chorus_lines(content)
-        for chord in line.get("chords", [])
-    ]
-
-
 def extract_chorus_lines(content: str) -> list[ChorusLine]:
-    lines: list[ChorusLine] = []
-    for line in first_chorus_source_lines(content):
-        parsed = parse_chorus_line(line)
-        if parsed["lyrics"].strip() or parsed["chords"]:
-            lines.append(parsed)
-    return lines
+    return detect_chorus(content)["lines"]
 
 
-def first_chorus_source_lines(content: str) -> list[str]:
-    lines = []
-    in_chorus = False
-    found_chorus = False
-
-    for line in content.splitlines():
-        section_match = SECTION_RE.match(line)
-        if section_match:
-            is_chorus = is_chorus_section(section_match.group(1))
-            if found_chorus and not is_chorus:
-                break
-            if found_chorus and is_chorus:
-                break
-            in_chorus = is_chorus
-            found_chorus = found_chorus or is_chorus
-            continue
-        if in_chorus and ANY_SECTION_RE.match(line):
-            break
-        if in_chorus:
-            lines.append(line)
-
-    return lines
-
-
-def parse_chorus_line(line: str) -> ChorusLine:
-    line = TAB_RE.sub("", line)
-    if CHORD_RE.search(line):
-        return parse_marked_chord_line(line)
-    if is_chord_line(line):
-        return {
-            "lyrics": "",
-            "chords": [
-                {"symbol": match.group(0), "position": match.start()}
-                for match in re.finditer(r"\S+", line)
-            ],
-        }
-    return {"lyrics": line, "chords": []}
-
-
-def parse_marked_chord_line(line: str) -> ChorusLine:
-    lyrics = []
-    chords: list[ChordPosition] = []
-    cursor = 0
-
-    for match in CHORD_RE.finditer(line):
-        lyrics.append(line[cursor : match.start()])
-        chord = match.group(1).strip()
-        if chord:
-            chords.append({"symbol": chord, "position": len("".join(lyrics))})
-        cursor = match.end()
-
-    lyrics.append(line[cursor:])
-    return {"lyrics": "".join(lyrics), "chords": chords}
-
-
-def is_chorus_section(section: str) -> bool:
-    name = section.strip().lower()
-    return name == "chorus" or re.match(r"^chorus\s+\d+$", name) is not None
-
-
-def is_chord_line(line: str) -> bool:
-    tokens = line.split()
-    return bool(tokens) and all(CHORD_TOKEN_RE.match(token) for token in tokens)
+def extract_chorus_chords(content: str) -> list[str]:
+    return detect_chorus(content)["chords"]
 
 
 def main() -> int:
@@ -324,6 +240,8 @@ def main() -> int:
     output = {
         "title": song["title"],
         "artist": song["artist"],
+        "favorites_count": song.get("favorites_count"),
+        "view_total": song.get("view_total"),
         "chorus_chords": extract_chorus_chords(song["content"]),
         "chorus_lines": extract_chorus_lines(song["content"]),
     }

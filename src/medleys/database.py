@@ -108,6 +108,10 @@ def merge_song(
         "chorus_chords",
         "chorus_lines",
         "has_chorus",
+        "chorus_detection",
+        "chorus_confidence",
+        "favorites_count",
+        "view_total",
     ]:
         if field in song:
             existing[field] = song[field]

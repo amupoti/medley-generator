@@ -27,6 +27,12 @@ function initializeSongPicker(picker) {
     return button;
   }
 
+  function favoritesLabel(song) {
+    return song.favorites_count === undefined || song.favorites_count === null
+      ? null
+      : `${song.favorites_count} ${picker.dataset.favoritesLabel}`;
+  }
+
   function addSong(song) {
     if ([...songList.children].some((row) => row.dataset.songUrl === song.url)) return;
     const row = document.createElement("li");
@@ -43,7 +49,15 @@ function initializeSongPicker(picker) {
       : song.artist || songTitle || picker.dataset.newSongLabel;
     const address = document.createElement("span");
     address.textContent = song.url;
-    details.append(title, address);
+    details.append(title);
+    const favorites = favoritesLabel(song);
+    if (favorites) {
+      const favoritesSpan = document.createElement("span");
+      favoritesSpan.className = "song-favorites";
+      favoritesSpan.textContent = favorites;
+      details.append(favoritesSpan);
+    }
+    details.append(address);
     const actions = document.createElement("span");
     actions.className = "editable-song-actions";
     actions.append(
@@ -74,9 +88,9 @@ function initializeSongPicker(picker) {
         const button = document.createElement("button");
         button.type = "button";
         button.className = "song-search-result";
-        button.textContent = [song.artist, song.title || song.explore_title]
-          .filter(Boolean)
-          .join(" - ") || song.url;
+        const label = [song.artist, song.title || song.explore_title].filter(Boolean).join(" - ") || song.url;
+        const favorites = favoritesLabel(song);
+        button.textContent = favorites ? `${label} (${favorites})` : label;
         button.addEventListener("click", () => {
           addSong(song);
           button.remove();

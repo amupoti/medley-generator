@@ -8,20 +8,27 @@
 
 <form class="search" method="get" action="{{ lang_url('songs') }}">
   <input type="hidden" name="lang" value="{{ current_lang }}">
+  <input type="hidden" name="sort" value="{{ sort }}">
   <input name="q" value="{{ query }}" placeholder="{{ t("search_placeholder") }}">
   <button type="submit">{{ t("search") }}</button>
 </form>
 
+<div class="method-switcher" role="tablist" aria-label="{{ t('sort_alphabetically') }} / {{ t('sort_by_favorites') }}">
+  <a class="method-tab{% if sort == 'alpha' %} active{% endif %}" href="{{ lang_url('songs', sort='alpha', q=query) }}">{{ t("sort_alphabetically") }}</a>
+  <a class="method-tab{% if sort == 'favorites' %} active{% endif %}" href="{{ lang_url('songs', sort='favorites', q=query) }}">{{ t("sort_by_favorites") }}</a>
+</div>
+
 <section class="panel">
   <table>
     <thead>
-      <tr><th>{{ t("artist") }}</th><th>{{ t("title") }}</th><th>{{ t("chorus") }}</th><th>{{ t("sources") }}</th><th></th></tr>
+      <tr><th>{{ t("artist") }}</th><th>{{ t("title") }}</th><th>{{ t("favorites") }}</th><th>{{ t("chorus") }}</th><th>{{ t("sources") }}</th><th></th></tr>
     </thead>
     <tbody>
       {% for song in songs %}
         <tr>
           <td>{{ song.artist or "" }}</td>
           <td>{{ song.title or song.explore_title or "" }}</td>
+          <td>{{ song.get("favorites_count") if song.get("favorites_count") is not none else "–" }}</td>
           <td>{{ song.chorus_chords|length }}</td>
           <td>{{ song.sources|length }}</td>
           <td><a href="{{ lang_url('song_detail', encoded_url=song.url|song_url) }}">{{ t("view") }}</a></td>

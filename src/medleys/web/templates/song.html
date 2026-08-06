@@ -8,6 +8,8 @@
 
 <section class="panel">
   <dl class="details">
+    <dt>{{ t("favorites") }}</dt><dd>{{ song.get("favorites_count") if song.get("favorites_count") is not none else "–" }}</dd>
+    <dt>{{ t("views") }}</dt><dd>{{ song.get("view_total") if song.get("view_total") is not none else "–" }}</dd>
     <dt>{{ t("explore_title") }}</dt><dd>{{ song.explore_title or "" }}</dd>
     <dt>{{ t("explore_rank") }}</dt><dd>{{ song.explore_rank or "" }}</dd>
     <dt>{{ t("first_seen") }}</dt><dd>{{ song.first_seen_at or "" }}</dd>

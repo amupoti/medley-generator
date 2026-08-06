@@ -160,6 +160,8 @@ def song_ref(song: SongRecord) -> SongRecord:
     }
     if song.get("chorus_lines"):
         ref["chorus_lines"] = song["chorus_lines"]
+    if song.get("favorites_count") is not None:
+        ref["favorites_count"] = song["favorites_count"]
     return ref
 
 
@@ -184,6 +186,33 @@ def medley_order(songs: list[SongRecord], pairs: list[PairScore], target_root: s
         "target_root": target_root,
         "songs": [song_ref(song) for song in songs_in_order],
         "transitions": build_transitions(order, by_key, pair_score),
+    }
+
+
+def ordered_medley(songs: list[SongRecord], target_root: str) -> MedleyOutput:
+    if not songs:
+        return {"average_transition_score": 0.0, "songs": [], "transitions": []}
+
+    songs_in_order = apply_target_root_transpose(songs, target_root)
+    transitions: list[Transition] = []
+    for index in range(len(songs_in_order) - 1):
+        pair = similarity(songs_in_order[index], songs_in_order[index + 1])
+        transitions.append(
+            {
+                "from": song_ref(songs_in_order[index]),
+                "to": song_ref(songs_in_order[index + 1]),
+                "score": pair["score"],
+                "transpose_to_by": pair["transpose_right_by"],
+            }
+        )
+    scores = [transition["score"] for transition in transitions]
+    average = sum(scores) / len(scores) if scores else 0.0
+
+    return {
+        "average_transition_score": round(average, 4),
+        "target_root": target_root,
+        "songs": [song_ref(song) for song in songs_in_order],
+        "transitions": transitions,
     }
 
 
@@ -276,13 +305,20 @@ def best_transpose(left: list[int], right: list[int]) -> int:
     return best_shift
 
 
-def build_output(songs: list[SongRecord], top: int, target_root: str) -> ComparisonOutput:
+def build_output(
+    songs: list[SongRecord], top: int, target_root: str, sort: str = "transition"
+) -> ComparisonOutput:
     normalized = [normalize_song(song) for song in songs]
     pairs = pairwise_scores(normalized)
+    if sort == "favorites":
+        favorites_order = sorted(normalized, key=lambda song: -(song.get("favorites_count") or 0))
+        medley = ordered_medley(favorites_order, target_root)
+    else:
+        medley = medley_order(normalized, pairs, target_root)
     return {
         "song_count": len(normalized),
         "top_pairs": pairs[:top],
-        "medley": medley_order(normalized, pairs, target_root),
+        "medley": medley,
     }
 
 

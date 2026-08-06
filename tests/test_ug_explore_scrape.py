@@ -53,16 +53,14 @@ class ExploreLinksTest(unittest.TestCase):
 
 
 class ScrapeSongTest(unittest.TestCase):
-    @patch("medleys.ultimate_guitar.explore.extract_chorus_lines")
-    @patch("medleys.ultimate_guitar.explore.extract_chorus_chords")
+    @patch("medleys.ultimate_guitar.explore.detect_chorus")
     @patch("medleys.ultimate_guitar.explore.extract_store")
     @patch("medleys.ultimate_guitar.explore.extract_store_song")
     def test_scrape_song_prefers_store_metadata_and_content(
         self,
         extract_store_song: MagicMock,
         extract_store: MagicMock,
-        extract_chords: MagicMock,
-        extract_lines: MagicMock,
+        detect_chorus: MagicMock,
     ) -> None:
         page = MagicMock()
         page.title.return_value = "Page Title"
@@ -73,42 +71,88 @@ class ScrapeSongTest(unittest.TestCase):
             "title": "Store Song",
             "artist": "Store Artist",
             "content": "Store content",
+            "favorites_count": 2130,
+            "view_total": 28239,
         }
-        extract_chords.return_value = ["C", "G"]
-        extract_lines.return_value = [{"chords": []}]
+        detect_chorus.return_value = {
+            "lines": [{"lyrics": "hi", "chords": []}],
+            "chords": ["C", "G"],
+            "method": "explicit",
+            "confidence": 1.0,
+        }
 
         result = explore.scrape_song(page, {"url": "one", "explore_rank": 1}, 25)
 
         self.assertEqual(result["title"], "Store Song")
         self.assertEqual(result["artist"], "Store Artist")
         self.assertTrue(result["has_chorus"])
-        extract_chords.assert_called_once_with("Store content")
+        self.assertEqual(result["chorus_chords"], ["C", "G"])
+        self.assertEqual(result["chorus_detection"], "explicit")
+        self.assertEqual(result["chorus_confidence"], 1.0)
+        self.assertEqual(result["favorites_count"], 2130)
+        self.assertEqual(result["view_total"], 28239)
+        detect_chorus.assert_called_once_with("Store content")
         page.goto.assert_called_once_with("one", wait_until="domcontentloaded", timeout=60000)
         page.wait_for_timeout.assert_any_call(25)
 
     @patch("medleys.ultimate_guitar.explore.extract_artist", return_value="Fallback Artist")
     @patch("medleys.ultimate_guitar.explore.extract_title", return_value="Fallback Song")
-    @patch("medleys.ultimate_guitar.explore.extract_chorus_lines", return_value=[])
-    @patch("medleys.ultimate_guitar.explore.extract_chorus_chords", return_value=[])
+    @patch("medleys.ultimate_guitar.explore.detect_chorus")
     @patch("medleys.ultimate_guitar.explore.extract_store", side_effect=ValueError("missing"))
     def test_scrape_song_falls_back_to_rendered_text(
         self,
         _extract_store: MagicMock,
-        extract_chords: MagicMock,
-        _extract_lines: MagicMock,
+        detect_chorus: MagicMock,
         _extract_title: MagicMock,
         _extract_artist: MagicMock,
     ) -> None:
         page = MagicMock()
         page.title.return_value = "Page Title"
         page.locator.return_value.inner_text.return_value = "Body text"
+        detect_chorus.return_value = {
+            "lines": [],
+            "chords": [],
+            "method": "none",
+            "confidence": 0.0,
+        }
 
         result = explore.scrape_song(page, {"url": "one"}, 0)
 
         self.assertEqual(result["title"], "Fallback Song")
         self.assertEqual(result["artist"], "Fallback Artist")
         self.assertFalse(result["has_chorus"])
-        extract_chords.assert_called_once_with("Body text")
+        self.assertEqual(result["chorus_detection"], "none")
+        self.assertEqual(result["chorus_confidence"], 0.0)
+        self.assertIsNone(result["favorites_count"])
+        self.assertIsNone(result["view_total"])
+        detect_chorus.assert_called_once_with("Body text")
+
+    @patch("medleys.ultimate_guitar.explore.extract_artist", return_value="Artist")
+    @patch("medleys.ultimate_guitar.explore.extract_title", return_value="Title")
+    @patch("medleys.ultimate_guitar.explore.detect_chorus")
+    @patch("medleys.ultimate_guitar.explore.extract_store", side_effect=ValueError("missing"))
+    def test_scrape_song_marks_inferred_chorus_as_has_chorus(
+        self,
+        _extract_store: MagicMock,
+        detect_chorus: MagicMock,
+        _extract_title: MagicMock,
+        _extract_artist: MagicMock,
+    ) -> None:
+        page = MagicMock()
+        page.title.return_value = "Page Title"
+        page.locator.return_value.inner_text.return_value = "Body text"
+        detect_chorus.return_value = {
+            "lines": [{"lyrics": "we will rock you", "chords": []}],
+            "chords": ["C", "G"],
+            "method": "inferred",
+            "confidence": 0.72,
+        }
+
+        result = explore.scrape_song(page, {"url": "one"}, 0)
+
+        self.assertTrue(result["has_chorus"])
+        self.assertEqual(result["chorus_detection"], "inferred")
+        self.assertEqual(result["chorus_confidence"], 0.72)
 
     @patch("medleys.ultimate_guitar.explore.scrape_song")
     @patch("medleys.ultimate_guitar.explore.launch_browser")

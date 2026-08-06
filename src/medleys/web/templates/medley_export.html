@@ -116,6 +116,7 @@
         <div class="rank">{{ loop.index }}</div>
         <div>
           <h2>{{ song.artist }} - {{ song.title }}</h2>
+          {% if song.get("favorites_count") is not none %}<p class="meta">{{ song.favorites_count }} {{ t("favorites") }}</p>{% endif %}
           {% if show_original %}
             <div class="label">{{ t("original_chorus") }}</div>
             {% if song.original_tab_lines %}

@@ -62,6 +62,10 @@ LOCALES_DIR = WEB_DIR / "locales"
 DB_PATH = PROJECT_DIR / "data" / "songs_db.json"
 DEFAULT_DELAY_MS = 2000
 DEFAULT_TARGET_ROOT = "C"
+DEFAULT_MEDLEY_SORT = "transition"
+MEDLEY_SORTS = {"transition", "favorites"}
+DEFAULT_SONGS_SORT = "alpha"
+SONGS_SORTS = {"alpha", "favorites"}
 TOP_PAIR_COUNT = 50
 MEDLEY_LIMIT = 20
 GROUP_SEARCH_LIMIT = 50
@@ -171,10 +175,13 @@ def build_medley_context(source_id: str) -> DynamicRecord:
     if target_root not in PITCH_CLASSES:
         target_root = DEFAULT_TARGET_ROOT
     limit = parse_int(request.args.get("limit"), MEDLEY_LIMIT)
-    show_original = request.args.get("show_original", "1") != "0"
+    show_original = request.args.get("show_original", "0") != "0"
+    sort = request.args.get("sort", DEFAULT_MEDLEY_SORT)
+    if sort not in MEDLEY_SORTS:
+        sort = DEFAULT_MEDLEY_SORT
     songs = source_songs(source_id)
     exclusions = comparison_exclusions(source_id, songs)
-    output = build_output(songs, TOP_PAIR_COUNT, target_root)
+    output = build_output(songs, TOP_PAIR_COUNT, target_root, sort=sort)
     medley_songs = []
     for song in output["medley"]["songs"][:limit]:
         shift = song.get("global_transpose_by", 0)
@@ -197,6 +204,7 @@ def build_medley_context(source_id: str) -> DynamicRecord:
         "target_root": target_root,
         "target_roots": sorted(PITCH_CLASSES),
         "show_original": show_original,
+        "sort": sort,
         "exclusions": exclusions,
     }
 
@@ -408,9 +416,19 @@ def db_stats() -> DynamicRecord:
     }
 
 
-def sorted_songs() -> list[SongRecord]:
+def sorted_songs(sort: str = DEFAULT_SONGS_SORT) -> list[SongRecord]:
+    songs = db_songs_as_list(load_db(DB_PATH))
+    if sort == "favorites":
+        return sorted(
+            songs,
+            key=lambda song: (
+                -(song.get("favorites_count") or 0),
+                (song.get("artist") or "").casefold(),
+                (song.get("title") or "").casefold(),
+            ),
+        )
     return sorted(
-        db_songs_as_list(load_db(DB_PATH)),
+        songs,
         key=lambda song: (
             (song.get("artist") or "").casefold(),
             (song.get("title") or "").casefold(),
@@ -590,6 +608,7 @@ def medley(source_id: str) -> Any:
             target_root=target_root,
             limit=context["limit"],
             show_original="1" if show_original else "0",
+            sort=context["sort"],
         ),
         export_filename=export_filename(source_id, target_root),
     )
@@ -607,7 +626,7 @@ def edit_medley(source_id: str) -> Any:
                 "url": url,
                 **{
                     key: db["songs"].get(url, {}).get(key)
-                    for key in ("artist", "title", "explore_title")
+                    for key in ("artist", "title", "explore_title", "favorites_count")
                 },
             }
             for url in definition["urls"]
@@ -640,7 +659,10 @@ def delete_medley(source_id: str) -> Any:
 @app.get("/songs")
 def songs() -> Any:
     query = request.args.get("q", "").strip().casefold()
-    songs_list = sorted_songs()
+    sort = request.args.get("sort", DEFAULT_SONGS_SORT)
+    if sort not in SONGS_SORTS:
+        sort = DEFAULT_SONGS_SORT
+    songs_list = sorted_songs(sort)
     if query:
         songs_list = [
             song
@@ -650,7 +672,9 @@ def songs() -> Any:
                 [song.get("artist") or "", song.get("title") or "", song.get("url") or ""]
             ).casefold()
         ]
-    return render_template("songs.html", songs=songs_list, query=request.args.get("q", "").strip())
+    return render_template(
+        "songs.html", songs=songs_list, query=request.args.get("q", "").strip(), sort=sort
+    )
 
 
 @app.get("/api/songs")
@@ -669,7 +693,10 @@ def search_songs_api() -> Any:
     return jsonify(
         {
             "songs": [
-                {key: song.get(key) for key in ("url", "artist", "title", "explore_title")}
+                {
+                    key: song.get(key)
+                    for key in ("url", "artist", "title", "explore_title", "favorites_count")
+                }
                 for song in songs_list[:20]
                 if song.get("url")
             ]
@@ -712,7 +739,7 @@ def get_job(job_id: str) -> JobRecord | None:
 
 
 def main() -> None:
-    app.run(debug=True, port=5001, use_reloader=False)
+    app.run(host="0.0.0.0", debug=True, port=5001, use_reloader=False)
 
 
 if __name__ == "__main__":

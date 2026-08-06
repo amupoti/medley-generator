@@ -101,6 +101,50 @@ class SongDbTest(unittest.TestCase):
         self.assertEqual(db_urls(db), {"one"})
         self.assertEqual(db_songs_as_list(db), [song])
 
+    def test_merge_song_persists_chorus_detection_metadata(self) -> None:
+        db = empty_db()
+        merge_song(
+            db,
+            {
+                "url": "one",
+                "chorus_chords": ["C", "G"],
+                "chorus_lines": [],
+                "has_chorus": True,
+                "chorus_detection": "inferred",
+                "chorus_confidence": 0.72,
+            },
+        )
+
+        song = db["songs"]["one"]
+        self.assertEqual(song["chorus_detection"], "inferred")
+        self.assertEqual(song["chorus_confidence"], 0.72)
+
+    def test_merge_song_persists_favorites_and_view_stats(self) -> None:
+        db = empty_db()
+        merge_song(db, {"url": "one", "favorites_count": 2130, "view_total": 28239})
+
+        song = db["songs"]["one"]
+        self.assertEqual(song["favorites_count"], 2130)
+        self.assertEqual(song["view_total"], 28239)
+
+    def test_merge_song_is_compatible_with_records_missing_detection_fields(self) -> None:
+        db = empty_db()
+        db["songs"]["one"] = {
+            "url": "one",
+            "chorus_chords": ["C"],
+            "sources": [],
+            "scrape_count": 1,
+            "errors": [],
+            "first_seen_at": "first",
+        }
+
+        merge_song(db, {"url": "one", "title": "Refreshed"})
+
+        song = db["songs"]["one"]
+        self.assertEqual(song["title"], "Refreshed")
+        self.assertNotIn("chorus_detection", song)
+        self.assertNotIn("chorus_confidence", song)
+
     def test_merge_and_mark_seen_ignore_missing_urls(self) -> None:
         db = empty_db()
         merge_song(db, {"title": "No URL"})

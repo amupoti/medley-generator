@@ -19,6 +19,12 @@ class TranslationsTest(unittest.TestCase):
 
 
 class AppHelpersTest(unittest.TestCase):
+    @patch("medleys.web.app.app.run")
+    def test_main_listens_on_the_local_network(self, run: MagicMock) -> None:
+        app.main()
+
+        run.assert_called_once_with(host="0.0.0.0", debug=True, port=5001, use_reloader=False)
+
     def test_url_encoding_round_trips_without_padding(self) -> None:
         url = "https://tabs.ultimate-guitar.com/tab/artist/song?q=café"
         encoded = app.encode_url(url)
@@ -316,6 +322,32 @@ class UrlListRouteTest(unittest.TestCase):
         self.assertIn("data-remove-song", html)
         self.assertIn("data-move-up", html)
 
+    def test_edit_page_shows_favorites_count_and_dash_when_missing(self) -> None:
+        source_id = "list:1234:Fiesta"
+        with_favorites = "https://tabs.ultimate-guitar.com/tab/oasis/wonderwall-chords-27596"
+        without_favorites = "https://www.ultimate-guitar.com/tab/blur/song-chords-123"
+        with TemporaryDirectory() as directory:
+            db_path = Path(directory) / "songs.json"
+            db = empty_db()
+            db["songs"][with_favorites] = {
+                "url": with_favorites,
+                "artist": "Oasis",
+                "title": "Wonderwall",
+                "favorites_count": 2130,
+            }
+            db["songs"][without_favorites] = {
+                "url": without_favorites,
+                "artist": "Blur",
+                "title": "Song 2",
+            }
+            save_db(db_path, db)
+            with patch("medleys.web.app.DB_PATH", db_path):
+                app.store_medley(source_id, "Fiesta", [with_favorites, without_favorites])
+                response = self.client.get(f"/medley/{source_id}/edit?lang=ca")
+
+        html = response.get_data(as_text=True)
+        self.assertIn("2130", html)
+
     def test_edit_page_reconstructs_legacy_medley_urls(self) -> None:
         source_id = "list:1234:Legacy"
         url = "https://tabs.ultimate-guitar.com/tab/oasis/wonderwall-chords-27596"
@@ -364,6 +396,7 @@ class SongSearchApiTest(unittest.TestCase):
                     "explore_title": None,
                     "title": "Wonderwall",
                     "url": "oasis-url",
+                    "favorites_count": None,
                 }
             ],
         )
@@ -381,6 +414,22 @@ class SongSearchApiTest(unittest.TestCase):
                 response = self.client.get("/api/songs")
 
         self.assertEqual(len(response.get_json()["songs"]), 20)
+
+    def test_includes_favorites_count_when_present(self) -> None:
+        with TemporaryDirectory() as directory:
+            db_path = Path(directory) / "songs.json"
+            db = empty_db()
+            db["songs"]["oasis-url"] = {
+                "url": "oasis-url",
+                "artist": "Oasis",
+                "title": "Wonderwall",
+                "favorites_count": 2130,
+            }
+            save_db(db_path, db)
+            with patch("medleys.web.app.DB_PATH", db_path):
+                response = self.client.get("/api/songs?q=wonder")
+
+        self.assertEqual(response.get_json()["songs"][0]["favorites_count"], 2130)
 
 
 class DeleteMedleyTest(unittest.TestCase):
@@ -450,6 +499,91 @@ class ComparisonExclusionsTest(unittest.TestCase):
             [("duplicate", "duplicate"), ("missing", "no_chorus"), ("failed", "scrape_failed")],
         )
         self.assertEqual(exclusions[-1]["exclusion_detail"], "blocked")
+
+
+class SongsSortTest(unittest.TestCase):
+    def setUp(self) -> None:
+        self.client = app.app.test_client()
+
+    def test_sorted_songs_orders_by_favorites_with_missing_treated_as_zero(self) -> None:
+        songs = [
+            {"url": "a", "artist": "A", "title": "A Song", "favorites_count": 5},
+            {"url": "b", "artist": "B", "title": "B Song", "favorites_count": 50},
+            {"url": "c", "artist": "C", "title": "C Song"},
+        ]
+        with TemporaryDirectory() as directory:
+            db_path = Path(directory) / "songs.json"
+            db = empty_db()
+            db["songs"] = {song["url"]: song for song in songs}
+            save_db(db_path, db)
+            with patch("medleys.web.app.DB_PATH", db_path):
+                ordered = app.sorted_songs("favorites")
+
+        self.assertEqual([song["url"] for song in ordered], ["b", "a", "c"])
+
+    def test_songs_route_honors_favorites_sort(self) -> None:
+        songs = [
+            {"url": "a", "artist": "A", "title": "A Song", "favorites_count": 5},
+            {"url": "b", "artist": "B", "title": "B Song", "favorites_count": 50},
+        ]
+        with TemporaryDirectory() as directory:
+            db_path = Path(directory) / "songs.json"
+            db = empty_db()
+            db["songs"] = {song["url"]: song for song in songs}
+            save_db(db_path, db)
+            with patch("medleys.web.app.DB_PATH", db_path):
+                response = self.client.get("/songs?sort=favorites&lang=es")
+
+        self.assertEqual(response.status_code, 200)
+        self.assertLess(response.data.index(b"B Song"), response.data.index(b"A Song"))
+
+
+class MedleyContextSortTest(unittest.TestCase):
+    def test_build_medley_context_orders_songs_by_favorites_when_requested(self) -> None:
+        source = "list:1:Party"
+        songs = {
+            "one": {
+                "url": "one",
+                "artist": "One",
+                "title": "First",
+                "chorus_chords": ["C", "G", "Am", "F"],
+                "favorites_count": 5,
+                "sources": [source],
+            },
+            "two": {
+                "url": "two",
+                "artist": "Two",
+                "title": "Second",
+                "chorus_chords": ["D", "A", "Bm", "G"],
+                "favorites_count": 50,
+                "sources": [source],
+            },
+        }
+        with TemporaryDirectory() as directory:
+            db_path = Path(directory) / "songs.json"
+            db = empty_db()
+            db["songs"] = songs
+            save_db(db_path, db)
+            with (
+                patch("medleys.web.app.DB_PATH", db_path),
+                app.app.test_request_context(f"/medley/{source}?sort=favorites"),
+            ):
+                context = app.build_medley_context(source)
+
+        self.assertEqual(context["sort"], "favorites")
+        self.assertEqual([song["title"] for song in context["songs"]], ["Second", "First"])
+
+    def test_build_medley_context_defaults_to_transition_sort_for_invalid_value(self) -> None:
+        with TemporaryDirectory() as directory:
+            db_path = Path(directory) / "songs.json"
+            save_db(db_path, empty_db())
+            with (
+                patch("medleys.web.app.DB_PATH", db_path),
+                app.app.test_request_context("/medley/list:1:Party?sort=bogus"),
+            ):
+                context = app.build_medley_context("list:1:Party")
+
+        self.assertEqual(context["sort"], "transition")
 
 
 if __name__ == "__main__":

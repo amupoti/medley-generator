@@ -7,6 +7,7 @@
   data-remove-label="{{ t('remove_song') }}"
   data-new-song-label="{{ t('new_song') }}"
   data-remove-text="{{ t('remove') }}"
+  data-favorites-label="{{ t('favorites') }}"
 >
   <div class="song-list-heading">
     <h2>{{ t("selected_songs") }}</h2>
@@ -18,6 +19,9 @@
         <span class="editable-song-position">{{ loop.index }}</span>
         <span class="editable-song-details">
           <strong>{{ song.artist or song.explore_title or t("unknown_song") }}{% if song.artist and song.title %} - {{ song.title }}{% endif %}</strong>
+          {% if song.get("favorites_count") is not none %}
+            <span class="song-favorites">{{ song.favorites_count }} {{ t("favorites") }}</span>
+          {% endif %}
           <span>{{ song.url }}</span>
         </span>
         <span class="editable-song-actions">

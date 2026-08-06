@@ -38,10 +38,61 @@ class StoreExtractionTest(unittest.TestCase):
                     "wiki_tab": {"content": "[Chorus]\nC G"},
                     "song_name": "Song",
                     "artist_name": "Artist",
+                    "stats": {"favorites_count": 2130, "view_total": 28239},
                 }
             }
         )
-        self.assertEqual(song, {"title": "Song", "artist": "Artist", "content": "[Chorus]\nC G"})
+        self.assertEqual(
+            song,
+            {
+                "title": "Song",
+                "artist": "Artist",
+                "content": "[Chorus]\nC G",
+                "favorites_count": 2130,
+                "view_total": 28239,
+            },
+        )
+
+    def test_extract_song_defaults_stats_to_none_when_absent(self) -> None:
+        song = ug.extract_song(
+            {"wiki_tab": {"content": "[Chorus]\nC G"}, "song_name": "Song", "artist_name": "Artist"}
+        )
+        self.assertIsNone(song["favorites_count"])
+        self.assertIsNone(song["view_total"])
+
+    def test_extract_song_falls_back_to_header_meta_when_song_name_is_absent(self) -> None:
+        # Some tab pages carry no song_name/title/artist_name on tab_view at
+        # all - only headerMeta.name and headerMeta.artists[0].name.
+        song = ug.extract_song(
+            {
+                "wiki_tab": {"content": "[Chorus]\nC G"},
+                "headerMeta": {
+                    "name": "María",
+                    "artists": [{"name": "La Oreja de Van Gogh"}],
+                },
+            }
+        )
+        self.assertEqual(song["title"], "María")
+        self.assertEqual(song["artist"], "La Oreja de Van Gogh")
+
+    def test_extract_song_prefers_top_level_fields_over_header_meta(self) -> None:
+        song = ug.extract_song(
+            {
+                "wiki_tab": {"content": "[Chorus]\nC G"},
+                "song_name": "Top Level Song",
+                "artist_name": "Top Level Artist",
+                "headerMeta": {"name": "Other", "artists": [{"name": "Other Artist"}]},
+            }
+        )
+        self.assertEqual(song["title"], "Top Level Song")
+        self.assertEqual(song["artist"], "Top Level Artist")
+
+    def test_extract_song_handles_missing_header_meta_artists(self) -> None:
+        song = ug.extract_song(
+            {"wiki_tab": {"content": "[Chorus]\nC G"}, "headerMeta": {"name": "Solo Title"}}
+        )
+        self.assertEqual(song["title"], "Solo Title")
+        self.assertIsNone(song["artist"])
 
     def test_extract_song_rejects_missing_view_or_content(self) -> None:
         with self.assertRaisesRegex(ValueError, "tab_view"):
@@ -153,21 +204,10 @@ D A
         )
         self.assertEqual(ug.extract_chorus_chords(content), ["C", "G", "Am", "F"])
 
-    def test_repeated_chorus_section_stops_first_chorus(self) -> None:
-        self.assertEqual(ug.first_chorus_source_lines("[Chorus]\nC\n[Chorus 2]\nG"), ["C"])
-
-    def test_parse_marked_line_skips_empty_chord_marker(self) -> None:
-        self.assertEqual(
-            ug.parse_chorus_line("A[ch] [/ch]B"),
-            {"lyrics": "AB", "chords": []},
-        )
-
-    def test_chord_and_section_recognition(self) -> None:
-        self.assertTrue(ug.is_chorus_section(" Chorus 12 "))
-        self.assertFalse(ug.is_chorus_section("Pre-Chorus"))
-        self.assertTrue(ug.is_chord_line("C G/B Am7"))
-        self.assertFalse(ug.is_chord_line(""))
-        self.assertFalse(ug.is_chord_line("sing along"))
+    def test_extract_chorus_lines_and_chords_delegate_to_detect_chorus(self) -> None:
+        content = "[Verse]\nno repeats here at all\njust one unique line\n"
+        self.assertEqual(ug.extract_chorus_lines(content), [])
+        self.assertEqual(ug.extract_chorus_chords(content), [])
 
     def test_title_and_artist_use_text_then_page_title_fallbacks(self) -> None:
         text = "Wonderwall Chords by Oasis"

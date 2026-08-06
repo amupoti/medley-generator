@@ -19,6 +19,13 @@
         {% endfor %}
       </select>
     </label>
+    <label>
+      {{ t("sort_by") }}
+      <select name="sort">
+        <option value="transition" {% if sort == 'transition' %}selected{% endif %}>{{ t("sort_transition") }}</option>
+        <option value="favorites" {% if sort == 'favorites' %}selected{% endif %}>{{ t("sort_by_favorites") }}</option>
+      </select>
+    </label>
     <label class="toolbar-checkbox">
       <input type="checkbox" name="show_original" value="1" {% if show_original %}checked{% endif %}>
       {{ t("show_original_choruses") }}
@@ -61,6 +68,7 @@
       <div class="rank">{{ loop.index }}</div>
       <div class="song-body">
         <h2>{{ song.artist }} - {{ song.title }}</h2>
+        {% if song.get("favorites_count") is not none %}<p class="muted">{{ song.favorites_count }} {{ t("favorites") }}</p>{% endif %}
         {% if show_original %}
           <div class="label">{{ t("original_chorus") }}</div>
           {% if song.original_tab_lines %}

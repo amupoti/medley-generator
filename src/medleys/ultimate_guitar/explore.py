@@ -8,11 +8,10 @@ from pathlib import Path
 from typing import Any
 
 from medleys.database import SongRecord
+from medleys.ultimate_guitar.chorus_detection import detect_chorus
 from medleys.ultimate_guitar.song import (
     dismiss_cookie_popup,
     extract_artist,
-    extract_chorus_chords,
-    extract_chorus_lines,
     extract_store,
     extract_title,
     launch_browser,
@@ -119,15 +118,19 @@ def scrape_song(page: Any, explore_song: SongRecord, delay_ms: int) -> SongRecor
     except Exception:
         pass
 
-    chords = extract_chorus_chords(content)
+    detection = detect_chorus(content)
 
     return {
         **explore_song,
         "title": store_song.get("title") or extract_title(text, page_title),
         "artist": store_song.get("artist") or extract_artist(text, page_title),
-        "chorus_chords": chords,
-        "chorus_lines": extract_chorus_lines(content),
-        "has_chorus": bool(chords),
+        "favorites_count": store_song.get("favorites_count"),
+        "view_total": store_song.get("view_total"),
+        "chorus_chords": detection["chords"],
+        "chorus_lines": detection["lines"],
+        "has_chorus": detection["method"] != "none",
+        "chorus_detection": detection["method"],
+        "chorus_confidence": detection["confidence"],
     }
 
 
