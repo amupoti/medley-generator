@@ -63,9 +63,13 @@ DB_PATH = PROJECT_DIR / "data" / "songs_db.json"
 DEFAULT_DELAY_MS = 2000
 DEFAULT_TARGET_ROOT = "C"
 DEFAULT_MEDLEY_SORT = "transition"
-MEDLEY_SORTS = {"transition", "favorites"}
+MEDLEY_SORTS = {"transition", "favorites", "chord_match"}
 DEFAULT_SONGS_SORT = "alpha"
 SONGS_SORTS = {"alpha", "favorites"}
+DEFAULT_MEDLEYS_SORT = "created_at"
+DEFAULT_MEDLEYS_DIRECTION = "desc"
+MEDLEYS_SORTS = {"name", "created_at", "updated_at", "total", "eligible", "skipped"}
+SORT_DIRECTIONS = {"asc", "desc"}
 TOP_PAIR_COUNT = 50
 MEDLEY_LIMIT = 20
 GROUP_SEARCH_LIMIT = 50
@@ -552,6 +556,17 @@ def medley_overview_rows() -> list[DynamicRecord]:
     return rows
 
 
+def sort_medley_overview_rows(
+    rows: list[DynamicRecord], sort: str, direction: str
+) -> list[DynamicRecord]:
+    reverse = direction == "desc"
+    if sort == "name":
+        return sorted(rows, key=lambda row: str(row["name"]).casefold(), reverse=reverse)
+    if sort in {"total", "eligible", "skipped"}:
+        return sorted(rows, key=lambda row: int(row[sort]), reverse=reverse)
+    return sorted(rows, key=lambda row: row[sort] or "", reverse=reverse)
+
+
 @app.get("/")
 def index() -> Any:
     recent_jobs = sorted(snapshot_jobs(), key=lambda job: job["created_at"], reverse=True)[:8]
@@ -561,12 +576,22 @@ def index() -> Any:
 @app.get("/medleys")
 def medleys_overview() -> Any:
     rows = medley_overview_rows()
+    sort = request.args.get("sort", DEFAULT_MEDLEYS_SORT)
+    direction = request.args.get("direction", DEFAULT_MEDLEYS_DIRECTION)
+    if sort not in MEDLEYS_SORTS:
+        sort = DEFAULT_MEDLEYS_SORT
+        direction = DEFAULT_MEDLEYS_DIRECTION
+    elif direction not in SORT_DIRECTIONS:
+        direction = DEFAULT_MEDLEYS_DIRECTION
+    rows = sort_medley_overview_rows(rows, sort, direction)
     totals = {
         "total": sum(row["total"] for row in rows),
         "eligible": sum(row["eligible"] for row in rows),
         "skipped": sum(row["skipped"] for row in rows),
     }
-    return render_template("medleys.html", medleys=rows, totals=totals)
+    return render_template(
+        "medleys.html", medleys=rows, totals=totals, sort=sort, direction=direction
+    )
 
 
 @app.post("/analyze/url")

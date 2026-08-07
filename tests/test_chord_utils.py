@@ -34,8 +34,25 @@ class TransposeChordsTest(unittest.TestCase):
     def test_transpose_chord_preserves_quality_and_bass(self) -> None:
         self.assertEqual(transpose_chord("Cmaj7/G", 2), "Dmaj7/A")
 
+    def test_transpose_chord_preserves_annotation(self) -> None:
+        self.assertEqual(transpose_chord("C*", 2), "D*")
+
+    def test_transpose_chord_handles_uncommon_database_qualities(self) -> None:
+        cases = {
+            "B(b9)": "Db(b9)",
+            "D#m7b5": "Fm7b5",
+            "Abmaj9/G": "Bbmaj9/A",
+            "Dbm6/Fb": "Ebm6/Gb",
+        }
+        for chord, expected in cases.items():
+            with self.subTest(chord=chord):
+                self.assertEqual(transpose_chord(chord, 2, prefer_flats=True), expected)
+
     def test_transpose_chord_preserves_invalid_bass(self) -> None:
         self.assertEqual(transpose_chord("C/H", 2), "D/H")
+
+    def test_transpose_chord_preserves_nonstandard_database_bass(self) -> None:
+        self.assertEqual(transpose_chord("Em/SOL", 2), "F#m/SOL")
 
     def test_transpose_chord_preserves_unrecognized_chord(self) -> None:
         self.assertEqual(transpose_chord("N.C.", 5), "N.C.")

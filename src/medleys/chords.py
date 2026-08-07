@@ -13,6 +13,7 @@ class ParsedChord(TypedDict):
 
 
 PITCH_CLASSES = {
+    "Cb": 11,
     "C": 0,
     "C#": 1,
     "Db": 1,
@@ -20,6 +21,8 @@ PITCH_CLASSES = {
     "D#": 3,
     "Eb": 3,
     "E": 4,
+    "E#": 5,
+    "Fb": 4,
     "F": 5,
     "F#": 6,
     "Gb": 6,
@@ -30,6 +33,7 @@ PITCH_CLASSES = {
     "A#": 10,
     "Bb": 10,
     "B": 11,
+    "B#": 0,
 }
 
 SHARP_NAMES = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]

@@ -30,12 +30,22 @@
   <table>
     <thead>
       <tr>
-        <th>{{ t("medley_name") }}</th>
-        <th>{{ t("created") }}</th>
-        <th>{{ t("updated") }}</th>
-        <th>{{ t("total_songs") }}</th>
-        <th>{{ t("eligible_songs") }}</th>
-        <th>{{ t("skipped") }}</th>
+        {% set columns = [
+          ("name", t("medley_name")),
+          ("created_at", t("created")),
+          ("updated_at", t("updated")),
+          ("total", t("total_songs")),
+          ("eligible", t("eligible_songs")),
+          ("skipped", t("skipped"))
+        ] %}
+        {% for field, label in columns %}
+          {% set next_direction = "desc" if sort == field and direction == "asc" else "asc" %}
+          <th aria-sort="{{ 'ascending' if sort == field and direction == 'asc' else 'descending' if sort == field else 'none' }}">
+            <a class="table-sort{% if sort == field %} active{% endif %}" href="{{ lang_url('medleys_overview', sort=field, direction=next_direction) }}">
+              {{ label }}{% if sort == field %}<span aria-hidden="true">{{ "▲" if direction == "asc" else "▼" }}</span>{% endif %}
+            </a>
+          </th>
+        {% endfor %}
         <th></th>
       </tr>
     </thead>

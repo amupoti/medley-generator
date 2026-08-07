@@ -216,6 +216,81 @@ def ordered_medley(songs: list[SongRecord], target_root: str) -> MedleyOutput:
     }
 
 
+def last_chord_medley(songs: list[SongRecord], target_root: str) -> MedleyOutput:
+    if not songs:
+        return {"average_transition_score": 0.0, "songs": [], "transitions": []}
+
+    target_pitch = PITCH_CLASSES[target_root]
+    chains = [last_chord_chain_from(start, songs, target_pitch) for start in songs]
+    chain = max(chains, key=lambda candidate: candidate[2])
+    ordered, shifts, average = chain
+    shifted_songs = [
+        {**song, "global_transpose_by": shift} for song, shift in zip(ordered, shifts)
+    ]
+    transitions = []
+    for index in range(len(shifted_songs) - 1):
+        transitions.append(
+            {
+                "from": song_ref(shifted_songs[index]),
+                "to": song_ref(shifted_songs[index + 1]),
+                "score": last_chord_transition_score(
+                    ordered[index], shifts[index], ordered[index + 1], shifts[index + 1]
+                ),
+                "transpose_to_by": shifts[index + 1],
+            }
+        )
+    return {
+        "average_transition_score": round(average, 4),
+        "target_root": target_root,
+        "songs": [song_ref(song) for song in shifted_songs],
+        "transitions": transitions,
+    }
+
+
+def last_chord_chain_from(
+    start: SongRecord, songs: list[SongRecord], target_pitch: int
+) -> tuple[list[SongRecord], list[int], float]:
+    ordered = [start]
+    shifts = [transpose_to_target(start["pitch_sequence"], target_pitch)]
+    unused = [song for song in songs if song is not start]
+    scores: list[float] = []
+    while unused:
+        current = ordered[-1]
+        current_shift = shifts[-1]
+        current_pitches = shifted_pitches(current, current_shift)
+        end_pitch = current_pitches[-1] if current_pitches else target_pitch
+        candidates = []
+        for candidate in unused:
+            shift = transpose_to_target(candidate["pitch_sequence"], end_pitch)
+            score = last_chord_transition_score(current, current_shift, candidate, shift)
+            candidates.append((score, -song_rank(candidate), candidate, shift))
+        score, _, selected, shift = max(candidates, key=lambda candidate: candidate[:2])
+        ordered.append(selected)
+        shifts.append(shift)
+        scores.append(score)
+        unused.remove(selected)
+    average = sum(scores) / len(scores) if scores else 0.0
+    return ordered, shifts, average
+
+
+def shifted_pitches(song: SongRecord, shift: int) -> list[int]:
+    return [((pitch + shift) % 12) for pitch in song["pitch_sequence"]]
+
+
+def last_chord_transition_score(
+    left: SongRecord, left_shift: int, right: SongRecord, right_shift: int
+) -> float:
+    left_pitches = shifted_pitches(left, left_shift)
+    right_pitches = shifted_pitches(right, right_shift)
+    absolute = sequence_score(left_pitches, right_pitches)
+    interval = sequence_score(left["interval_sequence"], right["interval_sequence"])
+    qualities = sequence_score(left["quality_sequence"], right["quality_sequence"])
+    overlap = jaccard_score(left_pitches, right_pitches)
+    return round(
+        (absolute * 0.35) + (interval * 0.35) + (qualities * 0.15) + (overlap * 0.15), 4
+    )
+
+
 def apply_target_root_transpose(songs: list[SongRecord], target_root: str) -> list[SongRecord]:
     target_pitch = PITCH_CLASSES[target_root]
     return [
@@ -313,6 +388,8 @@ def build_output(
     if sort == "favorites":
         favorites_order = sorted(normalized, key=lambda song: -(song.get("favorites_count") or 0))
         medley = ordered_medley(favorites_order, target_root)
+    elif sort == "chord_match":
+        medley = last_chord_medley(normalized, target_root)
     else:
         medley = medley_order(normalized, pairs, target_root)
     return {

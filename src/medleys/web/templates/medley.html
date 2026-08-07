@@ -24,6 +24,7 @@
       <select name="sort">
         <option value="transition" {% if sort == 'transition' %}selected{% endif %}>{{ t("sort_transition") }}</option>
         <option value="favorites" {% if sort == 'favorites' %}selected{% endif %}>{{ t("sort_by_favorites") }}</option>
+        <option value="chord_match" {% if sort == 'chord_match' %}selected{% endif %}>{{ t("sort_chord_match") }}</option>
       </select>
     </label>
     <label class="toolbar-checkbox">

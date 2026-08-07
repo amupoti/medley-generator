@@ -9,6 +9,7 @@ from medleys.comparison import (
     canonical_song_key,
     intervals,
     jaccard_score,
+    last_chord_medley,
     load_songs,
     normalize_quality,
     normalize_song,
@@ -206,6 +207,78 @@ class CompareChorusesTest(unittest.TestCase):
         self.assertEqual(len(medley["transitions"]), 1)
         self.assertEqual(medley["transitions"][0]["from"]["title"], "Second")
         self.assertEqual(medley["transitions"][0]["to"]["title"], "First")
+
+    def test_last_chord_medley_transposes_each_song_to_match_previous_ending(self) -> None:
+        songs = [
+            normalize_song(
+                {
+                    "artist": "One",
+                    "title": "First",
+                    "url": "one",
+                    "explore_rank": 1,
+                    "chorus_chords": ["C", "G"],
+                }
+            ),
+            normalize_song(
+                {
+                    "artist": "Two",
+                    "title": "Second",
+                    "url": "two",
+                    "explore_rank": 2,
+                    "chorus_chords": ["D", "A"],
+                }
+            ),
+        ]
+
+        medley = last_chord_medley(songs, "C")
+
+        ordered = medley["songs"]
+        first = next(song for song in songs if song["title"] == ordered[0]["title"])
+        second = next(song for song in songs if song["title"] == ordered[1]["title"])
+        first_end = (first["pitch_sequence"][-1] + ordered[0]["global_transpose_by"]) % 12
+        second_start = (second["pitch_sequence"][0] + ordered[1]["global_transpose_by"]) % 12
+        self.assertEqual(first_end, second_start)
+        self.assertEqual(len(medley["transitions"]), 1)
+
+    def test_last_chord_mode_prefers_best_constrained_progression_match(self) -> None:
+        songs = [
+            {
+                "artist": "Anchor",
+                "title": "Anchor",
+                "url": "anchor",
+                "explore_rank": 1,
+                "chorus_chords": ["C", "G", "C"],
+            },
+            {
+                "artist": "Match",
+                "title": "Match",
+                "url": "match",
+                "explore_rank": 2,
+                "chorus_chords": ["D", "A", "D"],
+            },
+            {
+                "artist": "Other",
+                "title": "Other",
+                "url": "other",
+                "explore_rank": 3,
+                "chorus_chords": ["E", "F", "G"],
+            },
+        ]
+
+        output = build_output(songs, top=1, target_root="C", sort="chord_match")
+
+        titles = [song["title"] for song in output["medley"]["songs"]]
+        self.assertLess(abs(titles.index("Anchor") - titles.index("Match")), 2)
+
+    def test_last_chord_medley_handles_empty_and_single_song_lists(self) -> None:
+        self.assertEqual(
+            last_chord_medley([], "C"),
+            {"average_transition_score": 0.0, "songs": [], "transitions": []},
+        )
+        song = normalize_song({"title": "Only", "chorus_chords": ["G", "D"]})
+        medley = last_chord_medley([song], "C")
+        self.assertEqual(medley["songs"][0]["global_transpose_by"], 5)
+        self.assertEqual(medley["transitions"], [])
 
 
 if __name__ == "__main__":

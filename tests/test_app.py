@@ -538,7 +538,95 @@ class SongsSortTest(unittest.TestCase):
         self.assertLess(response.data.index(b"B Song"), response.data.index(b"A Song"))
 
 
+class MedleysOverviewSortTest(unittest.TestCase):
+    def setUp(self) -> None:
+        self.client = app.app.test_client()
+        self.rows = [
+            {
+                "source_id": "list:1:Zulu",
+                "name": "Zulu",
+                "created_at": "2025-01-01",
+                "updated_at": "2025-03-01",
+                "total": 2,
+                "eligible": 1,
+                "skipped": 1,
+                "no_chorus": 1,
+                "scrape_failed": 0,
+                "missing": 0,
+                "duplicate": 0,
+            },
+            {
+                "source_id": "list:2:alpha",
+                "name": "alpha",
+                "created_at": "2025-02-01",
+                "updated_at": "2025-02-01",
+                "total": 10,
+                "eligible": 8,
+                "skipped": 2,
+                "no_chorus": 1,
+                "scrape_failed": 1,
+                "missing": 0,
+                "duplicate": 0,
+            },
+        ]
+
+    def test_sort_medley_overview_rows_handles_text_dates_and_numbers(self) -> None:
+        cases = [
+            ("name", "asc", ["alpha", "Zulu"]),
+            ("updated_at", "desc", ["Zulu", "alpha"]),
+            ("total", "desc", ["alpha", "Zulu"]),
+        ]
+        for field, direction, expected in cases:
+            with self.subTest(field=field, direction=direction):
+                ordered = app.sort_medley_overview_rows(self.rows, field, direction)
+                self.assertEqual([row["name"] for row in ordered], expected)
+
+    @patch("medleys.web.app.medley_overview_rows")
+    def test_route_sorts_rows_and_renders_sortable_headers(self, overview_rows: MagicMock) -> None:
+        overview_rows.return_value = self.rows
+
+        response = self.client.get("/medleys?sort=name&direction=asc&lang=es")
+
+        self.assertEqual(response.status_code, 200)
+        self.assertLess(response.data.index(b"alpha"), response.data.index(b"Zulu"))
+        self.assertIn(b'aria-sort="ascending"', response.data)
+        self.assertIn(b'sort=name&amp;direction=desc', response.data)
+        self.assertEqual(response.data.count(b'class="table-sort'), 6)
+
+    @patch("medleys.web.app.medley_overview_rows")
+    def test_route_uses_default_sort_for_invalid_parameters(
+        self, overview_rows: MagicMock
+    ) -> None:
+        overview_rows.return_value = self.rows
+
+        response = self.client.get("/medleys?sort=bogus&direction=sideways")
+
+        self.assertEqual(response.status_code, 200)
+        self.assertLess(response.data.index(b"alpha"), response.data.index(b"Zulu"))
+        self.assertIn(b'aria-sort="descending"', response.data)
+
+
 class MedleyContextSortTest(unittest.TestCase):
+    def test_medley_sort_options_include_last_chord_matching(self) -> None:
+        self.assertIn("chord_match", app.MEDLEY_SORTS)
+        for language in app.SUPPORTED_LANGUAGES:
+            self.assertIn("sort_chord_match", app.TRANSLATIONS[language])
+
+    def test_medley_route_renders_last_chord_matching_as_selected(self) -> None:
+        with TemporaryDirectory() as directory:
+            db_path = Path(directory) / "songs.json"
+            save_db(db_path, empty_db())
+            with patch("medleys.web.app.DB_PATH", db_path):
+                response = app.app.test_client().get(
+                    "/medley/list:1:Party?sort=chord_match&lang=es"
+                )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(
+            b'<option value="chord_match" selected>Coincidencia con el \xc3\xbaltimo acorde</option>',
+            response.data,
+        )
+
     def test_build_medley_context_orders_songs_by_favorites_when_requested(self) -> None:
         source = "list:1:Party"
         songs = {
