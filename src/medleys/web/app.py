@@ -502,10 +502,71 @@ def medley_definition(db: SongDatabase, source_id: str) -> DynamicRecord | None:
     return {"name": source_id.split(":", 2)[-1], "urls": urls}
 
 
+def medley_overview_rows() -> list[DynamicRecord]:
+    db = load_db(DB_PATH)
+    songs_by_url = db.get("songs", {})
+    sources = {
+        source for song in songs_by_url.values() for source in song.get("sources", [])
+    } | set(db.get("medleys", {}))
+
+    rows = []
+    for source_id in sources:
+        definition = medley_definition(db, source_id)
+        if not definition:
+            continue
+        urls = definition.get("urls", [])
+        eligible = len(load_songs(DB_PATH, source_id))
+        no_chorus = scrape_failed = missing = duplicate = 0
+        seen_keys: set[str] = set()
+        for url in urls:
+            song = songs_by_url.get(url)
+            if not song or source_id not in song.get("sources", []):
+                missing += 1
+                continue
+            if song.get("errors") and not song.get("chorus_chords"):
+                scrape_failed += 1
+            elif not song.get("chorus_chords"):
+                no_chorus += 1
+            else:
+                key = canonical_song_key(song)
+                if key in seen_keys:
+                    duplicate += 1
+                else:
+                    seen_keys.add(key)
+        rows.append(
+            {
+                "source_id": source_id,
+                "name": definition.get("name", source_id),
+                "created_at": definition.get("created_at"),
+                "updated_at": definition.get("updated_at"),
+                "total": len(urls),
+                "eligible": eligible,
+                "skipped": len(urls) - eligible,
+                "no_chorus": no_chorus,
+                "scrape_failed": scrape_failed,
+                "missing": missing,
+                "duplicate": duplicate,
+            }
+        )
+    rows.sort(key=lambda row: row["created_at"] or "", reverse=True)
+    return rows
+
+
 @app.get("/")
 def index() -> Any:
     recent_jobs = sorted(snapshot_jobs(), key=lambda job: job["created_at"], reverse=True)[:8]
     return render_template("index.html", stats=db_stats(), jobs=recent_jobs)
+
+
+@app.get("/medleys")
+def medleys_overview() -> Any:
+    rows = medley_overview_rows()
+    totals = {
+        "total": sum(row["total"] for row in rows),
+        "eligible": sum(row["eligible"] for row in rows),
+        "skipped": sum(row["skipped"] for row in rows),
+    }
+    return render_template("medleys.html", medleys=rows, totals=totals)
 
 
 @app.post("/analyze/url")
